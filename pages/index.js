@@ -11,23 +11,33 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <ChartComponent type="doughnut" data={{
-          labels: ['Red', 'Blue'],
+        <ChartComponent width="800" height="450" type="line" data={{
+          labels: ["1. týden", "2. týden", "3. týden", "4. týden", "5. týden", "6. týden", "7. týden", "8. týden", "9. týden", "10. týden"],
           datasets: [{
-            label: '# of Votes',
-            data: [12, 19],
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)'
-            ],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)'
-            ],
-            borderWidth: 1
+            data: [26.8, 23.0, 13.9, 13.9, 16.4, 17.5, 18.3, 19.1, 19.1, 20.7],
+            label: "Průměrný počet lidí, s kterými byli v kontaktu",
+            borderColor: "#3e95cd",
+            fill: false
           }]
+        }} options={{
+          responsive: true,
+          title: {
+            display: true,
+            text: 'Byl(a) v práci (plně či částečně)'
+          },
+          legend: { display: false },
+          scales: {
+            yAxes: [{
+              ticks: {
+                suggestedMin: 0, suggestedMax: 30
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "Průměrný počet lidí, s kterými byli v kontaktu"
+              }
+            }]
+          }
         }} />
-
       </main>
 
       <footer className={styles.footer}>

@@ -3,6 +3,9 @@ import { useEffect } from "react"
 
 function ChartComponent(props) {
     useEffect(() => {
+        if (Window.chartInstance) {
+            Window.chartInstance.destroy();
+        }
         var config = {
             type: props.type,
             data: props.data,
