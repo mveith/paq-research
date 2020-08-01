@@ -25,11 +25,22 @@ export default function Home() {
             display: true,
             text: 'Byl(a) v práci (plně či částečně)'
           },
+          plugins: {
+            datalabels: {
+              align: "end"
+            }
+          },
           legend: { display: false },
           scales: {
+            xAxes: [{ gridLines: { display: false } }],
             yAxes: [{
+              gridLines: {
+                display: false
+              },
               ticks: {
-                suggestedMin: 0, suggestedMax: 30
+                display: false,
+                suggestedMin: 0,
+                suggestedMax: 30
               },
               scaleLabel: {
                 display: true,

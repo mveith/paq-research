@@ -1,5 +1,6 @@
 import Chart from 'chart.js'
 import { useEffect } from "react"
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 function ChartComponent(props) {
     useEffect(() => {
