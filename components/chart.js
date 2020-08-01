@@ -3,20 +3,25 @@ import { useEffect } from "react"
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 function ChartComponent(props) {
+    const instanceId = `chartInstance_${props.chartId}`;
     useEffect(() => {
-        if (Window.chartInstance) {
-            Window.chartInstance.destroy();
+        if (Window[instanceId]) {
+            Window[instanceId].destroy();
         }
         var config = {
             type: props.type,
             data: props.data,
             options: props.options
         };
-        var ctx = document.getElementById('canvas').getContext('2d');
-        Window.chartInstance = new Chart(ctx, config);
+        var ctx = document.getElementById(instanceId).getContext('2d');
+        Window[instanceId] = new Chart(ctx, config);
     });
 
-    return <canvas id="canvas" width={props.width} height={props.height}></canvas>;
+    return (
+        <div style={{ height: props.height }}>
+            <canvas id={instanceId}></canvas>
+        </div>
+    );
 }
 
 export default ChartComponent;
