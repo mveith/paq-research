@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { Doughnut } from 'react-chartjs-2';
+import ChartComponent from "../components/chart"
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Doughnut data={{
+        <ChartComponent type="doughnut" data={{
           labels: ['Red', 'Blue'],
           datasets: [{
             label: '# of Votes',
