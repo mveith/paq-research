@@ -47,7 +47,24 @@ function LineChart(props) {
   }} />;
 }
 
-export default function Home() {
+export default function Home(props) {
+  const charts = props.charts.map((c, i) => {
+    return (<div style={{ display: "flex", flexDirection: "column", flexBasis: "100%", flex: "1", margin: "10px" }} key={`chart-${i}`}>
+      <LineChart
+        id={`chart-${i}`}
+        labels={props.labels}
+        dataset={{
+          data: c.data,
+          label: c.valueLabel,
+          borderColor: "#3e95cd",
+          fill: false,
+          lineTension: 0
+        }}
+        title={c.title}
+        yAxisLabel={c.valueLabel}
+      />
+    </div>);
+  });
   return (
     <div className={styles.container}>
       <Head>
@@ -61,50 +78,7 @@ export default function Home() {
         <h2>Aktivity - vývoj typů chování v čase</h2>
 
         <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", width: "100%" }}>
-          <div style={{ display: "flex", flexDirection: "column", flexBasis: "100%", flex: "1", margin: "10px" }}>
-            <LineChart
-              id="work"
-              labels={["1. týden", "2. týden", "3. týden", "4. týden", "5. týden", "6. týden", "7. týden", "8. týden", "9. týden", "10. týden"]}
-              dataset={{
-                data: [26.8, 23.0, 13.9, 13.9, 16.4, 17.5, 18.3, 19.1, 19.1, 20.7],
-                label: "Průměrný počet lidí, s kterými byli v kontaktu",
-                borderColor: "#3e95cd",
-                fill: false,
-                lineTension: 0
-              }}
-              title="Byl(a) v práci (plně či částečně)"
-              yAxisLabel="Průměrný počet lidí, s kterými byli v kontaktu"
-            />
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", flexBasis: "100%", flex: "1", margin: "10px" }}>
-            <LineChart
-              id="remote"
-              labels={["1. týden", "2. týden", "3. týden", "4. týden", "5. týden", "6. týden", "7. týden", "8. týden", "9. týden", "10. týden"]}
-              dataset={{
-                data: [17.5, 7.1, 5.5, 3.7, 4.7, 4.4, 6.2, 6.8, 7.6, 9.0],
-                label: "Průměrný počet lidí, s kterými byli v kontaktu",
-                borderColor: "#3e95cd",
-                fill: false,
-                lineTension: 0
-              }}
-              title="Měl(a) home-office"
-              yAxisLabel="Průměrný počet lidí, s kterými byli v kontaktu"
-            /></div>
-
-          <div style={{ display: "flex", flexDirection: "column", flexBasis: "100%", flex: "1", margin: "10px" }}>
-            <LineChart
-              id="nothing"
-              labels={["1. týden", "2. týden", "3. týden", "4. týden", "5. týden", "6. týden", "7. týden", "8. týden", "9. týden", "10. týden"]}
-              dataset={{
-                data: [9.2, 5.9, 4.0, 2.9, 4.6, 4.4, 5.8, 5.8, 6.5, 6.4],
-                label: "Průměrný počet lidí, s kterými byli v kontaktu",
-                borderColor: "#3e95cd",
-                fill: false,
-                lineTension: 0
-              }}
-              title="Nepracoval(a)"
-              yAxisLabel="Průměrný počet lidí, s kterými byli v kontaktu"
-            /></div>
+          {charts}
         </div>
       </main>
 
@@ -119,4 +93,29 @@ export default function Home() {
       </footer>
     </div >
   )
+}
+
+export async function getStaticProps(context) {
+  return {
+    props: {
+      labels: ["1. týden", "2. týden", "3. týden", "4. týden", "5. týden", "6. týden", "7. týden", "8. týden", "9. týden", "10. týden"],
+      charts: [
+        {
+          data: [26.8, 23.0, 13.9, 13.9, 16.4, 17.5, 18.3, 19.1, 19.1, 20.7],
+          valueLabel: "Průměrný počet lidí, s kterými byli v kontaktu",
+          title: "Byl(a) v práci (plně či částečně)"
+        },
+        {
+          data: [17.5, 7.1, 5.5, 3.7, 4.7, 4.4, 6.2, 6.8, 7.6, 9.0],
+          valueLabel: "Průměrný počet lidí, s kterými byli v kontaktu",
+          title: "Měl(a) home-office"
+        },
+        {
+          data: [9.2, 5.9, 4.0, 2.9, 4.6, 4.4, 5.8, 5.8, 6.5, 6.4],
+          valueLabel: "Průměrný počet lidí, s kterými byli v kontaktu",
+          title: "Nepracoval(a)"
+        }
+      ]
+    }
+  }
 }
