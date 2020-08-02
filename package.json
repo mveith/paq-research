@@ -1,17 +1,18 @@
 {
-  "name": "paq-research",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "chart.js": "^2.9.3",
-    "chartjs-plugin-datalabels": "^0.7.0",
-    "next": "9.5.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
-  }
+    "name": "paq-research",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "export": "next export"
+    },
+    "dependencies": {
+        "chart.js": "^2.9.3",
+        "chartjs-plugin-datalabels": "^0.7.0",
+        "next": "9.5.0",
+        "react": "16.13.1",
+        "react-dom": "16.13.1"
+    }
 }

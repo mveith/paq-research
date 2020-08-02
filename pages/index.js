@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import ChartComponent from "../components/chart"
+import fs from 'fs'
+import path from 'path'
 
 function LineChart(props) {
   return <ChartComponent chartId={props.id} height="450px" type="line" data={{
@@ -96,26 +98,9 @@ export default function Home(props) {
 }
 
 export async function getStaticProps(context) {
+  const filePath = path.join(process.cwd(), 'data.json');
+  const fileContent = fs.readFileSync(filePath, 'utf8');
   return {
-    props: {
-      labels: ["1. týden", "2. týden", "3. týden", "4. týden", "5. týden", "6. týden", "7. týden", "8. týden", "9. týden", "10. týden"],
-      charts: [
-        {
-          data: [26.8, 23.0, 13.9, 13.9, 16.4, 17.5, 18.3, 19.1, 19.1, 20.7],
-          valueLabel: "Průměrný počet lidí, s kterými byli v kontaktu",
-          title: "Byl(a) v práci (plně či částečně)"
-        },
-        {
-          data: [17.5, 7.1, 5.5, 3.7, 4.7, 4.4, 6.2, 6.8, 7.6, 9.0],
-          valueLabel: "Průměrný počet lidí, s kterými byli v kontaktu",
-          title: "Měl(a) home-office"
-        },
-        {
-          data: [9.2, 5.9, 4.0, 2.9, 4.6, 4.4, 5.8, 5.8, 6.5, 6.4],
-          valueLabel: "Průměrný počet lidí, s kterými byli v kontaktu",
-          title: "Nepracoval(a)"
-        }
-      ]
-    }
+    props: JSON.parse(fileContent)
   }
 }
