@@ -9,20 +9,20 @@ const Chart = dynamic(
   { ssr: false }
 )
 function LineChart(props) {
-  var coordinates = props.labels.map((l, i) => {
-    return {
-      value: props.chart.data[i],
-      wave: i
-    };
-  });
   const frameProps = {
     lines: [
       {
-        coordinates: coordinates
+        coordinates: props.labels.map((l, i) => {
+          return {
+            value: props.chart.data[i],
+            wave: i
+          };
+        })
       }
     ],
     size: [400, 450],
-    margin: { left: 80, bottom: 90, right: 50, top: 40 },
+    responsiveWidth: true,
+    margin: { left: 80, bottom: 50, right: 20, top: 40 },
     xAccessor: "wave",
     yAccessor: "value",
     yExtent: [0, 30],
@@ -62,7 +62,7 @@ function LineChart(props) {
 
 export default function Home(props) {
   const charts = props.charts.map((c, i) => {
-    return (<div style={{ display: "flex", flexDirection: "column", flexBasis: "100%", flex: "1", margin: "10px" }} key={`chart-${i}`}>
+    return (<div style={{ display: "flex", flexDirection: "column", flexBasis: "100%", flex: "1", margin: "10px", minWidth: "300px" }} key={`chart-${i}`}>
       <LineChart
         id={`chart-${i}`}
         labels={props.labels}

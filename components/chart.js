@@ -1,7 +1,7 @@
-import XYFrame from "semiotic/lib/XYFrame"
+import ResponsiveXYFrame  from "semiotic/lib/ResponsiveXYFrame"
 
 function ChartComponent(props) {
-    return <XYFrame {...props} />;
+    return <ResponsiveXYFrame {...props} />;
 }
 
 export default ChartComponent;
