@@ -1,52 +1,63 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import ChartComponent from "../components/chart"
 import fs from 'fs'
 import path from 'path'
+import dynamic from 'next/dynamic'
 
+const Chart = dynamic(
+  () => import('../components/chart'),
+  { ssr: false }
+)
 function LineChart(props) {
-  return <ChartComponent chartId={props.id} height="450px" type="line" data={{
-    labels: props.labels,
-    datasets: [props.dataset]
-  }} options={{
-    responsive: true,
-    maintainAspectRatio: false,
-    title: {
-      display: true,
-      text: props.title
-    },
-    plugins: {
-      datalabels: {
-        align: "end"
+  var coordinates = props.labels.map((l, i) => {
+    return {
+      value: props.chart.data[i],
+      wave: i
+    };
+  });
+  const frameProps = {
+    lines: [
+      {
+        coordinates: coordinates
       }
-    },
-    legend: { display: false },
-    layout: {
-      padding: {
-        left: 0,
-        right: 20,
-        top: 0,
-        bottom: 0
-      }
-    },
-    scales: {
-      xAxes: [{ gridLines: { display: false } }],
-      yAxes: [{
-        gridLines: {
-          display: false
-        },
-        ticks: {
-          display: false,
-          suggestedMin: 0,
-          suggestedMax: 30
-        },
-        scaleLabel: {
-          display: true,
-          labelString: props.yAxisLabel
-        }
-      }]
-    }
-  }} />;
+    ],
+    size: [400, 450],
+    margin: { left: 80, bottom: 90, right: 50, top: 40 },
+    xAccessor: "wave",
+    yAccessor: "value",
+    yExtent: [0, 30],
+    lineStyle: (d, i) => ({
+      stroke: "#3e95cd",
+      strokeWidth: 2,
+      fill: "none"
+    }),
+    title: (
+      <text textAnchor="middle">
+        {props.chart.title}
+      </text>
+    ),
+    axes: [
+      {
+        orient: "left",
+        label: props.chart.valueLabel,
+        tickLineGenerator: ({ xy }) => { return null; }
+      },
+      {
+        orient: "bottom",
+        tickValues: props.labels.map((l, i) => i),
+        tickFormat: i => props.labels[i],
+        tickLineGenerator: ({ xy }) => { return null; }
+      }],
+    showLinePoints: true,
+    hoverAnnotation: true,
+    tooltipContent: d => (
+      <div>
+        <p><strong>{d.wave}. týden: </strong><br />
+          {props.chart.valueLabel}: {d.value}</p>
+      </div>
+    )
+  };
+  return <Chart {...frameProps} />;
 }
 
 export default function Home(props) {
@@ -55,15 +66,7 @@ export default function Home(props) {
       <LineChart
         id={`chart-${i}`}
         labels={props.labels}
-        dataset={{
-          data: c.data,
-          label: c.valueLabel,
-          borderColor: "#3e95cd",
-          fill: false,
-          lineTension: 0
-        }}
-        title={c.title}
-        yAxisLabel={c.valueLabel}
+        chart={c}
       />
     </div>);
   });
