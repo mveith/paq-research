@@ -38,13 +38,29 @@ export default function Test(props) {
                     </div>
                 </div>
             </div>
-            <div style={{ padding: "10px", margin: "1rem" }}>
+            <div style={{ padding: "10px", margin: "1rem", display: "flex", flexDirection: "column" }}>
                 <h1>Jaký má epidemie ekonomický dopad na domácnosti?</h1>
                 <p>Ekonomické dopady na domácnosti se vyvíjejí - podle toho, jak lidé ztratili práci, či jim byla redukována mzda.
                 Existuje malá velmi riziková skupina zasažená poklesem příjmů a zároveň bez úspor, která může mít velké ekonomické prolémy brzy + skupina lehčeji zasažených lidí,
                 která může měnit spotřební chování, či ji může krize dostihnout později.
                 </p>
-                <p><img src="/charts.png" alt="charts" width="1500px"/></p>
+                <div style={{ display: "flex", flexDirection: "row" }}>
+                    <div><img src="/charts.png" alt="charts" /></div>
+                    <ul style={{ listStyle: "none", flexBasis: "20%" }}>
+                        <li>
+                            <h2 style={{ color: "rgb(129, 143, 233)" }}>V poho skupina</h2>
+                            <p>V poho skupina</p>
+                        </li>
+                        <li>
+                            <h2 style={{ color: "rgb(238, 190, 94)" }}>Lehce ekonomicky zasažení</h2>
+                            <p>Jejich příjem klesl alespoň o 10% a mají úspory alespoň na půl roku</p>
+                        </li>
+                        <li>
+                            <h2 style={{ color: "rgb(233, 129, 129)" }}>Těžce ekonoomicky zasažení</h2>
+                            <p>Jejich příjem klesl o více než 30% a mají úspory maximálně na 2 měsíce</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     )
