@@ -45,7 +45,20 @@ export default function Test(props) {
                 která může měnit spotřební chování, či ji může krize dostihnout později.
                 </p>
                 <div style={{ display: "flex", flexDirection: "row" }}>
-                    <div><img src="/charts.png" alt="charts" /></div>
+                    <div style={{ display: "flex", flexDirection: "column" }}>
+                        <div style={{ display: "flex", flexDirection: "row" }}>
+                            <div style={{ margin: "0 20px" }}>
+                                <button className="button button-left">souhrnný ukazatel</button>
+                                <button className="button button-right">jednotlivé ukazatele</button>
+                            </div>
+
+                            <div style={{ margin: "0 20px" }}>
+                                <button className="button button-left">celkem</button>
+                                <button className="button button-right">podle skupin</button>
+                            </div>
+                        </div>
+                        <img src="/charts.png" alt="charts" />
+                    </div>
                     <ul style={{ listStyle: "none", flexBasis: "20%" }}>
                         <li>
                             <h2 style={{ color: "rgb(129, 143, 233)" }}>V poho skupina</h2>
