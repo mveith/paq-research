@@ -1,9 +1,9 @@
 import Layout from '../components/layout';
 
-export default function Home() {
+export default function About() {
     return (
         <Layout>
-            <h1>Život během pandemie</h1>
+            <h1>O projektu</h1>
             <p>TBD...</p>
         </Layout>
     )
