@@ -104,6 +104,6 @@ export async function getStaticProps(context) {
   const filePath = path.join(process.cwd(), 'data.json');
   const fileContent = fs.readFileSync(filePath, 'utf8');
   return {
-    props: JSON.parse(fileContent)
+    props: JSON.parse(fileContent).activities
   }
 }

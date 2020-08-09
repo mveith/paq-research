@@ -1,5 +1,6 @@
 import Head from 'next/head'
-
+import fs from 'fs'
+import path from 'path'
 import dynamic from 'next/dynamic'
 
 const Chart = dynamic(
@@ -7,50 +8,38 @@ const Chart = dynamic(
     { ssr: false }
 )
 function AreaChart(props) {
-    const theme = ["#ac58e5", "#E0488B", "#9fd0cb", "#e0d33a", "#7566ff", "#533f82", "#7a255d", "#365350", "#a19a11", "#3f4482"]
-    const frameProps = {
-        /* --- Data --- */
-        lines: [{
-            title: "Ex", coordinates: [{ week: 1, grossWeekly: 327616, theaterCount: 4, theaterAvg: 81904, date: "2015-04-10", rank: 18 },
-            { week: 2, grossWeekly: 1150814, theaterCount: 39, theaterAvg: 29508, date: "2015-04-17", rank: 15 },]
-        },
-        {
-            title: "Far", coordinates: [{ week: 1, grossWeekly: 240160, theaterCount: 10, theaterAvg: 24016, date: "2015-05-01", rank: 24 },
-            { week: 2, grossWeekly: 1090487, theaterCount: 99, theaterAvg: 11015, date: "2015-05-08", rank: 15 },]
-        }],
+    const values = props;
+    const lines = values.lines.map(l => { return { coordinates: l.map((v, i) => { return { week: i + 1, value: v }; }) }; });
 
-        /* --- Size --- */
+    const frameProps = {
+        lines: lines,
+
         size: [300, 200],
         margin: { left: 80, bottom: 10, right: 10, top: 40 },
 
-        /* --- Layout --- */
-        lineType: "area",
+        lineType: "stackedarea",
 
-        /* --- Process --- */
         xAccessor: "week",
-        yAccessor: "theaterCount",
-        yExtent: [0],
+        yAccessor: "value",
+        yExtent: [0, 50],
         lineDataAccessor: "coordinates",
 
-        /* --- Customize --- */
         lineStyle: (d, i) => ({
-            stroke: theme[i],
-            strokeWidth: 2,
-            fill: theme[i],
-            fillOpacity: 0.6
+            fill: values.colors[i],
+            fillOpacity: 0.8
         }),
         title: (
             <text textAnchor="middle">
-                TODO
+                {values.title}
             </text>
         ),
-        axes: [{ orient: "left",  tickFormat: function (e) { return e + "%" } }]
+        axes: [{ orient: "left", baseline: false, showOutboundTickLines: false, tickLineGenerator: e => null, tickFormat: function (e) { return e + "%" } }]
     };
     return <Chart {...frameProps} />;
 }
 
 export default function Layout(props) {
-    const charts = [0, 1, 2, 3, 4, 5].map(_ => <AreaChart />);
+    const charts = props.groups.map(v => <AreaChart {...v} />);
     return (
         <div style={{ width: "100%", display: "flex", height: "100vh", fontFamily: "'Fira Sans', sans-serif" }}>
             <Head>
@@ -128,4 +117,12 @@ export default function Layout(props) {
             </div>
         </div>
     )
+}
+
+export async function getStaticProps(context) {
+    const filePath = path.join(process.cwd(), 'data.json');
+    const fileContent = fs.readFileSync(filePath, 'utf8');
+    return {
+        props: JSON.parse(fileContent).impacts
+    }
 }
