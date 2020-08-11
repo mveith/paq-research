@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import fs from 'fs'
 import path from 'path'
 import dynamic from 'next/dynamic'
@@ -27,14 +26,37 @@ function ImpactChart(props) {
 
         lineStyle: (d, i) => ({
             fill: values.colors[i],
-            fillOpacity: 0.8
+            fillOpacity: 1
         }),
         title: (
             <text textAnchor="middle">
                 {values.title}
             </text>
         ),
-        axes: [{ orient: "left", baseline: false, showOutboundTickLines: false, tickLineGenerator: e => null, tickFormat: function (e) { return e + "%" } }]
+        axes: [
+            {
+                orient: "left", baseline: false, showOutboundTickLines: false, tickLineGenerator: e => null, tickFormat: function (e) { return e + "%" }
+            },
+            {
+                orient: "bottom", ticks: values.weeks, tickLineGenerator: ({ xy }) => (
+                    <line
+                        key={`line-${xy.y1}-${xy.x1}`}
+                        x1={xy.x1}
+                        x2={xy.x2}
+                        y1={xy.y1}
+                        y2={xy.y2}
+                        style={{
+                            strokeDasharray: "5 5",
+                            stroke: "gray",
+                            strokeOpacity: 0.25
+                        }}
+                    />
+                )
+            }
+        ],
+        hoverAnnotation: [
+            { type: "x", disable: ["connector", "note"] }
+        ]
     };
     return <Chart {...frameProps} />;
 }
