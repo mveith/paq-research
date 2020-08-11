@@ -2,18 +2,18 @@ import fs from 'fs'
 import path from 'path'
 import dynamic from 'next/dynamic'
 import Layout from '../components/layout';
+import { useState } from 'react';
 
 const Chart = dynamic(
     () => import('../components/chart'),
     { ssr: false }
 )
 function ImpactChart(props) {
-    const values = props;
+    const values = props.values;
     const lines = values.lines.map(l => { return { coordinates: l.map((v, i) => { return { week: i + 1, value: v }; }) }; });
 
     const frameProps = {
         lines: lines,
-
         size: [300, 200],
         margin: { left: 80, bottom: 10, right: 10, top: 40 },
 
@@ -56,13 +56,21 @@ function ImpactChart(props) {
         ],
         hoverAnnotation: [
             { type: "x", disable: ["connector", "note"] }
-        ]
+        ],
+        annotations: props.annotation,
+        customHoverBehavior: x => props.onHover(x)
     };
     return <Chart {...frameProps} />;
 }
 
 export default function Home(props) {
-    const charts = props.groups.map(v => <ImpactChart {...v} />);
+    const [annotation, setAnnotation] = useState();
+    const charts = props.groups.map(v => <ImpactChart values={v} annotation={annotation} onHover={x => {
+        if (x) {
+            setAnnotation([{ type: "xy", week: x.week, disable: ["connector", "note"] }]);
+        }
+        else { setAnnotation([]); }
+    }} />);
     return (
         <Layout>
             <h1>Jaký má epidemie ekonomický dopad na domácnosti?</h1>
