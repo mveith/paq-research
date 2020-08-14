@@ -67,7 +67,7 @@ export default function Home(props) {
     const [annotation, setAnnotation] = useState();
     const charts = props.groups.map(v => <ImpactChart values={v} annotation={annotation} onHover={x => {
         if (x) {
-            setAnnotation([{ type: "xy", week: x.week, disable: ["connector", "note"] }]);
+            setAnnotation([{ type: "x", week: x.week, disable: ["connector", "note"] }]);
         }
         else { setAnnotation([]); }
     }} />);
