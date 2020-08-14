@@ -12,6 +12,10 @@ function ImpactChart(props) {
     const values = props.values;
     const lines = values.lines.map(l => { return { coordinates: l.map((v, i) => { return { week: i + 1, value: v }; }) }; });
 
+    const yAxis = props.showYAxis ?
+        { orient: "left", tickValues: [0, 100], baseline: false, showOutboundTickLines: false, tickLineGenerator: e => null, tickFormat: function (e) { return e + "%" } } :
+        { orient: "left", ticks: 0, baseline: false, showOutboundTickLines: false, tickLineGenerator: e => null, tickFormat: e => null };
+
     const frameProps = {
         lines: lines,
         size: [300, 200],
@@ -21,7 +25,7 @@ function ImpactChart(props) {
 
         xAccessor: "week",
         yAccessor: "value",
-        yExtent: [0, 50],
+        yExtent: [props.yMin, props.yMax],
         lineDataAccessor: "coordinates",
 
         lineStyle: (d, i) => ({
@@ -34,9 +38,7 @@ function ImpactChart(props) {
             </text>
         ),
         axes: [
-            {
-                orient: "left", baseline: false, showOutboundTickLines: false, tickLineGenerator: e => null, tickFormat: function (e) { return e + "%" }
-            },
+            yAxis,
             {
                 orient: "bottom", ticks: values.weeks, tickLineGenerator: ({ xy }) => (
                     <line
@@ -65,12 +67,14 @@ function ImpactChart(props) {
 
 export default function Home(props) {
     const [annotation, setAnnotation] = useState();
-    const charts = props.groups.map(v => <ImpactChart values={v} annotation={annotation} onHover={x => {
-        if (x) {
-            setAnnotation([{ type: "x", week: x.week, disable: ["connector", "note"] }]);
-        }
-        else { setAnnotation([]); }
-    }} />);
+    const charts = props.groups.map((v, i) => {
+        return (<ImpactChart yMin={0} yMax={100} showYAxis={i % 3 === 0} values={v} annotation={annotation} onHover={x => {
+            if (x) {
+                setAnnotation([{ type: "x", week: x.week, disable: ["connector", "note"] }]);
+            }
+            else { setAnnotation([]); }
+        }} />);
+    });
     return (
         <Layout>
             <h1>Jaký má epidemie ekonomický dopad na domácnosti?</h1>
