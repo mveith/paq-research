@@ -12,6 +12,15 @@ function ImpactChart(props) {
     const values = props.values;
     const lines = values.lines.map(l => { return { coordinates: l.map((v, i) => { return { week: i + 1, value: v }; }) }; });
 
+    const tooltipAnnotations = props.annotation ? values.lines.map((l, i) => {
+        return {
+            type: "frame-hover",
+            x: props.annotation,
+            y: values.lines.slice(i).map(pl => pl[props.annotation - 1]).reduce((a, b) => a + b, 0)
+        };
+    }) : [];
+    const annotations = [{ type: "x", week: props.annotation, disable: ["connector", "note"] }].concat(tooltipAnnotations);
+
     const yAxis = props.showYAxis ?
         { orient: "left", tickValues: [0, 100], baseline: false, showOutboundTickLines: false, tickLineGenerator: e => null, tickFormat: function (e) { return e + "%" } } :
         { orient: "left", ticks: 0, baseline: false, showOutboundTickLines: false, tickLineGenerator: e => null, tickFormat: e => null };
@@ -57,8 +66,14 @@ function ImpactChart(props) {
         hoverAnnotation: [
             { type: "x", disable: ["connector", "note"] }
         ],
-        annotations: props.annotation,
-        customHoverBehavior: x => props.onHover ? props.onHover(x) : null
+        annotations: annotations,
+        customHoverBehavior: x => props.onHover ? props.onHover(x) : null,
+        tooltipContent: (d => {
+            return (
+                <div className="tooltip-content">
+                    <p>Bla</p>
+                </div>);
+        })
     };
     return <Chart {...frameProps} />;
 }
@@ -69,9 +84,9 @@ export default function Home(props) {
     const charts = props.groups.map((v, i) => {
         return (<ImpactChart yMin={0} yMax={100} showYAxis={i % 3 === 0} showXAxis={false} values={v} size={[300, 200]} annotation={annotation} onHover={x => {
             if (x) {
-                setAnnotation([{ type: "x", week: x.week, disable: ["connector", "note"] }]);
+                setAnnotation(x.week);
             }
-            else { setAnnotation([]); }
+            else { setAnnotation(); }
         }} />);
     });
     const totalChart = (<ImpactChart yMin={0} yMax={100} showYAxis={true} showXAxis={true} values={props.total} size={[800, 600]} />);
