@@ -67,6 +67,7 @@ function ImpactChart(props) {
 
 export default function Home(props) {
     const [annotation, setAnnotation] = useState();
+    const [total, setTotal] = useState(false);
     const charts = props.groups.map((v, i) => {
         return (<ImpactChart yMin={0} yMax={100} showYAxis={i % 3 === 0} values={v} annotation={annotation} onHover={x => {
             if (x) {
@@ -84,16 +85,11 @@ export default function Home(props) {
                 </p>
             <div style={{ display: "flex", flexDirection: "row" }}>
                 <div style={{ display: "flex", flexDirection: "column" }}>
-                    <div style={{ display: "flex", flexDirection: "row" }}>
-                        <div style={{ margin: "0 20px" }}>
-                            <button className="button button-left">souhrnný ukazatel</button>
-                            <button className="button button-right">jednotlivé ukazatele</button>
-                        </div>
-
-                        <div style={{ margin: "0 20px" }}>
-                            <button className="button button-left">celkem</button>
-                            <button className="button button-right">podle skupin</button>
-                        </div>
+                    <div>
+                        <input type="radio" id="total" name="total" value="total" checked={total} onChange={e => setTotal(true)} />
+                        <label for="total">celkem</label>
+                        <input type="radio" id="groups" name="groups" value="groups" checked={!total} onChange={e => setTotal(false)} />
+                        <label for="groups">podle skupin</label>
                     </div>
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", }}>{charts}</div>
                 </div>
