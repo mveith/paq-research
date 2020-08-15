@@ -16,7 +16,8 @@ function ImpactChart(props) {
         return {
             type: "frame-hover",
             x: props.annotation,
-            y: values.lines.slice(i).map(pl => pl[props.annotation - 1]).reduce((a, b) => a + b, 0)
+            y: values.lines.slice(i).map(pl => pl[props.annotation - 1]).reduce((a, b) => a + b, 0),
+            value: l[props.annotation - 1]
         };
     }) : [];
     const annotations = [{ type: "x", week: props.annotation, disable: ["connector", "note"] }].concat(tooltipAnnotations);
@@ -71,7 +72,7 @@ function ImpactChart(props) {
         tooltipContent: (d => {
             return (
                 <div className="tooltip-content">
-                    <p>Bla</p>
+                    <p>Vlna {d.x}: {d.value} %</p>
                 </div>);
         })
     };
@@ -102,7 +103,7 @@ export default function Home(props) {
         <Layout>
             <h1>Jaký má epidemie ekonomický dopad na domácnosti?</h1>
             <p>Ekonomické dopady na domácnosti se vyvíjejí - podle toho, jak lidé ztratili práci, či jim byla redukována mzda.
-            Existuje malá velmi riziková skupina zasažená poklesem příjmů a zároveň bez úspor, která může mít velké ekonomické prolémy brzy + skupina lehčeji zasažených lidí,
+            Existuje malá velmi riziková skupina zasažená poklesem příjmů a zároveň bez úspor, která může mít velké ekonomické problémy brzy + skupina lehčeji zasažených lidí,
             která může měnit spotřební chování, či ji může krize dostihnout později.
                 </p>
             <div style={{ display: "flex", flexDirection: "row" }}>
