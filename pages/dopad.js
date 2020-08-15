@@ -16,10 +16,26 @@ function ImpactChart(props) {
         { orient: "left", tickValues: [0, 100], baseline: false, showOutboundTickLines: false, tickLineGenerator: e => null, tickFormat: function (e) { return e + "%" } } :
         { orient: "left", ticks: 0, baseline: false, showOutboundTickLines: false, tickLineGenerator: e => null, tickFormat: e => null };
 
+    const xAxis = {
+        orient: "bottom", ticks: values.weeks, tickFormat: (e => props.showXAxis ? `${e}.${e === 1 ? "vlna" : ""}` : null), tickLineGenerator: ({ xy }) => (
+            <line
+                key={`line-${xy.y1}-${xy.x1}`}
+                x1={xy.x1}
+                x2={xy.x2}
+                y1={xy.y1}
+                y2={xy.y2}
+                style={{
+                    strokeDasharray: "5 5",
+                    stroke: "gray",
+                    strokeOpacity: 0.25
+                }}
+            />
+        )
+    };
     const frameProps = {
         lines: lines,
         size: props.size,
-        margin: { left: 80, bottom: 10, right: 10, top: 40 },
+        margin: { left: 80, bottom: props.showXAxis ? 50 : 10, right: 10, top: 40 },
 
         lineType: "stackedarea",
 
@@ -37,25 +53,7 @@ function ImpactChart(props) {
                 {values.title}
             </text>
         ),
-        axes: [
-            yAxis,
-            {
-                orient: "bottom", ticks: values.weeks, tickLineGenerator: ({ xy }) => (
-                    <line
-                        key={`line-${xy.y1}-${xy.x1}`}
-                        x1={xy.x1}
-                        x2={xy.x2}
-                        y1={xy.y1}
-                        y2={xy.y2}
-                        style={{
-                            strokeDasharray: "5 5",
-                            stroke: "gray",
-                            strokeOpacity: 0.25
-                        }}
-                    />
-                )
-            }
-        ],
+        axes: [yAxis, xAxis],
         hoverAnnotation: [
             { type: "x", disable: ["connector", "note"] }
         ],
@@ -69,14 +67,14 @@ export default function Home(props) {
     const [annotation, setAnnotation] = useState();
     const [total, setTotal] = useState(false);
     const charts = props.groups.map((v, i) => {
-        return (<ImpactChart yMin={0} yMax={100} showYAxis={i % 3 === 0} values={v} size={[300,200]} annotation={annotation} onHover={x => {
+        return (<ImpactChart yMin={0} yMax={100} showYAxis={i % 3 === 0} showXAxis={false} values={v} size={[300, 200]} annotation={annotation} onHover={x => {
             if (x) {
                 setAnnotation([{ type: "x", week: x.week, disable: ["connector", "note"] }]);
             }
             else { setAnnotation([]); }
         }} />);
     });
-    const totalChart = (<ImpactChart yMin={0} yMax={100} showYAxis={true} values={props.total}  size={[800,600]} />);
+    const totalChart = (<ImpactChart yMin={0} yMax={100} showYAxis={true} showXAxis={true} values={props.total} size={[800, 600]} />);
     const content = total ?
         (<div >{totalChart}</div>) :
         (<div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", }}>{charts}</div>);
