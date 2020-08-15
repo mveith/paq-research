@@ -10,7 +10,7 @@ const Chart = dynamic(
 )
 function ImpactChart(props) {
     const values = props.values;
-    const lines = values.lines.map(l => { return { coordinates: l.map((v, i) => { return { week: i + 1, value: v }; }) }; });
+    const lines = values.lines.map((l, li) => { return { coordinates: l.map((v, i) => { return { week: i + 1, value: values.lines.slice(li).map(pl => pl[i]).reduce((a, b) => a + b, 0) }; }) }; });
 
     const tooltipAnnotations = props.annotation ? values.lines.map((l, i) => {
         return {
@@ -46,7 +46,7 @@ function ImpactChart(props) {
         size: props.size,
         margin: { left: 80, bottom: props.showXAxis ? 50 : 10, right: 10, top: 40 },
 
-        lineType: "stackedarea",
+        lineType: "area",
 
         xAccessor: "week",
         yAccessor: "value",
