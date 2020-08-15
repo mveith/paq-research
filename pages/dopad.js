@@ -18,7 +18,7 @@ function ImpactChart(props) {
 
     const frameProps = {
         lines: lines,
-        size: [300, 200],
+        size: props.size,
         margin: { left: 80, bottom: 10, right: 10, top: 40 },
 
         lineType: "stackedarea",
@@ -60,7 +60,7 @@ function ImpactChart(props) {
             { type: "x", disable: ["connector", "note"] }
         ],
         annotations: props.annotation,
-        customHoverBehavior: x => props.onHover(x)
+        customHoverBehavior: x => props.onHover ? props.onHover(x) : null
     };
     return <Chart {...frameProps} />;
 }
@@ -69,13 +69,17 @@ export default function Home(props) {
     const [annotation, setAnnotation] = useState();
     const [total, setTotal] = useState(false);
     const charts = props.groups.map((v, i) => {
-        return (<ImpactChart yMin={0} yMax={100} showYAxis={i % 3 === 0} values={v} annotation={annotation} onHover={x => {
+        return (<ImpactChart yMin={0} yMax={100} showYAxis={i % 3 === 0} values={v} size={[300,200]} annotation={annotation} onHover={x => {
             if (x) {
                 setAnnotation([{ type: "x", week: x.week, disable: ["connector", "note"] }]);
             }
             else { setAnnotation([]); }
         }} />);
     });
+    const totalChart = (<ImpactChart yMin={0} yMax={100} showYAxis={true} values={props.total}  size={[800,600]} />);
+    const content = total ?
+        (<div >{totalChart}</div>) :
+        (<div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", }}>{charts}</div>);
     return (
         <Layout>
             <h1>Jaký má epidemie ekonomický dopad na domácnosti?</h1>
@@ -91,7 +95,7 @@ export default function Home(props) {
                         <input type="radio" id="groups" name="groups" value="groups" checked={!total} onChange={e => setTotal(false)} />
                         <label for="groups">podle skupin</label>
                     </div>
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", }}>{charts}</div>
+                    {content}
                 </div>
                 <ul style={{ listStyle: "none", flexBasis: "20%" }}>
                     <li>
