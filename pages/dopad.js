@@ -89,7 +89,12 @@ export default function Home(props) {
             else { setAnnotation(); }
         }} />);
     });
-    const totalChart = (<ImpactChart yMin={0} yMax={100} showYAxis={true} showXAxis={true} values={props.total} size={[800, 600]} />);
+    const totalChart = (<ImpactChart yMin={0} yMax={100} showYAxis={true} showXAxis={true} values={props.total} size={[800, 600]} annotation={annotation} onHover={x => {
+        if (x) {
+            setAnnotation(x.week);
+        }
+        else { setAnnotation(); }
+    }} />);
     const content = total ?
         (<div >{totalChart}</div>) :
         (<div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", }}>{charts}</div>);
