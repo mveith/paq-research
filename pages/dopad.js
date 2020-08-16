@@ -55,7 +55,7 @@ function generateTooltip(week, props) {
                 style={{
                     width: "10px",
                     height: "10px",
-                    backgroundColor: values.colors[i],
+                    backgroundColor: props.colors[i],
                     display: "inline-block",
                     position: "absolute",
                     top: "8px",
@@ -66,7 +66,7 @@ function generateTooltip(week, props) {
             <p
                 key={`tooltip_p_${i}`}
                 style={{ display: "inline-block", margin: "0 5px 0 15px" }}
-            >{`${"bla"} =`}</p>
+            >{`${props.titles[i]} =`}</p>
             <p key={`tooltip_p_val_${i}`} style={{ display: "inline-block", fontWeight: "bold", margin: "0" }}>
                 {`${l[week - 1]} %`}
             </p>
@@ -85,7 +85,7 @@ function ImpactChart(props) {
         { orient: "left", ticks: 0, baseline: false, showOutboundTickLines: false, tickLineGenerator: e => null, tickFormat: e => null };
 
     const xAxis = {
-        orient: "bottom", ticks: values.weeks, tickFormat: (e => props.showXAxis ? `${e}.${e === 1 ? "vlna" : ""}` : null), tickLineGenerator: ({ xy }) => (
+        orient: "bottom", ticks: props.weeks, tickFormat: (e => props.showXAxis ? `${e}.${e === 1 ? "vlna" : ""}` : null), tickLineGenerator: ({ xy }) => (
             <line
                 key={`line-${xy.y1}-${xy.x1}`}
                 x1={xy.x1}
@@ -113,7 +113,7 @@ function ImpactChart(props) {
         lineDataAccessor: "coordinates",
 
         lineStyle: (d, i) => ({
-            fill: values.colors[i],
+            fill: props.colors[i],
             fillOpacity: 1
         }),
         pointStyle: { fill: "none", stroke: "gray", strokeWidth: "1px" },
@@ -137,14 +137,14 @@ export default function Home(props) {
     const [annotation, setAnnotation] = useState();
     const [total, setTotal] = useState(false);
     const charts = props.groups.map((v, i) => {
-        return (<ImpactChart yMin={0} yMax={100} showYAxis={i % 3 === 0} showXAxis={false} values={v} size={[300, 200]} annotation={annotation} onHover={x => {
+        return (<ImpactChart weeks={props.weeks} colors={props.colors} titles={props.titles} yMin={0} yMax={100} showYAxis={i % 3 === 0} showXAxis={false} values={v} size={[300, 200]} annotation={annotation} onHover={x => {
             if (x) {
                 setAnnotation({ week: x.week, lineIndex: x.parentLine.key });
             }
             else { setAnnotation(); }
         }} />);
     });
-    const totalChart = (<ImpactChart yMin={0} yMax={100} showYAxis={true} showXAxis={true} values={props.total} size={[800, 600]} annotation={annotation} onHover={x => {
+    const totalChart = (<ImpactChart weeks={props.weeks} colors={props.colors} titles={props.titles} yMin={0} yMax={100} showYAxis={true} showXAxis={true} values={props.total} size={[800, 600]} annotation={annotation} onHover={x => {
         if (x) {
             setAnnotation({ week: x.week, lineIndex: x.parentLine.key });
         }
