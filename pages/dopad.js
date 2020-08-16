@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import dynamic from 'next/dynamic'
 import Layout from '../components/layout';
+import SharedTooltip from '../components/sharedTooltip';
 import { useState } from 'react';
 
 const Chart = dynamic(
@@ -31,49 +32,6 @@ function generateAnnotations(props) {
     else return [];
 }
 
-function generateTooltip(week, props) {
-    const values = props.values;
-    return (<div className="tooltip-content" style={{
-        background: "rgba(255,255,255,0.6)",
-        minWidth: "max-content",
-        whiteSpace: "nowrap",
-        padding: "10px",
-        border: "1px solid black",
-        fontSize: "small"
-    }}>
-        <div key={"header_multi"} style={{
-            fontWeight: "bold",
-            borderBottom: "thin solid black",
-            marginBottom: "10px",
-            textAlign: "center"
-        }}>
-            {`${week}. vlna:`}
-        </div>
-        {values.lines.map((l, i) => <div key={`tooltip_line_${i}`} style={{ position: "relative", display: "block", textAlign: "left" }}>
-            <p
-                key={`tooltip_color_${i}`}
-                style={{
-                    width: "10px",
-                    height: "10px",
-                    backgroundColor: props.colors[i],
-                    display: "inline-block",
-                    position: "absolute",
-                    top: "8px",
-                    left: "0",
-                    margin: "0"
-                }}
-            />
-            <p
-                key={`tooltip_p_${i}`}
-                style={{ display: "inline-block", margin: "0 5px 0 15px" }}
-            >{`${props.titles[i]} =`}</p>
-            <p key={`tooltip_p_val_${i}`} style={{ display: "inline-block", fontWeight: "bold", margin: "0" }}>
-                {`${l[week - 1]} %`}
-            </p>
-        </div>)}
-    </div>);
-}
-
 function ImpactChart(props) {
     const values = props.values;
     const lines = values.lines.map((l, li) => { return { coordinates: l.map((v, i) => { return { week: i + 1, value: values.lines.slice(li).map(pl => pl[i]).reduce((a, b) => a + b, 0) }; }) }; });
@@ -100,6 +58,15 @@ function ImpactChart(props) {
             />
         )
     };
+
+    const convertedLines = values.lines.map((line, lineIndex) => {
+        var res = {
+            lineValues: line,
+            color: props.colors[lineIndex],
+            title: props.titles[lineIndex]
+        }
+        return res;
+    });
     const frameProps = {
         lines: lines,
         size: props.size,
@@ -128,7 +95,7 @@ function ImpactChart(props) {
         ],
         annotations: annotations,
         customHoverBehavior: x => props.onHover ? props.onHover(x) : null,
-        tooltipContent: d => generateTooltip(d.x, props)
+        tooltipContent: d => <SharedTooltip week={d.x} lines={convertedLines} />
     };
     return <Chart {...frameProps} />;
 }
