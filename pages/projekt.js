@@ -1,8 +1,8 @@
-import Layout2 from '../components/layout2';
+import Layout from '../components/layout';
 
 export default function About() {
     return (
-        <Layout2>
+        <Layout>
             <h1>O projektu</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat maecenas volutpat blandit aliquam etiam erat. Blandit massa enim nec dui nunc mattis enim ut. Aliquam vestibulum morbi blandit cursus risus at ultrices. Dictum varius duis at consectetur lorem donec. Ipsum consequat nisl vel pretium. Habitant morbi tristique senectus et netus et. Tempor commodo ullamcorper a lacus vestibulum sed arcu non. At ultrices mi tempus imperdiet nulla. Placerat vestibulum lectus mauris ultrices eros in cursus turpis massa. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Faucibus pulvinar elementum integer enim. Fermentum et sollicitudin ac orci phasellus egestas tellus rutrum. Tellus integer feugiat scelerisque varius. Consequat id porta nibh venenatis cras sed. Interdum posuere lorem ipsum dolor sit amet. Sit amet cursus sit amet dictum sit. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.</p>
 
@@ -13,6 +13,6 @@ export default function About() {
             <p>Magna etiam tempor orci eu lobortis. Et ligula ullamcorper malesuada proin libero nunc consequat interdum. Duis ultricies lacus sed turpis tincidunt id aliquet risus. Faucibus a pellentesque sit amet porttitor eget. Suspendisse in est ante in nibh mauris cursus. Habitant morbi tristique senectus et netus et malesuada fames ac. Nam aliquam sem et tortor consequat id. Ut placerat orci nulla pellentesque dignissim. Elementum sagittis vitae et leo duis ut. Convallis a cras semper auctor neque vitae tempus quam pellentesque. Auctor augue mauris augue neque.</p>
 
             <p>Sit amet nisl purus in mollis nunc sed id. Nibh tortor id aliquet lectus proin. Sed enim ut sem viverra aliquet eget sit amet. Volutpat maecenas volutpat blandit aliquam etiam. Ultricies lacus sed turpis tincidunt id aliquet. Tristique nulla aliquet enim tortor at. Velit sed ullamcorper morbi tincidunt ornare massa eget. Laoreet non curabitur gravida arcu. Quis auctor elit sed vulputate mi sit. Pretium fusce id velit ut tortor pretium. Quisque egestas diam in arcu cursus euismod quis viverra nibh. Dictum fusce ut placerat orci nulla pellentesque dignissim. Orci sagittis eu volutpat odio. Diam in arcu cursus euismod. Ut eu sem integer vitae justo eget magna. Risus nec feugiat in fermentum posuere urna nec tincidunt. Eu augue ut lectus arcu.</p>
-        </Layout2>
+        </Layout>
     )
 }

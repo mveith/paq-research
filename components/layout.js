@@ -13,17 +13,17 @@ function ActiveLink({ children, href, style, activeStyle }) {
 
 export default function Layout(props) {
     return (
-        <div style={{ width: "100%", display: "flex", height: "100vh", fontFamily: "'Fira Sans', sans-serif" }}>
+        <div className="main-wrapper">
             <Head>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet" />
             </Head>
-            <div style={{ flexShrink: "0", flexBasis: "12%", padding: "0 10px", margin: "0 1rem", display: "flex", flexDirection: "column" }}>
+            <div style={{ padding: "0 10px", margin: "0 1rem", display: "flex", flexDirection: "column" }}>
                 <header>
                     <h1>život během pandemie</h1>
                     <span><ActiveLink href="/projekt" style={menuItemStyle} activeStyle={activeMenuItemStyle}>O projektu</ActiveLink></span>
                 </header>
-                <div style={{ display: "flex", flexDirection: "column", flex: 1, justifyContent: "space-between" }}>
+                <div className="main-menu">
                     <nav>
                         <div>
                             <h3>EKONOMICKÉ DOPADY</h3>
@@ -50,8 +50,12 @@ export default function Layout(props) {
                     </div>
                 </div>
             </div>
-            <div style={{ padding: "10px", margin: "1rem", display: "flex", flexDirection: "column" }}>
+            <div style={{ padding: "10px", margin: "1rem" }}>
                 {props.children}
+            </div>
+            <div className="main-footer">
+                <hr />
+                <p>výzkumné společnosti PAQ Research, iniciativa IDEA AntiCovid a data sbírá agentura NMS.</p>
             </div>
         </div>
     )

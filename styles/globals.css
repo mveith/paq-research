@@ -37,4 +37,11 @@ a {
         flex: 1;
         justify-content: space-between;
     }
+    .chart-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+    .chart {
+        flex-basis: 100%;
+    }
 }

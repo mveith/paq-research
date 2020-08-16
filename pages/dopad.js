@@ -73,7 +73,7 @@ function ImpactChart(props) {
         margin: { left: 80, bottom: props.showXAxis ? 50 : 10, right: 10, top: 40 },
 
         lineType: "area",
-
+        responsiveWidth: true,
         xAccessor: "week",
         yAccessor: "value",
         yExtent: [props.yMin, props.yMax],
@@ -102,7 +102,7 @@ function ImpactChart(props) {
 
 export default function Home(props) {
     const [annotation, setAnnotation] = useState();
-    const [total, setTotal] = useState(false);
+    const [total, setTotal] = useState(true);
     const charts = props.groups.map((v, i) => {
         return (<ImpactChart key={`impact-chart-${i}`} weeks={props.weeks} colors={props.colors} titles={props.titles} yMin={0} yMax={100} showYAxis={i % 3 === 0} showXAxis={false} values={v} size={[300, 200]} annotation={annotation} onHover={x => {
             if (x) {
@@ -123,34 +123,37 @@ export default function Home(props) {
     return (
         <Layout>
             <h1>Jaký má epidemie ekonomický dopad na domácnosti?</h1>
-            <p>Ekonomické dopady na domácnosti se vyvíjejí - podle toho, jak lidé ztratili práci, či jim byla redukována mzda.
-            Existuje malá velmi riziková skupina zasažená poklesem příjmů a zároveň bez úspor, která může mít velké ekonomické problémy brzy + skupina lehčeji zasažených lidí,
-            která může měnit spotřební chování, či ji může krize dostihnout později.
-                </p>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                    <div>
-                        <input type="radio" id="total" name="total" value="total" checked={total} onChange={e => setTotal(true)} />
-                        <label htmlFor="total">celkem</label>
-                        <input type="radio" id="groups" name="groups" value="groups" checked={!total} onChange={e => setTotal(false)} />
-                        <label htmlFor="groups">podle skupin</label>
-                    </div>
-                    {content}
+            <p>
+                Ekonomické dopady na domácnosti se vyvíjejí - podle toho, jak lidé ztratili práci, či jim byla redukována mzda.
+                Existuje malá velmi riziková skupina zasažená poklesem příjmů a zároveň bez úspor, která může mít velké ekonomické problémy brzy + skupina lehčeji zasažených lidí,
+                která může měnit spotřební chování, či ji může krize dostihnout později.
+            </p>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+                <div>
+                    <input type="radio" id="total" name="total" value="total" checked={total} onChange={e => setTotal(true)} />
+                    <label htmlFor="total">celkem</label>
+                    <input type="radio" id="groups" name="groups" value="groups" checked={!total} onChange={e => setTotal(false)} />
+                    <label htmlFor="groups">podle skupin</label>
                 </div>
-                <ul style={{ listStyle: "none", flexBasis: "20%" }}>
-                    <li>
-                        <h2 style={{ color: "rgb(129, 143, 233)" }}>V poho skupina</h2>
-                        <p>V poho skupina</p>
-                    </li>
-                    <li>
-                        <h2 style={{ color: "rgb(238, 190, 94)" }}>Lehce ekonomicky zasažení</h2>
-                        <p>Jejich příjem klesl alespoň o 10% a mají úspory alespoň na půl roku</p>
-                    </li>
-                    <li>
-                        <h2 style={{ color: "rgb(233, 129, 129)" }}>Těžce ekonoomicky zasažení</h2>
-                        <p>Jejich příjem klesl o více než 30% a mají úspory maximálně na 2 měsíce</p>
-                    </li>
-                </ul>
+                <div className="chart-wrapper">
+                    <div className="chart">{content}</div>
+                    <div className="legend">
+                        <ul style={{ listStyle: "none", flexBasis: "20%" }}>
+                            <li>
+                                <h2 style={{ color: "rgb(129, 143, 233)" }}>V poho skupina</h2>
+                                <p>V poho skupina</p>
+                            </li>
+                            <li>
+                                <h2 style={{ color: "rgb(238, 190, 94)" }}>Lehce ekonomicky zasažení</h2>
+                                <p>Jejich příjem klesl alespoň o 10% a mají úspory alespoň na půl roku</p>
+                            </li>
+                            <li>
+                                <h2 style={{ color: "rgb(233, 129, 129)" }}>Těžce ekonoomicky zasažení</h2>
+                                <p>Jejich příjem klesl o více než 30% a mají úspory maximálně na 2 měsíce</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </Layout>
     )
