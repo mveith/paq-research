@@ -9,27 +9,7 @@ const Chart = dynamic(
     { ssr: false }
 )
 
-const tooltipStyles = {
-    header: {
-        fontWeight: "bold",
-        borderBottom: "thin solid black",
-        marginBottom: "10px",
-        textAlign: "center"
-    },
-    lineItem: { position: "relative", display: "block", textAlign: "left" },
-    title: { display: "inline-block", margin: "0 5px 0 15px" },
-    value: { display: "inline-block", fontWeight: "bold", margin: "0" },
-    wrapper: {
-        background: "rgba(255,255,255,0.6)",
-        minWidth: "max-content",
-        whiteSpace: "nowrap",
-        padding: "10px",
-        border: "1px solid black",
-        fontSize: "small"
-    }
-}
-
-function getAnnotations(props) {
+function generateAnnotations(props) {
     if (props.annotation) {
         const values = props.values;
 
@@ -51,11 +31,54 @@ function getAnnotations(props) {
     else return [];
 }
 
+function generateTooltip(week, props) {
+    const values = props.values;
+    return (<div className="tooltip-content" style={{
+        background: "rgba(255,255,255,0.6)",
+        minWidth: "max-content",
+        whiteSpace: "nowrap",
+        padding: "10px",
+        border: "1px solid black",
+        fontSize: "small"
+    }}>
+        <div key={"header_multi"} style={{
+            fontWeight: "bold",
+            borderBottom: "thin solid black",
+            marginBottom: "10px",
+            textAlign: "center"
+        }}>
+            {`${week}. vlna:`}
+        </div>
+        {values.lines.map((l, i) => <div key={`tooltip_line_${i}`} style={{ position: "relative", display: "block", textAlign: "left" }}>
+            <p
+                key={`tooltip_color_${i}`}
+                style={{
+                    width: "10px",
+                    height: "10px",
+                    backgroundColor: values.colors[i],
+                    display: "inline-block",
+                    position: "absolute",
+                    top: "8px",
+                    left: "0",
+                    margin: "0"
+                }}
+            />
+            <p
+                key={`tooltip_p_${i}`}
+                style={{ display: "inline-block", margin: "0 5px 0 15px" }}
+            >{`${"bla"} =`}</p>
+            <p key={`tooltip_p_val_${i}`} style={{ display: "inline-block", fontWeight: "bold", margin: "0" }}>
+                {`${l[week - 1]} %`}
+            </p>
+        </div>)}
+    </div>);
+}
+
 function ImpactChart(props) {
     const values = props.values;
     const lines = values.lines.map((l, li) => { return { coordinates: l.map((v, i) => { return { week: i + 1, value: values.lines.slice(li).map(pl => pl[i]).reduce((a, b) => a + b, 0) }; }) }; });
 
-    const annotations = getAnnotations(props);
+    const annotations = generateAnnotations(props);
 
     const yAxis = props.showYAxis ?
         { orient: "left", tickValues: [0, 100], baseline: false, showOutboundTickLines: false, tickLineGenerator: e => null, tickFormat: function (e) { return e + "%" } } :
@@ -105,36 +128,7 @@ function ImpactChart(props) {
         ],
         annotations: annotations,
         customHoverBehavior: x => props.onHover ? props.onHover(x) : null,
-        tooltipContent: (d => {
-            return (
-                <div className="tooltip-content" style={tooltipStyles.wrapper}>
-                    <div key={"header_multi"} style={tooltipStyles.header}>
-                        {`${d.x}. vlna:`}
-                    </div>
-                    {values.lines.map((l, i) => <div key={`tooltip_line_${i}`} style={tooltipStyles.lineItem}>
-                        <p
-                            key={`tooltip_color_${i}`}
-                            style={{
-                                width: "10px",
-                                height: "10px",
-                                backgroundColor: values.colors[i],
-                                display: "inline-block",
-                                position: "absolute",
-                                top: "8px",
-                                left: "0",
-                                margin: "0"
-                            }}
-                        />
-                        <p
-                            key={`tooltip_p_${i}`}
-                            style={tooltipStyles.title}
-                        >{`${"bla"} =`}</p>
-                        <p key={`tooltip_p_val_${i}`} style={tooltipStyles.value}>
-                            {`${l[d.x - 1]} %`}
-                        </p>
-                    </div>)}
-                </div>);
-        })
+        tooltipContent: d => generateTooltip(d.x, props)
     };
     return <Chart {...frameProps} />;
 }
@@ -152,7 +146,7 @@ export default function Home(props) {
     });
     const totalChart = (<ImpactChart yMin={0} yMax={100} showYAxis={true} showXAxis={true} values={props.total} size={[800, 600]} annotation={annotation} onHover={x => {
         if (x) {
-            setAnnotation(x.week);
+            setAnnotation({ week: x.week, lineIndex: x.parentLine.key });
         }
         else { setAnnotation(); }
     }} />);
