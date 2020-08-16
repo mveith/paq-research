@@ -21,26 +21,26 @@ export default function Layout(props) {
             <div style={{ flexShrink: "0", flexBasis: "12%", padding: "0 10px", margin: "0 1rem", display: "flex", flexDirection: "column" }}>
                 <header>
                     <h1>život během pandemie</h1>
-                    <span><ActiveLink href="/projekt" style={menuItemStyle} activeStyle={activeMenuItemStyle}><a>O projektu</a></ActiveLink></span>
+                    <span><ActiveLink href="/projekt" style={menuItemStyle} activeStyle={activeMenuItemStyle}>O projektu</ActiveLink></span>
                 </header>
                 <div style={{ display: "flex", flexDirection: "column", flex: 1, justifyContent: "space-between" }}>
                     <nav>
                         <div>
                             <h3>EKONOMICKÉ DOPADY</h3>
                             <ul>
-                                <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}><a>Destabilizace práce</a></ActiveLink></li>
-                                <li><ActiveLink href="/dopad" style={menuItemStyle} activeStyle={activeMenuItemStyle}><a>Ekonomické dopady na domácnosti</a></ActiveLink></li>
-                                <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}><a>Dopady a strategie domácnosti</a></ActiveLink></li>
+                                <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Destabilizace práce</ActiveLink></li>
+                                <li><ActiveLink href="/dopad" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Ekonomické dopady na domácnosti</ActiveLink></li>
+                                <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Dopady a strategie domácnosti</ActiveLink></li>
                             </ul>
                         </div>
 
                         <div>
                             <h3>CHOVÁNÍ A AKTIVITY</h3>
                             <ul>
-                                <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}><a>Celkový profil aktivit</a></ActiveLink></li>
-                                <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}><a>Počet protektivních aktivit</a></ActiveLink></li>
-                                <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}><a>Kontakt s lidmi</a></ActiveLink></li>
-                                <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}><a>Pocity ohledně koronaviru</a></ActiveLink></li>
+                                <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Celkový profil aktivit</ActiveLink></li>
+                                <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Počet protektivních aktivit</ActiveLink></li>
+                                <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Kontakt s lidmi</ActiveLink></li>
+                                <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Pocity ohledně koronaviru</ActiveLink></li>
                             </ul>
                         </div>
                     </nav>

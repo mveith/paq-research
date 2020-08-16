@@ -104,14 +104,14 @@ export default function Home(props) {
     const [annotation, setAnnotation] = useState();
     const [total, setTotal] = useState(false);
     const charts = props.groups.map((v, i) => {
-        return (<ImpactChart weeks={props.weeks} colors={props.colors} titles={props.titles} yMin={0} yMax={100} showYAxis={i % 3 === 0} showXAxis={false} values={v} size={[300, 200]} annotation={annotation} onHover={x => {
+        return (<ImpactChart key={`impact-chart-${i}`} weeks={props.weeks} colors={props.colors} titles={props.titles} yMin={0} yMax={100} showYAxis={i % 3 === 0} showXAxis={false} values={v} size={[300, 200]} annotation={annotation} onHover={x => {
             if (x) {
                 setAnnotation({ week: x.week, lineIndex: x.parentLine.key });
             }
             else { setAnnotation(); }
         }} />);
     });
-    const totalChart = (<ImpactChart weeks={props.weeks} colors={props.colors} titles={props.titles} yMin={0} yMax={100} showYAxis={true} showXAxis={true} values={props.total} size={[800, 600]} annotation={annotation} onHover={x => {
+    const totalChart = (<ImpactChart key="impact-chart-total" weeks={props.weeks} colors={props.colors} titles={props.titles} yMin={0} yMax={100} showYAxis={true} showXAxis={true} values={props.total} size={[800, 600]} annotation={annotation} onHover={x => {
         if (x) {
             setAnnotation({ week: x.week, lineIndex: x.parentLine.key });
         }
@@ -131,9 +131,9 @@ export default function Home(props) {
                 <div style={{ display: "flex", flexDirection: "column" }}>
                     <div>
                         <input type="radio" id="total" name="total" value="total" checked={total} onChange={e => setTotal(true)} />
-                        <label for="total">celkem</label>
+                        <label htmlFor="total">celkem</label>
                         <input type="radio" id="groups" name="groups" value="groups" checked={!total} onChange={e => setTotal(false)} />
-                        <label for="groups">podle skupin</label>
+                        <label htmlFor="groups">podle skupin</label>
                     </div>
                     {content}
                 </div>
