@@ -13,3 +13,28 @@ a {
 * {
     box-sizing: border-box;
 }
+
+.main-wrapper {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.main-menu {
+    display: none;
+}
+
+@media only screen and (min-width: 720px) {
+    .main-wrapper {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+    }
+    .main-footer {
+        display: none;
+    }
+    .main-menu {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-between;
+    }
+}
