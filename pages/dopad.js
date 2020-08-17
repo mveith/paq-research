@@ -2,7 +2,6 @@ import fs from 'fs'
 import path from 'path'
 import dynamic from 'next/dynamic'
 import Layout from '../components/layout';
-import SharedTooltip from '../components/sharedTooltip';
 import { useState } from 'react';
 
 const Chart = dynamic(
@@ -13,20 +12,14 @@ const Chart = dynamic(
 function generateAnnotations(props) {
     if (props.annotation) {
         const values = props.values;
-
-        const tooltipAnnotation = [{
-            type: "frame-hover",
-            x: props.annotation.week,
-            y: values.lines.slice(props.annotation.lineIndex).map(pl => pl[props.annotation.week - 1]).reduce((a, b) => a + b, 0),
-        }];
-        const pointAnnotations = values.lines.map((l, i) => {
+        const tooltipAnnotations = values.lines.map((l, i) => {
             return {
-                type: "xy",
+                type: "frame-hover",
                 x: props.annotation.week,
                 y: values.lines.slice(i).map(pl => pl[props.annotation.week - 1]).reduce((a, b) => a + b, 0),
             };
         });
-        return [{ type: "x", week: props.annotation.week, disable: ["connector", "note"] }].concat(tooltipAnnotation).concat(pointAnnotations);
+        return [{ type: "x", week: props.annotation.week, disable: ["connector", "note"] }].concat(tooltipAnnotations);
 
     }
     else return [];
@@ -59,14 +52,6 @@ function ImpactChart(props) {
         )
     };
 
-    const convertedLines = values.lines.map((line, lineIndex) => {
-        var res = {
-            lineValues: line,
-            color: props.colors[lineIndex],
-            title: props.titles[lineIndex]
-        }
-        return res;
-    });
     const frameProps = {
         lines: lines,
         size: props.size,
@@ -95,7 +80,7 @@ function ImpactChart(props) {
         ],
         annotations: annotations,
         customHoverBehavior: x => props.onHover ? props.onHover(x) : null,
-        tooltipContent: d => <SharedTooltip week={d.x} lines={convertedLines} />
+        tooltipContent: d => {return <div style={{margin: "5px"}}>{d.y} %</div>}
     };
     return <Chart {...frameProps} />;
 }
