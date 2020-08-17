@@ -17,6 +17,7 @@ function generateAnnotations(props) {
                 type: "frame-hover",
                 x: props.annotation.week,
                 y: values.lines.slice(i).map(pl => pl[props.annotation.week - 1]).reduce((a, b) => a + b, 0),
+                value: l[props.annotation.week - 1]
             };
         });
         return [{ type: "x", week: props.annotation.week, disable: ["connector", "note"] }].concat(tooltipAnnotations);
@@ -80,7 +81,7 @@ function ImpactChart(props) {
         ],
         annotations: annotations,
         customHoverBehavior: x => props.onHover ? props.onHover(x) : null,
-        tooltipContent: d => {return <div style={{margin: "5px"}}>{d.y} %</div>}
+        tooltipContent: d => { return <div style={{ margin: "5px" }}>{d.value} %</div> }
     };
     return <Chart {...frameProps} />;
 }
