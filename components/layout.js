@@ -18,9 +18,9 @@ export default function Layout(props) {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet" />
             </Head>
-            <div style={{ padding: "0 10px", margin: "0 1rem", display: "flex", flexDirection: "column" }}>
+            <div style={{ padding: "0 10px", margin: "0 1rem", display: "flex", flexDirection: "column", width: "250px" }}>
                 <header>
-                    <h1>život během pandemie</h1>
+                    <Link href="/"><a><h1>život během pandemie</h1></a></Link>
                     <span><ActiveLink href="/projekt" style={menuItemStyle} activeStyle={activeMenuItemStyle}>O projektu</ActiveLink></span>
                 </header>
                 <div className="main-menu">
@@ -50,7 +50,7 @@ export default function Layout(props) {
                     </div>
                 </div>
             </div>
-            <div style={{ padding: "10px", margin: "1rem" }}>
+            <div style={{ padding: "10px", margin: "1rem", width: "100%" }}>
                 {props.children}
             </div>
             <div className="main-footer">
