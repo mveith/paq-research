@@ -22,6 +22,14 @@ a {
     display: none;
 }
 
+.background-graphics {
+    z-index: 1;
+}
+
+.interaction-layer {
+    z-index: 1;
+}
+
 @media only screen and (min-width: 720px) {
     .main-wrapper {
         display: flex;

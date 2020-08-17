@@ -45,9 +45,9 @@ function ImpactChart(props) {
                 y1={xy.y1}
                 y2={xy.y2}
                 style={{
-                    strokeDasharray: "5 5",
-                    stroke: "gray",
-                    strokeOpacity: 0.25
+                    strokeDasharray: "3 3",
+                    stroke: "white",
+                    strokeOpacity: 0.4
                 }}
             />
         )
