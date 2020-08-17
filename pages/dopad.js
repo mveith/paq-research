@@ -126,7 +126,7 @@ export default function Home(props) {
                     <div className="legend">
                         <ul style={{ listStyle: "none", flexBasis: "20%" }}>
                             <li>
-                                <h2 style={{ color: "rgb(129, 143, 233)" }}>V poho skupina</h2>
+                                <h2 style={{ color: "#b3b3b3" }}>V poho skupina</h2>
                                 <p>V poho skupina</p>
                             </li>
                             <li>
