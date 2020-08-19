@@ -143,20 +143,15 @@ export default function Home(props) {
                 </div>
                 <div id="stories">
                     <h2>Interpretace a další story</h2>
-                    <div class="story">
-                        <p style={{ fontSize: 16, color: "#B3B3B3" }}>8. června 2020</p>
-                        <p style={{ fontSize: 20, fontWeight: "medium", color: "#545454" }}>Za propad zaměstnanosti může úplně někdo jiný</p>
-                        <p style={{ fontSize: 16, fontWeight: "medium", color: "#545454" }}>Nárůst nezaměstnanosti byl <strong>relativně malý</strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis.</p>
-                    </div>
-                    <div class="story">
-                        <p style={{ fontSize: 16, color: "#B3B3B3" }}>11. srpna 2020</p>
-                        <p style={{ fontSize: 20, fontWeight: "medium", color: "#545454" }}>Jiný podnadpis a krátká story</p>
-                        <p style={{ fontSize: 16, fontWeight: "medium", color: "#545454" }}>Aliquam erat volutpat. Sed rhoncus commodo diam. Curabitur lobortis mauris in maximus volutpat. Aenean consectetur mauris ipsum, eget eleifend magna posuere at. Mauris sed magna hendrerit, vehicula dui id, vehicula nunc. Nullam condimentum facilisis dui, vitae placerat ante accumsan sit amet. Praesent venenatis lacus sed sapien lobortis convallis. Aliquam auctor sagittis suscipit. Etiam at magna in dolor placerat commodo ac nec nisi. In a lorem imperdiet, pretium justo non, elementum orci. Cras dapibus ullamcorper nunc. Morbi id ipsum vel arcu tempor fringilla. Suspendisse pellentesque eros dui, in euismod nulla placerat nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam in iaculis erat, vitae efficitur urna. In sed sem cursus, hendrerit urna a, vulputate lectus. Proin malesuada ligula nunc, id dapibus magna condimentum ac. Proin bibendum consectetur sapien in blandit. Aliquam gravida arcu nulla, vel ullamcorper orci fermentum sit amet. Vestibulum urna lectus, congue in imperdiet non, scelerisque at augue. Suspendisse potenti. Proin eget urna vel orci mollis mollis. Maecenas ut justo ac dui lobortis vulputate quis eget nisi. Etiam sit amet leo nec eros scelerisque vehicula. Fusce interdum risus ac lacus sodales ullamcorper. Cras molestie, ipsum in feugiat consectetur, orci eros tincidunt justo, id viverra enim metus nec augue. Fusce dapibus dictum velit, sit amet dictum eros vehicula at.</p>
-                    </div>
+                    {props.stories.map((s, i) => (<div class="story" key={`story-${i}}`}>
+                        <p style={{ fontSize: 16, color: "#B3B3B3" }}>{s.date}</p>
+                        <p style={{ fontSize: 20, fontWeight: "medium", color: "#545454" }}>{s.title}</p>
+                        <p style={{ fontSize: 16, fontWeight: "medium", color: "#545454" }} dangerouslySetInnerHTML={{ __html: s.text }}></p>
+                    </div>))}
                 </div>
                 <div id="methodology">
                     <h2>Metodické poznámky</h2>
-                    <p style={{ fontSize: 16, fontWeight: "medium", color: "#545454" }}>Nárůst nezaměstnanosti byl relativně malý, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.</p>
+                    <p style={{ fontSize: 16, fontWeight: "medium", color: "#545454" }} dangerouslySetInnerHTML={{ __html: props.methodology }}></p>
                 </div>
             </div>
         </Layout>
