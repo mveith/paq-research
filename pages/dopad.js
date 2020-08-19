@@ -3,6 +3,7 @@ import path from 'path'
 import dynamic from 'next/dynamic'
 import Layout from '../components/layout';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const Chart = dynamic(
     () => import('../components/chart'),
@@ -24,6 +25,30 @@ function generateAnnotations(props) {
 
     }
     else return [];
+}
+
+function ThemeNavigation() {
+    return (
+        <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
+            <div>
+                <Link href="/">
+                    <a>
+                        <span>🠐</span><br />
+                        <span>Předchozí téma</span><br />
+                        <span>Pocity ohledně koronaviru</span>
+                    </a>
+                </Link>
+            </div>
+            <div>
+                <Link href="/">
+                    <a>
+                        <span>🠒</span><br />
+                        <span>Další téma</span><br />
+                        <span>Destabilizace práce</span>
+                    </a>
+                </Link>
+            </div>
+        </div>);
 }
 
 function ImpactChart(props) {
@@ -141,6 +166,7 @@ export default function Home(props) {
                         </ul>
                     </div>
                 </div>
+                <ThemeNavigation />
                 <div id="stories">
                     <h2>Interpretace a další story</h2>
                     {props.stories.map((s, i) => (<div class="story" key={`story-${i}}`}>
@@ -153,6 +179,7 @@ export default function Home(props) {
                     <h2>Metodické poznámky</h2>
                     <p style={{ fontSize: 16, fontWeight: "medium", color: "#545454" }} dangerouslySetInnerHTML={{ __html: props.methodology }}></p>
                 </div>
+                <ThemeNavigation />
             </div>
         </Layout>
     )
