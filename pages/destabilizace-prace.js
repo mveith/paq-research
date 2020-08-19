@@ -111,7 +111,7 @@ function ImpactChart(props) {
     return <Chart {...frameProps} />;
 }
 
-export default function Impact(props) {
+export default function Destabilization(props) {
     const [annotation, setAnnotation] = useState();
     const [total, setTotal] = useState(true);
     const charts = props.groups.map((v, i) => {
@@ -133,11 +133,9 @@ export default function Impact(props) {
         (<div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", }}>{charts}</div>);
     return (
         <Layout>
-            <h1>Jaký má epidemie ekonomický dopad na domácnosti?</h1>
+            <h1>Jaký epidemie ovlivňuj destabilizici práce?</h1>
             <p>
-                Ekonomické dopady na domácnosti se vyvíjejí - podle toho, jak lidé ztratili práci, či jim byla redukována mzda.
-                Existuje malá velmi riziková skupina zasažená poklesem příjmů a zároveň bez úspor, která může mít velké ekonomické problémy brzy + skupina lehčeji zasažených lidí,
-                která může měnit spotřební chování, či ji může krize dostihnout později.
+                Nárůst nezaměstnanosti byl relativně malý, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.
             </p>
             <div style={{ display: "flex", flexDirection: "column" }}>
                 <div>Podívej se na <a href="#stories" style={{ fontWeight: "600", textDecoration: "underline" }}>interpretace dat a grafů↓</a> a <a href="#methodology" style={{ fontWeight: "600", textDecoration: "underline" }}>metodické poznámky↓</a></div>
@@ -152,16 +150,24 @@ export default function Impact(props) {
                     <div className="legend">
                         <ul style={{ listStyle: "none", flexBasis: "20%" }}>
                             <li>
-                                <h2 style={{ color: "#b3b3b3" }}>V poho skupina</h2>
-                                <p>V poho skupina</p>
+                                <h2 style={{ color: "#b3b3b3" }}>Zbytek</h2>
+                                <p></p>
                             </li>
                             <li>
-                                <h2 style={{ color: "rgb(238, 190, 94)" }}>Lehce ekonomicky zasažení</h2>
-                                <p>Jejich příjem klesl alespoň o 10% a mají úspory alespoň na půl roku</p>
+                                <h2 style={{ color: "rgb(238, 190, 94)" }}>desPra4_omezeni_domacnost</h2>
+                                <p></p>
                             </li>
                             <li>
-                                <h2 style={{ color: "rgb(233, 129, 129)" }}>Těžce ekonoomicky zasažení</h2>
-                                <p>Jejich příjem klesl o více než 30% a mají úspory maximálně na 2 měsíce</p>
+                                <h2 style={{ color: "green" }}>desPra3_podzamestnani_nestabilni</h2>
+                                <p></p>
+                            </li>
+                            <li>
+                                <h2 style={{ color: "blue" }}>desPra2_prekarizace</h2>
+                                <p></p>
+                            </li>
+                            <li>
+                                <h2 style={{ color: "rgb(233, 129, 129)" }}>desPra1_celkova_ztrata_prace</h2>
+                                <p></p>
                             </li>
                         </ul>
                     </div>
@@ -189,6 +195,6 @@ export async function getStaticProps(context) {
     const filePath = path.join(process.cwd(), 'data.json');
     const fileContent = fs.readFileSync(filePath, 'utf8');
     return {
-        props: JSON.parse(fileContent).impacts
+        props: JSON.parse(fileContent).destabilization
     }
 }
