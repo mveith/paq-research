@@ -34,7 +34,7 @@ a {
     .main-wrapper {
         display: flex;
         flex-direction: row;
-        height: 100vh;
+        height: calc(100vh - 50px);
     }
     .main-footer {
         display: none;
