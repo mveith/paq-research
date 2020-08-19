@@ -115,6 +115,7 @@ export default function Home(props) {
                 která může měnit spotřební chování, či ji může krize dostihnout později.
             </p>
             <div style={{ display: "flex", flexDirection: "column" }}>
+                <div>Podívej se na <a href="#stories" style={{ fontWeight: "600", textDecoration: "underline" }}>interpretace dat a grafů↓</a> a <a href="#methodology" style={{ fontWeight: "600", textDecoration: "underline" }}>metodické poznámky↓</a></div>
                 <div>
                     <input type="radio" id="total" name="total" value="total" checked={total} onChange={e => setTotal(true)} />
                     <label htmlFor="total">celkem</label>
@@ -140,7 +141,7 @@ export default function Home(props) {
                         </ul>
                     </div>
                 </div>
-                <div className="stories">
+                <div id="stories">
                     <h2>Interpretace a další story</h2>
                     <div class="story">
                         <p style={{ fontSize: 16, color: "#B3B3B3" }}>8. června 2020</p>
@@ -153,7 +154,7 @@ export default function Home(props) {
                         <p style={{ fontSize: 16, fontWeight: "medium", color: "#545454" }}>Aliquam erat volutpat. Sed rhoncus commodo diam. Curabitur lobortis mauris in maximus volutpat. Aenean consectetur mauris ipsum, eget eleifend magna posuere at. Mauris sed magna hendrerit, vehicula dui id, vehicula nunc. Nullam condimentum facilisis dui, vitae placerat ante accumsan sit amet. Praesent venenatis lacus sed sapien lobortis convallis. Aliquam auctor sagittis suscipit. Etiam at magna in dolor placerat commodo ac nec nisi. In a lorem imperdiet, pretium justo non, elementum orci. Cras dapibus ullamcorper nunc. Morbi id ipsum vel arcu tempor fringilla. Suspendisse pellentesque eros dui, in euismod nulla placerat nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam in iaculis erat, vitae efficitur urna. In sed sem cursus, hendrerit urna a, vulputate lectus. Proin malesuada ligula nunc, id dapibus magna condimentum ac. Proin bibendum consectetur sapien in blandit. Aliquam gravida arcu nulla, vel ullamcorper orci fermentum sit amet. Vestibulum urna lectus, congue in imperdiet non, scelerisque at augue. Suspendisse potenti. Proin eget urna vel orci mollis mollis. Maecenas ut justo ac dui lobortis vulputate quis eget nisi. Etiam sit amet leo nec eros scelerisque vehicula. Fusce interdum risus ac lacus sodales ullamcorper. Cras molestie, ipsum in feugiat consectetur, orci eros tincidunt justo, id viverra enim metus nec augue. Fusce dapibus dictum velit, sit amet dictum eros vehicula at.</p>
                     </div>
                 </div>
-                <div className="methodology">
+                <div id="methodology">
                     <h2>Metodické poznámky</h2>
                     <p style={{ fontSize: 16, fontWeight: "medium", color: "#545454" }}>Nárůst nezaměstnanosti byl relativně malý, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.</p>
                 </div>
