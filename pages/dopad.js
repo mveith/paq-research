@@ -31,11 +31,11 @@ function ThemeNavigation() {
     return (
         <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
             <div>
-                <Link href="/">
+                <Link href="/destabilizace-prace">
                     <a>
                         <span>🠐</span><br />
                         <span>Předchozí téma</span><br />
-                        <span>Pocity ohledně koronaviru</span>
+                        <span>Destabilizace práce</span>
                     </a>
                 </Link>
             </div>
@@ -44,7 +44,7 @@ function ThemeNavigation() {
                     <a>
                         <span>🠒</span><br />
                         <span>Další téma</span><br />
-                        <span>Destabilizace práce</span>
+                        <span>Dopady a strategie domácnosti</span>
                     </a>
                 </Link>
             </div>

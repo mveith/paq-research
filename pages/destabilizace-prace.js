@@ -40,11 +40,11 @@ function ThemeNavigation() {
                 </Link>
             </div>
             <div>
-                <Link href="/">
+                <Link href="/dopad">
                     <a>
                         <span>🠒</span><br />
                         <span>Další téma</span><br />
-                        <span>Destabilizace práce</span>
+                        <span>Ekonomické dopady na domácnosti</span>
                     </a>
                 </Link>
             </div>
