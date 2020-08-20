@@ -2,32 +2,10 @@ import fs from 'fs'
 import path from 'path'
 import Layout from '../components/layout';
 import AreaChart from '../components/areaChart';
+import ThemeNavigation from '../components/themeNavigation';
 import { useState } from 'react';
-import Link from 'next/link';
 
-function ThemeNavigation() {
-    return (
-        <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
-            <div>
-                <Link href="/">
-                    <a>
-                        <span>🠐</span><br />
-                        <span>Předchozí téma</span><br />
-                        <span>Pocity ohledně koronaviru</span>
-                    </a>
-                </Link>
-            </div>
-            <div>
-                <Link href="/dopad">
-                    <a>
-                        <span>🠒</span><br />
-                        <span>Další téma</span><br />
-                        <span>Ekonomické dopady na domácnosti</span>
-                    </a>
-                </Link>
-            </div>
-        </div>);
-}
+const navigation = (<ThemeNavigation previousHref="/" previousTitle="Pocity ohledně koronaviru" nextHref="/dopad" nextTitle="Ekonomické dopady na domácnost" />);
 
 export default function Destabilization(props) {
     const [annotation, setAnnotation] = useState();
@@ -90,7 +68,7 @@ export default function Destabilization(props) {
                         </ul>
                     </div>
                 </div>
-                <ThemeNavigation />
+                {navigation}
                 <div id="stories">
                     <h2>Interpretace a další story</h2>
                     {props.stories.map((s, i) => (<div class="story" key={`story-${i}}`}>
@@ -103,7 +81,7 @@ export default function Destabilization(props) {
                     <h2>Metodické poznámky</h2>
                     <p style={{ fontSize: 16, fontWeight: "medium", color: "#545454" }} dangerouslySetInnerHTML={{ __html: props.methodology }}></p>
                 </div>
-                <ThemeNavigation />
+                {navigation}
             </div>
         </Layout>
     )
