@@ -12,7 +12,7 @@ export default function Destabilization(props) {
         title="Jak epidemie ovlivňuje destabilizaci práce?"
         description="Nárůst nezaměstnanosti byl relativně malý, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení."
         legend={(
-            <ul style={{ listStyle: "none", flexBasis: "20%" }}>
+            <ul style={{ listStyle: "none", flexBasis: "20%", paddingLeft: "0" }}>
                 <li>
                     <h2 style={{ color: "#b3b3b3" }}>Zbytek</h2>
                     <p></p>

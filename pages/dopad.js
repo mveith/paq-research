@@ -7,7 +7,7 @@ const navigation = (<ThemeNavigation previousHref="/destabilizace-prace" previou
 
 export default function Impact(props) {
     var legend = (
-        <ul style={{ listStyle: "none", flexBasis: "20%" }}>
+        <ul style={{ listStyle: "none", flexBasis: "20%", paddingLeft: "0" }}>
             <li>
                 <h2 style={{ color: "#b3b3b3" }}>V poho skupina</h2>
                 <p>V poho skupina</p>
@@ -25,7 +25,7 @@ export default function Impact(props) {
         navigation={navigation}
         dataProps={props}
         title="Jaký má epidemie ekonomický dopad na domácnosti?"
-        description="Ekonomické dopady na domácnosti se vyvíjejí - podle toho, jak lidé ztratili práci, či jim byla redukována mzda. Existuje malá velmi riziková skupina zasažená poklesem příjmů a zároveň bez úspor, která může mít velké ekonomické problémy brzy + skupina lehčeji zasažených lidí, která může měnit spotřební chování, či ji může krize dostihnout později." 
+        description="Ekonomické dopady na domácnosti se vyvíjejí - podle toho, jak lidé ztratili práci, či jim byla redukována mzda. Existuje malá velmi riziková skupina zasažená poklesem příjmů a zároveň bez úspor, která může mít velké ekonomické problémy brzy + skupina lehčeji zasažených lidí, která může měnit spotřební chování, či ji může krize dostihnout později."
         legend={legend}
     />;
 }

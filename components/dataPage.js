@@ -6,7 +6,7 @@ export default function DataPage({ navigation, dataProps, title, description, le
     const [annotation, setAnnotation] = useState();
     const [total, setTotal] = useState(true);
     const charts = dataProps.groups.map((v, i) => {
-        return (<AreaChart key={`chart-${i}`} weeks={dataProps.weeks} colors={dataProps.colors} titles={dataProps.titles} yMin={0} yMax={100} showYAxis={i % 3 === 0} showXAxis={false} values={v} size={[300, 200]} annotation={annotation} onHover={x => {
+        return (<AreaChart key={`chart-${i}`} weeks={dataProps.weeks} colors={dataProps.colors} titles={dataProps.titles} yMin={0} yMax={100} showYAxis={true} showXAxis={false} values={v} size={[300, 200]} annotation={annotation} onHover={x => {
             if (x) {
                 setAnnotation({ week: x.week, lineIndex: x.parentLine.key });
             }
@@ -21,7 +21,7 @@ export default function DataPage({ navigation, dataProps, title, description, le
     }} />);
     const content = total ?
         (<div >{totalChart}</div>) :
-        (<div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", }}>{charts}</div>);
+        (<div className="multiple-charts-wrapper">{charts}</div>);
     return (
         <Layout>
             <h1>{title}</h1>

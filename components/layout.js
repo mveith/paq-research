@@ -29,7 +29,7 @@ export default function Layout(props) {
                     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet" />
                 </Head>
-                <div style={{ padding: "0 10px", margin: "0 1rem", display: "flex", flexDirection: "column", width: "250px" }}>
+                <div className="side-menu">
                     <header>
                         <Link href="/"><a><h1>život během pandemie</h1></a></Link>
                     </header>
@@ -60,7 +60,7 @@ export default function Layout(props) {
                         </div>
                     </div>
                 </div>
-                <div style={{ padding: "10px", margin: "1rem", width: "100%" }}>
+                <div className="content-wrapper">
                     {props.children}
                 </div>
                 <div className="main-footer">

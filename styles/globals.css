@@ -16,9 +16,19 @@ a {
 
 .main-wrapper {
     font-family: 'Fira Sans', sans-serif;
+    margin: 0 16px;
 }
 
 .main-menu {
+    display: none;
+}
+
+.content-wrapper {
+    padding: 10px;
+    margin: 1rem;
+}
+
+.side-menu {
     display: none;
 }
 
@@ -29,6 +39,8 @@ a {
 .interaction-layer {
     z-index: 1;
 }
+
+.multiple-charts-wrapper {}
 
 @media only screen and (min-width: 720px) {
     .main-wrapper {
@@ -44,6 +56,27 @@ a {
         flex-direction: column;
         flex: 1;
         justify-content: space-between;
+    }
+    .content-wrapper {
+        width: 100%;
+    }
+    .side-menu {
+        display: block;
+        padding: 0 10px;
+        margin: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+    }
+    .multiple-charts-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .axis.y.left {
+        display: none;
+    }
+    .responsive-container:nth-child(3n-2) .axis.y.left {
+        display: inherit;
     }
 }
 
