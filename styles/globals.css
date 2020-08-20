@@ -42,6 +42,15 @@ a {
 
 .multiple-charts-wrapper {}
 
+.top-menu {
+    display: none;
+}
+
+.top-menu-mobile {
+    width: 100%;
+    height: 50px;
+}
+
 @media only screen and (min-width: 720px) {
     .main-wrapper {
         display: flex;
@@ -77,6 +86,19 @@ a {
     }
     .responsive-container:nth-child(3n-2) .axis.y.left {
         display: inherit;
+    }
+    .top-menu {
+        overflow: hidden;
+        background-color: #F4F4F4;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: right
+    }
+    .top-menu-mobile {
+        display: none;
     }
 }
 

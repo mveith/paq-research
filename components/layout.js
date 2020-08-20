@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 
 const menuItemStyle = { color: "gray" };
 const activeMenuItemStyle = { color: "black" };
@@ -15,20 +16,34 @@ function ActiveLink({ children, href, style, activeStyle }) {
     return (<Link href={href}><a style={isActive ? activeStyle : style}>{children}</a></Link>);
 }
 
-
 export default function Layout(props) {
+    const [openMenu, setOpenMenu] = useState(false);
     return (
         <>
-            <nav style={{ overflow: "hidden", backgroundColor: "#F4F4F4", position: "fixed", top: "0", width: "100%", height: "50px", display: "flex", justifyContent: "right" }}>
+            <Head>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+                <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet" />
+            </Head>
+            <nav className="top-menu">
                 <Link href="/"><a style={navbarItemStyle}>Život během pandemie</a></Link>
                 <Link href="/projekt"><a style={navbarItemStyle}>O projektu</a></Link>
                 <Link href="/projekt"><a style={navbarItemStyle}>Kontakt</a></Link>
             </nav>
+            <nav className="top-menu-mobile">
+                <div class="topnav" style={{ overflow: "hidden", backgroundColor: "#B3B3B3", position: "relative" }} >
+                    <Link href="/"><a style={{ ...navbarItemStyle, display: "block" }}>Život během pandemie</a></Link>
+                    <div style={{ display: openMenu ? "flex" : "none", flexDirection: "column" }}>
+
+                        <Link href="/projekt" ><a style={navbarItemStyle}>O projektu</a></Link>
+                        <Link href="/projekt"><a style={navbarItemStyle}>Kontakt</a></Link>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onClick={e => setOpenMenu(!openMenu)} style={{ ...navbarItemStyle, fontSize: "17px", display: "block", position: "absolute", right: 0, top: 0 }}>
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </nav>
             <div className="main-wrapper" style={{ marginTop: "50px", }}>
-                <Head>
-                    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet" />
-                </Head>
                 <div className="side-menu">
                     <header>
                         <Link href="/"><a><h1>život během pandemie</h1></a></Link>
