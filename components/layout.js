@@ -32,7 +32,6 @@ export default function Layout(props) {
                 <div style={{ padding: "0 10px", margin: "0 1rem", display: "flex", flexDirection: "column", width: "250px" }}>
                     <header>
                         <Link href="/"><a><h1>život během pandemie</h1></a></Link>
-                        <span><ActiveLink href="/projekt" style={menuItemStyle} activeStyle={activeMenuItemStyle}>O projektu</ActiveLink></span>
                     </header>
                     <div className="main-menu">
                         <nav>
