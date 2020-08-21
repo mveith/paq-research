@@ -6,7 +6,10 @@ import { useState } from 'react';
 const menuItemStyle = { color: "gray" };
 const activeMenuItemStyle = { color: "black" };
 const navbarItemStyle = {
-    color: "#707070",
+    color: "#707070"
+};
+const navbarItemStylePadding = {
+    ...navbarItemStyle,
     padding: "14px 16px"
 };
 
@@ -18,6 +21,29 @@ function ActiveLink({ children, href, style, activeStyle }) {
 
 export default function Layout(props) {
     const [openMenu, setOpenMenu] = useState(false);
+
+    const menu = (
+        <>
+            <div>
+                <h3>EKONOMICKÉ DOPADY</h3>
+                <ul>
+                    <li><ActiveLink href="/destabilizace-prace" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Destabilizace práce</ActiveLink></li>
+                    <li><ActiveLink href="/dopad" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Ekonomické dopady na domácnosti</ActiveLink></li>
+                    <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Dopady a strategie domácnosti</ActiveLink></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>CHOVÁNÍ A AKTIVITY</h3>
+                <ul>
+                    <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Celkový profil aktivit</ActiveLink></li>
+                    <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Počet protektivních aktivit</ActiveLink></li>
+                    <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Kontakt s lidmi</ActiveLink></li>
+                    <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Pocity ohledně koronaviru</ActiveLink></li>
+                </ul>
+            </div>
+        </>);
+
     return (
         <>
             <Head>
@@ -26,19 +52,24 @@ export default function Layout(props) {
                 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet" />
             </Head>
             <nav className="top-menu">
-                <Link href="/"><a style={navbarItemStyle}>Život během pandemie</a></Link>
-                <Link href="/projekt"><a style={navbarItemStyle}>O projektu</a></Link>
-                <Link href="/projekt"><a style={navbarItemStyle}>Kontakt</a></Link>
+                <Link href="/"><a style={navbarItemStylePadding}>Život během pandemie</a></Link>
+                <Link href="/projekt"><a style={navbarItemStylePadding}>O projektu</a></Link>
+                <Link href="/projekt"><a style={navbarItemStylePadding}>Kontakt</a></Link>
             </nav>
             <nav className="top-menu-mobile">
-                <div class="topnav" style={{ overflow: "hidden", backgroundColor: "rgb(236,236,236)", position: "relative" }} >
-                    <Link href="/"><a style={{ ...navbarItemStyle, display: "block" }}>Život během pandemie</a></Link>
-                    <div style={{ display: openMenu ? "flex" : "none", flexDirection: "column" }}>
-
-                        <Link href="/projekt" ><a style={navbarItemStyle}>O projektu</a></Link>
-                        <Link href="/projekt"><a style={navbarItemStyle}>Kontakt</a></Link>
+                <div style={{ overflow: "hidden", backgroundColor: "#F4F4F4", position: "relative" }} >
+                    <Link href="/"><a style={{ ...navbarItemStylePadding, display: "block" }}>Život během pandemie</a></Link>
+                    <div style={{ display: openMenu ? "flex" : "none", flexDirection: "column", margin: "0 16px" }}>
+                        {menu}
+                        <hr style={{ width: "100%" }} />
+                        <div>
+                            <ul>
+                                <li><Link href="/projekt" ><a style={navbarItemStyle}>O projektu</a></Link></li>
+                                <li><Link href="/projekt"><a style={navbarItemStyle}>Kontakt</a></Link></li>
+                            </ul>
+                        </div>
                     </div>
-                    <a href="javascript:void(0);" class="icon" onClick={e => setOpenMenu(!openMenu)} style={{ ...navbarItemStyle, fontSize: "17px", display: "block", position: "absolute", right: 0, top: 0 }}>
+                    <a href="javascript:void(0);" class="icon" onClick={e => setOpenMenu(!openMenu)} style={{ ...navbarItemStylePadding, fontSize: "17px", display: "block", position: "absolute", right: 0, top: 0 }}>
                         <i class="fa fa-bars"></i>
                     </a>
                 </div>
@@ -50,24 +81,7 @@ export default function Layout(props) {
                     </header>
                     <div className="main-menu">
                         <nav>
-                            <div>
-                                <h3>EKONOMICKÉ DOPADY</h3>
-                                <ul>
-                                    <li><ActiveLink href="/destabilizace-prace" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Destabilizace práce</ActiveLink></li>
-                                    <li><ActiveLink href="/dopad" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Ekonomické dopady na domácnosti</ActiveLink></li>
-                                    <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Dopady a strategie domácnosti</ActiveLink></li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h3>CHOVÁNÍ A AKTIVITY</h3>
-                                <ul>
-                                    <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Celkový profil aktivit</ActiveLink></li>
-                                    <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Počet protektivních aktivit</ActiveLink></li>
-                                    <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Kontakt s lidmi</ActiveLink></li>
-                                    <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Pocity ohledně koronaviru</ActiveLink></li>
-                                </ul>
-                            </div>
+                            {menu}
                         </nav>
                         <div>
                             <hr />
