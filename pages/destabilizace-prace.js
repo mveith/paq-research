@@ -10,10 +10,10 @@ export default function Destabilization(props) {
     const legend = {
         items: [
             { color: "#b3b3b3", title: "Zbytek", description: "" },
-            { color: "rgb(238, 190, 94)", title: "desPra4_omezeni_domacnost", description: "" },
-            { color: "green", title: "desPra3_podzamestnani_nestabilni", description: "" },
-            { color: "blue", title: "desPra2_prekarizace", description: "" },
-            { color: "rgb(233, 129, 129)", title: "desPra1_celkova_ztrata_prace", description: "" }
+            { color: "rgb(238, 190, 94)", title: "Omezení práce v domácnosti", description: "" },
+            { color: "green", title: "Podzaměstnaní a nestabilní", description: "" },
+            { color: "blue", title: "Prekarizace: ztráta stabilní práce", description: "" },
+            { color: "rgb(233, 129, 129)", title: "Celková ztráta práce", description: "" }
         ]
     };
     return <DataPage
