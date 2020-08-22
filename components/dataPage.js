@@ -1,26 +1,37 @@
 import Layout from './layout';
 import AreaChart from './areaChart';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function DataPage({ navigation, dataProps, title, description, legend }) {
     const [annotation, setAnnotation] = useState();
     const [total, setTotal] = useState(true);
+    const [height, setHeight] = useState(600);
     const charts = dataProps.groups.map((v, i) => {
-        return (<AreaChart key={`chart-${i}`} weeks={dataProps.weeks} colors={dataProps.colors} titles={dataProps.titles} yMin={0} yMax={100} showYAxis={true} showXAxis={false} values={v} size={[300, 200]} annotation={annotation} onHover={x => {
+        return (<div className="chart-content"><AreaChart key={`chart-${i}`} weeks={dataProps.weeks} colors={dataProps.colors} titles={dataProps.titles} yMin={0} yMax={100} showYAxis={true} showXAxis={false} values={v} size={[300, height]} annotation={annotation} onHover={x => {
             if (x) {
                 setAnnotation({ week: x.week, lineIndex: x.parentLine.key });
             }
             else { setAnnotation(); }
-        }} />);
+        }} /></div>);
     });
-    const totalChart = (<AreaChart key="chart-total" weeks={dataProps.weeks} colors={dataProps.colors} titles={dataProps.titles} yMin={0} yMax={100} showYAxis={true} showXAxis={true} values={dataProps.total} size={[800, 600]} annotation={annotation} onHover={x => {
+    const totalChart = (<div className="chart-content"><AreaChart key="chart-total" weeks={dataProps.weeks} colors={dataProps.colors} titles={dataProps.titles} yMin={0} yMax={100} showYAxis={true} showXAxis={true} values={dataProps.total} size={[800, height]} annotation={annotation} onHover={x => {
         if (x) {
             setAnnotation({ week: x.week, lineIndex: x.parentLine.key });
         }
         else { setAnnotation(); }
-    }} />);
+    }} /></div>);
+
+    useEffect(() => {
+        function handleResize() {
+            var chart = document.getElementsByClassName('chart-content')[0];
+            setHeight(chart.offsetWidth * 0.75);
+        }
+
+        handleResize();
+        window.addEventListener('resize', handleResize)
+    });
     const content = total ?
-        (<div >{totalChart}</div>) :
+        (<>{totalChart}</>) :
         (<div className="multiple-charts-wrapper">{charts}</div>);
     return (
         <Layout>
@@ -37,7 +48,7 @@ export default function DataPage({ navigation, dataProps, title, description, le
                     <label htmlFor="groups">podle skupin</label>
                 </div>
                 <div className="chart-wrapper">
-                    <div className="chart">{content}</div>
+                    <div className="chart" >{content}</div>
                     <div className="legend">
                         {legend}
                     </div>
