@@ -116,7 +116,7 @@ a {
         flex-direction: row;
     }
     .chart {
-        flex-basis: 100%;
+        flex: 1 0 75%
     }
 }
 
