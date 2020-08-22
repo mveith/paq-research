@@ -51,6 +51,14 @@ a {
     height: 50px;
 }
 
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 @media only screen and (min-width: 720px) {
     .main-wrapper {
         display: flex;
@@ -109,5 +117,29 @@ a {
     }
     .chart {
         flex-basis: 100%;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
     }
 }

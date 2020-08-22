@@ -74,7 +74,7 @@ export default function Layout(props) {
                     </a>
                 </div>
             </nav>
-            <div className="main-wrapper" style={{ marginTop: "50px", }}>
+            <div className="main-wrapper container" style={{ marginTop: "50px", }}>
                 <div className="side-menu">
                     <header>
                         <Link href="/"><a><h1>život během pandemie</h1></a></Link>
