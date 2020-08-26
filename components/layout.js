@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-const menuItemStyle = { color: "gray" };
-const activeMenuItemStyle = { color: "black" };
+const menuItemStyle = { color: "#888" };
+const activeMenuItemStyle = { color: "black", fontWeight: "bold" };
 const navbarItemStyle = {
     color: "#707070"
 };
@@ -24,16 +24,18 @@ export default function Layout(props) {
 
     const menu = (
         <>
-            <div>
+            <div style={{ marginTop: "4rem"}}>
                 <h3>EKONOMICKÉ DOPADY</h3>
                 <ul>
+                {/* <ul style={{ listStyle: "none" }}> */}
+                    {/* <li><span className="li-custom" ><i class="fa fa-circle" /></span><ActiveLink href="/destabilizace-prace" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Destabilizace práce</ActiveLink></li> */}
                     <li><ActiveLink href="/destabilizace-prace" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Destabilizace práce</ActiveLink></li>
                     <li><ActiveLink href="/dopad" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Ekonomické dopady na domácnosti</ActiveLink></li>
                     <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Dopady a strategie domácnosti</ActiveLink></li>
                 </ul>
             </div>
 
-            <div>
+            <div style={{ marginTop: "2rem"}}>
                 <h3>CHOVÁNÍ A AKTIVITY</h3>
                 <ul>
                     <li><ActiveLink href="/" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Celkový profil aktivit</ActiveLink></li>
@@ -85,7 +87,7 @@ export default function Layout(props) {
                         </nav>
                         <div>
                             <hr />
-                            <p>výzkumné společnosti PAQ Research, iniciativa IDEA AntiCovid a data sbírá agentura NMS.</p>
+                            <p className="menu-footer">výzkumné společnosti PAQ Research, iniciativa IDEA AntiCovid a data sbírá agentura NMS.</p>
                         </div>
                     </div>
                 </div>
@@ -94,7 +96,7 @@ export default function Layout(props) {
                 </div>
                 <div className="main-footer">
                     <hr />
-                    <p>výzkumné společnosti PAQ Research, iniciativa IDEA AntiCovid a data sbírá agentura NMS.</p>
+                    <p className="menu-footer">výzkumné společnosti PAQ Research, iniciativa IDEA AntiCovid a data sbírá agentura NMS.</p>
                 </div>
             </div>
         </>

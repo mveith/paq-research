@@ -18,11 +18,41 @@ h2 {
 
 }
 
+h3 {
+  font-size: .85rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
 p {
   font-size: 1rem;
   margin-top: .5rem;
   margin-bottom: 0rem;
   line-height: 1.4rem;
+}
+
+ul {
+  padding-inline-start: 1.2rem;
+  margin-top: 0rem;
+}
+
+li {
+  padding: .2rem 0rem;
+  font-size: .9rem;
+}
+ 
+/* ul li:before { */
+.li-custom {
+/* content: "•"; */
+  /* font-family: Font awesome; */
+  /* font-size: 200%; */
+  /* line-height: 5%;  */
+  /* padding-left: 5px; */
+  /* margin-top: -1; */
+  margin-right: .5rem;
+  margin-left: -1rem;
+  display: inline-block;
+
 }
 
 * {
@@ -113,6 +143,14 @@ p {
   /* color: #707070; */
   text-align: justify;
   text-justify: inter-word;
+}
+
+.menu-footer {
+  font-size: .9rem;
+}
+
+.menu-item-style {
+  color: red;
 }
 
 @media only screen and (min-width: 720px) {
