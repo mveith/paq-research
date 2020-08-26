@@ -40,7 +40,7 @@ export default function DataPage({ navigation, dataProps, title, description, le
                 {description}
             </p>
             <div style={{ display: "flex", flexDirection: "column" }}>
-                <div>Podívej se na <a href="#stories" style={{ fontWeight: "600", textDecoration: "underline" }}>interpretace dat a grafů↓</a> a <a href="#methodology" style={{ fontWeight: "600", textDecoration: "underline" }}>metodické poznámky↓</a></div>
+                <p>Podívej se na <a href="#stories" class="arrow-button">interpretace dat a grafů↓</a> a <a href="#methodology"  class="arrow-button">metodické poznámky↓</a></p>
                 <div>
                     <input type="radio" id="total" name="total" value="total" checked={total} onChange={e => setTotal(true)} />
                     <label htmlFor="total">celkem</label>
@@ -57,14 +57,15 @@ export default function DataPage({ navigation, dataProps, title, description, le
                 <div id="stories">
                     <h2>Interpretace a další story</h2>
                     {dataProps.stories.map((s, i) => (<div class="story" key={`story-${i}}`}>
-                        <p style={{ fontSize: 16, color: "#B3B3B3" }}>{s.date}</p>
-                        <p style={{ fontSize: 20, fontWeight: "medium", color: "#545454" }}>{s.title}</p>
-                        <p style={{ fontSize: 16, fontWeight: "medium", color: "#545454" }} dangerouslySetInnerHTML={{ __html: s.text }}></p>
+                        <p className="story-title">{s.title}</p>
+                        <p className="story-date">{s.date}</p>
+                        <p className="block-paragraph" dangerouslySetInnerHTML={{ __html: s.text }}></p>
+                        <hr style={{ margin: "2rem 20rem", color: "#707070"}}/>
                     </div>))}
                 </div>
                 <div id="methodology">
                     <h2>Metodické poznámky</h2>
-                    <p style={{ fontSize: 16, fontWeight: "medium", color: "#545454" }} dangerouslySetInnerHTML={{ __html: dataProps.methodology }}></p>
+                    <p className="block-paragraph" dangerouslySetInnerHTML={{ __html: dataProps.methodology }}></p>
                 </div>
                 {navigation}
             </div>

@@ -1,7 +1,7 @@
 function LegendItem({ color, title, description }) {
     return (<li>
-        <h2 style={{ color: color }}>{title}</h2>
-        <p>{description}</p>
+        <h2 class="legend-title" style={{ color: color }}>{title}</h2>
+        <p class="legend-description">{description}</p>
     </li>);
 }
 
