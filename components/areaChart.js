@@ -24,7 +24,7 @@ function generateAnnotations(props) {
 
 function AreaChart(props) {
     const values = props.values;
-    const lines = values.lines.map((l, li) => { return { coordinates: l.map((v, i) => { return { week: i + 1, value: values.lines.slice(li).map(pl => pl[i]).reduce((a, b) => a + b, 0) }; }) }; });
+    const lines = values.lines.map((l, li) => { return { coordinates: l.map((v, i) => { return { week: i + props.firstWeek, value: values.lines.slice(li).map(pl => pl[i]).reduce((a, b) => a + b, 0) }; }) }; });
 
     const annotations = generateAnnotations(props);
 

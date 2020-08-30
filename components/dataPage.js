@@ -7,14 +7,14 @@ export default function DataPage({ navigation, dataProps, title, description, le
     const [total, setTotal] = useState(true);
     const [height, setHeight] = useState(600);
     const charts = dataProps.groups.map((v, i) => {
-        return (<div className="chart-content"><AreaChart key={`chart-${i}`} weeks={dataProps.weeks} colors={dataProps.colors} titles={dataProps.titles} yMin={0} yMax={100} showYAxis={true} showXAxis={false} values={v} size={[300, height]} annotation={annotation} onHover={x => {
+        return (<div className="chart-content"><AreaChart key={`chart-${i}`} weeks={dataProps.weeks} firstWeek={dataProps.firstWeek} colors={dataProps.colors} titles={dataProps.titles} yMin={0} yMax={100} showYAxis={true} showXAxis={false} values={v} size={[300, height]} annotation={annotation} onHover={x => {
             if (x) {
                 setAnnotation({ week: x.week, lineIndex: x.parentLine.key });
             }
             else { setAnnotation(); }
         }} /></div>);
     });
-    const totalChart = (<div className="chart-content"><AreaChart key="chart-total" weeks={dataProps.weeks} colors={dataProps.colors} titles={dataProps.titles} yMin={0} yMax={100} showYAxis={true} showXAxis={true} values={dataProps.total} size={[800, height]} annotation={annotation} onHover={x => {
+    const totalChart = (<div className="chart-content"><AreaChart key="chart-total" weeks={dataProps.weeks} firstWeek={dataProps.firstWeek} colors={dataProps.colors} titles={dataProps.titles} yMin={0} yMax={100} showYAxis={true} showXAxis={true} values={dataProps.total} size={[800, height]} annotation={annotation} onHover={x => {
         if (x) {
             setAnnotation({ week: x.week, lineIndex: x.parentLine.key });
         }

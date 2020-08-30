@@ -1,731 +1,260 @@
 {
-    "impacts": {
-        "colors": [
-            "#eeeeee",
-            "rgb(238, 190, 94)",
-            "rgb(233, 129, 129)"
-        ],
-        "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý</strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
-        "stories": [{
-                "title": "Za propad zaměstnanosti může úplně někdo jiný",
-                "date": "8. června 2020",
-                "text": "Nárůst nezaměstnanosti byl <strong>relativně malý</strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis."
-            },
-            {
-                "title": "Jiný podnadpis a krátká story",
-                "date": "11. srpna 2020",
-                "text": "Aliquam erat volutpat. Sed rhoncus commodo diam. Curabitur lobortis mauris in maximus volutpat. Aenean consectetur mauris ipsum, eget eleifend magna posuere at. Mauris sed magna hendrerit, vehicula dui id, vehicula nunc. Nullam condimentum facilisis dui, vitae placerat ante accumsan sit amet. Praesent venenatis lacus sed sapien lobortis convallis. Aliquam auctor sagittis suscipit. Etiam at magna in dolor placerat commodo ac nec nisi. In a lorem imperdiet, pretium justo non, elementum orci. Cras dapibus ullamcorper nunc. Morbi id ipsum vel arcu tempor fringilla. Suspendisse pellentesque eros dui, in euismod nulla placerat nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam in iaculis erat, vitae efficitur urna. In sed sem cursus, hendrerit urna a, vulputate lectus. Proin malesuada ligula nunc, id dapibus magna condimentum ac. Proin bibendum consectetur sapien in blandit. Aliquam gravida arcu nulla, vel ullamcorper orci fermentum sit amet. Vestibulum urna lectus, congue in imperdiet non, scelerisque at augue. Suspendisse potenti. Proin eget urna vel orci mollis mollis. Maecenas ut justo ac dui lobortis vulputate quis eget nisi. Etiam sit amet leo nec eros scelerisque vehicula. Fusce interdum risus ac lacus sodales ullamcorper. Cras molestie, ipsum in feugiat consectetur, orci eros tincidunt justo, id viverra enim metus nec augue. Fusce dapibus dictum velit, sit amet dictum eros vehicula at."
-            }
-        ],
-        "groups": [{
-                "lines": [
-                    [
-                        100,
-                        50,
-                        49,
-                        49,
-                        51,
-                        46,
-                        50,
-                        47,
-                        52
-                    ],
-                    [
-                        0,
-                        24,
-                        23,
-                        24,
-                        22,
-                        30,
-                        25,
-                        28,
-                        27
-                    ],
-                    [
-                        0,
-                        26,
-                        28,
-                        27,
-                        27,
-                        24,
-                        25,
-                        25,
-                        21
-                    ]
-                ],
-                "title": "Obchod"
-            },
-            {
-                "lines": [
-                    [
-                        100,
-                        74,
-                        71,
-                        60,
-                        58,
-                        54,
-                        68,
-                        71,
-                        58
-                    ],
-                    [
-                        0,
-                        20,
-                        26,
-                        32,
-                        36,
-                        38,
-                        23,
-                        24,
-                        32
-                    ],
-                    [
-                        0,
-                        6,
-                        3,
-                        8,
-                        6,
-                        8,
-                        9,
-                        5,
-                        10
-                    ]
-                ],
-                "title": "Peněžnictví"
-            },
-            {
-                "lines": [
-                    [
-                        100,
-                        69,
-                        70,
-                        72,
-                        74,
-                        74,
-                        70,
-                        69,
-                        73
-                    ],
-                    [
-                        0,
-                        25,
-                        23,
-                        19,
-                        18,
-                        17,
-                        23,
-                        24,
-                        22
-                    ],
-                    [
-                        0,
-                        6,
-                        7,
-                        9,
-                        8,
-                        9,
-                        7,
-                        7,
-                        5
-                    ]
-                ],
-                "title": "Počítače"
-            },
-            {
-                "lines": [
-                    [
-                        100,
-                        58,
-                        54,
-                        54,
-                        54,
-                        53,
-                        56,
-                        57,
-                        58
-                    ],
-                    [
-                        0,
-                        24,
-                        25,
-                        29,
-                        27,
-                        28,
-                        24,
-                        26,
-                        23
-                    ],
-                    [
-                        0,
-                        18,
-                        21,
-                        17,
-                        19,
-                        19,
-                        20,
-                        17,
-                        19
-                    ]
-                ],
-                "title": "Průmysl"
-            },
-            {
-                "lines": [
-                    [
-                        100,
-                        72,
-                        47,
-                        46,
-                        50,
-                        67,
-                        64,
-                        60,
-                        50
-                    ],
-                    [
-                        0,
-                        21,
-                        20,
-                        23,
-                        29,
-                        8,
-                        18,
-                        30,
-                        33
-                    ],
-                    [
-                        0,
-                        7,
-                        33,
-                        31,
-                        21,
-                        25,
-                        18,
-                        10,
-                        17
-                    ]
-                ],
-                "title": "Zemědělství"
-            },
-            {
-                "lines": [
-                    [
-                        100,
-                        65,
-                        69,
-                        70,
-                        65,
-                        62,
-                        69,
-                        72,
-                        71
-                    ],
-                    [
-                        0,
-                        19,
-                        23,
-                        19,
-                        26,
-                        28,
-                        21,
-                        18,
-                        19
-                    ],
-                    [
-                        0,
-                        16,
-                        8,
-                        11,
-                        9,
-                        10,
-                        10,
-                        10,
-                        10
-                    ]
-                ],
-                "title": "Státní správa"
-            },
-            {
-                "lines": [
-                    [
-                        100,
-                        63,
-                        62,
-                        54,
-                        60,
-                        63,
-                        59,
-                        64,
-                        74
-                    ],
-                    [
-                        0,
-                        24,
-                        19,
-                        21,
-                        28,
-                        25,
-                        30,
-                        23,
-                        13
-                    ],
-                    [
-                        0,
-                        13,
-                        19,
-                        25,
-                        12,
-                        12,
-                        11,
-                        13,
-                        13
-                    ]
-                ],
-                "title": "Zdravotnictví"
-            },
-            {
-                "lines": [
-                    [
-                        100,
-                        62,
-                        67,
-                        69,
-                        70,
-                        67,
-                        67,
-                        70,
-                        68
-                    ],
-                    [
-                        0,
-                        25,
-                        22,
-                        21,
-                        19,
-                        22,
-                        22,
-                        18,
-                        23
-                    ],
-                    [
-                        0,
-                        13,
-                        11,
-                        10,
-                        11,
-                        11,
-                        11,
-                        12,
-                        9
-                    ]
-                ],
-                "title": "Školství"
-            },
-            {
-                "lines": [
-                    [
-                        100,
-                        63,
-                        74,
-                        77,
-                        75,
-                        72,
-                        78,
-                        77,
-                        80
-                    ],
-                    [
-                        0,
-                        24,
-                        18,
-                        10,
-                        17,
-                        18,
-                        10,
-                        17,
-                        9
-                    ],
-                    [
-                        0,
-                        13,
-                        8,
-                        13,
-                        8,
-                        10,
-                        12,
-                        6,
-                        11
-                    ]
-                ],
-                "title": "Armáda"
-            }
-        ],
-        "titles": [
-            "V poho skupina",
-            "Lehce ekonomicky zasažení",
-            "Těžce ekonoomicky zasažení"
-        ],
-        "total": {
-            "lines": [
-                [
-                    100,
-                    63,
-                    62,
-                    63,
-                    63,
-                    62,
-                    64,
-                    63,
-                    65
-                ],
-                [
-                    0,
-                    21,
-                    21,
-                    21,
-                    21,
-                    23,
-                    21,
-                    22,
-                    21
-                ],
-                [
-                    0,
-                    16,
-                    17,
-                    16,
-                    16,
-                    15,
-                    15,
-                    15,
-                    14
-                ]
-            ],
-            "title": ""
-        },
-        "weeks": 9
-    },
     "destabilization": {
         "colors": [
             "#eeeeee",
             "rgb(238, 190, 94)",
-            "green",
+            "red",
             "blue",
             "rgb(233, 129, 129)"
         ],
+        "firstWeek": 2,
         "groups": [{
                 "lines": [
                     [
-                        100,
-                        97,
-                        73,
-                        71,
-                        73,
-                        71,
-                        70,
-                        71,
-                        72
+                        55,
+                        49,
+                        50,
+                        49,
+                        56,
+                        55,
+                        60,
+                        55,
+                        52
                     ],
                     [
-                        0,
-                        0,
-                        23,
-                        25,
+                        13,
+                        13,
+                        13,
+                        14,
+                        12,
+                        14,
+                        15,
+                        14,
+                        9
+                    ],
+                    [
+                        29,
+                        33,
+                        31,
+                        33,
+                        26,
                         24,
-                        23,
-                        23,
-                        23,
-                        22
-                    ],
-                    [
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        0,
-                        1,
-                        1,
-                        1,
-                        1,
-                        2,
-                        2,
-                        1,
-                        1
+                        19,
+                        25,
+                        32
                     ],
                     [
                         0,
                         2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    [
                         3,
                         3,
+                        4,
                         2,
                         4,
                         5,
-                        5,
+                        4,
+                        4,
                         5
                     ]
                 ],
-                "title": "uplna_deti"
+                "title": "Úplná s dětmi"
             },
             {
                 "lines": [
                     [
-                        100,
-                        98,
-                        79,
-                        81,
-                        81,
-                        80,
-                        81,
-                        81,
-                        82
+                        68,
+                        62,
+                        63,
+                        62,
+                        67,
+                        68,
+                        67,
+                        66,
+                        61
                     ],
                     [
-                        0,
-                        0,
-                        17,
-                        15,
-                        16,
-                        15,
-                        15,
-                        15,
-                        14
+                        9,
+                        9,
+                        8,
+                        9,
+                        10,
+                        9,
+                        9,
+                        7,
+                        7
                     ],
                     [
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
+                        21,
+                        24,
+                        23,
+                        25,
+                        18,
+                        18,
+                        19,
+                        21,
+                        26
                     ],
                     [
-                        0,
                         1,
                         2,
                         1,
                         1,
                         1,
+                        2,
                         1,
                         1,
-                        1
+                        2
                     ],
                     [
-                        0,
                         1,
-                        2,
                         3,
+                        5,
+                        3,
+                        4,
+                        3,
+                        4,
+                        5,
+                        4
+                    ]
+                ],
+                "title": "Dospělí bez dětí"
+            },
+            {
+                "lines": [
+                    [
+                        49,
+                        42,
+                        43,
+                        46,
+                        58,
+                        64,
+                        65,
+                        45,
+                        47
+                    ],
+                    [
+                        14,
+                        13,
+                        12,
+                        10,
+                        3,
+                        8,
+                        10,
+                        7,
+                        5
+                    ],
+                    [
+                        32,
+                        42,
+                        41,
+                        40,
+                        35,
+                        23,
+                        15,
+                        41,
+                        41
+                    ],
+                    [
+                        3,
+                        1,
+                        0,
+                        1,
+                        1,
+                        3,
+                        7,
+                        5,
+                        2
+                    ],
+                    [
+                        2,
                         2,
                         4,
                         3,
                         3,
-                        3
+                        2,
+                        3,
+                        2,
+                        5
                     ]
                 ],
-                "title": "dospeli_bez"
+                "title": "Samoživitel\/ka s dětmi"
             },
             {
                 "lines": [
                     [
-                        100,
-                        98,
-                        71,
-                        82,
-                        82,
                         80,
-                        86,
-                        78,
+                        80,
+                        77,
+                        73,
+                        80,
+                        80,
+                        83,
+                        79,
                         77
                     ],
                     [
+                        1,
                         0,
                         0,
-                        24,
-                        13,
+                        0,
+                        0,
+                        2,
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        17,
+                        18,
+                        20,
+                        23,
+                        17,
                         16,
                         15,
-                        11,
-                        11,
-                        15
+                        19,
+                        21
                     ],
                     [
                         0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        0,
-                        2,
-                        3,
-                        2,
-                        1,
                         1,
                         2,
-                        8,
-                        5
-                    ],
-                    [
-                        0,
-                        0,
-                        2,
-                        3,
                         1,
-                        4,
-                        1,
-                        3,
-                        3
-                    ]
-                ],
-                "title": "samozivitel"
-            },
-            {
-                "lines": [
-                    [
-                        100,
-                        97,
-                        96,
-                        95,
-                        96,
-                        96,
-                        95,
-                        97,
-                        97
-                    ],
-                    [
-                        0,
-                        0,
                         1,
                         1,
                         0,
-                        1,
-                        2,
                         1,
                         1
                     ],
                     [
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        0,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        1,
-                        0,
-                        1
-                    ],
-                    [
-                        0,
                         2,
-                        2,
-                        3,
+                        1,
+                        1,
                         3,
                         2,
+                        1,
                         2,
-                        2,
+                        1,
                         1
                     ]
                 ],
-                "title": "sam_dospely"
-            },
-            {
-                "lines": [
-                    [
-                        100,
-                        100,
-                        100,
-                        100,
-                        90,
-                        100,
-                        70,
-                        100,
-                        89
-                    ],
-                    [
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        20,
-                        0,
-                        0
-                    ],
-                    [
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        11
-                    ],
-                    [
-                        0,
-                        0,
-                        0,
-                        0,
-                        10,
-                        0,
-                        10,
-                        0,
-                        0
-                    ]
-                ],
-                "title": "studentska"
+                "title": "Samostatně žijící dospělý"
             }
         ],
-        "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý</strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
+        "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
         "stories": [{
-                "title": "Za propad zaměstnanosti může úplně někdo jiný",
-                "date": "8. června 2020",
-                "text": "Nárůst nezaměstnanosti byl <strong>relativně malý</strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis."
-            },
-            {
-                "title": "Jiný podnadpis a krátká story",
-                "date": "11. srpna 2020",
-                "text": "Aliquam erat volutpat. Sed rhoncus commodo diam. Curabitur lobortis mauris in maximus volutpat. Aenean consectetur mauris ipsum, eget eleifend magna posuere at. Mauris sed magna hendrerit, vehicula dui id, vehicula nunc. Nullam condimentum facilisis dui, vitae placerat ante accumsan sit amet. Praesent venenatis lacus sed sapien lobortis convallis. Aliquam auctor sagittis suscipit. Etiam at magna in dolor placerat commodo ac nec nisi. In a lorem imperdiet, pretium justo non, elementum orci. Cras dapibus ullamcorper nunc. Morbi id ipsum vel arcu tempor fringilla. Suspendisse pellentesque eros dui, in euismod nulla placerat nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam in iaculis erat, vitae efficitur urna. In sed sem cursus, hendrerit urna a, vulputate lectus. Proin malesuada ligula nunc, id dapibus magna condimentum ac. Proin bibendum consectetur sapien in blandit. Aliquam gravida arcu nulla, vel ullamcorper orci fermentum sit amet. Vestibulum urna lectus, congue in imperdiet non, scelerisque at augue. Suspendisse potenti. Proin eget urna vel orci mollis mollis. Maecenas ut justo ac dui lobortis vulputate quis eget nisi. Etiam sit amet leo nec eros scelerisque vehicula. Fusce interdum risus ac lacus sodales ullamcorper. Cras molestie, ipsum in feugiat consectetur, orci eros tincidunt justo, id viverra enim metus nec augue. Fusce dapibus dictum velit, sit amet dictum eros vehicula at."
-            }
-        ],
+            "date": "8. června 2020",
+            "text": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis.",
+            "title": "Za propad zaměstnanosti může úplně někdo jiný"
+        }],
         "titles": [
             "Zbytek",
             "Omezení domácnosti",
@@ -736,62 +265,311 @@
         "total": {
             "lines": [
                 [
-                    100,
-                    98,
-                    81,
-                    81,
-                    82,
-                    81,
-                    82,
-                    82,
-                    83
+                    64,
+                    59,
+                    60,
+                    58,
+                    65,
+                    65,
+                    66,
+                    63,
+                    59
                 ],
                 [
-                    0,
-                    0,
-                    16,
-                    15,
-                    15,
-                    15,
-                    14,
-                    14,
-                    13
+                    9,
+                    9,
+                    9,
+                    10,
+                    9,
+                    10,
+                    10,
+                    9,
+                    7
                 ],
                 [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
+                    24,
+                    27,
+                    26,
+                    28,
+                    22,
+                    20,
+                    18,
+                    23,
+                    28
                 ],
                 [
-                    0,
-                    1,
-                    1,
-                    1,
-                    1,
-                    1,
-                    1,
-                    1,
-                    1
-                ],
-                [
-                    0,
                     1,
                     2,
-                    3,
+                    1,
+                    1,
+                    1,
+                    2,
+                    2,
+                    1,
+                    2
+                ],
+                [
                     2,
                     3,
+                    4,
                     3,
                     3,
-                    3
+                    3,
+                    4,
+                    4,
+                    4
                 ]
             ],
-            "title": ""
+            "title": "Celkem"
+        },
+        "weeks": 9
+    },
+    "impacts": {
+        "colors": [
+            "#eeeeee",
+            "rgb(238, 190, 94)",
+            "rgb(233, 129, 129)"
+        ],
+        "firstWeek": 2,
+        "groups": [{
+                "lines": [
+                    [
+                        44,
+                        39,
+                        46,
+                        50,
+                        45,
+                        48,
+                        46,
+                        54,
+                        55
+                    ],
+                    [
+                        27,
+                        32,
+                        28,
+                        29,
+                        32,
+                        31,
+                        31,
+                        28,
+                        33
+                    ],
+                    [
+                        29,
+                        29,
+                        26,
+                        21,
+                        23,
+                        21,
+                        23,
+                        18,
+                        12
+                    ]
+                ],
+                "title": "Obchod a služby"
+            },
+            {
+                "lines": [
+                    [
+                        64,
+                        59,
+                        63,
+                        68,
+                        59,
+                        66,
+                        66,
+                        71,
+                        70
+                    ],
+                    [
+                        30,
+                        31,
+                        27,
+                        25,
+                        33,
+                        26,
+                        28,
+                        22,
+                        28
+                    ],
+                    [
+                        6,
+                        10,
+                        10,
+                        7,
+                        8,
+                        8,
+                        6,
+                        7,
+                        2
+                    ]
+                ],
+                "title": "IT a finance"
+            },
+            {
+                "lines": [
+                    [
+                        57,
+                        47,
+                        56,
+                        53,
+                        51,
+                        54,
+                        56,
+                        58,
+                        66
+                    ],
+                    [
+                        23,
+                        35,
+                        34,
+                        32,
+                        34,
+                        32,
+                        33,
+                        29,
+                        25
+                    ],
+                    [
+                        20,
+                        18,
+                        10,
+                        15,
+                        15,
+                        14,
+                        11,
+                        13,
+                        9
+                    ]
+                ],
+                "title": "Průmysl a zemědělství"
+            },
+            {
+                "lines": [
+                    [
+                        63,
+                        61,
+                        68,
+                        67,
+                        61,
+                        68,
+                        72,
+                        75,
+                        68
+                    ],
+                    [
+                        23,
+                        29,
+                        20,
+                        25,
+                        32,
+                        26,
+                        21,
+                        19,
+                        24
+                    ],
+                    [
+                        14,
+                        10,
+                        12,
+                        8,
+                        7,
+                        6,
+                        7,
+                        6,
+                        8
+                    ]
+                ],
+                "title": "Státní správa, sociální služby, zdravotnictví, bezpečnost"
+            },
+            {
+                "lines": [
+                    [
+                        62,
+                        63,
+                        74,
+                        69,
+                        68,
+                        67,
+                        69,
+                        67,
+                        73
+                    ],
+                    [
+                        21,
+                        26,
+                        13,
+                        19,
+                        22,
+                        23,
+                        20,
+                        25,
+                        17
+                    ],
+                    [
+                        17,
+                        11,
+                        13,
+                        12,
+                        10,
+                        10,
+                        11,
+                        8,
+                        10
+                    ]
+                ],
+                "title": "Školství a kultura"
+            }
+        ],
+        "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
+        "stories": [{
+            "date": "8. června 2020",
+            "text": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis.",
+            "title": "Za propad zaměstnanosti může úplně někdo jiný"
+        }],
+        "titles": [
+            "V poho skupina",
+            "Lehce ekonomicky zasažení",
+            "Těžce ekonoomicky zasažení"
+        ],
+        "total": {
+            "lines": [
+                [
+                    62,
+                    55,
+                    63,
+                    62,
+                    59,
+                    61,
+                    60,
+                    65,
+                    66
+                ],
+                [
+                    21,
+                    28,
+                    24,
+                    25,
+                    28,
+                    27,
+                    27,
+                    24,
+                    24
+                ],
+                [
+                    17,
+                    17,
+                    13,
+                    13,
+                    13,
+                    12,
+                    13,
+                    11,
+                    10
+                ]
+            ],
+            "title": "Celkem"
         },
         "weeks": 9
     }
