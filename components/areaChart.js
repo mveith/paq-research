@@ -52,7 +52,7 @@ function AreaChart(props) {
     const frameProps = {
         lines: lines,
         size: props.size,
-        margin: { left: 80, bottom: props.showXAxis ? 50 : 10, right: 10, top: 40 },
+        margin: { left: 50, bottom: props.showXAxis ? 50 : 10, right: 10, top: 40 },
 
         lineType: "area",
         responsiveWidth: true,
