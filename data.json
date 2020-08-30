@@ -3,7 +3,7 @@
         "colors": [
             "#eeeeee",
             "rgb(238, 190, 94)",
-            "red",
+            "green",
             "blue",
             "rgb(233, 129, 129)"
         ],
@@ -257,9 +257,9 @@
         }],
         "titles": [
             "Zbytek",
-            "Omezení domácnosti",
-            "Podzaměstnaní nestabilní",
-            "Prekarizace",
+            "Omezení práce v domácnosti",
+            "Podzaměstnaní a nestabilní",
+            "Prekarizace: ztráta stabilní práce",
             "Celková ztráta práce"
         ],
         "total": {
@@ -529,9 +529,9 @@
             "title": "Za propad zaměstnanosti může úplně někdo jiný"
         }],
         "titles": [
-            "V poho skupina",
-            "Lehce ekonomicky zasažení",
-            "Těžce ekonoomicky zasažení"
+            "Zbytek",
+            "Lehce zasažení",
+            "Těžce zasažení"
         ],
         "total": {
             "lines": [

@@ -1,11 +1,15 @@
 import Layout from './layout';
 import AreaChart from './areaChart';
 import { useState, useEffect } from 'react';
+import Legend from '../components/legend';
 
-export default function DataPage({ navigation, dataProps, title, description, legend }) {
+export default function DataPage({ navigation, dataProps, title, description }) {
     const [annotation, setAnnotation] = useState();
     const [total, setTotal] = useState(true);
     const [height, setHeight] = useState(600);
+    const legend = {
+        items: dataProps.titles.map((t, i) => { return { color: dataProps.colors[i], title: t, description: t }; })
+    };
     const charts = dataProps.groups.map((v, i) => {
         return (<div className="chart-content"><AreaChart key={`chart-${i}`} weeks={dataProps.weeks} firstWeek={dataProps.firstWeek} colors={dataProps.colors} titles={dataProps.titles} yMin={0} yMax={100} showYAxis={true} showXAxis={false} values={v} size={[300, height]} annotation={annotation} onHover={x => {
             if (x) {
@@ -50,7 +54,7 @@ export default function DataPage({ navigation, dataProps, title, description, le
                 <div className="chart-wrapper">
                     <div className="chart" >{content}</div>
                     <div className="legend">
-                        {legend}
+                        <Legend {...legend} />
                     </div>
                 </div>
                 {navigation}
