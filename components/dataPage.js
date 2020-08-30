@@ -64,7 +64,7 @@ export default function DataPage({ navigation, dataProps, title, description }) 
                         <p className="story-title">{s.title}</p>
                         <p className="story-date">{s.date}</p>
                         <p className="block-paragraph" dangerouslySetInnerHTML={{ __html: s.text }}></p>
-                        <hr style={{ margin: "2rem 20rem", color: "#707070"}}/>
+                        <hr style={{ margin: "2rem 40%", color: "#707070"}}/>
                     </div>))}
                 </div>
                 <div id="methodology">
