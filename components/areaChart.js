@@ -33,7 +33,7 @@ function AreaChart(props) {
         { orient: "left", ticks: 0, baseline: false, showOutboundTickLines: false, tickLineGenerator: e => null, tickFormat: e => null };
 
     const xAxis = {
-        orient: "bottom", showOutboundTickLines: true, ticks: props.weeks, tickFormat: (e => props.showXAxis ? `${e}.${e === 1 ? "vlna" : ""}` : null), tickLineGenerator: ({ xy }) => (
+        orient: "bottom", showOutboundTickLines: true, ticks: props.weeks, tickFormat: (e => props.showXAxis ? `${e}.${e === props.firstWeek ? "vlna" : ""}` : null), tickLineGenerator: ({ xy }) => (
             <line
                 key={`line-${xy.y1}-${xy.x1}`}
                 x1={xy.x1}
