@@ -3,7 +3,7 @@ import path from 'path'
 import DataPage from '../components/dataPage';
 import ThemeNavigation from '../components/themeNavigation';
 
-const navigation = (<ThemeNavigation previousHref="/destabilizace-prace" previousTitle="Destabilizace práce" nextHref="/" nextTitle="Dopady a strategie domácnosti" />);
+const navigation = (<ThemeNavigation previousHref="/destabilizace-prace" previousTitle="Destabilizace práce" nextHref="/strategie" nextTitle="Dopady a strategie domácnosti" />);
 
 export default function Impact(props) {
     return <DataPage
