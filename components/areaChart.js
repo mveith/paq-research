@@ -12,8 +12,8 @@ function generateAnnotations(props) {
             return {
                 type: "frame-hover",
                 x: props.annotation.week,
-                y: values.lines.slice(i).map(pl => pl[props.annotation.week - 1]).reduce((a, b) => a + b, 0),
-                value: l[props.annotation.week - 1]
+                y: values.lines.slice(i).map(pl => pl[props.annotation.week - props.firstWeek]).reduce((a, b) => a + b, 0),
+                value: l[props.annotation.week - props.firstWeek]
             };
         });
         return [{ type: "x", week: props.annotation.week, disable: ["connector", "note"] }].concat(tooltipAnnotations);
