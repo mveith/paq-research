@@ -11,48 +11,47 @@ a {
 }
 
 h1 {
-  margin-bottom: 0rem;
+    margin-bottom: 0rem;
 }
 
-h2 {
-
-}
+h2 {}
 
 h3 {
-  font-size: .85rem;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
+    font-size: .85rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
 }
 
 p {
-  font-size: 1rem;
-  margin-top: .5rem;
-  margin-bottom: 0rem;
-  line-height: 1.4rem;
+    font-size: 1rem;
+    margin-top: .5rem;
+    margin-bottom: 0rem;
+    line-height: 1.4rem;
 }
 
 ul {
-  padding-inline-start: 1.2rem;
-  margin-top: 0rem;
+    padding-inline-start: 1.2rem;
+    margin-top: 0rem;
 }
 
 li {
-  padding: .2rem 0rem;
-  font-size: .9rem;
+    padding: .2rem 0rem;
+    font-size: .9rem;
 }
- 
-/* ul li:before { */
-.li-custom {
-/* content: "•"; */
-  /* font-family: Font awesome; */
-  /* font-size: 200%; */
-  /* line-height: 5%;  */
-  /* padding-left: 5px; */
-  /* margin-top: -1; */
-  margin-right: .5rem;
-  margin-left: -1rem;
-  display: inline-block;
 
+
+/* ul li:before { */
+
+.li-custom {
+    /* content: "•"; */
+    /* font-family: Font awesome; */
+    /* font-size: 200%; */
+    /* line-height: 5%;  */
+    /* padding-left: 5px; */
+    /* margin-top: -1; */
+    margin-right: .5rem;
+    margin-left: -1rem;
+    display: inline-block;
 }
 
 * {
@@ -105,52 +104,52 @@ li {
 }
 
 .legend-title {
-  font-size: 1.1rem;
-  margin-bottom: 0.2rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
 }
 
 .legend-description {
-  /* font-size: 0.9rem; */
-  margin-top: 0rem;
+    /* font-size: 0.9rem; */
+    margin-top: 0rem;
 }
 
 .arrow-button {
-  font-weight: 600;
-  text-decoration: underline;
+    font-weight: 600;
+    text-decoration: underline;
 }
 
 .button-switch-topic {
-  font-size: .9rem;
-  color: #707070;
-  margin: 1rem 0rem;
+    font-size: .9rem;
+    color: #707070;
+    margin: 1rem 0rem;
 }
 
 .story-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  /* color: #333; */
-  margin-bottom: 0rem;
-  margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    /* color: #333; */
+    margin-bottom: 0rem;
+    margin-top: 1.5rem;
 }
 
 .story-date {
-  font-size: 0.8rem;
-  color: #545454; 
-  margin-top: 0.2rem;
+    font-size: 0.8rem;
+    color: #545454;
+    margin-top: 0.2rem;
 }
 
 .block-paragraph {
-  /* color: #707070; */
-  text-align: justify;
-  text-justify: inter-word;
+    /* color: #707070; */
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .menu-footer {
-  font-size: .9rem;
+    font-size: .9rem;
 }
 
 .menu-item-style {
-  color: red;
+    color: red;
 }
 
 @media only screen and (min-width: 720px) {
@@ -199,7 +198,7 @@ li {
         display: flex;
         justify-content: right;
         font-family: Fira Sans;
-
+        z-index: 10;
     }
     .top-menu-mobile {
         display: none;
