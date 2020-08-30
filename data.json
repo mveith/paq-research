@@ -922,5 +922,183 @@
             "title": "Celkem"
         },
         "weeks": 10
+    },
+    "strategies": {
+        "colors": [
+            "#eeeeee",
+            "rgb(238, 190, 94)",
+            "rgb(233, 129, 129)"
+        ],
+        "firstWeek": 1,
+        "groups": [{
+                "lines": [
+                    [
+                        29,
+                        33,
+                        38,
+                        51,
+                        58,
+                        58,
+                        61,
+                        62,
+                        62
+                    ],
+                    [
+                        44,
+                        44,
+                        37,
+                        30,
+                        25,
+                        24,
+                        22,
+                        20,
+                        22
+                    ],
+                    [
+                        27,
+                        23,
+                        25,
+                        19,
+                        17,
+                        18,
+                        17,
+                        18,
+                        16
+                    ]
+                ],
+                "title": "ZŠ a SŠ bez maturity"
+            },
+            {
+                "lines": [
+                    [
+                        26,
+                        40,
+                        44,
+                        52,
+                        55,
+                        54,
+                        59,
+                        57,
+                        58
+                    ],
+                    [
+                        50,
+                        40,
+                        36,
+                        31,
+                        28,
+                        29,
+                        24,
+                        25,
+                        24
+                    ],
+                    [
+                        24,
+                        20,
+                        20,
+                        17,
+                        17,
+                        17,
+                        17,
+                        18,
+                        18
+                    ]
+                ],
+                "title": "SŠ s maturitou"
+            },
+            {
+                "lines": [
+                    [
+                        43,
+                        49,
+                        52,
+                        61,
+                        60,
+                        63,
+                        67,
+                        70,
+                        71
+                    ],
+                    [
+                        42,
+                        36,
+                        34,
+                        29,
+                        28,
+                        25,
+                        22,
+                        20,
+                        19
+                    ],
+                    [
+                        15,
+                        15,
+                        14,
+                        10,
+                        12,
+                        12,
+                        11,
+                        10,
+                        10
+                    ]
+                ],
+                "title": "VŠ"
+            }
+        ],
+        "legendItems": [
+            "",
+            "Skupina lidí, kteří chtějí výrazně omezit výdaje za nákup potravin, spotřebních věcí (oblečení, vybavení domácnosti), návštěvy restaurací, kulturu či cestování",
+            "Respondenti, kteří mají potíže se splácením závazků (hypotéka\/nájem, půjčka, úvěr, pravidelné výdaje domácnosti) nebo zvažují půjčku od rodiny či známých, banky či úvěrové společnosti nebo prodej majetku"
+        ],
+        "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
+        "stories": [{
+            "date": "8. června 2020",
+            "text": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis.",
+            "title": "Za propad zaměstnanosti může úplně někdo jiný"
+        }],
+        "titles": [
+            "Zbytek",
+            "Chtějí šetřit",
+            "Nestíhají splácet či se chtějí zadlužit"
+        ],
+        "total": {
+            "lines": [
+                [
+                    30,
+                    39,
+                    43,
+                    54,
+                    57,
+                    58,
+                    61,
+                    62,
+                    62
+                ],
+                [
+                    46,
+                    41,
+                    36,
+                    30,
+                    27,
+                    26,
+                    23,
+                    21,
+                    22
+                ],
+                [
+                    24,
+                    20,
+                    21,
+                    16,
+                    16,
+                    16,
+                    16,
+                    17,
+                    16
+                ]
+            ],
+            "title": "Celkem"
+        },
+        "weeks": 9
     }
 }
