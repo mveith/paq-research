@@ -249,6 +249,13 @@
                 "title": "Samostatně žijící dospělý"
             }
         ],
+        "legendItems": [
+            "",
+            "Člen domácnosti respondenta přišel o práci nebo se mu výrazně redukovala.",
+            "U respondenta od začátku epidemie došlo k některé z následujících změn v práci – snížení úvazku, mzdy, odpracovaných hodin min. o pětinu, ztrátě benefitů, nucené dovolené nebo ztrátě jiných pracovních příjmů (např. z DPP nebo plateb na ruku) nebo někdo další z domácnosti přišel o práci či zažil výraznou redukci práce.",
+            "Došlo ke ztrátě původní práce, ale respondent nadále pracuje",
+            "Ztráta práce respondenta bez nelezení nové."
+        ],
         "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
         "stories": [{
             "date": "8. června 2020",
@@ -454,6 +461,10 @@
                 ],
                 "title": "55+ let"
             }
+        ],
+        "legendItems": [
+            "",
+            ""
         ],
         "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
         "stories": [{
@@ -706,6 +717,11 @@
                 ],
                 "title": "Školství a kultura"
             }
+        ],
+        "legendItems": [
+            "",
+            "",
+            ""
         ],
         "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
         "stories": [{
