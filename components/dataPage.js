@@ -3,6 +3,42 @@ import AreaChart from './areaChart';
 import { useState, useEffect } from 'react';
 import Legend from '../components/legend';
 
+function getSmallChartProps(dataProps, values, index, height, annotation, onHover) {
+    return {
+        key: `chart-${index}`,
+        weeks: dataProps.weeks,
+        firstWeek: dataProps.firstWeek,
+        colors: dataProps.colors,
+        titles: dataProps.titles,
+        yMin: 0,
+        yMax: 100,
+        showYAxis: true,
+        showXAxis: false,
+        values: values,
+        size: [300, height],
+        annotation: annotation,
+        onHover: onHover
+    };
+}
+
+function getBigChartProps(dataProps, height, annotation, onHover) {
+    return {
+        key: "chart-total",
+        weeks: dataProps.weeks,
+        firstWeek: dataProps.firstWeek,
+        colors: dataProps.colors,
+        titles: dataProps.titles,
+        yMin: 0,
+        yMax: 100,
+        showYAxis: true,
+        showXAxis: true,
+        values: dataProps.total,
+        size: [800, height],
+        annotation: annotation,
+        onHover: onHover
+    };
+}
+
 export default function DataPage({ navigation, dataProps, title, description }) {
     const [annotation, setAnnotation] = useState();
     const [total, setTotal] = useState(true);
@@ -10,20 +46,18 @@ export default function DataPage({ navigation, dataProps, title, description }) 
     const legend = {
         items: dataProps.titles.map((t, i) => { return { color: dataProps.colors[i], title: t, description: dataProps.legendItems[i] }; })
     };
-    const charts = dataProps.groups.map((v, i) => {
-        return (<div className="chart-content"><AreaChart key={`chart-${i}`} weeks={dataProps.weeks} firstWeek={dataProps.firstWeek} colors={dataProps.colors} titles={dataProps.titles} yMin={0} yMax={100} showYAxis={true} showXAxis={false} values={v} size={[300, height]} annotation={annotation} onHover={x => {
+
+    const onHover = x => {
             if (x) {
                 setAnnotation({ week: x.week, lineIndex: x.parentLine.key });
             }
             else { setAnnotation(); }
-        }} /></div>);
+    };
+
+    const charts = dataProps.groups.map((v, i) => {
+        return (<div className="chart-content"><AreaChart {...getSmallChartProps(dataProps, v, i, height, annotation, onHover)} /></div>);
     });
-    const totalChart = (<div className="chart-content"><AreaChart key="chart-total" weeks={dataProps.weeks} firstWeek={dataProps.firstWeek} colors={dataProps.colors} titles={dataProps.titles} yMin={0} yMax={100} showYAxis={true} showXAxis={true} values={dataProps.total} size={[800, height]} annotation={annotation} onHover={x => {
-        if (x) {
-            setAnnotation({ week: x.week, lineIndex: x.parentLine.key });
-        }
-        else { setAnnotation(); }
-    }} /></div>);
+    const totalChart = (<div className="chart-content"><AreaChart {...getBigChartProps(dataProps, height, annotation, onHover)} /></div>);
 
     useEffect(() => {
         function handleResize() {
