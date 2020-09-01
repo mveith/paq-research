@@ -45,7 +45,7 @@ function getYAxis(props) {
 
     const getTickValue = e => {
         if (e === 0 || e === 100) {
-            return e;
+            return e + props.nonpercentage ? "" : " %";
         }
         return null;
     };
@@ -104,7 +104,7 @@ function LineChart(props) {
         ],
         annotations: annotations,
         customHoverBehavior: x => props.onHover ? props.onHover(x) : null,
-        tooltipContent: d => { return <div style={{ margin: "5px" }}>{d.value}</div> }
+        tooltipContent: d => { return <div style={{ margin: "5px" }}>{d.value}{props.nonpercentage ? "" : " %"}</div> }
     };
     return <Chart {...frameProps} />;
 }

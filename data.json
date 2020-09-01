@@ -1,1229 +1,383 @@
 {
-    "contacts": {
-        "colors": [
-            "rgb(233, 129, 129)"
-        ],
+    "activities": {
+        "colors": [ "#FF00FF", "#2F4F4F", "#00008B", "#FA8072", "#FFA07A", "#FFD700", "#2E8B57", "#FFFFFF", "#7FFFD4", "#FF7F50", "#B0E0E6", "#48D1CC", "#D2B48C", "#9966CC", "#B0C4DE", "#6A5ACD" ],
         "firstWeek": 1,
-        "groups": [{
+        "groups": [
+            {
                 "lines": [
-                    [
-                        33,
-                        22,
-                        13,
-                        11,
-                        14,
-                        13,
-                        14,
-                        15,
-                        17,
-                        17,
-                        21,
-                        23,
-                        25,
-                        27,
-                        32,
-                        33,
-                        30,
-                        31,
-                        30,
-                        31
-                    ]
+                    [ 34, 26, 13, 10, 16, 13, 15, 15, 18, 19, 24, 23, 28, 29, 35, 35, 35, 35, 35, 33 ],
+                    [ 82, 72, 75, 70, 72, 68, 73, 72, 76, 74, 78, 76, 82, 83, 84, 82, 86, 82, 84, 79 ],
+                    [ 79, 68, 63, 55, 60, 56, 64, 60, 66, 64, 68, 66, 72, 72, 78, 77, 81, 78, 79, 76 ],
+                    [ 38, 25, 4, 1, 3, 3, 3, 4, 6, 8, 23, 29, 40, 45, 50, 50, 56, 56, 59, 56 ],
+                    [ 24, 18, 12, 8, 10, 9, 10, 11, 14, 14, 18, 19, 24, 22, 31, 28, 26, 25, 26, 22 ],
+                    [ 59, 48, 42, 35, 43, 41, 49, 49, 56, 59, 63, 58, 68, 64, 69, 69, 70, 67, 66, 63 ],
+                    [ 6, 5, 2, 2, 5, 4, 7, 8, 10, 11, 10, 11, 13, 14, 16, 16, 24, 23, 27, 25 ],
+                    [ 9, 2, 0, 1, 2, 3, 5, 6, 8, 8, 9, 6, 8, 8 ],
+                    [ 3, 1, 3, 4, 4, 3, 3, 3 ],
+                    [ 14, 7, 1, 1, 2, 2, 2, 3, 5, 5, 7, 8, 10, 10, 12, 11, 12, 11, 12, 12 ],
+                    [ 16, 9, 4, 3, 5, 3, 4, 5, 7, 6, 11, 10, 12, 12, 18, 18, 20, 19, 26, 23 ],
+                    [ 5, 3, 1, 1, 1, 2, 2, 2, 1, 1, 3, 2, 3, 3, 5, 4, 5, 5, 6, 5 ],
+                    [ 19, 14, 19, 16, 27, 22, 28, 24, 31, 27, 33, 30, 40, 36, 41, 37, 42, 35 ],
+                    [ 5, 4, 8, 8, 12, 10, 14, 14, 16, 13, 19, 17, 21, 18, 22, 19, 21, 19 ],
+                    [ 0, 1, 1, 1, 1, 2, 3, 4, 4, 4, 5, 5 ],
+                    [ 4, 4, 5, 4, 9, 8, 15, 15, 14, 12, 15, 14 ]
                 ],
-                "title": "18 až 34 let"
+                "title": "Muž"
             },
             {
                 "lines": [
-                    [
-                        32,
-                        26,
-                        11,
-                        10,
-                        14,
-                        13,
-                        15,
-                        15,
-                        17,
-                        18,
-                        22,
-                        23,
-                        25,
-                        28,
-                        30,
-                        33,
-                        31,
-                        32,
-                        31,
-                        30
-                    ]
+                    [ 38, 29, 15, 10, 14, 13, 15, 15, 19, 19, 27, 27, 32, 31, 42, 38, 37, 35, 37, 33 ],
+                    [ 83, 75, 70, 64, 70, 67, 70, 70, 75, 73, 78, 77, 80, 79, 85, 83, 83, 81, 81, 76 ],
+                    [ 80, 68, 61, 48, 52, 48, 59, 56, 66, 60, 69, 67, 74, 72, 77, 77, 78, 78, 78, 74 ],
+                    [ 24, 13, 2, 1, 1, 1, 2, 2, 4, 5, 11, 15, 23, 28, 37, 39, 40, 42, 41, 42 ],
+                    [ 29, 22, 15, 11, 14, 11, 16, 15, 20, 19, 25, 26, 33, 29, 42, 35, 33, 29, 34, 26 ],
+                    [ 60, 45, 37, 31, 37, 39, 45, 47, 55, 58, 62, 60, 68, 64, 72, 69, 74, 65, 70, 62 ],
+                    [ 6, 5, 2, 2, 3, 3, 5, 5, 9, 8, 10, 8, 11, 13, 17, 15, 23, 22, 23, 22 ],
+                    [ 7, 2, 1, 1, 1, 2, 3, 4, 8, 8, 7, 7, 8, 8 ],
+                    [ 2, 1, 3, 3, 3, 4, 3, 3 ],
+                    [ 12, 5, 1, 0, 1, 1, 1, 2, 3, 4, 4, 5, 8, 8, 9, 10, 8, 8, 9, 7 ],
+                    [ 17, 8, 5, 2, 3, 2, 5, 4, 5, 5, 9, 9, 13, 12, 23, 19, 26, 24, 25, 23 ],
+                    [ 3, 2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 5, 4, 5, 5, 4, 3 ],
+                    [ 15, 11, 14, 12, 19, 17, 28, 25, 29, 25, 33, 29, 41, 35, 45, 35, 38, 32 ],
+                    [ 4, 3, 5, 5, 7, 6, 10, 10, 12, 9, 13, 11, 17, 14, 17, 14, 18, 15 ],
+                    [ 1, 1, 1, 1, 1, 2, 2, 3, 3, 3, 5, 4 ],
+                    [ 5, 5, 4, 5, 8, 7, 12, 11, 11, 11, 12, 10 ]
                 ],
-                "title": "35 až 54 let"
-            },
-            {
-                "lines": [
-                    [
-                        15,
-                        10,
-                        5,
-                        4,
-                        6,
-                        6,
-                        7,
-                        7,
-                        9,
-                        9,
-                        11,
-                        12,
-                        13,
-                        14,
-                        17,
-                        17,
-                        18,
-                        17,
-                        16,
-                        16
-                    ]
-                ],
-                "title": "55+ let"
+                "title": "Žena"
             }
         ],
-        "legendItems": [
-            "Průměrný odhadovaný počet lidí, se kterými byli v uplynulých dvou týdnech (každý týden dotazován zvlášť) v přímém osobním kontaktu trvajícím alespoň pět minut"
-        ],
+        "legendItems": [ "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" ],
         "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
-        "stories": [{
-            "date": "8. června 2020",
-            "text": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis.",
-            "title": "Za propad zaměstnanosti může úplně někdo jiný"
-        }],
-        "titles": [
-            "Průměrný počet osob v podstatném kontaktu"
+        "stories": [
+            {
+                "date": "8. června 2020",
+                "text": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis.",
+                "title": "Za propad zaměstnanosti může úplně někdo jiný"
+            }
         ],
+        "titles": [ "Jízda plným MHD, vlakem nebo autobusem", "Nakupování v obchodě (popř. návštěva banky\/pošty) s větším množstvím lidí", "Nakupování nebalených potravin", "Návštěva restaurace nebo hospody", "Návštěva lékaře či zdravotních a sociálních institucí (domovy důchodců, nemocnice, stacionáře apod.)", "Návštěva rodiny či přátel (u nich či u vás doma)", "Společná dovolená či výlet s více lidmi", "Návštěva menších sportovních utkání, koncertů či kulturních akcí (50 až 500 účastníků)", "Návštěva větších sportovních utkání, koncertu či kulturních akcí (více než 500 účastníků)", "Návštěva fitness, sportovišť, hraní týmových sportů", "Využití veřejných toalet", "Jízda taxi", "Chození do parku, po městě apod. ve více než dvou lidech", "Ježdění na chatu\/chalupu a komunikace s místními", "Cestování či výjezd za prací do zahraničí", "Účast na společenské události za přítomnosti více než pěti lidí (např. svatba)" ],
         "total": {
             "lines": [
-                [
-                    26,
-                    19,
-                    9,
-                    8,
-                    11,
-                    10,
-                    11,
-                    12,
-                    14,
-                    14,
-                    17,
-                    18,
-                    21,
-                    22,
-                    25,
-                    27,
-                    25,
-                    26,
-                    25,
-                    24
-                ]
+                [ 36, 28, 14, 10, 15, 13, 15, 15, 19, 19, 26, 25, 30, 30, 38, 37, 36, 35, 36, 33 ],
+                [ 82, 74, 73, 67, 71, 67, 71, 71, 76, 73, 78, 76, 81, 81, 84, 83, 85, 81, 82, 78 ],
+                [ 79, 68, 62, 51, 56, 52, 62, 58, 66, 62, 69, 67, 73, 72, 78, 77, 80, 78, 78, 75 ],
+                [ 31, 19, 3, 1, 2, 2, 3, 3, 5, 6, 17, 22, 31, 36, 43, 45, 48, 49, 50, 48 ],
+                [ 27, 20, 13, 10, 12, 10, 13, 13, 17, 16, 22, 23, 29, 26, 37, 31, 30, 27, 30, 24 ],
+                [ 59, 47, 40, 33, 40, 40, 47, 48, 55, 58, 62, 59, 68, 64, 71, 69, 72, 66, 68, 62 ],
+                [ 6, 5, 2, 2, 4, 4, 6, 6, 9, 9, 10, 9, 12, 13, 17, 16, 23, 22, 25, 23 ],
+                [ 8, 2, 1, 1, 1, 2, 4, 5, 8, 8, 8, 7, 8, 8 ],
+                [ 3, 1, 3, 3, 4, 3, 3, 3 ],
+                [ 13, 6, 1, 1, 1, 1, 2, 2, 4, 5, 6, 6, 9, 9, 11, 10, 10, 10, 10, 9 ],
+                [ 16, 9, 5, 3, 4, 2, 4, 4, 6, 6, 10, 9, 12, 12, 21, 19, 23, 21, 26, 23 ],
+                [ 4, 2, 1, 1, 1, 2, 1, 1, 2, 2, 2, 2, 3, 3, 5, 4, 5, 5, 5, 4 ],
+                [ 17, 12, 17, 14, 23, 20, 28, 24, 30, 26, 33, 29, 40, 35, 43, 36, 40, 33 ],
+                [ 4, 4, 7, 6, 10, 8, 12, 12, 14, 11, 16, 14, 19, 16, 19, 17, 20, 17 ],
+                [ 1, 1, 1, 1, 1, 2, 3, 3, 4, 4, 5, 4 ],
+                [ 4, 5, 5, 5, 8, 8, 13, 13, 12, 11, 13, 12 ]
             ],
             "title": "Celkem"
         },
         "weeks": 20
     },
-    "destabilization": {
-        "colors": [
-            "#eeeeee",
-            "rgb(238, 190, 94)",
-            "green",
-            "blue",
-            "rgb(233, 129, 129)"
+    "contacts": {
+        "colors": [ "rgb(233, 129, 129)" ],
+        "firstWeek": 1,
+        "groups": [
+            {
+                "lines": [ [ 33, 22, 13, 11, 14, 13, 14, 15, 17, 17, 21, 23, 25, 27, 32, 33, 30, 31, 30, 31 ] ],
+                "title": "18 až 34 let"
+            },
+            {
+                "lines": [ [ 32, 26, 11, 10, 14, 13, 15, 15, 17, 18, 22, 23, 25, 28, 30, 33, 31, 32, 31, 30 ] ],
+                "title": "35 až 54 let"
+            },
+            {
+                "lines": [ [ 15, 10, 5, 4, 6, 6, 7, 7, 9, 9, 11, 12, 13, 14, 17, 17, 18, 17, 16, 16 ] ],
+                "title": "55+ let"
+            }
         ],
+        "legendItems": [ "Průměrný odhadovaný počet lidí, se kterými byli v uplynulých dvou týdnech (každý týden dotazován zvlášť) v přímém osobním kontaktu trvajícím alespoň pět minut" ],
+        "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
+        "stories": [
+            {
+                "date": "8. června 2020",
+                "text": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis.",
+                "title": "Za propad zaměstnanosti může úplně někdo jiný"
+            }
+        ],
+        "titles": [ "Průměrný počet osob v podstatném kontaktu" ],
+        "total": {
+            "lines": [ [ 26, 19, 9, 8, 11, 10, 11, 12, 14, 14, 17, 18, 21, 22, 25, 27, 25, 26, 25, 24 ] ],
+            "title": "Celkem"
+        },
+        "weeks": 20
+    },
+    "destabilization": {
+        "colors": [ "#eeeeee", "rgb(238, 190, 94)", "green", "blue", "rgb(233, 129, 129)" ],
         "firstWeek": 2,
-        "groups": [{
+        "groups": [
+            {
                 "lines": [
-                    [
-                        55,
-                        49,
-                        50,
-                        49,
-                        56,
-                        55,
-                        60,
-                        55,
-                        52
-                    ],
-                    [
-                        13,
-                        13,
-                        13,
-                        14,
-                        12,
-                        14,
-                        15,
-                        14,
-                        9
-                    ],
-                    [
-                        29,
-                        33,
-                        31,
-                        33,
-                        26,
-                        24,
-                        19,
-                        25,
-                        32
-                    ],
-                    [
-                        0,
-                        2,
-                        2,
-                        2,
-                        2,
-                        2,
-                        2,
-                        2,
-                        2
-                    ],
-                    [
-                        3,
-                        3,
-                        4,
-                        2,
-                        4,
-                        5,
-                        4,
-                        4,
-                        5
-                    ]
+                    [ 55, 49, 50, 49, 56, 55, 60, 55, 52 ],
+                    [ 13, 13, 13, 14, 12, 14, 15, 14, 9 ],
+                    [ 29, 33, 31, 33, 26, 24, 19, 25, 32 ],
+                    [ 0, 2, 2, 2, 2, 2, 2, 2, 2 ],
+                    [ 3, 3, 4, 2, 4, 5, 4, 4, 5 ]
                 ],
                 "title": "Úplná s dětmi"
             },
             {
                 "lines": [
-                    [
-                        68,
-                        62,
-                        63,
-                        62,
-                        67,
-                        68,
-                        67,
-                        66,
-                        61
-                    ],
-                    [
-                        9,
-                        9,
-                        8,
-                        9,
-                        10,
-                        9,
-                        9,
-                        7,
-                        7
-                    ],
-                    [
-                        21,
-                        24,
-                        23,
-                        25,
-                        18,
-                        18,
-                        19,
-                        21,
-                        26
-                    ],
-                    [
-                        1,
-                        2,
-                        1,
-                        1,
-                        1,
-                        2,
-                        1,
-                        1,
-                        2
-                    ],
-                    [
-                        1,
-                        3,
-                        5,
-                        3,
-                        4,
-                        3,
-                        4,
-                        5,
-                        4
-                    ]
+                    [ 68, 62, 63, 62, 67, 68, 67, 66, 61 ],
+                    [ 9, 9, 8, 9, 10, 9, 9, 7, 7 ],
+                    [ 21, 24, 23, 25, 18, 18, 19, 21, 26 ],
+                    [ 1, 2, 1, 1, 1, 2, 1, 1, 2 ],
+                    [ 1, 3, 5, 3, 4, 3, 4, 5, 4 ]
                 ],
                 "title": "Dospělí bez dětí"
             },
             {
                 "lines": [
-                    [
-                        49,
-                        42,
-                        43,
-                        46,
-                        58,
-                        64,
-                        65,
-                        45,
-                        47
-                    ],
-                    [
-                        14,
-                        13,
-                        12,
-                        10,
-                        3,
-                        8,
-                        10,
-                        7,
-                        5
-                    ],
-                    [
-                        32,
-                        42,
-                        41,
-                        40,
-                        35,
-                        23,
-                        15,
-                        41,
-                        41
-                    ],
-                    [
-                        3,
-                        1,
-                        0,
-                        1,
-                        1,
-                        3,
-                        7,
-                        5,
-                        2
-                    ],
-                    [
-                        2,
-                        2,
-                        4,
-                        3,
-                        3,
-                        2,
-                        3,
-                        2,
-                        5
-                    ]
+                    [ 49, 42, 43, 46, 58, 64, 65, 45, 47 ],
+                    [ 14, 13, 12, 10, 3, 8, 10, 7, 5 ],
+                    [ 32, 42, 41, 40, 35, 23, 15, 41, 41 ],
+                    [ 3, 1, 0, 1, 1, 3, 7, 5, 2 ],
+                    [ 2, 2, 4, 3, 3, 2, 3, 2, 5 ]
                 ],
                 "title": "Samoživitel\/ka s dětmi"
             },
             {
                 "lines": [
-                    [
-                        80,
-                        80,
-                        77,
-                        73,
-                        80,
-                        80,
-                        83,
-                        79,
-                        77
-                    ],
-                    [
-                        1,
-                        0,
-                        0,
-                        0,
-                        0,
-                        2,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        17,
-                        18,
-                        20,
-                        23,
-                        17,
-                        16,
-                        15,
-                        19,
-                        21
-                    ],
-                    [
-                        0,
-                        1,
-                        2,
-                        1,
-                        1,
-                        1,
-                        0,
-                        1,
-                        1
-                    ],
-                    [
-                        2,
-                        1,
-                        1,
-                        3,
-                        2,
-                        1,
-                        2,
-                        1,
-                        1
-                    ]
+                    [ 80, 80, 77, 73, 80, 80, 83, 79, 77 ],
+                    [ 1, 0, 0, 0, 0, 2, 0, 0, 0 ],
+                    [ 17, 18, 20, 23, 17, 16, 15, 19, 21 ],
+                    [ 0, 1, 2, 1, 1, 1, 0, 1, 1 ],
+                    [ 2, 1, 1, 3, 2, 1, 2, 1, 1 ]
                 ],
                 "title": "Samostatně žijící dospělý"
             }
         ],
-        "legendItems": [
-            "",
-            "Člen domácnosti respondenta přišel o práci nebo se mu výrazně redukovala.",
-            "U respondenta od začátku epidemie došlo k některé z následujících změn v práci – snížení úvazku, mzdy, odpracovaných hodin min. o pětinu, ztrátě benefitů, nucené dovolené nebo ztrátě jiných pracovních příjmů (např. z DPP nebo plateb na ruku) nebo někdo další z domácnosti přišel o práci či zažil výraznou redukci práce.",
-            "Došlo ke ztrátě původní práce, ale respondent nadále pracuje",
-            "Ztráta práce respondenta bez nelezení nové."
-        ],
+        "legendItems": [ "", "Člen domácnosti respondenta přišel o práci nebo se mu výrazně redukovala.", "U respondenta od začátku epidemie došlo k některé z následujících změn v práci – snížení úvazku, mzdy, odpracovaných hodin min. o pětinu, ztrátě benefitů, nucené dovolené nebo ztrátě jiných pracovních příjmů (např. z DPP nebo plateb na ruku) nebo někdo další z domácnosti přišel o práci či zažil výraznou redukci práce.", "Došlo ke ztrátě původní práce, ale respondent nadále pracuje", "Ztráta práce respondenta bez nelezení nové." ],
         "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
-        "stories": [{
-            "date": "8. června 2020",
-            "text": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis.",
-            "title": "Za propad zaměstnanosti může úplně někdo jiný"
-        }],
-        "titles": [
-            "Zbytek",
-            "Omezení práce v domácnosti",
-            "Podzaměstnaní a nestabilní",
-            "Prekarizace: ztráta stabilní práce",
-            "Celková ztráta práce"
+        "stories": [
+            {
+                "date": "8. června 2020",
+                "text": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis.",
+                "title": "Za propad zaměstnanosti může úplně někdo jiný"
+            }
         ],
+        "titles": [ "Zbytek", "Omezení práce v domácnosti", "Podzaměstnaní a nestabilní", "Prekarizace: ztráta stabilní práce", "Celková ztráta práce" ],
         "total": {
             "lines": [
-                [
-                    64,
-                    59,
-                    60,
-                    58,
-                    65,
-                    65,
-                    66,
-                    63,
-                    59
-                ],
-                [
-                    9,
-                    9,
-                    9,
-                    10,
-                    9,
-                    10,
-                    10,
-                    9,
-                    7
-                ],
-                [
-                    24,
-                    27,
-                    26,
-                    28,
-                    22,
-                    20,
-                    18,
-                    23,
-                    28
-                ],
-                [
-                    1,
-                    2,
-                    1,
-                    1,
-                    1,
-                    2,
-                    2,
-                    1,
-                    2
-                ],
-                [
-                    2,
-                    3,
-                    4,
-                    3,
-                    3,
-                    3,
-                    4,
-                    4,
-                    4
-                ]
+                [ 64, 59, 60, 58, 65, 65, 66, 63, 59 ],
+                [ 9, 9, 9, 10, 9, 10, 10, 9, 7 ],
+                [ 24, 27, 26, 28, 22, 20, 18, 23, 28 ],
+                [ 1, 2, 1, 1, 1, 2, 2, 1, 2 ],
+                [ 2, 3, 4, 3, 3, 3, 4, 4, 4 ]
             ],
             "title": "Celkem"
         },
         "weeks": 9
     },
     "feelings": {
-        "colors": [
-            "green",
-            "rgb(238, 190, 94)",
-            "rgb(233, 129, 129)"
-        ],
+        "colors": [ "green", "rgb(238, 190, 94)", "rgb(233, 129, 129)" ],
         "firstWeek": 1,
-        "groups": [{
+        "groups": [
+            {
                 "lines": [
-                    [
-                        24,
-                        21,
-                        25,
-                        30,
-                        36,
-                        39,
-                        44,
-                        40,
-                        38,
-                        39
-                    ],
-                    [
-                        32,
-                        39,
-                        46,
-                        47,
-                        47,
-                        44,
-                        37,
-                        43,
-                        40,
-                        43
-                    ],
-                    [
-                        44,
-                        40,
-                        28,
-                        23,
-                        18,
-                        17,
-                        19,
-                        17,
-                        21,
-                        18
-                    ]
+                    [ 24, 21, 25, 30, 36, 39, 44, 40, 38, 39 ],
+                    [ 32, 39, 46, 47, 47, 44, 37, 43, 40, 43 ],
+                    [ 44, 40, 28, 23, 18, 17, 19, 17, 21, 18 ]
                 ],
                 "title": "18 až 34 let"
             },
             {
                 "lines": [
-                    [
-                        20,
-                        17,
-                        20,
-                        23,
-                        29,
-                        32,
-                        35,
-                        33,
-                        29,
-                        31
-                    ],
-                    [
-                        27,
-                        34,
-                        44,
-                        49,
-                        46,
-                        43,
-                        48,
-                        50,
-                        45,
-                        48
-                    ],
-                    [
-                        53,
-                        49,
-                        35,
-                        28,
-                        25,
-                        25,
-                        16,
-                        17,
-                        25,
-                        21
-                    ]
+                    [ 20, 17, 20, 23, 29, 32, 35, 33, 29, 31 ],
+                    [ 27, 34, 44, 49, 46, 43, 48, 50, 45, 48 ],
+                    [ 53, 49, 35, 28, 25, 25, 16, 17, 25, 21 ]
                 ],
                 "title": "35 až 54 let"
             },
             {
                 "lines": [
-                    [
-                        21,
-                        11,
-                        16,
-                        20,
-                        24,
-                        27,
-                        32,
-                        29,
-                        24,
-                        26
-                    ],
-                    [
-                        28,
-                        31,
-                        37,
-                        44,
-                        44,
-                        41,
-                        42,
-                        45,
-                        45,
-                        45
-                    ],
-                    [
-                        51,
-                        58,
-                        47,
-                        37,
-                        33,
-                        31,
-                        25,
-                        26,
-                        31,
-                        29
-                    ]
+                    [ 21, 11, 16, 20, 24, 27, 32, 29, 24, 26 ],
+                    [ 28, 31, 37, 44, 44, 41, 42, 45, 45, 45 ],
+                    [ 51, 58, 47, 37, 33, 31, 25, 26, 31, 29 ]
                 ],
                 "title": "55+ let"
             }
         ],
-        "legendItems": [
-            "",
-            ""
-        ],
+        "legendItems": [ "", "" ],
         "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
-        "stories": [{
-            "date": "8. června 2020",
-            "text": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis.",
-            "title": "Za propad zaměstnanosti může úplně někdo jiný"
-        }],
-        "titles": [
-            "Klidný",
-            "Částečné starosti",
-            "Velké starosti"
+        "stories": [
+            {
+                "date": "8. června 2020",
+                "text": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis.",
+                "title": "Za propad zaměstnanosti může úplně někdo jiný"
+            }
         ],
+        "titles": [ "Klidný", "Částečné starosti", "Velké starosti" ],
         "total": {
             "lines": [
-                [
-                    21,
-                    16,
-                    20,
-                    23,
-                    29,
-                    32,
-                    36,
-                    33,
-                    29,
-                    31
-                ],
-                [
-                    29,
-                    34,
-                    42,
-                    46,
-                    45,
-                    43,
-                    43,
-                    46,
-                    44,
-                    46
-                ],
-                [
-                    50,
-                    50,
-                    38,
-                    30,
-                    26,
-                    26,
-                    20,
-                    21,
-                    27,
-                    23
-                ]
+                [ 21, 16, 20, 23, 29, 32, 36, 33, 29, 31 ],
+                [ 29, 34, 42, 46, 45, 43, 43, 46, 44, 46 ],
+                [ 50, 50, 38, 30, 26, 26, 20, 21, 27, 23 ]
             ],
             "title": "Celkem"
         },
         "weeks": 10
     },
     "impacts": {
-        "colors": [
-            "#eeeeee",
-            "rgb(238, 190, 94)",
-            "rgb(233, 129, 129)"
-        ],
+        "colors": [ "#eeeeee", "rgb(238, 190, 94)", "rgb(233, 129, 129)" ],
         "firstWeek": 2,
-        "groups": [{
+        "groups": [
+            {
                 "lines": [
-                    [
-                        44,
-                        39,
-                        46,
-                        50,
-                        45,
-                        48,
-                        46,
-                        54,
-                        55
-                    ],
-                    [
-                        27,
-                        32,
-                        28,
-                        29,
-                        32,
-                        31,
-                        31,
-                        28,
-                        33
-                    ],
-                    [
-                        29,
-                        29,
-                        26,
-                        21,
-                        23,
-                        21,
-                        23,
-                        18,
-                        12
-                    ]
+                    [ 44, 39, 46, 50, 45, 48, 46, 54, 55 ],
+                    [ 27, 32, 28, 29, 32, 31, 31, 28, 33 ],
+                    [ 29, 29, 26, 21, 23, 21, 23, 18, 12 ]
                 ],
                 "title": "Obchod a služby"
             },
             {
                 "lines": [
-                    [
-                        64,
-                        59,
-                        63,
-                        68,
-                        59,
-                        66,
-                        66,
-                        71,
-                        70
-                    ],
-                    [
-                        30,
-                        31,
-                        27,
-                        25,
-                        33,
-                        26,
-                        28,
-                        22,
-                        28
-                    ],
-                    [
-                        6,
-                        10,
-                        10,
-                        7,
-                        8,
-                        8,
-                        6,
-                        7,
-                        2
-                    ]
+                    [ 64, 59, 63, 68, 59, 66, 66, 71, 70 ],
+                    [ 30, 31, 27, 25, 33, 26, 28, 22, 28 ],
+                    [ 6, 10, 10, 7, 8, 8, 6, 7, 2 ]
                 ],
                 "title": "IT a finance"
             },
             {
                 "lines": [
-                    [
-                        57,
-                        47,
-                        56,
-                        53,
-                        51,
-                        54,
-                        56,
-                        58,
-                        66
-                    ],
-                    [
-                        23,
-                        35,
-                        34,
-                        32,
-                        34,
-                        32,
-                        33,
-                        29,
-                        25
-                    ],
-                    [
-                        20,
-                        18,
-                        10,
-                        15,
-                        15,
-                        14,
-                        11,
-                        13,
-                        9
-                    ]
+                    [ 57, 47, 56, 53, 51, 54, 56, 58, 66 ],
+                    [ 23, 35, 34, 32, 34, 32, 33, 29, 25 ],
+                    [ 20, 18, 10, 15, 15, 14, 11, 13, 9 ]
                 ],
                 "title": "Průmysl a zemědělství"
             },
             {
                 "lines": [
-                    [
-                        63,
-                        61,
-                        68,
-                        67,
-                        61,
-                        68,
-                        72,
-                        75,
-                        68
-                    ],
-                    [
-                        23,
-                        29,
-                        20,
-                        25,
-                        32,
-                        26,
-                        21,
-                        19,
-                        24
-                    ],
-                    [
-                        14,
-                        10,
-                        12,
-                        8,
-                        7,
-                        6,
-                        7,
-                        6,
-                        8
-                    ]
+                    [ 63, 61, 68, 67, 61, 68, 72, 75, 68 ],
+                    [ 23, 29, 20, 25, 32, 26, 21, 19, 24 ],
+                    [ 14, 10, 12, 8, 7, 6, 7, 6, 8 ]
                 ],
                 "title": "Státní správa, sociální služby, zdravotnictví, bezpečnost"
             },
             {
                 "lines": [
-                    [
-                        62,
-                        63,
-                        74,
-                        69,
-                        68,
-                        67,
-                        69,
-                        67,
-                        73
-                    ],
-                    [
-                        21,
-                        26,
-                        13,
-                        19,
-                        22,
-                        23,
-                        20,
-                        25,
-                        17
-                    ],
-                    [
-                        17,
-                        11,
-                        13,
-                        12,
-                        10,
-                        10,
-                        11,
-                        8,
-                        10
-                    ]
+                    [ 62, 63, 74, 69, 68, 67, 69, 67, 73 ],
+                    [ 21, 26, 13, 19, 22, 23, 20, 25, 17 ],
+                    [ 17, 11, 13, 12, 10, 10, 11, 8, 10 ]
                 ],
                 "title": "Školství a kultura"
             }
         ],
-        "legendItems": [
-            "",
-            "",
-            ""
-        ],
+        "legendItems": [ "", "", "" ],
         "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
-        "stories": [{
-            "date": "8. června 2020",
-            "text": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis.",
-            "title": "Za propad zaměstnanosti může úplně někdo jiný"
-        }],
-        "titles": [
-            "Zbytek",
-            "Lehce zasažení",
-            "Těžce zasažení"
+        "stories": [
+            {
+                "date": "8. června 2020",
+                "text": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis.",
+                "title": "Za propad zaměstnanosti může úplně někdo jiný"
+            }
         ],
+        "titles": [ "Zbytek", "Lehce zasažení", "Těžce zasažení" ],
         "total": {
             "lines": [
-                [
-                    62,
-                    55,
-                    63,
-                    62,
-                    59,
-                    61,
-                    60,
-                    65,
-                    66
-                ],
-                [
-                    21,
-                    28,
-                    24,
-                    25,
-                    28,
-                    27,
-                    27,
-                    24,
-                    24
-                ],
-                [
-                    17,
-                    17,
-                    13,
-                    13,
-                    13,
-                    12,
-                    13,
-                    11,
-                    10
-                ]
+                [ 62, 55, 63, 62, 59, 61, 60, 65, 66 ],
+                [ 21, 28, 24, 25, 28, 27, 27, 24, 24 ],
+                [ 17, 17, 13, 13, 13, 12, 13, 11, 10 ]
             ],
             "title": "Celkem"
         },
         "weeks": 9
     },
     "protection": {
-        "colors": [
-            "#eeeeee",
-            "rgb(238, 190, 94)",
-            "rgb(233, 129, 129)"
-        ],
+        "colors": [ "#eeeeee", "rgb(238, 190, 94)", "rgb(233, 129, 129)" ],
         "firstWeek": 1,
-        "groups": [{
+        "groups": [
+            {
                 "lines": [
-                    [
-                        13,
-                        13,
-                        17,
-                        23,
-                        25,
-                        31,
-                        41,
-                        45,
-                        53,
-                        52
-                    ],
-                    [
-                        39,
-                        36,
-                        37,
-                        37,
-                        40,
-                        39,
-                        34,
-                        33,
-                        33,
-                        33
-                    ],
-                    [
-                        48,
-                        51,
-                        46,
-                        40,
-                        36,
-                        30,
-                        26,
-                        21,
-                        14,
-                        15
-                    ]
+                    [ 13, 13, 17, 23, 25, 31, 41, 45, 53, 52 ],
+                    [ 39, 36, 37, 37, 40, 39, 34, 33, 33, 33 ],
+                    [ 48, 51, 46, 40, 36, 30, 26, 21, 14, 15 ]
                 ],
                 "title": "Muž"
             },
             {
                 "lines": [
-                    [
-                        8,
-                        11,
-                        12,
-                        18,
-                        20,
-                        25,
-                        34,
-                        38,
-                        46,
-                        48
-                    ],
-                    [
-                        36,
-                        31,
-                        36,
-                        34,
-                        38,
-                        37,
-                        35,
-                        36,
-                        37,
-                        35
-                    ],
-                    [
-                        56,
-                        58,
-                        52,
-                        49,
-                        42,
-                        37,
-                        31,
-                        25,
-                        18,
-                        17
-                    ]
+                    [ 8, 11, 12, 18, 20, 25, 34, 38, 46, 48 ],
+                    [ 36, 31, 36, 34, 38, 37, 35, 36, 37, 35 ],
+                    [ 56, 58, 52, 49, 42, 37, 31, 25, 18, 17 ]
                 ],
                 "title": "Žena"
             }
         ],
-        "legendItems": [
-            "Respondent v dotazovaném období (předchozí dva týdny) využíval 0-5 z dotazovaných 12 forem ochrany před nakažením koronavirem",
-            "Respondent v dotazovaném období (předchozí dva týdny) využíval 6-9 z dotazovaných 12 forem ochrany před nakažením koronavirem",
-            "Respondent v dotazovaném období (předchozí dva týdny) využíval téměř všechny (10 či více) formy ochrany před nakažením koronavirem"
-        ],
+        "legendItems": [ "Respondent v dotazovaném období (předchozí dva týdny) využíval 0-5 z dotazovaných 12 forem ochrany před nakažením koronavirem", "Respondent v dotazovaném období (předchozí dva týdny) využíval 6-9 z dotazovaných 12 forem ochrany před nakažením koronavirem", "Respondent v dotazovaném období (předchozí dva týdny) využíval téměř všechny (10 či více) formy ochrany před nakažením koronavirem" ],
         "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
-        "stories": [{
-            "date": "8. června 2020",
-            "text": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis.",
-            "title": "Za propad zaměstnanosti může úplně někdo jiný"
-        }],
-        "titles": [
-            "Menšina aktivit (0-5)",
-            "Většina aktivit (6-9)",
-            "Všechny nebo téměř všechny aktivity (10+)"
+        "stories": [
+            {
+                "date": "8. června 2020",
+                "text": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis.",
+                "title": "Za propad zaměstnanosti může úplně někdo jiný"
+            }
         ],
+        "titles": [ "Menšina aktivit (0-5)", "Většina aktivit (6-9)", "Všechny nebo téměř všechny aktivity (10+)" ],
         "total": {
             "lines": [
-                [
-                    11,
-                    12,
-                    15,
-                    20,
-                    22,
-                    28,
-                    37,
-                    42,
-                    49,
-                    50
-                ],
-                [
-                    37,
-                    34,
-                    36,
-                    35,
-                    39,
-                    38,
-                    35,
-                    35,
-                    35,
-                    34
-                ],
-                [
-                    52,
-                    54,
-                    49,
-                    44,
-                    39,
-                    34,
-                    28,
-                    23,
-                    16,
-                    16
-                ]
+                [ 11, 12, 15, 20, 22, 28, 37, 42, 49, 50 ],
+                [ 37, 34, 36, 35, 39, 38, 35, 35, 35, 34 ],
+                [ 52, 54, 49, 44, 39, 34, 28, 23, 16, 16 ]
             ],
             "title": "Celkem"
         },
         "weeks": 10
     },
     "strategies": {
-        "colors": [
-            "#eeeeee",
-            "rgb(238, 190, 94)",
-            "rgb(233, 129, 129)"
-        ],
+        "colors": [ "#eeeeee", "rgb(238, 190, 94)", "rgb(233, 129, 129)" ],
         "firstWeek": 2,
-        "groups": [{
+        "groups": [
+            {
                 "lines": [
-                    [
-                        29,
-                        33,
-                        38,
-                        51,
-                        58,
-                        58,
-                        61,
-                        62,
-                        62
-                    ],
-                    [
-                        44,
-                        44,
-                        37,
-                        30,
-                        25,
-                        24,
-                        22,
-                        20,
-                        22
-                    ],
-                    [
-                        27,
-                        23,
-                        25,
-                        19,
-                        17,
-                        18,
-                        17,
-                        18,
-                        16
-                    ]
+                    [ 29, 33, 38, 51, 58, 58, 61, 62, 62 ],
+                    [ 44, 44, 37, 30, 25, 24, 22, 20, 22 ],
+                    [ 27, 23, 25, 19, 17, 18, 17, 18, 16 ]
                 ],
                 "title": "ZŠ a SŠ bez maturity"
             },
             {
                 "lines": [
-                    [
-                        26,
-                        40,
-                        44,
-                        52,
-                        55,
-                        54,
-                        59,
-                        57,
-                        58
-                    ],
-                    [
-                        50,
-                        40,
-                        36,
-                        31,
-                        28,
-                        29,
-                        24,
-                        25,
-                        24
-                    ],
-                    [
-                        24,
-                        20,
-                        20,
-                        17,
-                        17,
-                        17,
-                        17,
-                        18,
-                        18
-                    ]
+                    [ 26, 40, 44, 52, 55, 54, 59, 57, 58 ],
+                    [ 50, 40, 36, 31, 28, 29, 24, 25, 24 ],
+                    [ 24, 20, 20, 17, 17, 17, 17, 18, 18 ]
                 ],
                 "title": "SŠ s maturitou"
             },
             {
                 "lines": [
-                    [
-                        43,
-                        49,
-                        52,
-                        61,
-                        60,
-                        63,
-                        67,
-                        70,
-                        71
-                    ],
-                    [
-                        42,
-                        36,
-                        34,
-                        29,
-                        28,
-                        25,
-                        22,
-                        20,
-                        19
-                    ],
-                    [
-                        15,
-                        15,
-                        14,
-                        10,
-                        12,
-                        12,
-                        11,
-                        10,
-                        10
-                    ]
+                    [ 43, 49, 52, 61, 60, 63, 67, 70, 71 ],
+                    [ 42, 36, 34, 29, 28, 25, 22, 20, 19 ],
+                    [ 15, 15, 14, 10, 12, 12, 11, 10, 10 ]
                 ],
                 "title": "VŠ"
             }
         ],
-        "legendItems": [
-            "",
-            "Skupina lidí, kteří chtějí výrazně omezit výdaje za nákup potravin, spotřebních věcí (oblečení, vybavení domácnosti), návštěvy restaurací, kulturu či cestování",
-            "Respondenti, kteří mají potíže se splácením závazků (hypotéka\/nájem, půjčka, úvěr, pravidelné výdaje domácnosti) nebo zvažují půjčku od rodiny či známých, banky či úvěrové společnosti nebo prodej majetku"
-        ],
+        "legendItems": [ "", "Skupina lidí, kteří chtějí výrazně omezit výdaje za nákup potravin, spotřebních věcí (oblečení, vybavení domácnosti), návštěvy restaurací, kulturu či cestování", "Respondenti, kteří mají potíže se splácením závazků (hypotéka\/nájem, půjčka, úvěr, pravidelné výdaje domácnosti) nebo zvažují půjčku od rodiny či známých, banky či úvěrové společnosti nebo prodej majetku" ],
         "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
-        "stories": [{
-            "date": "8. června 2020",
-            "text": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis.",
-            "title": "Za propad zaměstnanosti může úplně někdo jiný"
-        }],
-        "titles": [
-            "Zbytek",
-            "Chtějí šetřit",
-            "Nestíhají splácet či se chtějí zadlužit"
+        "stories": [
+            {
+                "date": "8. června 2020",
+                "text": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas tortor vitae metus iaculis, eu lobortis nibh dignissim. Nulla ac purus sapien. Integer varius risus quis orci elementum, et auctor massa ultrices. Nunc sit amet eros metus. Curabitur id finibus urna. Cras sit amet justo laoreet, convallis ex in, finibus nibh. Vestibulum pulvinar lacinia odio sed laoreet. Pellentesque nec dignissim eros. Donec feugiat accumsan erat, ac rutrum nisi aliquam ut. Suspendisse nisl risus, scelerisque non placerat vitae, rutrum egestas felis.",
+                "title": "Za propad zaměstnanosti může úplně někdo jiný"
+            }
         ],
+        "titles": [ "Zbytek", "Chtějí šetřit", "Nestíhají splácet či se chtějí zadlužit" ],
         "total": {
             "lines": [
-                [
-                    30,
-                    39,
-                    43,
-                    54,
-                    57,
-                    58,
-                    61,
-                    62,
-                    62
-                ],
-                [
-                    46,
-                    41,
-                    36,
-                    30,
-                    27,
-                    26,
-                    23,
-                    21,
-                    22
-                ],
-                [
-                    24,
-                    20,
-                    21,
-                    16,
-                    16,
-                    16,
-                    16,
-                    17,
-                    16
-                ]
+                [ 30, 39, 43, 54, 57, 58, 61, 62, 62 ],
+                [ 46, 41, 36, 30, 27, 26, 23, 21, 22 ],
+                [ 24, 20, 21, 16, 16, 16, 16, 17, 16 ]
             ],
             "title": "Celkem"
         },

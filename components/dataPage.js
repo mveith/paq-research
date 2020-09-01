@@ -4,7 +4,7 @@ import LineChart from './lineChart';
 import { useState, useEffect } from 'react';
 import Legend from '../components/legend';
 
-function getSmallChartProps(dataProps, values, index, height, annotation, onHover, max) {
+function getSmallChartProps(dataProps, values, index, height, annotation, onHover, max, nonpercentage) {
     return {
         key: `chart-${index}`,
         weeks: dataProps.weeks,
@@ -18,11 +18,12 @@ function getSmallChartProps(dataProps, values, index, height, annotation, onHove
         values: values,
         size: [300, height],
         annotation: annotation,
-        onHover: onHover
+        onHover: onHover,
+        nonpercentage: nonpercentage
     };
 }
 
-function getBigChartProps(dataProps, height, annotation, onHover, max) {
+function getBigChartProps(dataProps, height, annotation, onHover, max, nonpercentage) {
     return {
         key: "chart-total",
         weeks: dataProps.weeks,
@@ -36,7 +37,8 @@ function getBigChartProps(dataProps, height, annotation, onHover, max) {
         values: dataProps.total,
         size: [800, height],
         annotation: annotation,
-        onHover: onHover
+        onHover: onHover,
+        nonpercentage: nonpercentage
     };
 }
 
@@ -47,7 +49,7 @@ function Chart({ chartProps, asLineChart }) {
     return <AreaChart {...chartProps} />;
 }
 
-export default function DataPage({ navigation, dataProps, title, description, asLineChart, max }) {
+export default function DataPage({ navigation, dataProps, title, description, asLineChart, max, nonpercentage }) {
     const [annotation, setAnnotation] = useState();
     const [total, setTotal] = useState(true);
     const [height, setHeight] = useState(600);
@@ -63,9 +65,9 @@ export default function DataPage({ navigation, dataProps, title, description, as
     };
 
     const charts = dataProps.groups.map((v, i) => {
-        return (<div className="chart-content"><Chart chartProps={getSmallChartProps(dataProps, v, i, height, annotation, onHover, max)} asLineChart={asLineChart} /></div>);
+        return (<div className="chart-content"><Chart chartProps={getSmallChartProps(dataProps, v, i, height, annotation, onHover, max, nonpercentage)} asLineChart={asLineChart} /></div>);
     });
-    const totalChart = (<div className="chart-content"><Chart chartProps={getBigChartProps(dataProps, height, annotation, onHover, max)} asLineChart={asLineChart} /></div>);
+    const totalChart = (<div className="chart-content"><Chart chartProps={getBigChartProps(dataProps, height, annotation, onHover, max, nonpercentage)} asLineChart={asLineChart} /></div>);
 
     useEffect(() => {
         function handleResize() {

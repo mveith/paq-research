@@ -13,6 +13,7 @@ export default function Contacts(props) {
         description="S kolika lidmi byli respondenti v bližším kontaktu?"
         asLineChart={true}
         max={50}
+        nonpercentage={true}
     />;
 }
 
