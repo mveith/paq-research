@@ -1,9 +1,10 @@
 import Layout from './layout';
 import AreaChart from './areaChart';
+import LineChart from './lineChart';
 import { useState, useEffect } from 'react';
 import Legend from '../components/legend';
 
-function getSmallChartProps(dataProps, values, index, height, annotation, onHover) {
+function getSmallChartProps(dataProps, values, index, height, annotation, onHover, max) {
     return {
         key: `chart-${index}`,
         weeks: dataProps.weeks,
@@ -11,7 +12,7 @@ function getSmallChartProps(dataProps, values, index, height, annotation, onHove
         colors: dataProps.colors,
         titles: dataProps.titles,
         yMin: 0,
-        yMax: 100,
+        yMax: max ?? 100,
         showYAxis: true,
         showXAxis: false,
         values: values,
@@ -21,7 +22,7 @@ function getSmallChartProps(dataProps, values, index, height, annotation, onHove
     };
 }
 
-function getBigChartProps(dataProps, height, annotation, onHover) {
+function getBigChartProps(dataProps, height, annotation, onHover, max) {
     return {
         key: "chart-total",
         weeks: dataProps.weeks,
@@ -29,7 +30,7 @@ function getBigChartProps(dataProps, height, annotation, onHover) {
         colors: dataProps.colors,
         titles: dataProps.titles,
         yMin: 0,
-        yMax: 100,
+        yMax: max ?? 100,
         showYAxis: true,
         showXAxis: true,
         values: dataProps.total,
@@ -39,7 +40,14 @@ function getBigChartProps(dataProps, height, annotation, onHover) {
     };
 }
 
-export default function DataPage({ navigation, dataProps, title, description }) {
+function Chart({ chartProps, asLineChart }) {
+    if (asLineChart) {
+        return <LineChart {...chartProps} />;
+    }
+    return <AreaChart {...chartProps} />;
+}
+
+export default function DataPage({ navigation, dataProps, title, description, asLineChart, max }) {
     const [annotation, setAnnotation] = useState();
     const [total, setTotal] = useState(true);
     const [height, setHeight] = useState(600);
@@ -48,16 +56,16 @@ export default function DataPage({ navigation, dataProps, title, description }) 
     };
 
     const onHover = x => {
-            if (x) {
-                setAnnotation({ week: x.week, lineIndex: x.parentLine.key });
-            }
-            else { setAnnotation(); }
+        if (x) {
+            setAnnotation({ week: x.week, lineIndex: x.parentLine.key });
+        }
+        else { setAnnotation(); }
     };
 
     const charts = dataProps.groups.map((v, i) => {
-        return (<div className="chart-content"><AreaChart {...getSmallChartProps(dataProps, v, i, height, annotation, onHover)} /></div>);
+        return (<div className="chart-content"><Chart chartProps={getSmallChartProps(dataProps, v, i, height, annotation, onHover, max)} asLineChart={asLineChart} /></div>);
     });
-    const totalChart = (<div className="chart-content"><AreaChart {...getBigChartProps(dataProps, height, annotation, onHover)} /></div>);
+    const totalChart = (<div className="chart-content"><Chart chartProps={getBigChartProps(dataProps, height, annotation, onHover, max)} asLineChart={asLineChart} /></div>);
 
     useEffect(() => {
         function handleResize() {
@@ -78,7 +86,7 @@ export default function DataPage({ navigation, dataProps, title, description }) 
                 {description}
             </p>
             <div style={{ display: "flex", flexDirection: "column" }}>
-                <p>Podívej se na <a href="#stories" class="arrow-button">interpretace dat a grafů↓</a> a <a href="#methodology"  class="arrow-button">metodické poznámky↓</a></p>
+                <p>Podívej se na <a href="#stories" class="arrow-button">interpretace dat a grafů↓</a> a <a href="#methodology" class="arrow-button">metodické poznámky↓</a></p>
                 <div>
                     <input type="radio" id="total" name="total" value="total" checked={total} onChange={e => setTotal(true)} />
                     <label htmlFor="total">celkem</label>
@@ -98,7 +106,7 @@ export default function DataPage({ navigation, dataProps, title, description }) 
                         <p className="story-title">{s.title}</p>
                         <p className="story-date">{s.date}</p>
                         <p className="block-paragraph" dangerouslySetInnerHTML={{ __html: s.text }}></p>
-                        <hr style={{ margin: "2rem 40%", color: "#707070"}}/>
+                        <hr style={{ margin: "2rem 40%", color: "#707070" }} />
                     </div>))}
                 </div>
                 <div id="methodology">
