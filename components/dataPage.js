@@ -53,6 +53,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
     const [annotation, setAnnotation] = useState();
     const [total, setTotal] = useState(true);
     const [height, setHeight] = useState(600);
+    const [group, setGroup] = useState(0);
     const legend = {
         items: dataProps.titles.map((t, i) => { return { color: dataProps.legendColors[i], title: t, description: dataProps.legendItems[i] }; })
     };
@@ -64,7 +65,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
         else { setAnnotation(); }
     };
 
-    const charts = dataProps.groups.map((v, i) => {
+    const charts = dataProps.groups[group].data.map((v, i) => {
         return (<div className="chart-content"><Chart chartProps={getSmallChartProps(dataProps, v, i, height, annotation, onHover, max, nonpercentage)} asLineChart={asLineChart} /></div>);
     });
     const totalChart = (<div className="chart-content"><Chart chartProps={getBigChartProps(dataProps, height, annotation, onHover, max, nonpercentage)} asLineChart={asLineChart} /></div>);
@@ -81,6 +82,15 @@ export default function DataPage({ navigation, dataProps, title, description, as
     const content = total ?
         (<>{totalChart}</>) :
         (<div className="multiple-charts-wrapper">{charts}</div>);
+
+
+    const groupButtons = dataProps.groups.map((g, i) => {
+        const id = `group-${i}`;
+        return (<>
+            <input type="radio" id={id} name={id} value={id} checked={group === i} onChange={e => setGroup(i)} />
+            <label htmlFor={id}>{g.title}</label>
+        </>);
+    });
     return (
         <Layout>
             <h1>{title}</h1>
@@ -95,6 +105,9 @@ export default function DataPage({ navigation, dataProps, title, description, as
                     <input type="radio" id="groups" name="groups" value="groups" checked={!total} onChange={e => setTotal(false)} />
                     <label htmlFor="groups">podle skupin</label>
                 </div>
+                {!total && <div>
+                    {groupButtons}
+                </div>}
                 <div className="chart-wrapper">
                     <div className="chart" >{content}</div>
                     <div className="legend">
