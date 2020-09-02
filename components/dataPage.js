@@ -54,7 +54,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
     const [total, setTotal] = useState(true);
     const [height, setHeight] = useState(600);
     const legend = {
-        items: dataProps.titles.map((t, i) => { return { color: dataProps.colors[i], title: t, description: dataProps.legendItems[i] }; })
+        items: dataProps.titles.map((t, i) => { return { color: dataProps.legendColors[i], title: t, description: dataProps.legendItems[i] }; })
     };
 
     const onHover = x => {
