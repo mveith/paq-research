@@ -1,6 +1,7 @@
 {
     "activities": {
-        "colors": [ "#FF00FF", "#2F4F4F", "#00008B", "#FA8072", "#FFA07A", "#FFD700", "#2E8B57", "#FFFFFF", "#7FFFD4", "#FF7F50", "#B0E0E6", "#48D1CC", "#D2B48C", "#9966CC", "#B0C4DE", "#6A5ACD" ],
+        "colors": [ "#b80058", "#66c5cc", "#ebac23", "#8be0a4", "#008cf9", "#f6cf71", "#006e00", "#fe88b1", 
+                    "#00bbad", "#c9db74", "#d163e6", "#f89c74", "#b24502", "#5954d6", "#87c55f", "#00c6f8" ],
         "firstWeek": 1,
         "groups": [
             {
@@ -113,7 +114,7 @@
         "weeks": 20
     },
     "destabilization": {
-        "colors": [ "#eeeeee", "rgb(238, 190, 94)", "green", "blue", "rgb(233, 129, 129)" ],
+        "colors": [ "#f3f3f3", "#ffd080", "#fdab5e", "#f45048", "#bb1b30" ],
         "firstWeek": 2,
         "groups": [
             {
@@ -180,7 +181,7 @@
         "weeks": 9
     },
     "feelings": {
-        "colors": [ "green", "rgb(238, 190, 94)", "rgb(233, 129, 129)" ],
+        "colors": [ "#6BCBA8", "#f6cf71", "#fdab5e" ],
         "firstWeek": 1,
         "groups": [
             {
@@ -229,7 +230,7 @@
         "weeks": 10
     },
     "impacts": {
-        "colors": [ "#eeeeee", "rgb(238, 190, 94)", "rgb(233, 129, 129)" ],
+        "colors": [ "#f3f3f3", "#ffd080", "#fdab5e" ],
         "firstWeek": 2,
         "groups": [
             {
@@ -294,7 +295,7 @@
         "weeks": 9
     },
     "protection": {
-        "colors": [ "#eeeeee", "rgb(238, 190, 94)", "rgb(233, 129, 129)" ],
+        "colors": [ "#a8e0b2", "#2db59e", "#009cb8" ],
         "firstWeek": 1,
         "groups": [
             {
@@ -335,7 +336,7 @@
         "weeks": 10
     },
     "strategies": {
-        "colors": [ "#eeeeee", "rgb(238, 190, 94)", "rgb(233, 129, 129)" ],
+        "colors": [ "#f3f3f3", "#ffd080", "#fdab5e" ],
         "firstWeek": 2,
         "groups": [
             {
