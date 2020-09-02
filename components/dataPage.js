@@ -102,13 +102,17 @@ export default function DataPage({ navigation, dataProps, title, description, as
             <p>
                 {description}
             </p>
-            <div style={{ display: "flex", flexDirection: "column"}}>
+            <div style={{ display: "flex", flexDirection: "column" }}>
                 <p>Podívej se na <a href="#stories" class="arrow-button">interpretace dat a grafů↓</a> a <a href="#methodology" class="arrow-button">metodické poznámky↓</a></p>
-                <div>
-                    <input type="radio" id="total" name="total" value="total" checked={total} onChange={e => setTotal(true)} />
-                    <label htmlFor="total">celkem</label>
-                    <input type="radio" id="groups" name="groups" value="groups" checked={!total} onChange={e => setTotal(false)} />
-                    <label htmlFor="groups">podle skupin</label>
+                <div style={{ borderBottom: "1px solid #dee2e6" }}>
+                    <ul style={{ listStyle: "none", display: "flex", margin: 0, padding: 0 }}>
+                        <li className={"tab" + (total ? " tab-active" : "")}>
+                            <a href="#" style={{ padding: ".5rem 1rem" }} onClick={e => setTotal(true)}>celkem</a>
+                        </li>
+                        <li className={"tab" + (!total ? " tab-active" : "")}>
+                            <a href="#" style={{ padding: ".5rem 1rem" }} onClick={e => setTotal(false)}>podle skupin</a>
+                        </li>
+                    </ul>
                 </div>
                 {!total && <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", margin: "20px 0" }}>
                     {groupButtons}

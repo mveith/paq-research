@@ -154,6 +154,17 @@ li {
     color: red;
 }
 
+.tab {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.tab-active {
+    border-color: #dee2e6 #dee2e6 #fff;
+    margin-bottom: -1px;
+}
+
 @media only screen and (min-width: 720px) {
     .main-wrapper {
         display: flex;
