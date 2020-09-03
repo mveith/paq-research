@@ -6,8 +6,12 @@ function LegendItem({ color, title, description }) {
 }
 
 export default function Legend(props) {
+    const title = props.title ? <h2 class="legend-title">{props.title}</h2> : <></>;
     return (
-        <ul style={{ listStyle: "none", flexBasis: "20%", paddingLeft: "0" }}>
-            {props.items.map((item, i) => <LegendItem {...item} key={`legend-item-${i}`} />)}
-        </ul>);
+        <>
+            {title}
+            <ul style={{ listStyle: "none", flexBasis: "20%", paddingLeft: "0" }}>
+                {props.items.map((item, i) => <LegendItem {...item} key={`legend-item-${i}`} />)}
+            </ul>
+        </>);
 }
