@@ -11,6 +11,7 @@ export default function Destabilization(props) {
         dataProps={props}
         title="K jakým řešením své momentální finanční situace domácnosti přistupují?"
         description="Domácnosti na popsané změny práce a výpadky rozpočtu reagují, což dopadá na jejich hospodaření. Buď se snaží o redukci některých výdajů (to dělá asi 20-25 % dotázaných), ale u menší části domácností sledujeme i vážnější problémy – a to neschopnost splácet některé výdaje či snahu řešit problémy půjčkami."
+        asLineChart={true}
     />;
 }
 
