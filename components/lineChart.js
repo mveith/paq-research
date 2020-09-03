@@ -31,7 +31,7 @@ function TickLine({ xy }) {
         y2={xy.y2}
         style={{
             strokeDasharray: "3 3",
-            stroke: "gray",
+            stroke: "#CDCDCD",
             strokeOpacity: 0.4
         }}
     />)
