@@ -182,14 +182,17 @@ li {
     }
     .content-wrapper {
         width: 100%;
+        margin-left: 232px;
     }
     .side-menu {
-        display: block;
         padding: 0 10px;
         margin: 0 1rem;
         display: flex;
         flex-direction: column;
-        width: 250px;
+        width: 200px;
+        position: fixed;
+        top: 50px;
+        height: calc(100% - 50px);
     }
     .multiple-charts-wrapper {
         display: grid;
