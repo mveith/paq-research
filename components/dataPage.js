@@ -90,7 +90,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
             <label htmlFor={id}>
                 <input type="radio" id={id} name={id} value={id} checked={group === i} onChange={e => setGroup(i)} style={{ appearance: "none", MozAppearance: "none", WebkitAppearance: "none" }} />
                 <span style={{ display: "inline-flex", flexDirection: "column", opacity: group === i ? "1" : 0.5 }}>
-                    <img src="wallet-02.svg" width="50" style={{ margin: "0 auto" }} />
+                    <img src={g.image} width="50" style={{ margin: "0 auto" }} />
                     {g.title}
                 </span>
             </label>
