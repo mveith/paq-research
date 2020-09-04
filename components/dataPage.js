@@ -98,7 +98,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
         </>);
     });
     return (
-        <Layout>
+        <Layout title={title}>
             <h1>{title}</h1>
             <p>
                 {description}
