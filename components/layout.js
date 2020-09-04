@@ -24,10 +24,10 @@ export default function Layout(props) {
 
     const menu = (
         <>
-            <div style={{ marginTop: "4rem"}}>
+            <div style={{ marginTop: "4rem" }}>
                 <h3>EKONOMICKÉ DOPADY</h3>
                 <ul>
-                {/* <ul style={{ listStyle: "none" }}> */}
+                    {/* <ul style={{ listStyle: "none" }}> */}
                     {/* <li><span className="li-custom" ><i class="fa fa-circle" /></span><ActiveLink href="/destabilizace-prace" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Destabilizace práce</ActiveLink></li> */}
                     <li><ActiveLink href="/destabilizace-prace" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Destabilizace práce</ActiveLink></li>
                     <li><ActiveLink href="/dopad" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Ekonomické dopady na domácnosti</ActiveLink></li>
@@ -35,7 +35,7 @@ export default function Layout(props) {
                 </ul>
             </div>
 
-            <div style={{ marginTop: "2rem"}}>
+            <div style={{ marginTop: "2rem" }}>
                 <h3>CHOVÁNÍ A AKTIVITY</h3>
                 <ul>
                     <li><ActiveLink href="/aktivity" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Celkový profil aktivit</ActiveLink></li>
@@ -76,7 +76,7 @@ export default function Layout(props) {
                     </a>
                 </div>
             </nav>
-            <div className="main-wrapper container" style={{ marginTop: "50px", }}>
+            <div className="main-wrapper" style={{ marginTop: "50px", }}>
                 <div className="side-menu">
                     <header>
                         <Link href="/"><a><h1>život během pandemie</h1></a></Link>
@@ -91,7 +91,7 @@ export default function Layout(props) {
                         </div>
                     </div>
                 </div>
-                <div className="content-wrapper">
+                <div className="content-wrapper container">
                     {props.children}
                 </div>
                 <div className="main-footer">
