@@ -10,7 +10,7 @@ export default function Destabilization(props) {
         navigation={navigation}
         dataProps={props}
         title="Jak epidemie ovlivňuje destabilizaci práce?"
-        description="Nárůst nezaměstnanosti byl relativně malý, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení."
+        description="Ačkoliv nárůst registrované nezaměstnanosti byl od března malý, důsledky epidemie se stále promítají do života takřka pětiny aktivních Čechů. Okolo 4 % původně reportuje ztrátu práce (část ji částečně nahradila sezónními pracemi). Dalších šestina má ale dodnes omezený úvazek, mzdu, benefity či vedlejší příjmy (DPP, na ruku)."
     />;
 }
 
