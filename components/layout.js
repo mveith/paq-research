@@ -71,8 +71,8 @@ export default function Layout(props) {
                             </ul>
                         </div>
                     </div>
-                    <a href="javascript:void(0);" class="icon" onClick={e => setOpenMenu(!openMenu)} style={{ ...navbarItemStylePadding, fontSize: "17px", display: "block", position: "absolute", right: 0, top: 0 }}>
-                        <i class="fa fa-bars"></i>
+                    <a href="javascript:void(0);" className="icon" onClick={e => setOpenMenu(!openMenu)} style={{ ...navbarItemStylePadding, fontSize: "17px", display: "block", position: "absolute", right: 0, top: 0 }}>
+                        <i className="fa fa-bars"></i>
                     </a>
                 </div>
             </nav>

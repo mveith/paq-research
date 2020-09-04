@@ -105,7 +105,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
                 {description}
             </p>
             <div style={{ display: "flex", flexDirection: "column" }}>
-                <p>Podívej se na <a href="#stories" class="arrow-button">interpretace dat a grafů↓</a> a <a href="#methodology" class="arrow-button">metodické poznámky↓</a></p>
+                <p>Podívej se na <a href="#stories" className="arrow-button">interpretace dat a grafů↓</a> a <a href="#methodology" className="arrow-button">metodické poznámky↓</a></p>
                 <div style={{ borderBottom: "1px solid #dee2e6" }}>
                     <ul style={{ listStyle: "none", display: "flex", margin: 0, padding: 0 }}>
                         <li className={"tab" + (total ? " tab-active" : "")}>
@@ -128,7 +128,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
                 {navigation}
                 <div id="stories">
                     <h2>Interpretace a další story</h2>
-                    {dataProps.stories.map((s, i) => (<div class="story" key={`story-${i}}`}>
+                    {dataProps.stories.map((s, i) => (<div className="story" key={`story-${i}}`}>
                         <p className="story-title">{s.title}</p>
                         <p className="story-date">{s.date}</p>
                         <div className="block-paragraph" dangerouslySetInnerHTML={{ __html: s.text }}></div>
