@@ -120,6 +120,6 @@ function Chart({ dataProps, chartType }) {
         customHoverBehavior: x => dataProps.onHover ? dataProps.onHover(x) : null,
         tooltipContent: d => { return <div style={{ margin: "5px" }}>{d.value}{dataProps.nonpercentage ? "" : " %"}</div> }
     };
-    return <div><p style={{ textAlign: "center", marginLeft: "50px", marginRight: "10px" }}>{values.title}</p><ChartComponent {...frameProps} /></div>;
+    return <div><p style={{ textAlign: "center", marginLeft: "50px", marginRight: "10px" }}>{dataProps.title}</p><ChartComponent {...frameProps} /></div>;
 }
 export default Chart;
