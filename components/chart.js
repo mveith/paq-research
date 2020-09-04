@@ -5,10 +5,6 @@ const ResponsiveXYFrame = dynamic(
     { ssr: false }
 )
 
-function ChartComponent(props) {
-    return <ResponsiveXYFrame {...props} />;
-}
-
 function TickLine({ xy }) {
     return (<line
         key={`line-${xy.y1}-${xy.x1}`}
@@ -119,6 +115,11 @@ function Chart({ dataProps, chartType }) {
         customHoverBehavior: x => dataProps.onHover ? dataProps.onHover(x) : null,
         tooltipContent: d => { return <div style={{ margin: "5px" }}>{d.value}{dataProps.nonpercentage ? "" : " %"}</div> }
     };
-    return <div><p style={{ textAlign: "center", marginLeft: "50px", marginRight: "10px" }}>{dataProps.title}</p><ChartComponent {...frameProps} /></div>;
+    return (
+        <div>
+            <p style={{ textAlign: "center", marginLeft: "50px", marginRight: "10px" }}>{dataProps.title}</p>
+            <div><ResponsiveXYFrame {...frameProps} /></div>
+        </div>
+    );
 }
 export default Chart;
