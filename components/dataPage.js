@@ -49,6 +49,20 @@ function Chart({ chartProps, asLineChart }) {
     return <AreaChart {...chartProps} />;
 }
 
+function GroupButton({ currentGroup, group, index }) {
+    const id = `group-${index}`;
+    return (<>
+        <label htmlFor={id}>
+            <input type="radio" id={id} name={id} value={id} checked={currentGroup === index} onChange={e => setGroup(index)} style={{ appearance: "none", MozAppearance: "none", WebkitAppearance: "none" }} />
+            <span style={{ display: "inline-flex", flexDirection: "column", opacity: currentGroup === index ? "1" : 0.5, width: "150px", textAlign: "center" }}>
+                <img src={group.image} width="50" style={{ margin: "0 auto" }} />
+                {group.title}
+            </span>
+        </label>
+    </>);
+
+}
+
 export default function DataPage({ navigation, dataProps, title, description, asLineChart, max, nonpercentage }) {
     const [annotation, setAnnotation] = useState();
     const [total, setTotal] = useState(true);
@@ -84,19 +98,6 @@ export default function DataPage({ navigation, dataProps, title, description, as
         (<>{totalChart}</>) :
         (<div className="multiple-charts-wrapper">{charts}</div>);
 
-
-    const groupButtons = dataProps.groups.map((g, i) => {
-        const id = `group-${i}`;
-        return (<>
-            <label htmlFor={id}>
-                <input type="radio" id={id} name={id} value={id} checked={group === i} onChange={e => setGroup(i)} style={{ appearance: "none", MozAppearance: "none", WebkitAppearance: "none" }} />
-                <span style={{ display: "inline-flex", flexDirection: "column", opacity: group === i ? "1" : 0.5, width: "150px",textAlign: "center" }}>
-                    <img src={g.image} width="50" style={{ margin: "0 auto" }} />
-                    {g.title}
-                </span>
-            </label>
-        </>);
-    });
     return (
         <Layout title={title}>
             <h1>{title}</h1>
@@ -116,7 +117,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
                     </ul>
                 </div>
                 {!total && <div style={{ display: "flex", flexDirection: "row", margin: "20px 0", flexWrap: "wrap" }}>
-                    {groupButtons}
+                    {dataProps.groups.map((g, i) => <GroupButton currentGroup={group} group={g} index={i} />)}
                 </div>}
                 <div className="chart-wrapper">
                     <div className="chart" >{content}</div>
