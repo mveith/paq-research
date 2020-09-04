@@ -25,14 +25,13 @@ function TickLine({ xy }) {
 }
 
 function getYAxis(props) {
-    const step = props.yMax - props.yMin / 5;
+    const step = (props.yMax - props.yMin) / 5;
     const yAxisTicks = Array.from(new Array(5 + 1), (x, i) => props.yMin + (i * step));
     if (!props.showYAxis) {
         return { orient: "left", ticks: 0, baseline: false, showOutboundTickLines: false, tickLineGenerator: e => null, tickFormat: e => null };
     }
 
     const getTickValue = e => {
-        console.log(props);
         if (e === props.yMin || e === props.yMax) {
             return e + (props.nonpercentage ? "" : "%");
         }
