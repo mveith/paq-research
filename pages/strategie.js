@@ -3,7 +3,7 @@ import path from 'path';
 import DataPage from '../components/dataPage';
 import ThemeNavigation from '../components/themeNavigation';
 
-const navigation = (<ThemeNavigation previousHref="/dopad" previousTitle="Ekonomické dopady na domácnosti" nextHref="/aktivity" nextTitle="Celkový profil aktivit" />);
+const navigation = (<ThemeNavigation previousHref="/dopad" previousTitle="Ekonomické dopady na domácnosti" nextHref="/protektivni-aktivity" nextTitle="Počet protektivních aktivit" />);
 
 export default function Destabilization(props) {
     return <DataPage

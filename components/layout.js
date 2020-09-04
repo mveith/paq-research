@@ -38,7 +38,6 @@ export default function Layout(props) {
             <div style={{ marginTop: "2rem" }}>
                 <h3>CHOVÁNÍ A AKTIVITY</h3>
                 <ul>
-                    <li><ActiveLink href="/aktivity" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Celkový profil aktivit</ActiveLink></li>
                     <li><ActiveLink href="/protektivni-aktivity" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Počet protektivních aktivit</ActiveLink></li>
                     <li><ActiveLink href="/kontakty" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Kontakt s lidmi</ActiveLink></li>
                     <li><ActiveLink href="/pocity" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Pocity ohledně koronaviru</ActiveLink></li>
