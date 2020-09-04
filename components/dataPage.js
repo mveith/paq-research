@@ -43,11 +43,11 @@ function getBigChartProps(dataProps, height, annotation, onHover, max, nonpercen
     };
 }
 
-function GroupButton({ currentGroup, group, index }) {
+function GroupButton({ currentGroup, group, index, onChange }) {
     const id = `group-${index}`;
     return (<>
         <label htmlFor={id}>
-            <input type="radio" id={id} name={id} value={id} checked={currentGroup === index} onChange={e => setGroup(index)} style={{ appearance: "none", MozAppearance: "none", WebkitAppearance: "none" }} />
+            <input type="radio" id={id} name={id} value={id} checked={currentGroup === index} onChange={onChange} style={{ appearance: "none", MozAppearance: "none", WebkitAppearance: "none" }} />
             <span style={{ display: "inline-flex", flexDirection: "column", opacity: currentGroup === index ? "1" : 0.5, width: "150px", textAlign: "center" }}>
                 <img src={group.image} width="50" style={{ margin: "0 auto" }} />
                 {group.title}
@@ -112,7 +112,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
                     </ul>
                 </div>
                 {!total && <div style={{ display: "flex", flexDirection: "row", margin: "20px 0", flexWrap: "wrap" }}>
-                    {dataProps.groups.map((g, i) => <GroupButton currentGroup={group} group={g} index={i} />)}
+                    {dataProps.groups.map((g, i) => <GroupButton currentGroup={group} group={g} index={i} onChange={_ => setGroup(i)} />)}
                 </div>}
                 <div className="chart-wrapper">
                     <div className="chart" >{content}</div>
