@@ -1,6 +1,5 @@
 import Layout from './layout';
-import AreaChart from './areaChart';
-import LineChart from './lineChart';
+import Chart from '../components/chart'
 import { useState, useEffect } from 'react';
 import Legend from '../components/legend';
 
@@ -42,13 +41,6 @@ function getBigChartProps(dataProps, height, annotation, onHover, max, nonpercen
     };
 }
 
-function Chart({ chartProps, asLineChart }) {
-    if (asLineChart) {
-        return <LineChart {...chartProps} />;
-    }
-    return <AreaChart {...chartProps} />;
-}
-
 function GroupButton({ currentGroup, group, index }) {
     const id = `group-${index}`;
     return (<>
@@ -80,10 +72,11 @@ export default function DataPage({ navigation, dataProps, title, description, as
         else { setAnnotation(); }
     };
 
+    const chartType = asLineChart ? "line" : "stackedarea";
     const charts = dataProps.groups[group].data.map((v, i) => {
-        return (<div className="chart-content"><Chart chartProps={getSmallChartProps(dataProps, v, i, height, annotation, onHover, max, nonpercentage)} asLineChart={asLineChart} /></div>);
+        return (<div className="chart-content"><Chart dataProps={getSmallChartProps(dataProps, v, i, height, annotation, onHover, max, nonpercentage)} chartType={chartType} /></div>);
     });
-    const totalChart = (<div className="chart-content"><Chart chartProps={getBigChartProps(dataProps, height, annotation, onHover, max, nonpercentage)} asLineChart={asLineChart} /></div>);
+    const totalChart = (<div className="chart-content"><Chart dataProps={getBigChartProps(dataProps, height, annotation, onHover, max, nonpercentage)} chartType={chartType} /></div>);
 
     useEffect(() => {
         function handleResize() {
