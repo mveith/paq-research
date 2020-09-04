@@ -90,7 +90,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
         return (<>
             <label htmlFor={id}>
                 <input type="radio" id={id} name={id} value={id} checked={group === i} onChange={e => setGroup(i)} style={{ appearance: "none", MozAppearance: "none", WebkitAppearance: "none" }} />
-                <span style={{ display: "inline-flex", flexDirection: "column", opacity: group === i ? "1" : 0.5 }}>
+                <span style={{ display: "inline-flex", flexDirection: "column", opacity: group === i ? "1" : 0.5, width: "150px",textAlign: "center" }}>
                     <img src={g.image} width="50" style={{ margin: "0 auto" }} />
                     {g.title}
                 </span>
@@ -115,7 +115,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
                         </li>
                     </ul>
                 </div>
-                {!total && <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", margin: "20px 0" }}>
+                {!total && <div style={{ display: "flex", flexDirection: "row", margin: "20px 0", flexWrap: "wrap" }}>
                     {groupButtons}
                 </div>}
                 <div className="chart-wrapper">
