@@ -101,7 +101,7 @@ function Chart({ dataProps, chartType }) {
     const frameProps = {
         lines: lines,
         size: dataProps.size,
-        margin: { left: 50, bottom: dataProps.showXAxis ? 50 : 10, right: 10, top: 40 },
+        margin: { left: 50, bottom: dataProps.showXAxis ? 50 : 10, right: 10, top: 10 },
 
         lineType: lineType,
         responsiveWidth: true,
@@ -112,11 +112,6 @@ function Chart({ dataProps, chartType }) {
 
         lineStyle: lineStyle,
         pointStyle: { fill: "none", stroke: "gray", strokeWidth: "1px" },
-        title: (
-            <text textAnchor="middle">
-                {values.title}
-            </text>
-        ),
         axes: [getYAxis(dataProps), getXAxis(dataProps)],
         hoverAnnotation: [
             { type: "x", disable: ["connector", "note"] },
@@ -125,6 +120,6 @@ function Chart({ dataProps, chartType }) {
         customHoverBehavior: x => dataProps.onHover ? dataProps.onHover(x) : null,
         tooltipContent: d => { return <div style={{ margin: "5px" }}>{d.value}{dataProps.nonpercentage ? "" : " %"}</div> }
     };
-    return <ChartComponent {...frameProps} />;
+    return <div><p style={{ textAlign: "center", marginLeft: "50px", marginRight: "10px" }}>{values.title}</p><ChartComponent {...frameProps} /></div>;
 }
 export default Chart;
