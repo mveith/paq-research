@@ -165,11 +165,15 @@ li {
     border: 1px solid transparent;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
+    opacity: .6;
+    font-weight: normal;
 }
 
 .tab-active {
     border-color: #dee2e6 #dee2e6 #fff;
     margin-bottom: -1px;
+    font-weight: bold;
+    opacity: 1;
 }
 
 @media only screen and (min-width: 720px) {

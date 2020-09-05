@@ -48,8 +48,8 @@ function GroupButton({ currentGroup, group, index, onChange }) {
     return (<>
         <label htmlFor={id}>
             <input type="radio" id={id} name={id} value={id} checked={currentGroup === index} onChange={onChange} style={{ appearance: "none", MozAppearance: "none", WebkitAppearance: "none" }} />
-            <span style={{ display: "inline-flex", flexDirection: "column", opacity: currentGroup === index ? "1" : 0.5, width: "150px", textAlign: "center" }}>
-                <img src={group.image} width="50" style={{ margin: "0 auto" }} />
+            <span style={{ display: "inline-flex", flexDirection: "column", opacity: currentGroup === index ? "1" : 0.4, width: "135px", margin: "0rem .3rem", textAlign: "center", fontSize: ".9rem" }}>
+                <img src={group.image} width="50" style={{ margin: "0 auto", opacity: .4 }} />
                 {group.title}
             </span>
         </label>
@@ -104,10 +104,10 @@ export default function DataPage({ navigation, dataProps, title, description, as
                 <div style={{ borderBottom: "1px solid #dee2e6", marginTop: "2rem" }}>
                     <ul style={{ listStyle: "none", display: "flex", margin: 0, padding: 0 }}>
                         <li className={"tab" + (total ? " tab-active" : "")}>
-                            <a href="#" style={{ padding: ".5rem 1rem" }} onClick={e => setTotal(true)}>celkem</a>
+                            <a href="#" style={{ padding: ".5rem 1rem" }} onClick={e => setTotal(true)}>Souhrnné zobrazení</a>
                         </li>
                         <li className={"tab" + (!total ? " tab-active" : "")}>
-                            <a href="#" style={{ padding: ".5rem 1rem" }} onClick={e => setTotal(false)}>podle skupin</a>
+                            <a href="#" style={{ padding: ".5rem 1rem" }} onClick={e => setTotal(false)}>Zobrazení podle skupin</a>
                         </li>
                     </ul>
                 </div>
