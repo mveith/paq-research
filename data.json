@@ -22,7 +22,7 @@
                         "title": "Žena"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "pohlavi-v1.svg",
                 "title": "Pohlaví"
             },
             {
@@ -52,7 +52,7 @@
                         "title": "55+ let"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "vek-v1.svg",
                 "title": "Věk"
             },
             {
@@ -83,7 +83,7 @@
                     }
                 ],
                 "image": "wallet-02.svg",
-                "title": "Obavy ohledně koronaviru (maximum napříč vlnami)"
+                "title": "Obavy ohledně koronaviru"
             },
             {
                 "data": [
@@ -112,7 +112,7 @@
                         "title": "Ne"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "znamost-v1.svg",
                 "title": "Znalost nakaženého"
             },
             {
@@ -142,7 +142,7 @@
                         "title": "100 000 obyvatel a více"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "bydliste-v1.svg",
                 "title": "Velikost místa bydliště"
             }
         ],
@@ -183,7 +183,7 @@
                         "title": "Žena"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "pohlavi-v1.svg",
                 "title": "Pohlaví"
             },
             {
@@ -201,7 +201,7 @@
                         "title": "55+ let"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "vek-v1.svg",
                 "title": "Věk"
             },
             {
@@ -220,7 +220,7 @@
                     }
                 ],
                 "image": "wallet-02.svg",
-                "title": "Obavy ohledně koronaviru (maximum napříč vlnami)"
+                "title": "Obavy ohledně koronaviru"
             },
             {
                 "data": [
@@ -237,7 +237,7 @@
                         "title": "Ne"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "znamost-v1.svg",
                 "title": "Znalost nakaženého"
             },
             {
@@ -255,7 +255,7 @@
                         "title": "100 000 obyvatel a více"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "bydliste-v1.svg",
                 "title": "Velikost místa bydliště"
             }
         ],
@@ -362,7 +362,7 @@
                         "title": "Nepracující"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "forma-prace-v1.svg",
                 "title": "Forma práce (před krizí)"
             },
             {
@@ -395,7 +395,7 @@
                         "title": "VŠ"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "vzdelani-v1.svg",
                 "title": "Vzdělání"
             },
             {
@@ -437,7 +437,7 @@
                         "title": "Bez dětí – příjem nad medián či neznámý"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "domacnost-v1.svg",
                 "title": "Typ domácnosti dle složení a příjmu před krizí"
             },
             {
@@ -479,7 +479,7 @@
                         "title": "Vysokopříjmová"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "prijem-v1.svg",
                 "title": "Měsíční příjem domácnosti (před krizí)"
             },
             {
@@ -530,7 +530,7 @@
                         "title": "Školství a kultura"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "obor-prace-v1.svg",
                 "title": "Obor práce"
             },
             {
@@ -618,7 +618,7 @@
                         "title": "Žena"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "pohlavi-v1.svg",
                 "title": "Pohlaví"
             },
             {
@@ -648,7 +648,7 @@
                         "title": "55+ let"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "vek-v1.svg",
                 "title": "Věk"
             },
             {
@@ -678,7 +678,7 @@
                         "title": "Ne"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "znalost-v1.svg",
                 "title": "Znalost nakaženého"
             },
             {
@@ -708,7 +708,7 @@
                         "title": "100 000 obyvatel a více"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "bydliste-v1.svg",
                 "title": "Velikost místa bydliště"
             }
         ],
@@ -803,7 +803,7 @@
                         "title": "Nepracující"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "forma-prace-v1.svg",
                 "title": "Forma práce (před krizí)"
             },
             {
@@ -830,7 +830,7 @@
                         "title": "VŠ"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "vzdelani-v1.svg",
                 "title": "Vzdělání"
             },
             {
@@ -864,7 +864,7 @@
                         "title": "Samostatně žijící dospělý"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "domacnost-v1.svg",
                 "title": "Typ domácnosti dle složení"
             },
             {
@@ -898,7 +898,7 @@
                         "title": "Bez dětí – příjem nad medián či neznámý"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "domacnost-v1.svg",
                 "title": "Typ domácnosti dle složení a příjmu před krizí"
             },
             {
@@ -932,7 +932,7 @@
                         "title": "Vysokopříjmová"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "prijem-v1.svg",
                 "title": "Měsíční příjem domácnosti (před krizí)"
             },
             {
@@ -973,7 +973,7 @@
                         "title": "Školství a kultura"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "obor-prace-v1.svg",
                 "title": "Obor práce"
             },
             {
@@ -1048,7 +1048,7 @@
                         "title": "Žena"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "pohlavi-v1.svg",
                 "title": "Pohlaví"
             },
             {
@@ -1078,7 +1078,7 @@
                         "title": "55+ let"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "vek-v1.svg",
                 "title": "Věk"
             },
             {
@@ -1109,7 +1109,7 @@
                     }
                 ],
                 "image": "wallet-02.svg",
-                "title": "Obavy ohledně koronaviru (maximum napříč vlnami)"
+                "title": "Obavy ohledně koronaviru"
             },
             {
                 "data": [
@@ -1138,7 +1138,7 @@
                         "title": "Ne"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "znamost-v1.svg",
                 "title": "Znalost nakaženého"
             },
             {
@@ -1168,7 +1168,7 @@
                         "title": "100 000 obyvatel a více"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "bydliste-v1.svg",
                 "title": "Velikost místa bydliště"
             }
         ],
@@ -1263,7 +1263,7 @@
                         "title": "Nepracující"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "forma-prace-v1.svg",
                 "title": "Forma práce (před krizí)"
             },
             {
@@ -1290,7 +1290,7 @@
                         "title": "VŠ"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "vzdelani-v1.svg",
                 "title": "Vzdělání"
             },
             {
@@ -1324,7 +1324,7 @@
                         "title": "Samostatně žijící dospělý"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "domacnost-v1.svg",
                 "title": "Typ domácnosti dle složení"
             },
             {
@@ -1358,7 +1358,7 @@
                         "title": "Bez dětí – příjem nad medián či neznámý"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "domacnost-v1.svg",
                 "title": "Typ domácnosti dle složení a aktuálního příjmu"
             },
             {
@@ -1392,7 +1392,7 @@
                         "title": "Vysokopříjmová"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "prijem-v1.svg",
                 "title": "Měsíční příjem domácnosti (aktuální)"
             },
             {
@@ -1433,7 +1433,7 @@
                         "title": "Školství a kultura"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "obor-prace-v1.svg",
                 "title": "Obor práce"
             },
             {
