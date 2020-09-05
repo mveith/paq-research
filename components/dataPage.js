@@ -104,10 +104,10 @@ export default function DataPage({ navigation, dataProps, title, description, as
                 <div style={{ borderBottom: "1px solid #dee2e6", marginTop: "2rem" }}>
                     <ul style={{ listStyle: "none", display: "flex", margin: 0, padding: 0 }}>
                         <li className={"tab" + (total ? " tab-active" : "")}>
-                            <a href="#" style={{ padding: ".5rem 1rem" }} onClick={e => setTotal(true)}>Souhrnné zobrazení</a>
+                            <a href="#" onClick={e => setTotal(true)}>Souhrnné zobrazení</a>
                         </li>
                         <li className={"tab" + (!total ? " tab-active" : "")}>
-                            <a href="#" style={{ padding: ".5rem 1rem" }} onClick={e => setTotal(false)}>Zobrazení podle skupin</a>
+                            <a href="#" onClick={e => setTotal(false)}>Zobrazení podle skupin</a>
                         </li>
                     </ul>
                 </div>

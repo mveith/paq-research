@@ -95,7 +95,6 @@ export default function Layout(props) {
                     {props.children}
                 </div>
                 <div className="main-footer">
-                    <hr style={{ border: "5px solid #f00 !important" }} />
                     <p className="menu-footer">výzkumné společnosti PAQ Research, iniciativa IDEA AntiCovid a data sbírá agentura NMS.</p>
                 </div>
             </div>
