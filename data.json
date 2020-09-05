@@ -82,7 +82,7 @@
                         "title": "Velké starosti"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "",
                 "title": "Obavy ohledně koronaviru"
             },
             {
@@ -219,7 +219,7 @@
                         "title": "Velké starosti"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "",
                 "title": "Obavy ohledně koronaviru"
             },
             {
@@ -320,7 +320,7 @@
                         "title": "Ostatní"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "status-prace-v1.svg",
                 "title": "Pracovní status (před krizí)"
             },
             {
@@ -437,7 +437,7 @@
                         "title": "Bez dětí – příjem nad medián či neznámý"
                     }
                 ],
-                "image": "domacnost-v1.svg",
+                "image": "domacnost-prijem-v1.svg",
                 "title": "Typ domácnosti dle složení a příjmu před krizí"
             },
             {
@@ -563,7 +563,7 @@
                         "title": "Bohatý"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "",
                 "title": "Typ regionu"
             }
         ],
@@ -678,7 +678,7 @@
                         "title": "Ne"
                     }
                 ],
-                "image": "znalost-v1.svg",
+                "image": "znamost-v1.svg",
                 "title": "Znalost nakaženého"
             },
             {
@@ -769,7 +769,7 @@
                         "title": "Ostatní"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "status-prace-v1.svg",
                 "title": "Pracovní status (před krizí)"
             },
             {
@@ -898,7 +898,7 @@
                         "title": "Bez dětí – příjem nad medián či neznámý"
                     }
                 ],
-                "image": "domacnost-v1.svg",
+                "image": "domacnost-prijem-v1.svg",
                 "title": "Typ domácnosti dle složení a příjmu před krizí"
             },
             {
@@ -1000,7 +1000,7 @@
                         "title": "Bohatý"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "",
                 "title": "Typ regionu"
             }
         ],
@@ -1108,7 +1108,7 @@
                         "title": "Velké starosti"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "",
                 "title": "Obavy ohledně koronaviru"
             },
             {
@@ -1229,7 +1229,7 @@
                         "title": "Ostatní"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "status-prace-v1.svg",
                 "title": "Pracovní status (před krizí)"
             },
             {
@@ -1358,7 +1358,7 @@
                         "title": "Bez dětí – příjem nad medián či neznámý"
                     }
                 ],
-                "image": "domacnost-v1.svg",
+                "image": "domacnost-prijem-v1.svg",
                 "title": "Typ domácnosti dle složení a aktuálního příjmu"
             },
             {
@@ -1460,7 +1460,7 @@
                         "title": "Bohatý"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "",
                 "title": "Typ regionu"
             }
         ],
