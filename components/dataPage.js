@@ -121,7 +121,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
                     </div>
                 </div>
                 {/* {navigation} */}
-                <div id="stories" class="blog">
+                <div id="stories" className="blog">
                     <h2>Co můžeme z dat pozorovat?</h2>
                     {dataProps.stories.map((s, i) => (<div className="story" key={`story-${i}}`}>
                         <p className="story-title">{s.title}</p>
@@ -130,7 +130,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
                         <hr style={{ margin: "2rem 40%", color: "#707070" }} />
                     </div>))}
                 </div>
-                <div id="methodology" class="blog">
+                <div id="methodology" className="blog">
                     <h2>Metodické poznámky</h2>
                     <div className="block-paragraph" dangerouslySetInnerHTML={{ __html: dataProps.methodology }}></div>
                 </div>

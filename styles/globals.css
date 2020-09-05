@@ -18,7 +18,7 @@ h1 {
 }
 
 h2 {
-  color: #273E47;
+    color: #273E47;
 }
 
 h3 {
@@ -47,14 +47,12 @@ li {
 }
 
 #stories {
-  margin-top: 4rem;
+    margin-top: 4rem;
 }
 
 .blog {
-  width: 780px;
-  margin: auto;
+    margin: auto;
 }
-/* ul li:before { */
 
 .li-custom {
     /* content: "•"; */
@@ -164,7 +162,7 @@ li {
 }
 
 .chart-content {
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .menu-footer {
@@ -198,13 +196,12 @@ li {
 }
 
 .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 @media only screen and (min-width: 720px) {
@@ -277,5 +274,8 @@ li {
         /* max-width: 1440px; */
         max-width: 67%;
         margin: auto;
+    }
+    .blog {
+        width: 780px;
     }
 }
