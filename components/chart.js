@@ -45,9 +45,7 @@ function getYAxis(props) {
 }
 
 function getXAxis(props) {
-    console.log("props", props);
     const getTickValue = e => {
-        console.log("tick", e);
         return props.showXAxis ? `${props.ticks[e - props.firstWeek]}` : null;
     };
     return {
