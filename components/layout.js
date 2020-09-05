@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-const menuItemStyle = { color: "#888" };
-const activeMenuItemStyle = { color: "black", fontWeight: "bold" };
+const menuItemStyle = { color: "#7C8A92" };
+const activeMenuItemStyle = { fontWeight: "bold" };
 const navbarItemStyle = {
     color: "#707070"
 };
@@ -95,7 +95,7 @@ export default function Layout(props) {
                     {props.children}
                 </div>
                 <div className="main-footer">
-                    <hr />
+                    <hr style={{ border: "5px solid #f00 !important" }} />
                     <p className="menu-footer">výzkumné společnosti PAQ Research, iniciativa IDEA AntiCovid a data sbírá agentura NMS.</p>
                 </div>
             </div>

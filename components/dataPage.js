@@ -46,10 +46,10 @@ function getBigChartProps(dataProps, height, annotation, onHover, max, nonpercen
 function GroupButton({ currentGroup, group, index, onChange }) {
     const id = `group-${index}`;
     return (<>
-        <label htmlFor={id}>
+        <label htmlFor={id} style={{ cursor: "pointer" }} >
             <input type="radio" id={id} name={id} value={id} checked={currentGroup === index} onChange={onChange} style={{ appearance: "none", MozAppearance: "none", WebkitAppearance: "none" }} />
-            <span style={{ display: "inline-flex", flexDirection: "column", opacity: currentGroup === index ? "1" : 0.5, width: "150px", textAlign: "center" }}>
-                <img src={group.image} width="50" style={{ margin: "0 auto" }} />
+            <span style={{ display: "inline-flex", flexDirection: "column", opacity: currentGroup === index ? "1" : 0.4, width: "135px", margin: "0rem .3rem", textAlign: "center", fontSize: ".9rem" }} className="noselect">
+                <img src={group.image} width="50" style={{ margin: "0 auto", opacity: .4 }} />
                 {group.title}
             </span>
         </label>
@@ -101,13 +101,13 @@ export default function DataPage({ navigation, dataProps, title, description, as
             </p>
             <div style={{ display: "flex", flexDirection: "column" }}>
                 <p>Podívej se na <a href="#stories" className="arrow-button">interpretace dat a grafů↓</a> a <a href="#methodology" className="arrow-button">metodické poznámky↓</a></p>
-                <div style={{ borderBottom: "1px solid #dee2e6" }}>
+                <div style={{ borderBottom: "1px solid #dee2e6", marginTop: "2rem" }}>
                     <ul style={{ listStyle: "none", display: "flex", margin: 0, padding: 0 }}>
                         <li className={"tab" + (total ? " tab-active" : "")}>
-                            <a href="#" style={{ padding: ".5rem 1rem" }} onClick={e => setTotal(true)}>celkem</a>
+                            <a href="#" style={{ padding: ".5rem 1rem" }} onClick={e => setTotal(true)}>Souhrnné zobrazení</a>
                         </li>
                         <li className={"tab" + (!total ? " tab-active" : "")}>
-                            <a href="#" style={{ padding: ".5rem 1rem" }} onClick={e => setTotal(false)}>podle skupin</a>
+                            <a href="#" style={{ padding: ".5rem 1rem" }} onClick={e => setTotal(false)}>Zobrazení podle skupin</a>
                         </li>
                     </ul>
                 </div>
@@ -120,9 +120,9 @@ export default function DataPage({ navigation, dataProps, title, description, as
                         <Legend {...legend} />
                     </div>
                 </div>
-                {navigation}
-                <div id="stories">
-                    <h2>Interpretace a další story</h2>
+                {/* {navigation} */}
+                <div id="stories" class="blog">
+                    <h2>Co můžeme z dat pozorovat?</h2>
                     {dataProps.stories.map((s, i) => (<div className="story" key={`story-${i}}`}>
                         <p className="story-title">{s.title}</p>
                         <p className="story-date">{s.date}</p>
@@ -130,7 +130,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
                         <hr style={{ margin: "2rem 40%", color: "#707070" }} />
                     </div>))}
                 </div>
-                <div id="methodology">
+                <div id="methodology" class="blog">
                     <h2>Metodické poznámky</h2>
                     <div className="block-paragraph" dangerouslySetInnerHTML={{ __html: dataProps.methodology }}></div>
                 </div>

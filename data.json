@@ -22,7 +22,7 @@
                         "title": "Žena"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "pohlavi-v1.svg",
                 "title": "Pohlaví"
             },
             {
@@ -52,7 +52,7 @@
                         "title": "55+ let"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "vek-v1.svg",
                 "title": "Věk"
             },
             {
@@ -83,7 +83,7 @@
                     }
                 ],
                 "image": "wallet-02.svg",
-                "title": "Obavy ohledně koronaviru (maximum napříč vlnami)"
+                "title": "Obavy ohledně koronaviru"
             },
             {
                 "data": [
@@ -112,7 +112,7 @@
                         "title": "Ne"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "znamost-v1.svg",
                 "title": "Znalost nakaženého"
             },
             {
@@ -142,7 +142,7 @@
                         "title": "100 000 obyvatel a více"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "bydliste-v1.svg",
                 "title": "Velikost místa bydliště"
             }
         ],
@@ -183,7 +183,7 @@
                         "title": "Žena"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "pohlavi-v1.svg",
                 "title": "Pohlaví"
             },
             {
@@ -201,7 +201,7 @@
                         "title": "55+ let"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "vek-v1.svg",
                 "title": "Věk"
             },
             {
@@ -220,7 +220,7 @@
                     }
                 ],
                 "image": "wallet-02.svg",
-                "title": "Obavy ohledně koronaviru (maximum napříč vlnami)"
+                "title": "Obavy ohledně koronaviru"
             },
             {
                 "data": [
@@ -237,7 +237,7 @@
                         "title": "Ne"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "znamost-v1.svg",
                 "title": "Znalost nakaženého"
             },
             {
@@ -255,7 +255,7 @@
                         "title": "100 000 obyvatel a více"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "bydliste-v1.svg",
                 "title": "Velikost místa bydliště"
             }
         ],
@@ -362,7 +362,7 @@
                         "title": "Nepracující"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "forma-prace-v1.svg",
                 "title": "Forma práce (před krizí)"
             },
             {
@@ -395,7 +395,7 @@
                         "title": "VŠ"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "vzdelani-v1.svg",
                 "title": "Vzdělání"
             },
             {
@@ -437,7 +437,7 @@
                         "title": "Bez dětí – příjem nad medián či neznámý"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "domacnost-v1.svg",
                 "title": "Typ domácnosti dle složení a příjmu před krizí"
             },
             {
@@ -479,7 +479,7 @@
                         "title": "Vysokopříjmová"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "prijem-v1.svg",
                 "title": "Měsíční příjem domácnosti (před krizí)"
             },
             {
@@ -530,7 +530,7 @@
                         "title": "Školství a kultura"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "obor-prace-v1.svg",
                 "title": "Obor práce"
             },
             {
@@ -567,7 +567,7 @@
                 "title": "Typ regionu"
             }
         ],
-        "legendColors": [ "#ffd080", "#fdab5e", "#f45048", "#bb1b30" ],
+        "legendColors": [ "#ffc869", "#ff9e43", "#f45048", "#bb1b30" ],
         "legendItems": [ "Člen domácnosti respondenta přišel o práci nebo se mu výrazně redukovala (respondent sám pracovně zasažen nebyl).", "Respondent neztratil práci, ale došlo v ní k podstatné změně - snížení úvazku, mzdy či jiného části výdělku (vč. flexibilní složky, DPP, platby na ruku) či je na nucené dovolené.", "Respondent ztratil práci – nenalezl novou, ale v posledních týdnech pracoval alespoň hodinu (dočasné \/ sezónní práce, brigády atd.).", "Respondent od března ztratil práci a nenalezl novou. V posledních dvou týdnech vůbec nepracoval." ],
         "legendTitle": "",
         "methodology": "<p>Definice „celkové ztráty práce“ odpovídá definici nezaměstnanosti ILO používané např. Výběrovým šetřením pracovních sil (VŠPS) – jde o lidi, kteří nemají (ztratili) práci a v posledním období nepracovali ani hodinu. Definice ILO je ale přísnější v tom, že respondent si musí práci také aktivně hledat. Důvod proč nezaměstnanost ve VŠPS narostla méně je také fakt, že cca třetina původně nezaměstnaných si naopak práci našla. </p> <p>Velikost vzorku: 1200 – 1500 respondentů v jednotlivých vlnách, Statistická chyba +/- 1 p.b. u menších zobrazovaných četností až +/- 2,5 p.b. u vyšších zobrazovaných četností (na 95% hladině spolehlivosti).  </p>",
@@ -618,7 +618,7 @@
                         "title": "Žena"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "pohlavi-v1.svg",
                 "title": "Pohlaví"
             },
             {
@@ -648,7 +648,7 @@
                         "title": "55+ let"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "vek-v1.svg",
                 "title": "Věk"
             },
             {
@@ -678,7 +678,7 @@
                         "title": "Ne"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "znalost-v1.svg",
                 "title": "Znalost nakaženého"
             },
             {
@@ -708,7 +708,7 @@
                         "title": "100 000 obyvatel a více"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "bydliste-v1.svg",
                 "title": "Velikost místa bydliště"
             }
         ],
@@ -803,7 +803,7 @@
                         "title": "Nepracující"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "forma-prace-v1.svg",
                 "title": "Forma práce (před krizí)"
             },
             {
@@ -830,7 +830,7 @@
                         "title": "VŠ"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "vzdelani-v1.svg",
                 "title": "Vzdělání"
             },
             {
@@ -864,7 +864,7 @@
                         "title": "Samostatně žijící dospělý"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "domacnost-v1.svg",
                 "title": "Typ domácnosti dle složení"
             },
             {
@@ -898,7 +898,7 @@
                         "title": "Bez dětí – příjem nad medián či neznámý"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "domacnost-v1.svg",
                 "title": "Typ domácnosti dle složení a příjmu před krizí"
             },
             {
@@ -932,7 +932,7 @@
                         "title": "Vysokopříjmová"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "prijem-v1.svg",
                 "title": "Měsíční příjem domácnosti (před krizí)"
             },
             {
@@ -973,7 +973,7 @@
                         "title": "Školství a kultura"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "obor-prace-v1.svg",
                 "title": "Obor práce"
             },
             {
@@ -1004,7 +1004,7 @@
                 "title": "Typ regionu"
             }
         ],
-        "legendColors": [ "#ffd080", "#fdab5e" ],
+        "legendColors": [ "#ffc869", "#ff9e43" ],
         "legendItems": [ "", "" ],
         "legendTitle": "",
         "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
@@ -1048,7 +1048,7 @@
                         "title": "Žena"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "pohlavi-v1.svg",
                 "title": "Pohlaví"
             },
             {
@@ -1078,7 +1078,7 @@
                         "title": "55+ let"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "vek-v1.svg",
                 "title": "Věk"
             },
             {
@@ -1109,7 +1109,7 @@
                     }
                 ],
                 "image": "wallet-02.svg",
-                "title": "Obavy ohledně koronaviru (maximum napříč vlnami)"
+                "title": "Obavy ohledně koronaviru"
             },
             {
                 "data": [
@@ -1138,7 +1138,7 @@
                         "title": "Ne"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "znamost-v1.svg",
                 "title": "Znalost nakaženého"
             },
             {
@@ -1168,13 +1168,13 @@
                         "title": "100 000 obyvatel a více"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "bydliste-v1.svg",
                 "title": "Velikost místa bydliště"
             }
         ],
-        "legendColors": [ "#a8e0b2", "#2db59e", "#009cb8" ],
+        "legendColors": [ "#87d495", "#2db59e", "#009cb8" ],
         "legendItems": [ "", "", "" ],
-        "legendTitle": "Počet vykonávaných aktivit chránících před nákazou koronavirem v období uplynulých dvou týdnů.",
+        "legendTitle": "Počet vykonávaných aktivit chránících před nákazou koronavirem v období uplynulých dvou týdnů:",
         "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
         "stories": [
             {
@@ -1195,7 +1195,7 @@
         "weeks": 10
     },
     "strategies": {
-        "colors": [ "#ffd080", "#fdab5e" ],
+        "colors": [ "#fdab5e", "#f45048" ],
         "firstWeek": 2,
         "groups": [
             {
@@ -1263,7 +1263,7 @@
                         "title": "Nepracující"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "forma-prace-v1.svg",
                 "title": "Forma práce (před krizí)"
             },
             {
@@ -1290,7 +1290,7 @@
                         "title": "VŠ"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "vzdelani-v1.svg",
                 "title": "Vzdělání"
             },
             {
@@ -1324,7 +1324,7 @@
                         "title": "Samostatně žijící dospělý"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "domacnost-v1.svg",
                 "title": "Typ domácnosti dle složení"
             },
             {
@@ -1358,7 +1358,7 @@
                         "title": "Bez dětí – příjem nad medián či neznámý"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "domacnost-v1.svg",
                 "title": "Typ domácnosti dle složení a aktuálního příjmu"
             },
             {
@@ -1392,7 +1392,7 @@
                         "title": "Vysokopříjmová"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "prijem-v1.svg",
                 "title": "Měsíční příjem domácnosti (aktuální)"
             },
             {
@@ -1433,7 +1433,7 @@
                         "title": "Školství a kultura"
                     }
                 ],
-                "image": "wallet-02.svg",
+                "image": "obor-prace-v1.svg",
                 "title": "Obor práce"
             },
             {
@@ -1464,7 +1464,7 @@
                 "title": "Typ regionu"
             }
         ],
-        "legendColors": [ "#ffd080", "#fdab5e" ],
+        "legendColors": [ "#ff9e43", "#f45048" ],
         "legendItems": [ "Skupina lidí, kteří chtějí výrazně omezit výdaje za nákup potravin, spotřebních věcí (oblečení, vybavení domácnosti), návštěvy restaurací, kulturu či cestování", "Respondenti, kteří mají potíže se splácením závazků (hypotéka\/nájem, půjčka, úvěr, pravidelné výdaje domácnosti) nebo zvažují půjčku od rodiny či známých, banky či úvěrové společnosti nebo prodej majetku" ],
         "legendTitle": "",
         "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
