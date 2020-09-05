@@ -46,7 +46,7 @@ function getBigChartProps(dataProps, height, annotation, onHover, max, nonpercen
 function GroupButton({ currentGroup, group, index, onChange }) {
     const id = `group-${index}`;
     return (<>
-        <label htmlFor={id}>
+        <label htmlFor={id} style={{ cursor: "pointer" }} >
             <input type="radio" id={id} name={id} value={id} checked={currentGroup === index} onChange={onChange} style={{ appearance: "none", MozAppearance: "none", WebkitAppearance: "none" }} />
             <span style={{ display: "inline-flex", flexDirection: "column", opacity: currentGroup === index ? "1" : 0.4, width: "135px", margin: "0rem .3rem", textAlign: "center", fontSize: ".9rem" }} className="noselect">
                 <img src={group.image} width="50" style={{ margin: "0 auto", opacity: .4 }} />

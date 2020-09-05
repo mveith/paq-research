@@ -118,14 +118,14 @@ li {
 }
 
 .legend-title {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 0.2rem;
 }
 
 .legend-description {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin-top: 0rem;
-    line-height: 1rem;
+    line-height: 1.2rem;
     color: #7C8A92;
 }
 
@@ -158,8 +158,8 @@ li {
 
 .block-paragraph {
     /* color: #707070; */
-    text-align: justify;
-    text-justify: inter-word;
+    /* text-align: justify; */
+    /* text-justify: inter-word; */
     line-height: 1.4rem;
 }
 
