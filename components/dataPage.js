@@ -19,7 +19,8 @@ function getSmallChartProps(dataProps, values, index, height, annotation, onHove
         annotation: annotation,
         onHover: onHover,
         nonpercentage: nonpercentage,
-        title: values.title
+        title: values.title,
+        ticks: dataProps.ticks
     };
 }
 
@@ -39,7 +40,8 @@ function getBigChartProps(dataProps, height, annotation, onHover, max, nonpercen
         size: [800, height],
         annotation: annotation,
         onHover: onHover,
-        nonpercentage: nonpercentage
+        nonpercentage: nonpercentage,
+        ticks: dataProps.ticks
     };
 }
 

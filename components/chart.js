@@ -45,7 +45,11 @@ function getYAxis(props) {
 }
 
 function getXAxis(props) {
-    const getTickValue = e => props.showXAxis ? `${e}.${e === props.firstWeek ? "vlna" : ""}` : null;
+    console.log("props", props);
+    const getTickValue = e => {
+        console.log("tick", e);
+        return props.showXAxis ? `${props.ticks[e - props.firstWeek]}` : null;
+    };
     return {
         orient: "bottom",
         showOutboundTickLines: true,
@@ -111,7 +115,7 @@ function Chart({ dataProps, chartType }) {
     const frameProps = {
         lines: lines,
         size: dataProps.size,
-        margin: { left: 50, bottom: dataProps.showXAxis ? 50 : 10, right: 10, top: 10 },
+        margin: { left: 50, bottom: dataProps.showXAxis ? 50 : 10, right: 20, top: 10 },
 
         lineType: lineType,
         responsiveWidth: true,
@@ -128,11 +132,10 @@ function Chart({ dataProps, chartType }) {
         ],
         annotations: annotations,
         customHoverBehavior: x => dataProps.onHover ? dataProps.onHover(x) : null,
-        tooltipContent: d => <SharedTooltip firstWeek={dataProps.firstWeek} week={d.x} lines={tooltipLines} nonpercentage={dataProps.nonpercentage} />
+        tooltipContent: d => <SharedTooltip firstWeek={dataProps.firstWeek} week={d.x} lines={tooltipLines} nonpercentage={dataProps.nonpercentage} ticks={dataProps.ticks} />
     };
     return (
         <div>
-            {/* <p style={{ textAlign: "center", marginLeft: "50px", marginRight: "10px", fontSize: "1rem", fontWeight: "bold", textTransform: "uppercase", lineHeight: "1rem", height: dataProps.title ? "2rem" : 0 }}> */}
             <h3 style={{ textAlign: "center", marginLeft: "50px", marginRight: "10px", textTransform: 'uppercase', height: dataProps.title ? "1rem" : 0 }}>
                 {dataProps.title}
             </h3>

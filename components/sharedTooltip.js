@@ -10,10 +10,10 @@ function TooltipItem({ color, value, index }) {
     </div>);
 }
 
-function SharedTooltip({ firstWeek, week, lines, nonpercentage }) {
+function SharedTooltip({ firstWeek, week, lines, nonpercentage, ticks }) {
     return (<div className="tooltip-content" style={{ background: "rgba(255,255,255,0.9)", minWidth: "max-content", whiteSpace: "nowrap", padding: "10px", border: "1px solid black", fontSize: "small" }}>
         <div key={"header_multi"} style={{ fontWeight: "bold", borderBottom: "thin solid black", marginBottom: "10px", textAlign: "center" }}>
-            {`${week}. vlna:`}
+            {`${ticks[week - firstWeek]}:`}
         </div>
         {lines.map((l, i) => <TooltipItem color={l.color} value={l.lineValues[week - firstWeek] + (nonpercentage ? "" : "%")} index={i} />)}
     </div>);

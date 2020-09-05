@@ -157,6 +157,7 @@
                 "title": "Za propad zaměstnanosti může úplně někdo jiný"
             }
         ],
+        "ticks": [ "2.–8. 3.", "9.–15. 3.", "16.–22. 3.", "23.–29. 3.", "30. 3.–5. 4.", "6.–12. 4.", "13.–19. 4.", "20.–26. 4.", "27. 4.–3. 5.", "4.–10. 5.", "11.–17. 5.", "18.–24. 5.", "25.–31. 5.", "1.–7. 6.", "15.–21. 6.", "22.–28. 6.", "6.–12. 7.", "13.–19. 7.", "27. 7.–2. 8.", "3.–9. 8.", "w11", "w11", "w12", "w12", "w13", "w13", "w14", "w14", "w15", "w15", "w16", "w16" ],
         "titles": [ "Jízda plným MHD, vlakem nebo autobusem", "Nakupování v obchodě (popř. návštěva banky\/pošty) s větším množstvím lidí", "Nakupování nebalených potravin" ],
         "total": {
             "lines": [
@@ -270,6 +271,7 @@
                 "title": "Za propad zaměstnanosti může úplně někdo jiný"
             }
         ],
+        "ticks": [ "2.–8. 3.", "9.–15. 3.", "16.–22. 3.", "23.–29. 3.", "30. 3.–5. 4.", "6.–12. 4.", "13.–19. 4.", "20.–26. 4.", "27. 4.–3. 5.", "4.–10. 5.", "11.–17. 5.", "18.–24. 5.", "25.–31. 5.", "1.–7. 6.", "15.–21. 6.", "22.–28. 6.", "6.–12. 7.", "13.–19. 7.", "27. 7.–2. 8.", "3.–9. 8.", "w11", "w11", "w12", "w12", "w13", "w13", "w14", "w14", "w15", "w15", "w16", "w16" ],
         "titles": [ "Průměrný počet osob v podstatném kontaktu" ],
         "total": {
             "lines": [ [ 23, 17, 8, 7, 10, 9, 11, 11, 13, 14, 15, 17, 19, 20, 23, 24, 23, 23, 22, 22 ] ],
@@ -523,6 +525,7 @@
                 "title": "Jak si vedou skupiny obyvatel"
             }
         ],
+        "ticks": [ "k 1. 4.", "k 15. 4.", "k 28. 4.", "k 12. 5.", "k 26. 5.", "k 16. 6.", "k 30. 6.", "k 21. 7.", "k 11. 8.", "w11", "w12", "w13", "w14", "w15", "w16" ],
         "titles": [ "Omezení práce v domácnosti", "Podzaměstnaní a nestabilní", "Prekarizace: ztráta stabilní práce", "Celková ztráta práce" ],
         "total": {
             "lines": [
@@ -663,6 +666,7 @@
                 "title": "Za propad zaměstnanosti může úplně někdo jiný"
             }
         ],
+        "ticks": [ "k 19. 3.", "k 1. 4.", "k 15. 4.", "k 28. 4.", "k 12. 5.", "k 26. 5.", "k 16. 6.", "k 30. 6.", "k 21. 7.", "k 11. 8.", "w11", "w12", "w13", "w14", "w15", "w16", "", "", "" ],
         "titles": [ "Klidný", "Částečné starosti", "Velké starosti" ],
         "total": {
             "lines": [
@@ -894,6 +898,7 @@
                 "title": "Za propad zaměstnanosti může úplně někdo jiný"
             }
         ],
+        "ticks": [ "k 1. 4.", "k 15. 4.", "k 28. 4.", "k 12. 5.", "k 26. 5.", "k 16. 6.", "k 30. 6.", "k 21. 7.", "k 11. 8.", "w11", "w12", "w13", "w14", "w15", "w16" ],
         "titles": [ "Lehce zasažení", "Těžce zasažení" ],
         "total": {
             "lines": [
@@ -1062,6 +1067,7 @@
                 "title": "Za propad zaměstnanosti může úplně někdo jiný"
             }
         ],
+        "ticks": [ "k 19. 3.", "k 1. 4.", "k 15. 4.", "k 28. 4.", "k 12. 5.", "k 26. 5.", "k 16. 6.", "k 30. 6.", "k 21. 7.", "k 11. 8.", "w11", "w12", "w13", "w14", "w15", "w16", "", "" ],
         "titles": [ "Menšina aktivit (0-5)", "Většina aktivit (6-9)", "Všechny nebo téměř všechny aktivity (10+)" ],
         "total": {
             "lines": [
@@ -1293,6 +1299,7 @@
                 "title": "Za propad zaměstnanosti může úplně někdo jiný"
             }
         ],
+        "ticks": [ "k 1. 4.", "k 15. 4.", "k 28. 4.", "k 12. 5.", "k 26. 5.", "k 16. 6.", "k 30. 6.", "k 21. 7.", "k 11. 8.", "w11", "w12", "w13", "w14", "w15", "w16" ],
         "titles": [ "Chtějí šetřit", "Nestíhají splácet či se chtějí zadlužit" ],
         "total": {
             "lines": [
