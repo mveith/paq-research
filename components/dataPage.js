@@ -122,7 +122,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
                 </div>
                 {/* {navigation} */}
                 <div id="stories" class="blog">
-                    <h2>Interpretace a další story</h2>
+                    <h2>Co můžeme z dat pozorovat?</h2>
                     {dataProps.stories.map((s, i) => (<div className="story" key={`story-${i}}`}>
                         <p className="story-title">{s.title}</p>
                         <p className="story-date">{s.date}</p>
