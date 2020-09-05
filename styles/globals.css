@@ -72,7 +72,7 @@ li {
 
 .main-wrapper {
     font-family: 'Fira Sans', sans-serif;
-    margin: 0 16px;
+    margin: 0 8px;
 }
 
 .main-menu {
@@ -184,6 +184,8 @@ li {
     /* opacity: .6; */
     color: #7C8A92 !important;
     font-weight: normal;
+    text-align: center;
+    padding: .5rem;
 }
 
 .tab-active {
@@ -193,6 +195,7 @@ li {
     font-weight: bold;
     opacity: 1;
     color: #273E47 !important;
+    text-align: center;
 }
 
 .noselect {
