@@ -3,23 +3,29 @@ body {
     padding: 0;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    color: #273E47;
 }
 
 a {
     color: inherit;
+    /* color: #273E47; */
     text-decoration: none;
 }
 
 h1 {
     margin-bottom: 0rem;
+    color: #273E47;
 }
 
-h2 {}
+h2 {
+  color: #273E47;
+}
 
 h3 {
     font-size: .85rem;
-    letter-spacing: 1px;
+    letter-spacing: .8px;
     margin-bottom: 0.5rem;
+    color: #273E47;
 }
 
 p {
@@ -27,6 +33,7 @@ p {
     margin-top: .5rem;
     margin-bottom: 0rem;
     line-height: 1.4rem;
+    color: #273E47;
 }
 
 ul {
@@ -119,17 +126,19 @@ li {
     font-size: 0.9rem;
     margin-top: 0rem;
     line-height: 1rem;
-    color: #707070;
+    color: #7C8A92;
 }
 
 .arrow-button {
     font-weight: 600;
     text-decoration: underline;
+    opacity: 0.9;
+    font-size: .95rem;
 }
 
 .button-switch-topic {
     font-size: .9rem;
-    color: #707070;
+    /* color: #707070; */
     margin: 1rem 0rem;
 }
 
@@ -151,10 +160,19 @@ li {
     /* color: #707070; */
     text-align: justify;
     text-justify: inter-word;
+    line-height: 1.4rem;
+}
+
+.chart-content {
+  margin-bottom: 1.5rem;
 }
 
 .menu-footer {
     font-size: .9rem;
+    line-height: normal;
+    /* opacity: .6; */
+    color: #7C8A92;
+    margin-bottom: 1rem;
 }
 
 .menu-item-style {
@@ -165,15 +183,28 @@ li {
     border: 1px solid transparent;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
-    opacity: .6;
+    /* opacity: .6; */
+    color: #7C8A92 !important;
     font-weight: normal;
 }
 
 .tab-active {
-    border-color: #dee2e6 #dee2e6 #fff;
+    /* border-color: #dee2e6 #dee2e6 #fff; */
+    border-color: #D0D6DC #D0D6DC #fff;
     margin-bottom: -1px;
     font-weight: bold;
     opacity: 1;
+    color: #273E47 !important;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 @media only screen and (min-width: 720px) {
@@ -191,10 +222,11 @@ li {
     }
     .side-menu {
         padding: 0 10px;
+        padding-top: 1rem;
         margin: 0 1rem;
         display: flex;
         flex-direction: column;
-        width: 200px;
+        width: 190px;
         position: fixed;
         top: 50px;
         height: calc(100% - 50px);

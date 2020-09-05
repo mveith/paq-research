@@ -117,9 +117,10 @@ function Chart({ dataProps, chartType }) {
     };
     return (
         <div>
-            <p style={{ textAlign: "center", marginLeft: "50px", marginRight: "10px", fontSize: "1rem", lineHeight: "1rem", height: dataProps.title ? "2rem" : 0 }}>
+            {/* <p style={{ textAlign: "center", marginLeft: "50px", marginRight: "10px", fontSize: "1rem", fontWeight: "bold", textTransform: "uppercase", lineHeight: "1rem", height: dataProps.title ? "2rem" : 0 }}> */}
+            <h3 style={{ textAlign: "center", marginLeft: "50px", marginRight: "10px", textTransform: 'uppercase', height: dataProps.title ? "1rem" : 0 }}>
                 {dataProps.title}
-            </p>
+            </h3>
             <div><ResponsiveXYFrame {...frameProps} /></div>
         </div>
     );

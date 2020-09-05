@@ -1174,7 +1174,7 @@
         ],
         "legendColors": [ "#87d495", "#2db59e", "#009cb8" ],
         "legendItems": [ "", "", "" ],
-        "legendTitle": "Počet vykonávaných aktivit chránících před nákazou koronavirem v období uplynulých dvou týdnů.",
+        "legendTitle": "Počet vykonávaných aktivit chránících před nákazou koronavirem v období uplynulých dvou týdnů:",
         "methodology": "Nárůst nezaměstnanosti byl <strong>relativně malý<\/strong>, ale ztrátu práce či její výraznou redukci zažilo vice lidí, než ukazují oficiální statistiky (OSVČ a DPP se často nehlásí na ÚP) a další drží Antivirus B v placené neaktivitě. Kromě toho jsou lidé, kterým byl nějak změněn úvazek či se výrazně obávají ztráty práce a jsou na pracovním trhu ohrožení.",
         "stories": [
             {

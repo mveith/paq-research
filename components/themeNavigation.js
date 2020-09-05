@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 function ThemeNavigation({ previousHref, previousTitle, nextHref, nextTitle }) {
     return (
-        <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
+        <div className="blog" style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", marginTop: "2rem" }}>
             <div className="button-switch-topic">
                 <Link href={previousHref}>
                     <a>
