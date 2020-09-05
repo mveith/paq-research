@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic'
+import SharedTooltip from '../components/sharedTooltip';
 
 const ResponsiveXYFrame = dynamic(
     () => import('semiotic/lib/ResponsiveXYFrame'),
@@ -57,16 +58,24 @@ function getXAxis(props) {
 function generateAnnotations(props, stacked) {
     if (props.annotation) {
         const values = props.values;
-        const tooltipAnnotations = values.lines.map((l, i) => {
+
+        const tooltipAnnotation = [{
+            type: "frame-hover",
+            x: props.annotation.week,
+            y: stacked ?
+                values.lines.map(pl => pl[props.annotation.week - props.firstWeek]).reduce((a, b) => a + b, 0) :
+                Math.max.apply(null, values.lines.map(l => l[props.annotation.week - props.firstWeek]))
+        }];
+        const pointAnnotations = values.lines.map((l, i) => {
             return {
-                type: "frame-hover",
+                type: "xy",
                 x: props.annotation.week,
-                y: stacked ? values.lines.slice(i).map(pl => pl[props.annotation.week - props.firstWeek]).reduce((a, b) => a + b, 0) : l[props.annotation.week - props.firstWeek],
-                value: l[props.annotation.week - props.firstWeek]
+                y: stacked ?
+                    values.lines.slice(i).map(pl => pl[props.annotation.week - props.firstWeek]).reduce((a, b) => a + b, 0) :
+                    values.lines[i][props.annotation.week - props.firstWeek],
             };
         });
-        return [{ type: "x", week: props.annotation.week, disable: ["connector", "note"] }].concat(tooltipAnnotations);
-
+        return [{ type: "x", week: props.annotation.week, disable: ["connector", "note"] }].concat(tooltipAnnotation).concat(pointAnnotations);
     }
     else return [];
 }
@@ -92,7 +101,13 @@ function Chart({ dataProps, chartType }) {
                 fill: "none"
             };
     };
-
+    const tooltipLines = values.lines.map((line, lineIndex) => {
+        return {
+            lineValues: line,
+            color: dataProps.colors[lineIndex],
+            title: dataProps.titles[lineIndex]
+        };
+    });
     const frameProps = {
         lines: lines,
         size: dataProps.size,
@@ -113,7 +128,7 @@ function Chart({ dataProps, chartType }) {
         ],
         annotations: annotations,
         customHoverBehavior: x => dataProps.onHover ? dataProps.onHover(x) : null,
-        tooltipContent: d => { return <div style={{ margin: "5px" }}>{d.value}{dataProps.nonpercentage ? "" : " %"}</div> }
+        tooltipContent: d => <SharedTooltip firstWeek={dataProps.firstWeek} week={d.x} lines={tooltipLines} nonpercentage={dataProps.nonpercentage} />
     };
     return (
         <div>
