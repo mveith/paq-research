@@ -39,7 +39,14 @@ li {
     font-size: .9rem;
 }
 
+#stories {
+  margin-top: 4rem;
+}
 
+.blog {
+  width: 780px;
+  margin: auto;
+}
 /* ul li:before { */
 
 .li-custom {
@@ -231,7 +238,8 @@ li {
 
 @media only screen and (min-width: 1600px) {
     .container {
-        max-width: 1140px;
+        /* max-width: 1440px; */
+        max-width: 67%;
         margin: auto;
     }
 }

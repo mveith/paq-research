@@ -101,7 +101,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
             </p>
             <div style={{ display: "flex", flexDirection: "column" }}>
                 <p>Podívej se na <a href="#stories" className="arrow-button">interpretace dat a grafů↓</a> a <a href="#methodology" className="arrow-button">metodické poznámky↓</a></p>
-                <div style={{ borderBottom: "1px solid #dee2e6" }}>
+                <div style={{ borderBottom: "1px solid #dee2e6", marginTop: "2rem" }}>
                     <ul style={{ listStyle: "none", display: "flex", margin: 0, padding: 0 }}>
                         <li className={"tab" + (total ? " tab-active" : "")}>
                             <a href="#" style={{ padding: ".5rem 1rem" }} onClick={e => setTotal(true)}>celkem</a>
@@ -121,7 +121,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
                     </div>
                 </div>
                 {navigation}
-                <div id="stories">
+                <div id="stories" class="blog">
                     <h2>Interpretace a další story</h2>
                     {dataProps.stories.map((s, i) => (<div className="story" key={`story-${i}}`}>
                         <p className="story-title">{s.title}</p>
@@ -130,7 +130,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
                         <hr style={{ margin: "2rem 40%", color: "#707070" }} />
                     </div>))}
                 </div>
-                <div id="methodology">
+                <div id="methodology" class="blog">
                     <h2>Metodické poznámky</h2>
                     <div className="block-paragraph" dangerouslySetInnerHTML={{ __html: dataProps.methodology }}></div>
                 </div>
