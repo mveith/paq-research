@@ -27,8 +27,6 @@ export default function Layout(props) {
             <div style={{ marginTop: "4rem" }}>
                 <h3>EKONOMICKÉ DOPADY</h3>
                 <ul>
-                    {/* <ul style={{ listStyle: "none" }}> */}
-                    {/* <li><span className="li-custom" ><i class="fa fa-circle" /></span><ActiveLink href="/destabilizace-prace" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Destabilizace práce</ActiveLink></li> */}
                     <li><ActiveLink href="/destabilizace-prace" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Destabilizace práce</ActiveLink></li>
                     <li><ActiveLink href="/dopad" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Ekonomické dopady na domácnosti</ActiveLink></li>
                     <li><ActiveLink href="/strategie" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Dopady a strategie domácnosti</ActiveLink></li>
@@ -40,7 +38,6 @@ export default function Layout(props) {
                 <ul>
                     <li><ActiveLink href="/protektivni-aktivity" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Počet protektivních aktivit</ActiveLink></li>
                     <li><ActiveLink href="/kontakty" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Kontakt s lidmi</ActiveLink></li>
-                    <li><ActiveLink href="/pocity" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Pocity ohledně koronaviru</ActiveLink></li>
                 </ul>
             </div>
         </>);

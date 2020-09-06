@@ -2,7 +2,7 @@ import Layout from '../components/layout';
 
 export default function About() {
     return (
-        <Layout>
+        <Layout title="O projektu">
             <h1 style={{ marginBottom: "3rem" }}>O projektu</h1>
 
             <p>Data v na této stránce pocházejí z výzkumu Život během pandemie. Jeho cílem je sledovat, jak se vyvíjí sociální
