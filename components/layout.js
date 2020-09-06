@@ -76,7 +76,7 @@ export default function Layout(props) {
             <div className="main-wrapper">
                 <div className="side-menu">
                     <header>
-                        <Link href="/destabilizace-prace"><a><h1>život během pandemie</h1></a></Link>
+                        <Link href="/destabilizace-prace"><a><h1 style={{ color: "#eec94e", lineHeight: "1.9rem"}} >život během pandemie</h1></a></Link>
                     </header>
                     <div className="main-menu">
                         <nav>
