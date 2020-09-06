@@ -44,8 +44,8 @@ export default function About() {
             (téma distančního vzdělávání). </p>
 
             <p>
-                <img src="logo-paq.png" width="120" />
-                <img src="idea.png" width="120" />
+                <a href="https://www.paqresearch.cz/"><img src="logo-paq.png" width="120" /></a>
+                <a href="https://idea.cerge-ei.cz/anti-covid-19/"><img src="idea.png" width="120" /></a>
             </p>
         </Layout>
     )
