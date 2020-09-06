@@ -13,6 +13,7 @@ a {
 }
 
 h1 {
+    font-size: 1.5rem;
     margin-bottom: 0rem;
     color: #273E47;
 }
@@ -44,10 +45,6 @@ ul {
 li {
     padding: .2rem 0rem;
     font-size: .9rem;
-}
-
-#stories {
-    margin-top: 4rem;
 }
 
 .blog {
@@ -210,6 +207,12 @@ li {
 }
 
 @media only screen and (min-width: 720px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+    #stories {
+        margin-top: 2rem;
+    }
     .main-footer {
         display: none;
     }
@@ -268,6 +271,9 @@ li {
 }
 
 @media only screen and (min-width: 1200px) {
+    #stories {
+      margin-top: 3rem;
+    }
     .chart-wrapper {
         display: flex;
         flex-direction: row;
@@ -282,12 +288,17 @@ li {
 }
 
 @media only screen and (min-width: 1600px) {
+    #stories {
+      margin-top: 4rem;
+    }
     .container {
         /* max-width: 1440px; */
         max-width: 67%;
         margin: auto;
     }
     .blog {
-        width: 780px;
+        /* width: 780px; */
+        width: 840px;
+        margin-left: 40px;
     }
 }
