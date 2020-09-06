@@ -45,6 +45,7 @@ export default function About() {
 
             <p>
                 <img src="logo-paq.png" width="120" />
+                <img src="idea.png" width="120" />
             </p>
         </Layout>
     )
