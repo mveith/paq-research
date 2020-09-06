@@ -85,7 +85,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
     useEffect(() => {
         function handleResize() {
             var chart = document.getElementsByClassName('chart-content')[0];
-            setHeight(chart.offsetWidth * 0.65);
+            setHeight(chart.offsetWidth * 0.6);
         }
 
         handleResize();
@@ -127,7 +127,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
                     <h2>Co můžeme v datech pozorovat?</h2>
                     {dataProps.stories.map((s, i) => (<div className="story" key={`story-${i}}`}>
                         <p className="story-title">{s.title}</p>
-                        <p className="story-date">{s.date}</p>
+                        {/* <p className="story-date">{s.date}</p> */}
                         <div className="block-paragraph" dangerouslySetInnerHTML={{ __html: s.text }}></div>
                         <hr style={{ margin: "2rem 40%", color: "#707070" }} />
                     </div>))}

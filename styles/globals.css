@@ -277,6 +277,7 @@ li {
     }
     .legend {
         width: 300px;
+        margin: 1rem .5rem;
     }
 }
 
