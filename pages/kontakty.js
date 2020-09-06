@@ -10,7 +10,7 @@ export default function Contacts(props) {
         navigation={navigation}
         dataProps={props}
         title="S kolika lidmi byli respondenti v bližším kontaktu?"
-        description="S kolika lidmi byli respondenti v bližším kontaktu?"
+        description="Až od konce dubna dochází k kontinuálnímu nárůstu kontaktů, které se na původní míru přes jarní vlnou epidemie dostaly až začátkem prázdnin. Nárůst kontaktů zvyšuje pravděpodobnost komunitního šíření, rizikovost byla ale v létě zřejmě omezena i tím, že často probíhaly venku. Nárůstem kontaktů také vzrostly nároky na trasování (vyhledávání kontaktů nakažených)."
         asLineChart={true}
         max={50}
         nonpercentage={true}
