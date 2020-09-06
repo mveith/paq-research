@@ -56,7 +56,7 @@ export default function Layout(props) {
                 <Link href="/kontakt"><a style={navbarItemStylePadding}>Kontakt</a></Link>
             </nav>
             <nav className="top-menu-mobile">
-                <div style={{ overflow: "hidden", backgroundColor: "#F4F4F4", position: "relative" }} >
+                <div style={{ overflow: "hidden", backgroundColor: "#F4F4F4", position: "relative", zIndex: 10 }} >
                     <Link href="/destabilizace-prace"><a style={{ ...navbarItemStylePadding, display: "block" }}>Život během pandemie</a></Link>
                     <div style={{ display: openMenu ? "flex" : "none", flexDirection: "column", margin: "0 16px" }}>
                         {menu}
