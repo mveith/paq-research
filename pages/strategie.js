@@ -10,7 +10,7 @@ export default function Destabilization(props) {
         navigation={navigation}
         dataProps={props}
         title="K jakým řešením své momentální finanční situace domácnosti přistupují?"
-        description="Domácnosti na popsané změny práce a výpadky rozpočtu reagují, což dopadá na jejich hospodaření. Buď se snaží o redukci některých výdajů (to dělá asi 20-25 % dotázaných), ale u menší části domácností sledujeme i vážnější problémy – a to neschopnost splácet některé výdaje či snahu řešit problémy půjčkami."
+        description="Více pětina respondentů v současnosti snaží či chce omezit kvůli důsledkům krize svou spotřebu. Od jara ale jejich počet výrazně poklesl (ze 45 %), ale přesto existuje riziko omezení domácí poptávky. Počet domácností, které nezvládají splácet závazky či zvažují nové půjčky je nižší, ale naopak stabilní a může se projevit mimo jiné do nárůstu exekucí."
         asLineChart={true}
     />;
 }
