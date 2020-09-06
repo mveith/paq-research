@@ -98,6 +98,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
     return (
         <Layout title={title}>
             <h1>{title}</h1>
+            <p className="select-topic" ><a href="" className="arrow-button">Vybrat jiné téma</a></p>
             <p>
                 {description}
             </p>

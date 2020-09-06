@@ -78,7 +78,7 @@ li {
 
 .content-wrapper {
     padding: 10px;
-    margin: 1rem;
+    margin: 0rem 1rem;
 }
 
 .side-menu {
@@ -224,6 +224,7 @@ li {
     }
     .content-wrapper {
         width: 100%;
+        margin: 1rem;
     }
     .side-menu {
         padding: 0 10px;
@@ -267,6 +268,9 @@ li {
     }
     .main-wrapper {
         margin-top: 50px;
+    }
+    .select-topic {
+      display: none;
     }
 }
 
