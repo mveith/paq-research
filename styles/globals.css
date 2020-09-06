@@ -128,10 +128,10 @@ li {
 }
 
 .arrow-button {
-    font-weight: 600;
+    /* font-weight: 600; */
     text-decoration: underline;
     opacity: 0.9;
-    font-size: .95rem;
+    /* font-size: .95rem; */
 }
 
 .button-switch-topic {
@@ -184,13 +184,15 @@ li {
     /* opacity: .6; */
     color: #7C8A92 !important;
     font-weight: normal;
+    font-size: 1rem;
     text-align: center;
-    padding: .5rem;
+    padding: .5rem 1rem;
 }
 
 .tab-active {
     /* border-color: #dee2e6 #dee2e6 #fff; */
-    border-color: #D0D6DC #D0D6DC #fff;
+    /* border-color: #D0D6DC #D0D6DC #fff; */
+    border-color: #273E47 #273E47 #fff;
     margin-bottom: -1px;
     font-weight: bold;
     opacity: 1;
