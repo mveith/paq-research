@@ -262,6 +262,9 @@ li {
         margin-right: calc(0.1 * (100% - 232px));
         max-width: calc(0.90 * (100% - 232px));
     }
+    .main-wrapper {
+        margin-top: 50px;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
