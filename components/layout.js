@@ -86,8 +86,9 @@ export default function Layout(props) {
                             {menu}
                         </nav>
                         <div>
+                            <img src="logo-paq.png" width="90" />
                             <hr />
-                            <p className="menu-footer">výzkumné společnosti PAQ Research, iniciativa IDEA AntiCovid a data sbírá agentura NMS.</p>
+                            <p className="menu-footer">Na projektu se podílí výzkumné společnosti PAQ Research, iniciativa IDEA AntiCovid a data sbírá agentura NMS.</p>
                         </div>
                     </div>
                 </div>
@@ -95,7 +96,7 @@ export default function Layout(props) {
                     {props.children}
                 </div>
                 <div className="main-footer">
-                    <p className="menu-footer">výzkumné společnosti PAQ Research, iniciativa IDEA AntiCovid a data sbírá agentura NMS.</p>
+                    <p className="menu-footer">Na projektu se podílí výzkumné společnosti PAQ Research, iniciativa IDEA AntiCovid a data sbírá agentura NMS.</p>
                 </div>
             </div>
         </>

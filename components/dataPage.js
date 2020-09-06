@@ -102,14 +102,14 @@ export default function DataPage({ navigation, dataProps, title, description, as
                 {description}
             </p>
             <div style={{ display: "flex", flexDirection: "column" }}>
-                <p>Podívej se na <a href="#stories" className="arrow-button">interpretace dat a grafů↓</a> a <a href="#methodology" className="arrow-button">metodické poznámky↓</a></p>
-                <div style={{ borderBottom: "1px solid #dee2e6", marginTop: "2rem" }}>
+                <p>Podívej se na <a href="#stories" className="arrow-button">interpretace↓</a> a <a href="#methodology" className="arrow-button">metodické poznámky↓</a></p>
+                <div style={{ borderBottom: "1px solid #273E47", marginTop: "2rem" }}>
                     <ul style={{ listStyle: "none", display: "flex", margin: 0, padding: 0 }}>
                         <li className={"tab" + (total ? " tab-active" : "")}>
                             <a href="#" onClick={e => setTotal(true)}>Souhrnné zobrazení</a>
                         </li>
                         <li className={"tab" + (!total ? " tab-active" : "")}>
-                            <a href="#" onClick={e => setTotal(false)}>Zobrazení podle skupin</a>
+                            <a href="#" onClick={e => setTotal(false)}>Jak si vedou různé skupiny obyvatel?</a>
                         </li>
                     </ul>
                 </div>
