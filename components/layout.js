@@ -51,13 +51,13 @@ export default function Layout(props) {
                 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet" />
             </Head>
             <nav className="top-menu">
-                <Link href="/"><a style={navbarItemStylePadding}>Život během pandemie</a></Link>
+                <Link href="/destabilizace-prace"><a style={navbarItemStylePadding}>Život během pandemie</a></Link>
                 <Link href="/projekt"><a style={navbarItemStylePadding}>O projektu</a></Link>
                 <Link href="/kontakt"><a style={navbarItemStylePadding}>Kontakt</a></Link>
             </nav>
             <nav className="top-menu-mobile">
                 <div style={{ overflow: "hidden", backgroundColor: "#F4F4F4", position: "relative" }} >
-                    <Link href="/"><a style={{ ...navbarItemStylePadding, display: "block" }}>Život během pandemie</a></Link>
+                    <Link href="/destabilizace-prace"><a style={{ ...navbarItemStylePadding, display: "block" }}>Život během pandemie</a></Link>
                     <div style={{ display: openMenu ? "flex" : "none", flexDirection: "column", margin: "0 16px" }}>
                         {menu}
                         <hr style={{ width: "100%" }} />
@@ -76,7 +76,7 @@ export default function Layout(props) {
             <div className="main-wrapper" style={{ marginTop: "50px", }}>
                 <div className="side-menu">
                     <header>
-                        <Link href="/"><a><h1>život během pandemie</h1></a></Link>
+                        <Link href="/destabilizace-prace"><a><h1>život během pandemie</h1></a></Link>
                     </header>
                     <div className="main-menu">
                         <nav>
