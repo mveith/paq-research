@@ -53,7 +53,7 @@ export default function Layout(props) {
             <nav className="top-menu">
                 <Link href="/"><a style={navbarItemStylePadding}>Život během pandemie</a></Link>
                 <Link href="/projekt"><a style={navbarItemStylePadding}>O projektu</a></Link>
-                <Link href="/projekt"><a style={navbarItemStylePadding}>Kontakt</a></Link>
+                <Link href="/kontakt"><a style={navbarItemStylePadding}>Kontakt</a></Link>
             </nav>
             <nav className="top-menu-mobile">
                 <div style={{ overflow: "hidden", backgroundColor: "#F4F4F4", position: "relative" }} >
