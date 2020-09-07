@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic'
 import SharedTooltip from '../components/sharedTooltip';
+import { useState, useEffect } from 'react';
 
 const ResponsiveXYFrame = dynamic(
     () => import('semiotic/lib/ResponsiveXYFrame'),
@@ -44,9 +45,17 @@ function getYAxis(props) {
     };
 }
 
-function getXAxis(props) {
+function getXAxis(props, ticks) {
+    var mod;
+    for (mod = 1; mod < 10; mod++) {
+        if (props.weeks / mod <= ticks) {
+            break;
+        }
+    }
+
     const getTickValue = e => {
-        return props.showXAxis ? `${props.ticks[e - props.firstWeek]}` : null;
+        const x = e - props.firstWeek;
+        return x % mod === 0 ? `${props.ticks[x]}` : null;
     };
     return {
         orient: "bottom",
@@ -110,10 +119,20 @@ function Chart({ dataProps, chartType }) {
             title: dataProps.titles[lineIndex]
         };
     });
+    const [ticks, setTicks] = useState(2);
+    useEffect(() => {
+        var chart = document.getElementsByClassName('chart-content')[0];
+        const width = chart.offsetWidth;
+        const tickLength = dataProps.ticks[0].length;
+        const maxCount = width / (tickLength * 10);
+
+        const ticks = Math.min(dataProps.weeks, Math.round(maxCount));
+        setTicks(ticks);
+    });
     const frameProps = {
         lines: lines,
         size: dataProps.size,
-        margin: { left: 50, bottom: dataProps.showXAxis ? 50 : 10, right: 20, top: 10 },
+        margin: { left: 50, bottom: 50, right: 20, top: 10 },
 
         lineType: lineType,
         responsiveWidth: true,
@@ -124,7 +143,7 @@ function Chart({ dataProps, chartType }) {
 
         lineStyle: lineStyle,
         pointStyle: { fill: "none", stroke: "gray", strokeWidth: "1px" },
-        axes: [getYAxis(dataProps), getXAxis(dataProps)],
+        axes: [getYAxis(dataProps), getXAxis(dataProps, ticks)],
         hoverAnnotation: [
             { type: "x", disable: ["connector", "note"] },
         ],
