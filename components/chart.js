@@ -69,14 +69,14 @@ function getXAxis(props, ticks) {
 function generateAnnotations(props, stacked) {
     if (props.annotation) {
         const values = props.values;
-
-        const tooltipAnnotation = [{
-            type: "frame-hover",
-            x: props.annotation.week,
-            y: stacked ?
-                values.lines.map(pl => pl[props.annotation.week - props.firstWeek]).reduce((a, b) => a + b, 0) :
-                Math.max.apply(null, values.lines.map(l => l[props.annotation.week - props.firstWeek]))
-        }];
+        const tooltipAnnotations = values.lines.map((l, i) => {
+            return {
+                type: "frame-hover",
+                x: props.annotation.week,
+                y: stacked ? values.lines.slice(i).map(pl => pl[props.annotation.week - props.firstWeek]).reduce((a, b) => a + b, 0) : l[props.annotation.week - props.firstWeek],
+                value: l[props.annotation.week - props.firstWeek]
+            };
+        }).slice(props.annotation.lineIndex, props.annotation.lineIndex + 1);
         const pointAnnotations = values.lines.map((l, i) => {
             return {
                 type: "xy",
@@ -86,7 +86,9 @@ function generateAnnotations(props, stacked) {
                     values.lines[i][props.annotation.week - props.firstWeek],
             };
         });
-        return [{ type: "x", week: props.annotation.week, disable: ["connector", "note"] }].concat(tooltipAnnotation).concat(pointAnnotations);
+
+        return [{ type: "x", week: props.annotation.week, disable: ["connector", "note"] }].concat(tooltipAnnotations).concat(pointAnnotations);
+
     }
     else return [];
 }

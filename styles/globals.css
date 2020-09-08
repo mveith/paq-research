@@ -206,6 +206,17 @@ li {
     user-select: none;
 }
 
+.tooltip-content {
+    background: rgba(255, 255, 255, 0.9);
+    min-width: max-content;
+    white-space: nowrap;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: small;
+    margin-top: 0.5em;
+    margin-left: 1em;
+}
+
 @media only screen and (min-width: 720px) {
     h1 {
         font-size: 1.8rem;
