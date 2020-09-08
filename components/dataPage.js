@@ -1,47 +1,6 @@
 import Layout from './layout';
-import Chart from '../components/chart'
-import { useState, useEffect } from 'react';
-import Legend from '../components/legend';
-
-function getSmallChartProps(dataProps, values, index, height, annotation, onHover, max, nonpercentage) {
-    return {
-        key: `chart-${index}`,
-        weeks: dataProps.weeks,
-        firstWeek: dataProps.firstWeek,
-        colors: dataProps.colors,
-        titles: dataProps.titles,
-        yMin: 0,
-        yMax: max ?? 100,
-        showYAxis: true,
-        values: values,
-        size: [300, height],
-        annotation: annotation,
-        onHover: onHover,
-        nonpercentage: nonpercentage,
-        title: values.title,
-        ticks: dataProps.ticks
-    };
-}
-
-function getBigChartProps(dataProps, height, annotation, onHover, max, nonpercentage) {
-    return {
-        key: "chart-total",
-        weeks: dataProps.weeks,
-        firstWeek: dataProps.firstWeek,
-        colors: dataProps.colors,
-        titles: dataProps.titles,
-        yMin: 0,
-        yMax: max ?? 100,
-        showYAxis: true,
-        values: dataProps.total,
-        title: "",
-        size: [800, height],
-        annotation: annotation,
-        onHover: onHover,
-        nonpercentage: nonpercentage,
-        ticks: dataProps.ticks
-    };
-}
+import ChartWrapper from '../components/chartWrapper'
+import { useState } from 'react';
 
 function GroupButton({ currentGroup, group, index, onChange }) {
     const id = `group-${index}`;
@@ -58,40 +17,8 @@ function GroupButton({ currentGroup, group, index, onChange }) {
 }
 
 export default function DataPage({ navigation, dataProps, title, description, asLineChart, max, nonpercentage }) {
-    const [annotation, setAnnotation] = useState();
     const [total, setTotal] = useState(true);
-    const [height, setHeight] = useState(600);
     const [group, setGroup] = useState(0);
-    const legend = {
-        items: dataProps.titles.map((t, i) => { return { color: dataProps.legendColors[i], title: t, description: dataProps.legendItems[i] }; }),
-        title: dataProps.legendTitle
-    };
-
-    const onHover = x => {
-        if (x) {
-            setAnnotation({ week: x.week, lineIndex: x.parentLine.key });
-        }
-        else { setAnnotation(); }
-    };
-
-    const chartType = asLineChart ? "line" : "stackedarea";
-    const charts = dataProps.groups[group].data.map((v, i) => {
-        return (<div className="chart-content"><Chart dataProps={getSmallChartProps(dataProps, v, i, height, annotation, onHover, max, nonpercentage)} chartType={chartType} /></div>);
-    });
-    const totalChart = (<div className="chart-content"><Chart dataProps={getBigChartProps(dataProps, height, annotation, onHover, max, nonpercentage)} chartType={chartType} /></div>);
-
-    useEffect(() => {
-        function handleResize() {
-            var chart = document.getElementsByClassName('chart-content')[0];
-            setHeight(chart.offsetWidth * 0.6);
-        }
-
-        handleResize();
-        window.addEventListener('resize', handleResize)
-    });
-    const content = total ?
-        (<>{totalChart}</>) :
-        (<div className="multiple-charts-wrapper">{charts}</div>);
 
     const [openMenu, setOpenMenu] = useState(false);
     return (
@@ -116,18 +43,11 @@ export default function DataPage({ navigation, dataProps, title, description, as
                 {!total && <div style={{ display: "flex", flexDirection: "row", margin: "20px 0", flexWrap: "wrap" }}>
                     {dataProps.groups.map((g, i) => <GroupButton currentGroup={group} group={g} index={i} onChange={_ => setGroup(i)} />)}
                 </div>}
-                <div className="chart-wrapper">
-                    <div className="chart" >{content}</div>
-                    <div className="legend">
-                        <Legend {...legend} />
-                    </div>
-                </div>
-                {/* {navigation} */}
+                <ChartWrapper dataProps={dataProps} asLineChart={asLineChart} max={max} nonpercentage={nonpercentage} group={group} total={total} />
                 <div id="stories" className="blog">
                     <h2>Co můžeme v datech pozorovat?</h2>
                     {dataProps.stories.map((s, i) => (<div className="story" key={`story-${i}}`}>
                         <p className="story-title">{s.title}</p>
-                        {/* <p className="story-date">{s.date}</p> */}
                         <div className="block-paragraph" dangerouslySetInnerHTML={{ __html: s.text }}></div>
                         <hr style={{ margin: "2rem 40%", color: "#707070" }} />
                     </div>))}
