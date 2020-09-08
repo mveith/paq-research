@@ -1,4 +1,4 @@
-export function GroupButton({ currentGroup, group, index, onChange }) {
+function GroupButton({ currentGroup, group, index, onChange }) {
     const id = `group-${index}`;
     return (<>
         <label htmlFor={id} style={{ cursor: "pointer" }} >
@@ -11,20 +11,28 @@ export function GroupButton({ currentGroup, group, index, onChange }) {
     </>);
 }
 
+function Tab({ title, onClick, isActive }) {
+    return (<li className={"tab" + (isActive ? " tab-active" : "")}>
+        <a href="javascript:void(0);" onClick={e => onClick()}>{title}</a>
+    </li>);
+}
+
+function GroupButtons({ groups, onGroupChange, group }) {
+    return (<div style={{ display: "flex", flexDirection: "row", margin: "20px 0", flexWrap: "wrap" }}>
+        {groups.map((g, i) =>
+            <GroupButton key={`group-button-${i}`} currentGroup={group} group={g} index={i} onChange={_ => onGroupChange(i)} />
+        )}
+    </div>);
+}
+
 export default function ChartSettings({ dataProps, total, onTotalChange, group, onGroupChange }) {
     return (<>
         <div style={{ borderBottom: "1px solid #273E47", marginTop: "2rem" }}>
             <ul style={{ listStyle: "none", display: "flex", margin: 0, padding: 0 }}>
-                <li className={"tab" + (total ? " tab-active" : "")}>
-                    <a href="javascript:void(0);" onClick={e => onTotalChange(true)}>Souhrnné zobrazení</a>
-                </li>
-                <li className={"tab" + (!total ? " tab-active" : "")}>
-                    <a href="javascript:void(0);" onClick={e => onTotalChange(false)}>Jak si vedou různé skupiny obyvatel?</a>
-                </li>
+                <Tab title="Souhrnné zobrazení" onClick={() => onTotalChange(true)} isActive={total} />
+                <Tab title="Jak si vedou různé skupiny obyvatel?" onClick={() => onTotalChange(false)} isActive={!total} />
             </ul>
         </div>
-        {!total && <div style={{ display: "flex", flexDirection: "row", margin: "20px 0", flexWrap: "wrap" }}>
-            {dataProps.groups.map((g, i) => <GroupButton currentGroup={group} group={g} index={i} onChange={_ => onGroupChange(i)} />)}
-        </div>}
+        {!total && <GroupButtons groups={dataProps.groups} onGroupChange={onGroupChange} group={group} />}
     </>);
 }
