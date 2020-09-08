@@ -93,10 +93,11 @@ export default function DataPage({ navigation, dataProps, title, description, as
         (<>{totalChart}</>) :
         (<div className="multiple-charts-wrapper">{charts}</div>);
 
+    const [openMenu, setOpenMenu] = useState(false);
     return (
-        <Layout title={title}>
+        <Layout title={title} openMenu={openMenu} setOpenMenu={setOpenMenu}>
             <h1>{title}</h1>
-            <p className="select-topic" ><a href="" className="arrow-button">Vybrat jiné téma</a></p>
+            <p className="select-topic" ><a href="javascript:void(0);" className="arrow-button" onClick={e => setOpenMenu(!openMenu)}>Vybrat jiné téma</a></p>
             <p>
                 {description}
             </p>
@@ -105,10 +106,10 @@ export default function DataPage({ navigation, dataProps, title, description, as
                 <div style={{ borderBottom: "1px solid #273E47", marginTop: "2rem" }}>
                     <ul style={{ listStyle: "none", display: "flex", margin: 0, padding: 0 }}>
                         <li className={"tab" + (total ? " tab-active" : "")}>
-                            <a href="#" onClick={e => setTotal(true)}>Souhrnné zobrazení</a>
+                            <a href="javascript:void(0);" onClick={e => setTotal(true)}>Souhrnné zobrazení</a>
                         </li>
                         <li className={"tab" + (!total ? " tab-active" : "")}>
-                            <a href="#" onClick={e => setTotal(false)}>Jak si vedou různé skupiny obyvatel?</a>
+                            <a href="javascript:void(0);" onClick={e => setTotal(false)}>Jak si vedou různé skupiny obyvatel?</a>
                         </li>
                     </ul>
                 </div>
@@ -137,6 +138,6 @@ export default function DataPage({ navigation, dataProps, title, description, as
                 </div>
                 {navigation}
             </div>
-        </Layout>
+        </Layout >
     )
 }

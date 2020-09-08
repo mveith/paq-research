@@ -42,6 +42,13 @@ export default function Layout(props) {
             </div>
         </>);
 
+    const onMenuButtonClick = e => {
+        const openMenuValue = openMenu || props.openMenu;
+        setOpenMenu(!openMenuValue);
+        if (props.setOpenMenu) {
+            props.setOpenMenu(!openMenuValue);
+        }
+    };
     return (
         <>
             <Head>
@@ -58,7 +65,7 @@ export default function Layout(props) {
             <nav className="top-menu-mobile">
                 <div style={{ overflow: "hidden", backgroundColor: "#F4F4F4", position: "relative", zIndex: 10 }} >
                     <Link href="/destabilizace-prace"><a style={{ ...navbarItemStylePadding, display: "block" }}>Život během pandemie</a></Link>
-                    <div style={{ display: openMenu ? "flex" : "none", flexDirection: "column", margin: "0 16px" }}>
+                    <div style={{ display: openMenu || props.openMenu ? "flex" : "none", flexDirection: "column", margin: "0 16px" }}>
                         {menu}
                         <hr style={{ width: "100%" }} />
                         <div>
@@ -68,7 +75,7 @@ export default function Layout(props) {
                             </ul>
                         </div>
                     </div>
-                    <a href="javascript:void(0);" className="icon" onClick={e => setOpenMenu(!openMenu)} style={{ ...navbarItemStylePadding, fontSize: "17px", display: "block", position: "absolute", right: 0, top: 0 }}>
+                    <a href="javascript:void(0);" className="icon" onClick={onMenuButtonClick} style={{ ...navbarItemStylePadding, fontSize: "17px", display: "block", position: "absolute", right: 0, top: 0 }}>
                         <i className="fa fa-bars"></i>
                     </a>
                 </div>
@@ -76,7 +83,7 @@ export default function Layout(props) {
             <div className="main-wrapper">
                 <div className="side-menu">
                     <header>
-                        <Link href="/destabilizace-prace"><a><h1 style={{ color: "#eec94e", lineHeight: "1.9rem"}} >život během pandemie</h1></a></Link>
+                        <Link href="/destabilizace-prace"><a><h1 style={{ color: "#eec94e", lineHeight: "1.9rem" }} >život během pandemie</h1></a></Link>
                     </header>
                     <div className="main-menu">
                         <nav>
