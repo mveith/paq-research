@@ -217,6 +217,10 @@ li {
     margin-left: 1em;
 }
 
+.group-buttons {
+    display: none;
+}
+
 @media only screen and (min-width: 720px) {
     h1 {
         font-size: 1.8rem;
@@ -280,6 +284,15 @@ li {
         margin-top: 50px;
     }
     .select-topic {
+        display: none;
+    }
+    .group-buttons {
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0;
+        flex-wrap: wrap;
+    }
+    .group-dropdown {
         display: none;
     }
 }
