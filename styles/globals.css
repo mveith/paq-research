@@ -42,14 +42,9 @@ ul {
     margin-top: 0rem;
 }
 
-li {
-    padding: .2rem 0rem;
+.side-menu li {
+    padding: .3rem 0rem;
     font-size: .9rem;
-}
-
-.top-menu-mobile li {
-    padding: .2rem 0rem;
-    font-size: 1rem;
 }
 
 .blog {

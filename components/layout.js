@@ -102,7 +102,7 @@ export default function Layout(props) {
                     {props.children}
                 </div>
                 <div className="main-footer">
-                    <p className="menu-footer">Na projektu se podílí výzkumné společnosti PAQ Research, iniciativa IDEA AntiCovid a data sbírá agentura NMS.</p>
+                    <p className="menu-footer">Na projektu se podílí výzkumné společnosti <a href="https://www.paqresearch.cz/">PAQ Research</a>, iniciativa <a href="https://idea.cerge-ei.cz/anti-covid-19/">IDEA AntiCovid</a> a data sbírá agentura <a href="https://www.nms.cz/">NMS</a>.</p>
                 </div>
             </div>
         </>
