@@ -155,9 +155,12 @@ function Chart({ dataProps, chartType }) {
     };
     return (
         <div>
-            <h3 style={{ textAlign: "center", marginLeft: "50px", marginRight: "10px", textTransform: 'uppercase', height: dataProps.title ? "1rem" : 0 }}>
+            <h3 style={{ textAlign: "center", marginLeft: "50px", marginRight: "10px", textTransform: 'uppercase', height: dataProps.title ? "1.5rem" : 0 }}>
                 {dataProps.title}
             </h3>
+            <h4 style={{ textAlign: "center", margin: "0", marginLeft: "50px", marginRight: "10px", fontSize: "0.8em" }}>
+                {dataProps.subtitle}
+            </h4>
             <div><ResponsiveXYFrame {...frameProps} /></div>
         </div>
     );

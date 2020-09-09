@@ -18,7 +18,8 @@ function getSmallChartProps(dataProps, values, index, height, annotation, onHove
         onHover: onHover,
         nonpercentage: nonpercentage,
         title: values.title,
-        ticks: dataProps.ticks
+        ticks: dataProps.ticks,
+        subtitle: values.subtitle
     };
 }
 
