@@ -47,6 +47,11 @@ li {
     font-size: .9rem;
 }
 
+.top-menu-mobile li {
+    padding: .2rem 0rem;
+    font-size: 1rem;
+}
+
 .blog {
     margin: auto;
 }

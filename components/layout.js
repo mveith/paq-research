@@ -71,7 +71,7 @@ export default function Layout(props) {
                         <div>
                             <ul>
                                 <li><Link href="/projekt" ><a style={navbarItemStyle}>O projektu</a></Link></li>
-                                <li><Link href="/projekt"><a style={navbarItemStyle}>Kontakt</a></Link></li>
+                                <li><Link href="/kontakt"><a style={navbarItemStyle}>Kontakt</a></Link></li>
                             </ul>
                         </div>
                     </div>
