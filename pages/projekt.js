@@ -43,6 +43,17 @@ export default function About() {
             <p>V minulosti sběr dat ve výzkumu Život během pandemie podpořili i Michal Sirový, Ondřej Nezdara či Člověk v tísni
             (téma distančního vzdělávání). </p>
 
+            <h2>Financování</h2>
+            <p>Sběr dat financován z následujících zdrojů:
+                <ul>
+                    <li>Max Plack for Tax and Public Finance</li>
+                    <li>Akademie ved CR (ERC-CZ/AV-B (ERC300851901))</li>
+                    <li>German Science Foundation CRC TRR 190</li>
+                    <li>Ondřej Nezdara</li>
+                    <li>Michal Sirový</li>
+                </ul>
+            </p>
+
             <p>
                 <a href="https://www.paqresearch.cz/"><img src="logo-paq.png" width="120" /></a>
                 <a href="https://idea.cerge-ei.cz/anti-covid-19/"><img src="idea.png" width="120" /></a>
