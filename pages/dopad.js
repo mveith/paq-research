@@ -10,7 +10,7 @@ export default function Impact(props) {
         navigation={navigation}
         dataProps={props}
         title="Jaký má epidemie ekonomický dopad na domácnosti?"
-        description="Vývoj ekonomiky od začátku epidemie těžce dopadá na zhruba desetinu Čechů – reportují pokles příjmu domácnosti o 30 % a více procent a jejich domácnost nemá velké úspory. Domácnosti další čtvrtiny Čechů si pohoršily lehce."
+        description="Vývoj ekonomiky od začátku epidemie těžce dopadá na zhruba desetinu Čechů – reportují pokles příjmu domácnosti o 30 a více procent a jejich domácnost nemá velké úspory. Domácnosti další čtvrtiny Čechů si pohoršily lehce."
     />;
 }
 

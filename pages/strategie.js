@@ -10,7 +10,7 @@ export default function Destabilization(props) {
         navigation={navigation}
         dataProps={props}
         title="K jakým řešením své momentální finanční situace domácnosti přistupují?"
-        description="Více pětina respondentů v současnosti snaží či chce omezit kvůli důsledkům krize svou spotřebu. Od jara ale jejich počet výrazně poklesl (ze 45 %), ale přesto existuje riziko omezení domácí poptávky. Počet domácností, které nezvládají splácet závazky či zvažují nové půjčky je nižší, ale naopak stabilní a může se projevit mimo jiné do nárůstu exekucí."
+        description="Necelá čtvrtina respondentů v současnosti snaží či chce omezit kvůli důsledkům krize svou spotřebu. Od jara ale jejich počet výrazně poklesl (ze 45 %), ale přesto existuje riziko omezení domácí poptávky. Počet domácností, které nezvládají splácet závazky či zvažují nové půjčky je nižší, ale naopak stabilní a může se projevit mimo jiné do nárůstu exekucí."
         asLineChart={true}
     />;
 }
