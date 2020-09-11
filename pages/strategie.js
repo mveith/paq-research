@@ -5,7 +5,7 @@ import ThemeNavigation from '../components/themeNavigation';
 
 const navigation = (<ThemeNavigation previousHref="/dopad" previousTitle="Ekonomické dopady na domácnosti" nextHref="/protektivni-aktivity" nextTitle="Počet protektivních aktivit" />);
 
-export default function Destabilization(props) {
+export default function Strategies(props) {
     return <DataPage
         navigation={navigation}
         dataProps={props}

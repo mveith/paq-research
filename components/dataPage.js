@@ -23,21 +23,22 @@ export default function DataPage({ navigation, dataProps, title, description, as
 
                 <ChartWrapper dataProps={dataProps} asLineChart={asLineChart} max={max} nonpercentage={nonpercentage} group={group} total={total} />
 
-                <div id="stories" className="blog">
-                    <h2>Co můžeme v datech pozorovat?</h2>
-                    {dataProps.stories.map((s, i) => (<div className="story" key={`story-${i}}`}>
-                        <p className="story-title">{s.title}</p>
-                        <div className="block-paragraph" dangerouslySetInnerHTML={{ __html: s.text }}></div>
-                        <hr style={{ margin: "2rem 40%", color: "#707070" }} />
-                    </div>))}
-                </div>
-
-                <div id="methodology" className="blog">
-                    <h2>Metodické poznámky</h2>
-                    <div className="block-paragraph" dangerouslySetInnerHTML={{ __html: dataProps.methodology }}></div>
-                </div>
-                {navigation}
             </div>
+
+            <div id="stories" className="blog">
+                <h2>Co můžeme v datech pozorovat?</h2>
+                {dataProps.stories.map((s, i) => (<div className="story" key={`story-${i}}`}>
+                    <p className="story-title">{s.title}</p>
+                    <div className="block-paragraph" dangerouslySetInnerHTML={{ __html: s.text }}></div>
+                    <hr style={{ margin: "2rem 40%", color: "#707070" }} />
+                </div>))}
+            </div>
+
+            <div id="methodology" className="blog">
+                <h2>Metodické poznámky</h2>
+                <div className="block-paragraph" dangerouslySetInnerHTML={{ __html: dataProps.methodology }}></div>
+            </div>
+            {navigation}
         </Layout >
     )
 }
