@@ -56,6 +56,17 @@ export default function Layout(props) {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
                 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet" />
+
+                {/* Global site tag (gtag.js) - Google Analytics */}
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177624987-1"></script>
+                <script dangerouslySetInnerHTML={{
+                    __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+
+                    gtag('config', 'UA-177624987-1');
+                `}} />
             </Head>
             <nav className="top-menu">
                 <Link href="/destabilizace-prace"><a style={navbarItemStylePadding}>Život během pandemie</a></Link>
@@ -83,7 +94,7 @@ export default function Layout(props) {
             <div className="main-wrapper">
                 <div className="side-menu">
                     <header>
-                        <Link href="/destabilizace-prace"><a><h1 style={{ color: "#eec94e", lineHeight: "1.9rem", fontSize:"1.9rem" }} >život během pandemie</h1></a></Link>
+                        <Link href="/destabilizace-prace"><a><h1 style={{ color: "#eec94e", lineHeight: "1.9rem", fontSize: "1.9rem" }} >život během pandemie</h1></a></Link>
                     </header>
                     <div className="main-menu">
                         <nav>
