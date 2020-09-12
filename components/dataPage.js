@@ -9,7 +9,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
 
     useEffect(() => {
         const storedTotal = localStorage.getItem("total");
-        if (storedTotal !== undefined) {
+        if (storedTotal) {
             setTotal(storedTotal === "true");
         }
 
