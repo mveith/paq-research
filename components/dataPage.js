@@ -41,7 +41,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
             <p>{description}</p>
 
             <div style={{ display: "flex", flexDirection: "column" }}>
-                <p>Podívej se na <a href="#stories" className="arrow-button">interpretace↓</a> a <a href="#methodology" className="arrow-button">metodické poznámky↓</a></p>
+                <p>Podívejte se na <a href="#stories" className="arrow-button">interpretace↓</a> a <a href="#methodology" className="arrow-button">metodické poznámky↓</a></p>
 
                 <ChartSettings dataProps={dataProps} total={total} onTotalChange={onTotalChange} group={group} onGroupChange={onGroupChange} />
 
