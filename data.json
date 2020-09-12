@@ -575,7 +575,7 @@
                 "title": "Jak si vedou skupiny obyvatel"
             }
         ],
-        "ticks": [ "k 1. 4.", "k 15. 4.", "k 28. 4.", "k 12. 5.", "k 26. 5.", "k 16. 6.", "k 30. 6.", "k 21. 7.", "k 11. 8.", "k 1. 9.", "w12", "w13", "w14", "w15", "w16" ],
+        "ticks": [ "1. 4.", "15. 4.", "28. 4.", "12. 5.", "26. 5.", "16. 6.", "30. 6.", "21. 7.", "11. 8.", "1. 9.", "w12", "w13", "w14", "w15", "w16" ],
         "titles": [ "Omezení práce člena domácnosti", "Podzaměstnaní a nestabilní", "Prekarizace: ztráta stabilní práce", "Celková ztráta práce" ],
         "total": {
             "lines": [
@@ -984,7 +984,7 @@
                 "title": "Jak si vedou skupiny obyvatel"
             }
         ],
-        "ticks": [ "k 1. 4.", "k 15. 4.", "k 28. 4.", "k 12. 5.", "k 26. 5.", "k 16. 6.", "k 30. 6.", "k 21. 7.", "k 11. 8.", "k 1. 9.", "w12", "w13", "w14", "w15", "w16" ],
+        "ticks": [ "1. 4.", "15. 4.", "28. 4.", "12. 5.", "26. 5.", "16. 6.", "30. 6.", "21. 7.", "11. 8.", "1. 9.", "w12", "w13", "w14", "w15", "w16" ],
         "titles": [ "Lehce ekonomicky zasažení", "Těžce ekonomicky zasažení" ],
         "total": {
             "lines": [
@@ -1206,7 +1206,7 @@
                 "title": "Jak si vedou skupiny obyvatel"
             }
         ],
-        "ticks": [ "k 19. 3.", "k 1. 4.", "k 15. 4.", "k 28. 4.", "k 12. 5.", "k 26. 5.", "k 16. 6.", "k 30. 6.", "k 21. 7.", "k 11. 8.", "k 1. 9. ", "w12", "w13", "w14", "w15", "w16" ],
+        "ticks": [ "19. 3.", "1. 4.", "15. 4.", "28. 4.", "12. 5.", "26. 5.", "16. 6.", "30. 6.", "21. 7.", "11. 8.", "1. 9. ", "w12", "w13", "w14", "w15", "w16" ],
         "titles": [ "Menšina aktivit (0–6)", "Většina aktivit (7–10)", "Všechny nebo téměř všechny aktivity (11–13)" ],
         "total": {
             "lines": [
@@ -1452,7 +1452,7 @@
                 "title": "Jak si vedou skupiny obyvatel"
             }
         ],
-        "ticks": [ "k 1. 4.", "k 15. 4.", "k 28. 4.", "k 12. 5.", "k 26. 5.", "k 16. 6.", "k 30. 6.", "k 21. 7.", "k 11. 8.", "k 1. 9.", "w12", "w13", "w14", "w15", "w16" ],
+        "ticks": [ "1. 4.", "15. 4.", "28. 4.", "12. 5.", "26. 5.", "16. 6.", "30. 6.", "21. 7.", "11. 8.", "1. 9.", "w12", "w13", "w14", "w15", "w16" ],
         "titles": [ "Plánované omezení spotřeby", "Plánované půjčky nebo problémy se splácením " ],
         "total": {
             "lines": [

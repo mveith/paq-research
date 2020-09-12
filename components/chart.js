@@ -31,7 +31,7 @@ function getYAxis(props) {
 
     const getTickValue = e => {
         if (e === props.yMin || e === props.yMax) {
-            return e + (props.nonpercentage ? "" : "%");
+            return e + (props.nonpercentage ? "" : " %");
         }
         return null;
     };
@@ -134,7 +134,7 @@ function Chart({ dataProps, chartType }) {
     const frameProps = {
         lines: lines,
         size: dataProps.size,
-        margin: { left: 50, bottom: 50, right: 20, top: 10 },
+        margin: { left: 55, bottom: 50, right: 20, top: 10 },
 
         lineType: lineType,
         responsiveWidth: true,
