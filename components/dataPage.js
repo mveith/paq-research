@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Layout from './layout';
 import ChartWrapper from './chartWrapper'
 import ChartSettings from './chartSettings';
@@ -7,7 +7,18 @@ export default function DataPage({ navigation, dataProps, title, description, as
     const [total, setTotal] = useState(true);
     const [group, setGroup] = useState(0);
 
+    useEffect(() => {
+        const storedTotal = localStorage.getItem("total");
+        if (storedTotal !== undefined) {
+            setTotal(storedTotal === "true");
+        }
+    }, []);
+
     const [openMenu, setOpenMenu] = useState(false);
+    const onTotalChange = v => {
+        setTotal(v);
+        localStorage.setItem("total", v);
+    };
     return (
         <Layout title={title} openMenu={openMenu} setOpenMenu={setOpenMenu}>
             <h1>{title}</h1>
@@ -19,7 +30,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
             <div style={{ display: "flex", flexDirection: "column" }}>
                 <p>Podívej se na <a href="#stories" className="arrow-button">interpretace↓</a> a <a href="#methodology" className="arrow-button">metodické poznámky↓</a></p>
 
-                <ChartSettings dataProps={dataProps} total={total} onTotalChange={setTotal} group={group} onGroupChange={setGroup} />
+                <ChartSettings dataProps={dataProps} total={total} onTotalChange={onTotalChange} group={group} onGroupChange={setGroup} />
 
                 <ChartWrapper dataProps={dataProps} asLineChart={asLineChart} max={max} nonpercentage={nonpercentage} group={group} total={total} />
 
