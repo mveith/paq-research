@@ -53,9 +53,14 @@ function getXAxis(props, ticks) {
         }
     }
 
+    const maxCount = props.ticks.length / mod;
+
     const getTickValue = e => {
-        const x = e - props.firstWeek;
-        return x % mod === 0 ? `${props.ticks[x]}` : null;
+        const index = e - props.firstWeek;
+        const isModth = index % mod === 0;
+        const isInLimit = (index / mod) + 1 < maxCount;
+        const isLast = index === props.ticks.length - 1;
+        return (isModth && isInLimit) || isLast ? `${props.ticks[index]}` : null;
     };
     return {
         orient: "bottom",
