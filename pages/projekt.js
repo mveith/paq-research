@@ -5,7 +5,7 @@ export default function About() {
         <Layout title="O projektu">
             <h1 style={{ marginBottom: "3rem" }}>O projektu</h1>
 
-            <p>Data v na této stránce pocházejí z výzkumu Život během pandemie. Jeho cílem je sledovat, jak se vyvíjí sociální
+            <p>Data na této stránce pocházejí z výzkumu Život během pandemie. Jeho cílem je sledovat, jak se vyvíjí sociální
             chování Čechů od začátku pandemie koronaviru, jak pandemie a související problémy dopadají na jejich život. Kromě
             ekonomických dopadů výzkum zkoumá například vývoj duševního zdraví a některých společenských postojů. Shromažďuje
             data o míře kontaktů a typů aktivit, testování a symptomech nemoci, které mohou být využita i pro epidemiologické
