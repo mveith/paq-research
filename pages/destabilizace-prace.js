@@ -10,7 +10,7 @@ export default function Destabilization(props) {
         navigation={navigation}
         dataProps={props}
         title="Jak pandemie ovlivnila náš pracovní život?"
-        description="Ačkoliv nárůst oficiálně registrované nezaměstnanosti byl od března malý, důsledky epidemie se stále promítají do života takřka pětiny pracovně aktivních Čechů. Okolo 3 % současně reportuje ztrátu práce (část ji částečně nahradila sezónními pracemi). Dalších 12 % dotázaných má ale dodnes omezený úvazek, mzdu, benefity či vedlejší příjmy (DPP, na ruku)."
+        description="Ačkoliv nárůst oficiálně registrované nezaměstnanosti byl od března malý, důsledky epidemie se stále promítají do života takřka pětiny pracovně aktivních Čechů. Okolo 3&nbsp;% současně reportuje ztrátu práce (část ji částečně nahradila sezónními pracemi). Dalších 12 % dotázaných má ale dodnes omezený úvazek, mzdu, benefity či vedlejší příjmy (DPP, na ruku)."
     />;
 }
 
