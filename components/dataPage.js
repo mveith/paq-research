@@ -12,12 +12,25 @@ export default function DataPage({ navigation, dataProps, title, description, as
         if (storedTotal !== undefined) {
             setTotal(storedTotal === "true");
         }
+
+        const storedGroup = dataProps.groups.map(g => g.title).indexOf(localStorage.getItem("group"));
+        if (storedGroup >= 0) {
+            setGroup(storedGroup);
+        }
+        else {
+            localStorage.removeItem("group");
+        }
     }, []);
 
     const [openMenu, setOpenMenu] = useState(false);
     const onTotalChange = v => {
         setTotal(v);
         localStorage.setItem("total", v);
+    };
+
+    const onGroupChange = v => {
+        setGroup(v);
+        localStorage.setItem("group", dataProps.groups[v].title);
     };
     return (
         <Layout title={title} openMenu={openMenu} setOpenMenu={setOpenMenu}>
@@ -30,7 +43,7 @@ export default function DataPage({ navigation, dataProps, title, description, as
             <div style={{ display: "flex", flexDirection: "column" }}>
                 <p>Podívej se na <a href="#stories" className="arrow-button">interpretace↓</a> a <a href="#methodology" className="arrow-button">metodické poznámky↓</a></p>
 
-                <ChartSettings dataProps={dataProps} total={total} onTotalChange={onTotalChange} group={group} onGroupChange={setGroup} />
+                <ChartSettings dataProps={dataProps} total={total} onTotalChange={onTotalChange} group={group} onGroupChange={onGroupChange} />
 
                 <ChartWrapper dataProps={dataProps} asLineChart={asLineChart} max={max} nonpercentage={nonpercentage} group={group} total={total} />
 
