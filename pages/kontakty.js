@@ -1,5 +1,3 @@
-import fs from 'fs'
-import path from 'path'
 import DataPage from '../components/dataPage';
 import ThemeNavigation from '../components/themeNavigation';
 
@@ -19,8 +17,8 @@ export default function Contacts(props) {
 }
 
 export async function getStaticProps(context) {
-    const filePath = path.join(process.cwd(), 'data.json');
-    const fileContent = fs.readFileSync(filePath, 'utf8');
+    const res = await fetch(process.env.PAQ_DATA_PATH);
+    const fileContent = await res.text();
     return {
         props: JSON.parse(fileContent).contacts
     }
