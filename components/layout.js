@@ -54,6 +54,12 @@ export default function Layout(props) {
             <Head>
                 <title>život během pandemie - {props.title}</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+                <meta property="og:image" content="https://zivotbehempandemie.cz/share_image.png" />
+                <meta property="og:title" content="PAQ Research: Život během pandemie" />
+                <meta property="og:description" content="" />
+                <meta name="twitter:card" content="summary" />
+
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
                 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet" />
 
