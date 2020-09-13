@@ -33,8 +33,6 @@ export default function About() {
             <h2>Kontroly dat</h2>
             <p>Ve výzkumu kontrolujeme délku vyplňování dotazníku. Výzkum také obsahuje kontrolní otázky, které odhalí, když
             respondent při vyplňování nedával pozor.</p>
-            <p>V minulosti sběr dat ve výzkumu Život během pandemie podpořili i Michal Sirový, Ondřej Nezdara či Člověk v tísni
-            (téma distančního vzdělávání). </p>
 
             <h2>Financování</h2>
             <p>Sběr dat je financován z následujících zdrojů:
@@ -42,10 +40,10 @@ export default function About() {
                     <li>Max Plack for Tax and Public Finance</li>
                     <li>Akademie věd ČR (ERC-CZ/AV-B (ERC300851901))</li>
                     <li>German Science Foundation CRC TRR 190</li>
-                    <li>Ondřej Nezdara</li>
-                    <li>Michal Sirový</li>
+                    <li>V minulosti projekt podpořili Ondřej Nezdara, Michal Sirový, Člověk v tísni (sběr dat o distančním vzdělávání)</li>
                 </ul>
             </p>
+            <p>Tvorba tohoto dashboardu byla podpořena grantem TAČR ETA Mapování dopadů ekonomické krize a optimalizace systémů daní, dávek, exekucí a insolvencí pro zmírnění jejích nepříznivých vlivů (TL04000332).</p>
 
             <p>
                 <a href="https://www.paqresearch.cz/"><img src="logo-paq.png" width="120" /></a>
