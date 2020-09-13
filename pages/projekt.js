@@ -40,9 +40,9 @@ export default function About() {
                     <li>Max Plack for Tax and Public Finance</li>
                     <li>Akademie věd ČR (ERC-CZ/AV-B (ERC300851901))</li>
                     <li>German Science Foundation CRC TRR 190</li>
-                    <li>V minulosti projekt podpořili Ondřej Nezdara, Michal Sirový, Člověk v tísni (sběr dat o distančním vzdělávání)</li>
                 </ul>
             </p>
+            <p>V minulosti projekt podpořili Ondřej Nezdara, Michal Sirový, Člověk v tísni (sběr dat o distančním vzdělávání)</p>
             <p>Tvorba tohoto dashboardu byla podpořena grantem TAČR ETA Mapování dopadů ekonomické krize a optimalizace systémů daní, dávek, exekucí a insolvencí pro zmírnění jejích nepříznivých vlivů (TL04000332).</p>
 
             <p>

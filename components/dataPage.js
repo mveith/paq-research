@@ -13,14 +13,6 @@ export default function DataPage({ navigation, dataProps, title, description, as
         if (storedTotal) {
             setTotal(storedTotal === "true");
         }
-
-        const storedGroup = dataProps.groups.map(g => g.title).indexOf(localStorage.getItem("group"));
-        if (storedGroup >= 0) {
-            setGroup(storedGroup);
-        }
-        else {
-            localStorage.removeItem("group");
-        }
     }, []);
 
     const [openMenu, setOpenMenu] = useState(false);
@@ -31,7 +23,6 @@ export default function DataPage({ navigation, dataProps, title, description, as
 
     const onGroupChange = v => {
         setGroup(v);
-        localStorage.setItem("group", dataProps.groups[v].title);
     };
     return (
         <Layout title={title} openMenu={openMenu} setOpenMenu={setOpenMenu}>
