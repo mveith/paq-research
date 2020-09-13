@@ -1,15 +1,11 @@
 import { useState } from 'react';
 
 function GroupButton({ currentGroup, group, index, onChange }) {
-    const id = `group-${index}`;
     return (<>
-        <label htmlFor={id} style={{ cursor: "pointer" }} >
-            <input type="radio" id={id} name={id} value={id} checked={currentGroup === index} onChange={onChange} style={{ appearance: "none", MozAppearance: "none", WebkitAppearance: "none" }} />
-            <span style={{ display: "inline-flex", flexDirection: "column", opacity: currentGroup === index ? "1" : 0.4, width: "135px", margin: "0rem .3rem", textAlign: "center", fontSize: ".9rem" }} className="noselect">
-                <img src={`category-images/${group.image}`} width="60" style={{ margin: "0 auto", opacity: .4 }} />
-                {group.title}
-            </span>
-        </label>
+        <button style={{ cursor: "pointer", backgroundColor: "transparent", border: "0", display: "inline-flex", flexDirection: "column", opacity: currentGroup === index ? "1" : 0.4, width: "135px", margin: "0rem .3rem", textAlign: "center", fontSize: ".9rem" }} onClick={onChange} className="noselect">
+            <img src={`category-images/${group.image}`} width="60" style={{ margin: "0 auto", opacity: .4 }} />
+            <span style={{ textAlign: "center", width: "100%" }}>{group.title}</span>
+        </button>
     </>);
 }
 
@@ -44,7 +40,7 @@ function GroupDropdown({ groups, onGroupChange, group }) {
             <button style={itemStyle} onClick={e => setOpen(!open)}>
                 <img src={selectedGroup.image} width="60" style={{ margin: "0 1em", opacity: .4 }} />
                 <span style={{ margin: "auto 0" }}>{selectedGroup.title}</span>
-                <span style={{ margin: "auto 0", flexGrow: 1, textAlign: "right" }}><span style={{  margin: "auto 0", display:"inline-block", borderTop: ".3em solid", borderRight: ".3em solid transparent", borderBottom: "0", borderLeft: ".3em solid transparent" }}></span></span>
+                <span style={{ margin: "auto 0", flexGrow: 1, textAlign: "right" }}><span style={{ margin: "auto 0", display: "inline-block", borderTop: ".3em solid", borderRight: ".3em solid transparent", borderBottom: "0", borderLeft: ".3em solid transparent" }}></span></span>
             </button>
             {open && <div class="dropdown-content">
                 <hr style={{ margin: "0 2%" }} />
