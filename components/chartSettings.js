@@ -30,7 +30,7 @@ function GroupDropdown({ groups, onGroupChange, group }) {
     const itemStyle = { backgroundColor: "transparent", border: "0", width: "100%", display: "inline-flex", flexDirection: "row", opacity: "1", fontSize: ".9rem" }
     const item = (group, index) => {
         return (<a style={itemStyle} onClick={e => { onGroupChange(index); setOpen(false); }}>
-            <img src={group.image} width="60" style={{ margin: "0 1em", opacity: .4, width: "60px", flexShrink: "0" }} />
+            <img src={`category-images/${group.image}`} width="60" style={{ margin: "0 1em", opacity: .4, width: "60px", flexShrink: "0" }} />
             <span style={{ margin: "auto 0" }}>{group.title}</span>
         </a>);
     };
@@ -38,7 +38,7 @@ function GroupDropdown({ groups, onGroupChange, group }) {
     return (<>
         <div className="group-dropdown" style={{ border: "1px solid black", borderRadius: ".25rem", margin: "1em 0" }}>
             <button style={itemStyle} onClick={e => setOpen(!open)}>
-                <img src={selectedGroup.image} width="60" style={{ margin: "0 1em", opacity: .4 }} />
+                <img src={`category-images/${selectedGroup.image}`} width="60" style={{ margin: "0 1em", opacity: .4 }} />
                 <span style={{ margin: "auto 0" }}>{selectedGroup.title}</span>
                 <span style={{ margin: "auto 0", flexGrow: 1, textAlign: "right" }}><span style={{ margin: "auto 0", display: "inline-block", borderTop: ".3em solid", borderRight: ".3em solid transparent", borderBottom: "0", borderLeft: ".3em solid transparent" }}></span></span>
             </button>
