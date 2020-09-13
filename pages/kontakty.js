@@ -14,6 +14,7 @@ export default function Contacts(props) {
         asLineChart={true}
         max={50}
         nonpercentage={true}
+        shareImage="kontakty"
     />;
 }
 

@@ -11,6 +11,7 @@ export default function Impact(props) {
         dataProps={props}
         title="Jak postihla pandemie ekonomickou situaci domácností?"
         description="Vývoj ekonomiky od začátku epidemie těžce dopadá na zhruba desetinu Čechů – reportují pokles příjmu domácnosti o 30 a více procent a jejich domácnost nemá velké úspory. Domácnosti další čtvrtiny Čechů si pohoršily lehce."
+        shareImage="dopady"
     />;
 }
 

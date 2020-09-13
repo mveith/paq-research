@@ -1,9 +1,10 @@
+import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import Layout from './layout';
 import ChartWrapper from './chartWrapper'
 import ChartSettings from './chartSettings';
 
-export default function DataPage({ navigation, dataProps, title, description, asLineChart, max, nonpercentage }) {
+export default function DataPage({ navigation, dataProps, title, description, asLineChart, max, nonpercentage, shareImage }) {
     const [total, setTotal] = useState(true);
     const [group, setGroup] = useState(0);
 
@@ -34,6 +35,10 @@ export default function DataPage({ navigation, dataProps, title, description, as
     };
     return (
         <Layout title={title} openMenu={openMenu} setOpenMenu={setOpenMenu}>
+            <Head>
+                <meta key="share-image" property="og:image" content={`https://zivotbehempandemie.cz/${shareImage}.png`} />
+                <meta property="og:description" content={title} />
+            </Head>
             <h1>{title}</h1>
 
             <p className="select-topic" ><a href="javascript:void(0);" className="arrow-button" onClick={e => setOpenMenu(!openMenu)}>Vybrat jiné téma</a></p>
