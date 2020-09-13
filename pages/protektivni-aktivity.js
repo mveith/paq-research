@@ -9,8 +9,8 @@ export default function Protection(props) {
     return <DataPage
         navigation={navigation}
         dataProps={props}
-        title="Jak časté jsou různé formy protekce před nákazou?"
-        description="Ostražitost populace se v průběhu posledních měsíců výrazně mění. Během jarní vlny epidemie dělaly dvě pětiny respondentů téměř všechny zkoumané protektivní aktivity. Dnes to je jen okolo sedminy respondentů. Naopak více než polovina přijímá v současnosti menšinu těchto ochranných opatření."
+        title="Jak časté jsou různé formy ochrany před nákazou?"
+        description="Ostražitost populace se v průběhu posledních měsíců výrazně mění. Během jarní vlny epidemie vykonávaly dvě pětiny respondentů téměř všechny zkoumané protektivní aktivity. Dnes to je jen okolo sedminy respondentů. Naopak více než polovina přijímá v současnosti menšinu těchto ochranných opatření."
     />;
 }
 

@@ -7,33 +7,26 @@ export default function About() {
 
             <p>Data na této stránce pocházejí z výzkumu Život během pandemie. Jeho cílem je sledovat, jak se vyvíjí sociální
             chování Čechů od začátku pandemie koronaviru, jak pandemie a související problémy dopadají na jejich život. Kromě
-            ekonomických dopadů výzkum zkoumá například vývoj duševního zdraví a některých společenských postojů. Shromažďuje
-            data o míře kontaktů a typů aktivit, testování a symptomech nemoci, které mohou být využita i pro epidemiologické
-            modelování. </p>
-            <p>Každé 2-3 týdny (počínaje týdnem březnem 2020) oslovujeme vzorek stejných respondentů – výsledný reprezentativní
-            vzorek se v jednotlivých vlnách pohybuje mezi 2200 a 2600 rozhovory. Longitudinální metodika umožňuje zkoumat změnu
-            chování či ekonomického stavu stejné skupiny domácností.</p>
+            ekonomických dopadů výzkum zkoumá například vývoj duševního zdraví a některých společenských postojů. Shromažďuje data o míře kontaktů a typech aktivit, testování a symptomech nemoci, která mohou být využita i pro epidemiologické modelování.</p>
+            <p>Každé 2–3 týdny (počínaje březnem 2020) oslovujeme vzorek stejných respondentů – výsledný reprezentativní vzorek se v jednotlivých vlnách pohybuje mezi 2200 a 2600 rozhovory.</p>
             <p>Na projektu se podílí výzkumníci ze společnosti PAQ Research (Daniel Prokop, Lucie Marková, Michaela Kudrnáčová) a
             vědci z iniciativy IDEA AntiCovid (Jana Cahlíková, Vojtěch Bartoš, Michal Bauer, Julie Chytilová). Data sbírá
             agentura NMS (člen SIMAR).</p>
 
             <h2>Sběr dat</h2>
-            <p>Dotazování realizuje na probíhá na Českém národním panelu. Výzkum je kvótně reprezentativní pro populaci ČR, ale
-            kvůli metodice se ho mohou účastnit jen respondenti s připojením k internetu. Online metodika sběr redukuje sociální
-            desirabilitu a je nutná . Výstupy pro starší generaci (55+) jsou kvůli online sběru pouze orientační.</p>
+            <p>Dotazování probíhá na Českém národním panelu. Výzkum je kvótně reprezentativní pro populaci ČR, ale kvůli metodice se ho mohou účastnit jen respondenti s připojením k internetu. Online metodiku sběru dat si vyžádala potřeba rychlého dotázání respondentů v krátkém časovém úseku, znemožnění osobních kontaktů či jejich preventivní omezování během pandemie i citlivý charakter dotazovaných témat, u nichž by přítomnost tazatele mohla vést ke zkreslení odpovědí.</p>
 
             <h2>Reprezentativita</h2>
             <p>Náš vzorek kopíruje složení populace 18+ z hlediska:
                 <ul>
                     <li>kraje a velikosti obce bydliště, pohlaví, vzdělání, věku respondenta</li>
-                    <li>pracovního statusu (před začátkem epidemie), věku × pohlaví, věku ×vzdělání</li>
+                    <li>pracovního statusu (před začátkem epidemie), věku&nbsp;×&nbsp;pohlaví, věku&nbsp;×&nbsp;vzdělání</li>
                 </ul>
             </p>
             <p>Pro možnost robustnějšího modelování vztahu sociálních aktivit, protektivního chování a promořenosti jsou v
             hrubém vzorku nadhodnoceny rizikové kategorie měst nad 50 tisíc obyvatel. Pro zpracování výsledků je tento
             „boost“ redukován vážením dat.</p>
-            <p>Kromě vysoké retence pro zajištění srovnatelnosti výsledků a dodržení stejné reprezentativní struktury (viz výše)
-            dovažujeme data z druhé a další vlny mj.na typ vykonávané práce před začátkem epidemie. Původní příjmová
+            <p>Pro zajištění srovnatelnosti výsledků a dodržení stejné reprezentativní struktury (viz výše) usilujeme o vysokou retenci a rovněž dovažujeme data z druhé a další vlny mj. na typ vykonávané práce před začátkem epidemie. Původní příjmová
             struktura ani další původní parametry respondentů se během vln významně nemění. Vývoj v datech tak není dán tím,
             že by se měnilo složení respondentů – ale vývojem chování.</p>
 
@@ -44,10 +37,10 @@ export default function About() {
             (téma distančního vzdělávání). </p>
 
             <h2>Financování</h2>
-            <p>Sběr dat financován z následujících zdrojů:
+            <p>Sběr dat je financován z následujících zdrojů:
                 <ul>
                     <li>Max Plack for Tax and Public Finance</li>
-                    <li>Akademie ved CR (ERC-CZ/AV-B (ERC300851901))</li>
+                    <li>Akademie věd ČR (ERC-CZ/AV-B (ERC300851901))</li>
                     <li>German Science Foundation CRC TRR 190</li>
                     <li>Ondřej Nezdara</li>
                     <li>Michal Sirový</li>

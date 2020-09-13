@@ -28,7 +28,7 @@ export default function Layout(props) {
                 <h3>EKONOMICKÉ DOPADY</h3>
                 <ul>
                     <li><ActiveLink href="/destabilizace-prace" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Destabilizace práce</ActiveLink></li>
-                    <li><ActiveLink href="/dopad" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Ekonomické dopady na domácnosti</ActiveLink></li>
+                    <li><ActiveLink href="/dopad" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Ekonomické zasažení domácností</ActiveLink></li>
                     <li><ActiveLink href="/strategie" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Dopady a strategie domácnosti</ActiveLink></li>
                 </ul>
             </div>
