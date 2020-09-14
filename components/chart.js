@@ -41,7 +41,8 @@ function getYAxis(props) {
         baseline: false,
         showOutboundTickLines: false,
         tickLineGenerator: ({ xy }) => (<TickLine xy={xy} />),
-        tickFormat: getTickValue
+        tickFormat: getTickValue,
+        label: props.yLabel
     };
 }
 
@@ -139,7 +140,7 @@ function Chart({ dataProps, chartType }) {
     const frameProps = {
         lines: lines,
         size: dataProps.size,
-        margin: { left: 55, bottom: 50, right: 20, top: 10 },
+        margin: { left: dataProps.yLabel ? 65 : 55, bottom: 50, right: 20, top: 10 },
 
         lineType: lineType,
         responsiveWidth: true,
@@ -163,7 +164,7 @@ function Chart({ dataProps, chartType }) {
             <h3 style={{ textAlign: "center", marginLeft: "50px", marginRight: "10px", textTransform: 'uppercase', height: dataProps.title ? "2rem" : 0, overflow: "hidden" }}>
                 {dataProps.title}
             </h3>
-            <h4 style={{ textAlign: "center", margin: "0", marginLeft: "50px", marginRight: "10px", fontSize: "0.85rem", fontWeight: "normal",  }}>
+            <h4 style={{ textAlign: "center", margin: "0", marginLeft: "50px", marginRight: "10px", fontSize: "0.85rem", fontWeight: "normal", }}>
                 {dataProps.subtitle}
             </h4>
             <div><ResponsiveXYFrame {...frameProps} /></div>

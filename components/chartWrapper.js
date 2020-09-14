@@ -39,7 +39,8 @@ function getBigChartProps(dataProps, height, annotation, onHover, max, nonpercen
         annotation: annotation,
         onHover: onHover,
         nonpercentage: nonpercentage,
-        ticks: dataProps.ticks
+        ticks: dataProps.ticks,
+        yLabel: dataProps.yLabel
     };
 }
 
