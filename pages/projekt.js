@@ -37,7 +37,7 @@ export default function About() {
             <h2>Financování</h2>
             <p>Sběr dat je financován z následujících zdrojů:
                 <ul>
-                    <li>Max Plack for Tax and Public Finance</li>
+                    <li>Max Planck Institute for Tax Law and Public Finance</li>
                     <li>Akademie věd ČR (ERC-CZ/AV-B (ERC300851901))</li>
                     <li>German Science Foundation CRC TRR 190</li>
                 </ul>

@@ -19,7 +19,7 @@ export default function About() {
             {Person("Jana Cahlíková", [<li>afiliace: Max Planck Institute for Tax Law and Public Finance</li>, <li>spolutvůrkyně dotazníku, tematická sekce ekonomiky a stresu</li>, <li><a href="mailto:jana.cahlikova@tax.mpg.de">jana.cahlikova@tax.mpg.de</a></li>])}
             {Person("Vojtěch Bartoš", [<li>afiliace: University of Munich</li>, <li>spolutvůrce dotazníku, tematická sekce ekonomiky a stresu</li>, <li><a href="mailto:vojtech.bartos@econ.lmu.de">vojtech.bartos@econ.lmu.de</a></li>])}
             {Person("Julie Chytilová", [<li>afiliace: IES FSV UK a CERGE-EI</li>, <li>spolutvůrkyně dotazníku</li>, <li><a href="mailto:julie.chytilova@fsv.cuni.cz">julie.chytilova@fsv.cuni.cz</a></li>])}
-            {Person("Michal Bauer", [<li>afiliace: CERGE-EI a IES FSV UK</li>, <li>spolutvůrce dotazníku</li>, <li><a href="mailto:michal.bauer1@gmail.com">michal.bauer1@gmail.com</a></li>])}
+            {Person("Michal Bauer", [<li>afiliace: CERGE-EI a IES FSV UK</li>, <li>spolutvůrce dotazníku</li>, <li><a href="mailto:bauer@cerge-ei.cz">bauer@cerge-ei.cz</a></li>])}
             {Person("Kristína Zákopčanová", [<li><a href="https://github.com/mveith/paq-research">grafický návrh a vizualizace dat</a></li>, <li><a href="https://www.linkedin.com/in/kristina-zakopcanova/?originalSubdomain=cz">LinkedIn</a>, <a href="mailto:zakopcanova.k@gmail.com">zakopcanova.k@gmail.com</a></li> ])}
             {Person("Miroslav Veith", [<li><a href="https://github.com/mveith/paq-research">vývoj webové aplikace</a></li> ])}
             
