@@ -13,35 +13,26 @@ const navbarItemStylePadding = {
     padding: "14px 16px"
 };
 
-function ActiveLink({ children, href, style, activeStyle }) {
+function ActiveLink({ children, href, as, style, activeStyle }) {
     const router = useRouter()
-    const isActive = (router.pathname === href || router.asPath === href) && router.pathname !== "/";
-    return (<Link href={href}><a style={isActive ? activeStyle : style}>{children}</a></Link>);
+    const isActive = (router.pathname === href || router.asPath === as) && router.pathname !== "/";
+    return (<Link href={href} as={as}><a style={isActive ? activeStyle : style}>{children}</a></Link>);
+}
+
+function MenuGroup({ margin, title, items }) {
+    const links = items.map(i => <li><ActiveLink href="[key]" as={`/${i.key}`} style={menuItemStyle} activeStyle={activeMenuItemStyle}>{i.title}</ActiveLink></li>);
+    return (<div style={{ marginTop: margin }}>
+        <h3>{title.toUpperCase()}</h3>
+        <ul>
+            {links}
+        </ul>
+    </div>);
 }
 
 export default function Layout(props) {
     const [openMenu, setOpenMenu] = useState(false);
 
-    const menu = (
-        <>
-            <div style={{ marginTop: "4rem" }}>
-                <h3>EKONOMICKÉ DOPADY</h3>
-                <ul>
-                    <li><ActiveLink href="/destabilizace-prace" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Destabilizace práce</ActiveLink></li>
-                    <li><ActiveLink href="/dopad" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Ekonomické zasažení domácností</ActiveLink></li>
-                    <li><ActiveLink href="/strategie" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Reakce a strategie domácností</ActiveLink></li>
-                </ul>
-            </div>
-
-            <div style={{ marginTop: "2rem" }}>
-                <h3>CHOVÁNÍ A AKTIVITY</h3>
-                <ul>
-                    <li><ActiveLink href="/protektivni-aktivity" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Počet protektivních aktivit</ActiveLink></li>
-                    <li><ActiveLink href="/kontakty" style={menuItemStyle} activeStyle={activeMenuItemStyle}>Kontakt s lidmi</ActiveLink></li>
-                </ul>
-            </div>
-        </>);
-
+    const menu = props.menuItemsData ? props.menuItemsData.map((item, index) => <MenuGroup margin={index === 0 ? "4em" : "2em"} title={item.title} items={item.items} />) :<></>;
     const onMenuButtonClick = e => {
         const openMenuValue = openMenu || props.openMenu;
         setOpenMenu(!openMenuValue);

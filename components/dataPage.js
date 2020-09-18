@@ -4,7 +4,7 @@ import Layout from './layout';
 import ChartWrapper from './chartWrapper'
 import ChartSettings from './chartSettings';
 
-export default function DataPage({ navigation, dataProps, asLineChart, max, nonpercentage }) {
+export default function DataPage({ navigation, dataProps, asLineChart, max, nonpercentage, menuProps }) {
     const [total, setTotal] = useState(true);
     const [group, setGroup] = useState(0);
 
@@ -26,7 +26,7 @@ export default function DataPage({ navigation, dataProps, asLineChart, max, nonp
         setGroup(v);
     };
     return (
-        <Layout title={title} openMenu={openMenu} setOpenMenu={setOpenMenu}>
+        <Layout title={title} openMenu={openMenu} setOpenMenu={setOpenMenu} menuItemsData={menuProps}>
             <Head>
                 <meta key="share-image" property="og:image" content={`https://zivotbehempandemie.cz/${dataProps.pageData.shareImage}.png`} />
                 <meta property="og:description" content={title} />
