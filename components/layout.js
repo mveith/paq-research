@@ -15,7 +15,7 @@ const navbarItemStylePadding = {
 
 function ActiveLink({ children, href, style, activeStyle }) {
     const router = useRouter()
-    const isActive = router.pathname === href && router.pathname !== "/";
+    const isActive = (router.pathname === href || router.asPath === href) && router.pathname !== "/";
     return (<Link href={href}><a style={isActive ? activeStyle : style}>{children}</a></Link>);
 }
 
