@@ -1,3 +1,4 @@
+import getSourceData from '../components/dataProvider'
 import DataPage from '../components/dataPage';
 import ThemeNavigation from '../components/themeNavigation';
 
@@ -14,9 +15,8 @@ export default function Protection(props) {
 }
 
 export async function getStaticProps(context) {
-    const res = await fetch(process.env.PAQ_DATA_PATH);
-    const fileContent = await res.text();
+    var data = await getSourceData();
     return {
-        props: JSON.parse(fileContent).protection
+        props: data.protection
     }
 }
