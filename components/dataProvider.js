@@ -4,7 +4,7 @@ import path from 'path'
 export default async function getSourceData(fileName) {
     var json;
     if (process.env.PAQ_DATA_PATH_TO_FILE) {
-        const res = await fetch(path.join(process.env.PAQ_DATA_PATH_TO_FILE, fileName));
+        const res = await fetch(`${process.env.PAQ_DATA_PATH_TO_FILE}/${fileName}`);
         json = await res.text();
     }
     else {
