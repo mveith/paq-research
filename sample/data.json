@@ -56,6 +56,11 @@
         "legendItems": [ "Legend item description 1" ],
         "legendTitle": "",
         "methodology": "",
+        "pageData": {
+            "description": "Page 5 description",
+            "shareImage": "",
+            "title": "Page 5"
+        },
         "stories": [],
         "ticks": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ],
         "titles": [ "Legend item 1" ],
@@ -154,6 +159,11 @@
         "legendItems": [ "Legend item description 1", "Legend item description 2", "Legend item description 3", "Legend item description 4" ],
         "legendTitle": "",
         "methodology": "",
+        "pageData": {
+            "description": "Page 1 description",
+            "shareImage": "",
+            "title": "Page 1"
+        },
         "stories": [],
         "ticks": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ],
         "titles": [ "Legend item 1", "Legend item 2", "Legend item 3", "Legend item 4" ],
@@ -245,6 +255,11 @@
         "legendItems": [ "Legend item description 1", "Legend item description 2" ],
         "legendTitle": "",
         "methodology": "",
+        "pageData": {
+            "description": "Page 2 description",
+            "shareImage": "",
+            "title": "Page 2"
+        },
         "stories": [],
         "ticks": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ],
         "titles": [ "Legend item 1", "Legend item 2" ],
@@ -340,6 +355,11 @@
         "legendItems": [ "Legend item description 1", "Legend item description 2", "Legend item description 3" ],
         "legendTitle": "",
         "methodology": "",
+        "pageData": {
+            "description": "Page 4 description",
+            "shareImage": "",
+            "title": "Page 4"
+        },
         "stories": [],
         "ticks": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ],
         "titles": [ "Legend item 1", "Legend item 2", "Legend item 3" ],
@@ -430,6 +450,11 @@
         "legendItems": [ "Legend item description 1", "Legend item description 2" ],
         "legendTitle": "",
         "methodology": "",
+        "pageData": {
+            "description": "Page 3 description",
+            "shareImage": "",
+            "title": "Page 3"
+        },
         "stories": [],
         "ticks": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ],
         "titles": [ "Legend item 1", "Legend item 2" ],
