@@ -40,12 +40,4 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You also need data - create `.env` file:
-
-```env
-PAQ_DATA_PATH=..data_path..
-```
-
-Sample data file: WIP.
-
 Lear more: [Next.js Documentation](https://nextjs.org/docs).
