@@ -1,0 +1,28 @@
+{
+    "pages": [{
+            "key": "destabilizace-prace",
+            "title": "Destabilizace práce",
+            "group": "Ekonomické dopady"
+        },
+        {
+            "key": "dopad",
+            "title": "Ekonomické zasažení domácnosti",
+            "group": "Ekonomické dopady"
+        },
+        {
+            "key": "strategie",
+            "title": "Reakce a strategie domácnosti",
+            "group": "Ekonomické dopady"
+        },
+        {
+            "key": "protektivni-aktivity",
+            "title": "Počet protektivních aktivit",
+            "group": "Chování a aktivity"
+        },
+        {
+            "key": "kontakty",
+            "title": "Kontakt s lidmi",
+            "group": "Chování a aktivity"
+        }
+    ]
+}

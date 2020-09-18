@@ -1,0 +1,267 @@
+{
+    "colors": [
+        "#fdab5e",
+        "#f45048"
+    ],
+    "firstWeek": 1,
+    "groups": [{
+            "data": [{
+                    "lines": [
+                        [
+                            20,
+                            48,
+                            2,
+                            11,
+                            26,
+                            34,
+                            12,
+                            20,
+                            48,
+                            30
+                        ],
+                        [
+                            30,
+                            25,
+                            31,
+                            2,
+                            38,
+                            15,
+                            6,
+                            42,
+                            25,
+                            13
+                        ]
+                    ],
+                    "subtitle": "subtitle",
+                    "title": "Group 1"
+                },
+                {
+                    "lines": [
+                        [
+                            41,
+                            1,
+                            41,
+                            28,
+                            40,
+                            44,
+                            37,
+                            24,
+                            32,
+                            32
+                        ],
+                        [
+                            40,
+                            45,
+                            5,
+                            24,
+                            47,
+                            8,
+                            5,
+                            14,
+                            27,
+                            46
+                        ]
+                    ],
+                    "subtitle": "subtitle",
+                    "title": "Group 2"
+                }
+            ],
+            "image": "kategorie-v1.svg",
+            "title": "Category 1"
+        },
+        {
+            "data": [{
+                    "lines": [
+                        [
+                            8,
+                            32,
+                            33,
+                            33,
+                            14,
+                            42,
+                            25,
+                            49,
+                            42,
+                            33
+                        ],
+                        [
+                            35,
+                            4,
+                            24,
+                            14,
+                            25,
+                            18,
+                            6,
+                            24,
+                            20,
+                            31
+                        ]
+                    ],
+                    "subtitle": "subtitle",
+                    "title": "Group 1"
+                },
+                {
+                    "lines": [
+                        [
+                            47,
+                            38,
+                            38,
+                            15,
+                            40,
+                            34,
+                            20,
+                            7,
+                            4,
+                            30
+                        ],
+                        [
+                            9,
+                            42,
+                            15,
+                            28,
+                            5,
+                            9,
+                            18,
+                            7,
+                            13,
+                            48
+                        ]
+                    ],
+                    "subtitle": "subtitle",
+                    "title": "Group 2"
+                }
+            ],
+            "image": "kategorie-v1.svg",
+            "title": "Category 2"
+        },
+        {
+            "data": [{
+                    "lines": [
+                        [
+                            19,
+                            37,
+                            31,
+                            48,
+                            46,
+                            36,
+                            21,
+                            41,
+                            49,
+                            28
+                        ],
+                        [
+                            1,
+                            30,
+                            43,
+                            45,
+                            49,
+                            19,
+                            43,
+                            18,
+                            43,
+                            29
+                        ]
+                    ],
+                    "subtitle": "subtitle",
+                    "title": "Group 1"
+                },
+                {
+                    "lines": [
+                        [
+                            22,
+                            17,
+                            44,
+                            12,
+                            24,
+                            42,
+                            38,
+                            45,
+                            8,
+                            15
+                        ],
+                        [
+                            0,
+                            49,
+                            10,
+                            22,
+                            12,
+                            10,
+                            6,
+                            40,
+                            18,
+                            3
+                        ]
+                    ],
+                    "subtitle": "subtitle",
+                    "title": "Group 2"
+                }
+            ],
+            "image": "kategorie-v1.svg",
+            "title": "Category 3"
+        }
+    ],
+    "legendColors": [
+        "#ff9e43",
+        "#f45048"
+    ],
+    "legendItems": [
+        "Legend item description 1",
+        "Legend item description 2"
+    ],
+    "legendTitle": "",
+    "methodology": "",
+    "pageData": {
+        "description": "Page 3 description",
+        "shareImage": "",
+        "title": "Page 3"
+    },
+    "stories": [],
+    "ticks": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+    ],
+    "titles": [
+        "Legend item 1",
+        "Legend item 2"
+    ],
+    "total": {
+        "lines": [
+            [
+                6,
+                8,
+                25,
+                3,
+                31,
+                20,
+                3,
+                31,
+                14,
+                44
+            ],
+            [
+                18,
+                7,
+                1,
+                31,
+                49,
+                42,
+                46,
+                49,
+                27,
+                16
+            ]
+        ],
+        "subtitle": "",
+        "title": ""
+    },
+    "weeks": 10,
+    "yLabel": "%"
+}
