@@ -32,8 +32,8 @@ function MenuGroup({ margin, title, items }) {
 export default function Layout(props) {
     const [openMenu, setOpenMenu] = useState(false);
 
-    const menu = props.menuItemsData ? props.menuItemsData.map((item, index) => <MenuGroup margin={index === 0 ? "4em" : "2em"} title={item.title} items={item.items} />) :<></>;
-    const defaultUrl = props.menuItemsData[0].items[0].key;
+    const menu = props.menuItemsData ? props.menuItemsData.map((item, index) => <MenuGroup margin={index === 0 ? "4em" : "2em"} title={item.title} items={item.items} />) : <></>;
+    const defaultUrl = props.menuItemsData ? props.menuItemsData[0].items[0].key : "";
     const onMenuButtonClick = e => {
         const openMenuValue = openMenu || props.openMenu;
         setOpenMenu(!openMenuValue);
