@@ -4,10 +4,11 @@ import Layout from './layout';
 import ChartWrapper from './chartWrapper'
 import ChartSettings from './chartSettings';
 
-export default function DataPage({ navigation, dataProps, title, description, asLineChart, max, nonpercentage, shareImage }) {
+export default function DataPage({ navigation, dataProps, asLineChart, max, nonpercentage }) {
     const [total, setTotal] = useState(true);
     const [group, setGroup] = useState(0);
 
+    const title = dataProps.pageData.title;
     useEffect(() => {
         const storedTotal = localStorage.getItem("total");
         if (storedTotal) {
@@ -27,14 +28,14 @@ export default function DataPage({ navigation, dataProps, title, description, as
     return (
         <Layout title={title} openMenu={openMenu} setOpenMenu={setOpenMenu}>
             <Head>
-                <meta key="share-image" property="og:image" content={`https://zivotbehempandemie.cz/${shareImage}.png`} />
+                <meta key="share-image" property="og:image" content={`https://zivotbehempandemie.cz/${dataProps.pageData.shareImage}.png`} />
                 <meta property="og:description" content={title} />
             </Head>
             <h1>{title}</h1>
 
             <p className="select-topic" ><a href="javascript:void(0);" className="arrow-button" onClick={e => setOpenMenu(!openMenu)}>Vybrat jiné téma</a></p>
 
-            <p>{description}</p>
+            <p dangerouslySetInnerHTML={{ __html: dataProps.pageData.description }}></p>
 
             <div style={{ display: "flex", flexDirection: "column" }}>
                 <p>Podívejte se na <a href="#stories" className="arrow-button">interpretace↓</a> a <a href="#methodology" className="arrow-button">metodické poznámky↓</a></p>

@@ -8,12 +8,9 @@ export default function Contacts(props) {
     return <DataPage
         navigation={navigation}
         dataProps={props}
-        title="S kolika lidmi byli respondenti v bližším kontaktu?"
-        description="Na začátku epidemie (konec března) se snížil průměrný počet osob, se kterými byl respondent v rámci jednoho týdne v kontaktu na 7. Od konce dubna dochází ke kontinuálnímu nárůstu kontaktů a od začátku prázdnin už je situace stejná jako před epidemií. Nárůst kontaktů zvyšuje pravděpodobnost komunitního šíření, rizikovost byla ale v létě zřejmě omezena i tím, že často probíhaly venku. Nárůstem kontaktů také vzrostly nároky na trasování (vyhledávání kontaktů nakažených)."
         asLineChart={true}
         max={50}
         nonpercentage={true}
-        shareImage="kontakty"
     />;
 }
 
