@@ -70,7 +70,7 @@
             "title": ""
         },
         "weeks": 10,
-        "yLabel": "%"
+        "yLabel": "#"
     },
     "destabilization": {
         "colors": [ "#ffd080", "#fdab5e", "#f45048", "#bb1b30" ],

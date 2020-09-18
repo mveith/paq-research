@@ -10,7 +10,6 @@ export default async function getSourceData() {
     else {
         const filePath = path.join(process.cwd(), 'sample/data.json');
         json = fs.readFileSync(filePath, 'utf8');
-        console.log("data", json);
     }
 
     return JSON.parse(json);
