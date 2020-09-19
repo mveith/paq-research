@@ -8,9 +8,9 @@ import ChartSettings from '../components/chartSettings';
 
 export default function Page(props) {
     const dataProps = props.dataProps;
-    const asLineChart = false;
-    const max = 100;
-    const nonpercentage = false;
+    const asLineChart = props.dataProps.asLineChart;
+    const max = props.dataProps.yMax;
+    const nonpercentage = !props.dataProps.percentage;
 
 
     const [total, setTotal] = useState(true);
