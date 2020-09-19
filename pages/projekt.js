@@ -1,8 +1,9 @@
+import getMenu from '../components/menuBuilder'
 import Layout from '../components/layout';
 
-export default function About() {
+export default function About({ menu }) {
     return (
-        <Layout title="O projektu">
+        <Layout title="O projektu" menuItemsData={menu}>
             <h1 style={{ marginBottom: "3rem" }}>O projektu</h1>
 
             <p>Data na této stránce pocházejí z výzkumu Život během pandemie. Jeho cílem je sledovat, jak se vyvíjí sociální
@@ -51,4 +52,12 @@ export default function About() {
             </p>
         </Layout>
     )
+}
+
+export async function getStaticProps(context) {
+    return {
+        props: {
+            menu: await getMenu()
+        }
+    };
 }

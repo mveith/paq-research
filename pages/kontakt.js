@@ -1,6 +1,7 @@
+import getMenu from '../components/menuBuilder'
 import Layout from '../components/layout';
 
-export default function About() {
+export default function About({ menu }) {
     function Person(name, items) {
         return (<p>
             <strong>{name}</strong>
@@ -11,7 +12,7 @@ export default function About() {
     }
 
     return (
-        <Layout title="Kontakty">
+        <Layout title="Kontakty" menuItemsData={menu}>
             <h1 style={{ marginBottom: "3rem" }}>Kontakty</h1>
 
             {Person("Daniel Prokop", [<li><a href="mailto:prokop@paqresearch.cz">prokop@paqresearch.cz</a>, <a href="tel:+420 608 333 902">+420 608 333 902</a></li>, <li>kontakt s médii, konzultace ohledně výsledků výzkumu</li>])}
@@ -20,9 +21,9 @@ export default function About() {
             {Person("Vojtěch Bartoš", [<li>afiliace: University of Munich</li>, <li>spolutvůrce dotazníku, tematická sekce ekonomiky a stresu</li>, <li><a href="mailto:vojtech.bartos@econ.lmu.de">vojtech.bartos@econ.lmu.de</a></li>])}
             {Person("Julie Chytilová", [<li>afiliace: IES FSV UK a CERGE-EI</li>, <li>spolutvůrkyně dotazníku</li>, <li><a href="mailto:julie.chytilova@fsv.cuni.cz">julie.chytilova@fsv.cuni.cz</a></li>])}
             {Person("Michal Bauer", [<li>afiliace: CERGE-EI a IES FSV UK</li>, <li>spolutvůrce dotazníku</li>, <li><a href="mailto:bauer@cerge-ei.cz">bauer@cerge-ei.cz</a></li>])}
-            {Person("Kristína Zákopčanová", [<li><a href="https://github.com/mveith/paq-research">grafický návrh a vizualizace dat</a></li>, <li><a href="https://www.linkedin.com/in/kristina-zakopcanova/?originalSubdomain=cz">LinkedIn</a>, <a href="mailto:zakopcanova.k@gmail.com">zakopcanova.k@gmail.com</a></li> ])}
-            {Person("Miroslav Veith", [<li><a href="https://github.com/mveith/paq-research">vývoj webové aplikace</a></li> ])}
-            
+            {Person("Kristína Zákopčanová", [<li><a href="https://github.com/mveith/paq-research">grafický návrh a vizualizace dat</a></li>, <li><a href="https://www.linkedin.com/in/kristina-zakopcanova/?originalSubdomain=cz">LinkedIn</a>, <a href="mailto:zakopcanova.k@gmail.com">zakopcanova.k@gmail.com</a></li>])}
+            {Person("Miroslav Veith", [<li><a href="https://github.com/mveith/paq-research">vývoj webové aplikace</a></li>])}
+
             <br />
             <a href="https://www.paqresearch.cz/"><img src="logo-paq.png" width="120" /></a>
             <p>PAQ - Prokop Analysis and Quantitative Research, s.r.o.<br />
@@ -31,4 +32,12 @@ export default function About() {
             </p>
         </Layout>
     )
+}
+
+export async function getStaticProps(context) {
+    return {
+        props: {
+            menu: await getMenu()
+        }
+    };
 }
