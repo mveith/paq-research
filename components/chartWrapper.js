@@ -2,7 +2,7 @@ import Chart from '../components/chart'
 import { useState, useEffect } from 'react';
 import Legend from '../components/legend';
 
-function getSmallChartProps(dataProps, values, index, height, annotation, onHover, max, nonpercentage) {
+function getSmallChartProps(dataProps, values, index, height, annotation, onHover) {
     return {
         key: `chart-${index}`,
         weeks: dataProps.weeks,
@@ -10,20 +10,20 @@ function getSmallChartProps(dataProps, values, index, height, annotation, onHove
         colors: dataProps.colors,
         titles: dataProps.titles,
         yMin: 0,
-        yMax: max ?? 100,
+        yMax: dataProps.yMax ?? 100,
         showYAxis: true,
         values: values,
         size: [300, height],
         annotation: annotation,
         onHover: onHover,
-        nonpercentage: nonpercentage,
+        nonpercentage: !dataProps.percentage,
         title: values.title,
         ticks: dataProps.ticks,
         subtitle: values.subtitle
     };
 }
 
-function getBigChartProps(dataProps, height, annotation, onHover, max, nonpercentage) {
+function getBigChartProps(dataProps, height, annotation, onHover) {
     return {
         key: "chart-total",
         weeks: dataProps.weeks,
@@ -31,20 +31,20 @@ function getBigChartProps(dataProps, height, annotation, onHover, max, nonpercen
         colors: dataProps.colors,
         titles: dataProps.titles,
         yMin: 0,
-        yMax: max ?? 100,
+        yMax: dataProps.yMax ?? 100,
         showYAxis: true,
         values: dataProps.total,
         title: "",
         size: [800, height],
         annotation: annotation,
         onHover: onHover,
-        nonpercentage: nonpercentage,
+        nonpercentage: !dataProps.percentage,
         ticks: dataProps.ticks,
         yLabel: dataProps.yLabel
     };
 }
 
-export default function ChartWrapper({ dataProps, asLineChart, max, nonpercentage, group, total }) {
+export default function ChartWrapper({ dataProps, group, total }) {
     const [annotation, setAnnotation] = useState();
     const [height, setHeight] = useState(600);
     const legend = {
@@ -59,11 +59,11 @@ export default function ChartWrapper({ dataProps, asLineChart, max, nonpercentag
         else { setAnnotation(); }
     };
 
-    const chartType = asLineChart ? "line" : "stackedarea";
+    const chartType = dataProps.asLineChart ? "line" : "stackedarea";
     const charts = dataProps.groups[group].data.map((v, i) => {
-        return (<div className="chart-content"><Chart dataProps={getSmallChartProps(dataProps, v, i, height, annotation, onHover, max, nonpercentage)} chartType={chartType} /></div>);
+        return (<div className="chart-content"><Chart dataProps={getSmallChartProps(dataProps, v, i, height, annotation, onHover)} chartType={chartType} /></div>);
     });
-    const totalChart = (<div className="chart-content"><Chart dataProps={getBigChartProps(dataProps, height, annotation, onHover, max, nonpercentage)} chartType={chartType} /></div>);
+    const totalChart = (<div className="chart-content"><Chart dataProps={getBigChartProps(dataProps, height, annotation, onHover)} chartType={chartType} /></div>);
 
     useEffect(() => {
         function handleResize() {
