@@ -7,7 +7,7 @@ import Layout from '../components/layout';
 import ChartWrapper from '../components/chartWrapper'
 import ChartSettings from '../components/chartSettings';
 
-export default function Page({ dataProps, texts, menuProps, key, navigation }) {
+export default function Page({ data, texts, menu, key, navigation }) {
     const [total, setTotal] = useState(true);
     const [group, setGroup] = useState(0);
 
@@ -29,7 +29,7 @@ export default function Page({ dataProps, texts, menuProps, key, navigation }) {
         setGroup(v);
     };
     return (
-        <Layout title={title} openMenu={openMenu} setOpenMenu={setOpenMenu} menuItemsData={menuProps}>
+        <Layout title={title} openMenu={openMenu} setOpenMenu={setOpenMenu} menuItemsData={menu}>
             <Head>
                 <meta key="share-image" property="og:image" content={`https://zivotbehempandemie.cz/${texts.pageData.shareImage}.png`} />
                 <meta property="og:description" content={title} />
@@ -43,9 +43,9 @@ export default function Page({ dataProps, texts, menuProps, key, navigation }) {
             <div style={{ display: "flex", flexDirection: "column" }}>
                 <p>Podívejte se na <a href="#stories" className="arrow-button">interpretace↓</a> a <a href="#methodology" className="arrow-button">metodické poznámky↓</a></p>
 
-                <ChartSettings dataProps={dataProps} total={total} onTotalChange={onTotalChange} group={group} onGroupChange={onGroupChange} />
+                <ChartSettings dataProps={data} total={total} onTotalChange={onTotalChange} group={group} onGroupChange={onGroupChange} />
 
-                <ChartWrapper key={key} dataProps={dataProps} group={group} total={total} />
+                <ChartWrapper key={key} dataProps={data} group={group} total={total} />
 
             </div>
 
@@ -77,9 +77,9 @@ export async function getStaticProps(context) {
 
     return {
         props: {
-            dataProps: data,
+            data: data,
             texts: texts,
-            menuProps: await getMenu(structure),
+            menu: await getMenu(structure),
             key: `${context.params.key}-chart`,
             navigation: {
                 previousHref: `/${previous.key}`,
