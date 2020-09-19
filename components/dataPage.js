@@ -4,7 +4,7 @@ import Layout from './layout';
 import ChartWrapper from './chartWrapper'
 import ChartSettings from './chartSettings';
 
-export default function DataPage({ navigation, dataProps, asLineChart, max, nonpercentage, menuProps }) {
+export default function DataPage({ navigation, dataProps, asLineChart, max, nonpercentage, menuProps, chartKey }) {
     const [total, setTotal] = useState(true);
     const [group, setGroup] = useState(0);
 
@@ -42,7 +42,7 @@ export default function DataPage({ navigation, dataProps, asLineChart, max, nonp
 
                 <ChartSettings dataProps={dataProps} total={total} onTotalChange={onTotalChange} group={group} onGroupChange={onGroupChange} />
 
-                <ChartWrapper dataProps={dataProps} asLineChart={asLineChart} max={max} nonpercentage={nonpercentage} group={group} total={total} />
+                <ChartWrapper key={chartKey} dataProps={dataProps} asLineChart={asLineChart} max={max} nonpercentage={nonpercentage} group={group} total={total} />
 
             </div>
 

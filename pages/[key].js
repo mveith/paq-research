@@ -7,6 +7,7 @@ export default function Page(props) {
         navigation={<ThemeNavigation previousHref={props.previousHref} previousTitle={props.previousTitle} nextHref={props.nextHref} nextTitle={props.nextTitle} />}
         dataProps={props.dataProps}
         menuProps={props.menuProps}
+        chartKey={props.key}
     />;
 }
 
@@ -40,7 +41,8 @@ export async function getStaticProps(context) {
             previousTitle: previous.title,
             nextHref: `/${next.key}`,
             nextTitle: next.title,
-            menuProps: menu
+            menuProps: menu,
+            key: `${context.params.key}-chart`
         }
     }
 }
