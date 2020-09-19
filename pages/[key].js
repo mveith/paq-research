@@ -1,4 +1,5 @@
 import getSourceData from '../components/dataProvider'
+import getMenu from '../components/menuBuilder'  
 import ThemeNavigation from '../components/themeNavigation';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -74,27 +75,11 @@ export async function getStaticProps(context) {
     const previous = currentIndex > 0 ? structure.pages[currentIndex - 1] : structure.pages[structure.pages.length - 1];
     const next = currentIndex < structure.pages.length - 1 ? structure.pages[currentIndex + 1] : structure.pages[0];
 
-    const groupedMap = structure.pages.reduce(
-        (entryMap, e) => entryMap.set(e.group, [...entryMap.get(e.group) || [], e]),
-        new Map()
-    );
-    const menu = Array.from(groupedMap.keys()).map(k => {
-        return {
-            title: k,
-            items: groupedMap.get(k).map(i => {
-                return {
-                    title: i.title,
-                    key: i.key
-                };
-            })
-        };
-    });
-
     return {
         props: {
             dataProps: data,
             texts: texts,
-            menuProps: menu,
+            menuProps: await getMenu(structure),
             key: `${context.params.key}-chart`,
             navigation: {
                 previousHref: `/${previous.key}`,
@@ -103,7 +88,7 @@ export async function getStaticProps(context) {
                 nextTitle: next.title,
             }
         }
-    }
+    };
 }
 
 export async function getStaticPaths() {
