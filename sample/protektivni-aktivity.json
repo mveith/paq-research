@@ -284,13 +284,6 @@
         "Legend item description 3"
     ],
     "legendTitle": "",
-    "methodology": "",
-    "pageData": {
-        "description": "Page 4 description",
-        "shareImage": "",
-        "title": "Page 4"
-    },
-    "stories": [],
     "ticks": [
         "1",
         "2",
@@ -351,5 +344,8 @@
         "title": ""
     },
     "weeks": 10,
-    "yLabel": "%"
+    "yLabel": "%",
+    "asLineChart": false,
+    "percentage": true,
+    "yMax": 100
 }

@@ -209,13 +209,6 @@
         "Legend item description 2"
     ],
     "legendTitle": "",
-    "methodology": "",
-    "pageData": {
-        "description": "Page 2 description",
-        "shareImage": "",
-        "title": "Page 2"
-    },
-    "stories": [],
     "ticks": [
         "1",
         "2",
@@ -263,5 +256,8 @@
         "title": ""
     },
     "weeks": 10,
-    "yLabel": "%"
+    "yLabel": "%",
+    "asLineChart": false,
+    "percentage": true,
+    "yMax": 100
 }

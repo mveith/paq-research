@@ -134,13 +134,6 @@
         "Legend item description 1"
     ],
     "legendTitle": "",
-    "methodology": "",
-    "pageData": {
-        "description": "Page 5 description",
-        "shareImage": "",
-        "title": "Page 5"
-    },
-    "stories": [],
     "ticks": [
         "1",
         "2",
@@ -175,5 +168,8 @@
         "title": ""
     },
     "weeks": 10,
-    "yLabel": "#"
+    "yLabel": "#",
+    "asLineChart": true,
+    "percentage": false,
+    "yMax": 50
 }
