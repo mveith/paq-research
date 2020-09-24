@@ -1,8 +1,8 @@
 import getSourceData from '../components/dataProvider'
-import getMenu from '../components/menuBuilder'  
+import getMenu from '../components/menuBuilder'
 import ThemeNavigation from '../components/themeNavigation';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Layout from '../components/layout';
 import ChartWrapper from '../components/chartWrapper'
 import ChartSettings from '../components/chartSettings';
@@ -12,17 +12,9 @@ export default function Page({ data, texts, menu, key, navigation }) {
     const [group, setGroup] = useState(0);
 
     const title = texts.pageData.title;
-    useEffect(() => {
-        const storedTotal = localStorage.getItem("total");
-        if (storedTotal) {
-            setTotal(storedTotal === "true");
-        }
-    }, []);
-
     const [openMenu, setOpenMenu] = useState(false);
     const onTotalChange = v => {
         setTotal(v);
-        localStorage.setItem("total", v);
     };
 
     const onGroupChange = v => {
