@@ -9,13 +9,13 @@ export default function About({ menu }) {
             <p>Data na této stránce pocházejí z výzkumu Život během pandemie. Jeho cílem je sledovat, jak se vyvíjí sociální
             chování Čechů od začátku pandemie koronaviru, jak pandemie a související problémy dopadají na jejich život. Kromě
             ekonomických dopadů výzkum zkoumá například vývoj duševního zdraví a některých společenských postojů. Shromažďuje data o míře kontaktů a typech aktivit, testování a symptomech nemoci, která mohou být využita i pro epidemiologické modelování.</p>
-            <p>Každé 2–3 týdny (počínaje březnem 2020) oslovujeme vzorek stejných respondentů – výsledný reprezentativní vzorek se v jednotlivých vlnách pohybuje mezi 2200 a 2600 rozhovory.</p>
+            <p>Každé 2–3 týdny (počínaje březnem 2020) oslovujeme vzorek stejných respondentů – výsledný reprezentativní vzorek se v jednotlivých vlnách pohybuje mezi 2200 a 2600 rozhovory. Longitudinální metodika umožňuje zkoumat změnu chování či ekonomického stavu stejné skupiny domácností.</p>
             <p>Na projektu se podílí výzkumníci ze společnosti PAQ Research (Daniel Prokop, Lucie Marková, Michaela Kudrnáčová) a
             vědci z iniciativy IDEA AntiCovid (Jana Cahlíková, Vojtěch Bartoš, Michal Bauer, Julie Chytilová). Data sbírá
             agentura NMS (člen SIMAR).</p>
 
             <h2>Sběr dat</h2>
-            <p>Dotazování probíhá na Českém národním panelu. Výzkum je kvótně reprezentativní pro populaci ČR, ale kvůli metodice se ho mohou účastnit jen respondenti s připojením k internetu. Online metodiku sběru dat si vyžádala potřeba rychlého dotázání respondentů v krátkém časovém úseku, znemožnění osobních kontaktů či jejich preventivní omezování během pandemie i citlivý charakter dotazovaných témat, u nichž by přítomnost tazatele mohla vést ke zkreslení odpovědí.</p>
+            <p>Dotazování probíhá na Českém národním panelu. Výzkum je kvótně reprezentativní pro populaci ČR, ale kvůli metodice se ho mohou účastnit jen respondenti s připojením k internetu. Online metodiku sběru dat si vyžádala potřeba rychlého dotázání respondentů v krátkém časovém úseku, znemožnění osobních kontaktů či jejich preventivní omezování během pandemie i citlivý charakter dotazovaných témat, u nichž by přítomnost tazatele mohla vést ke zkreslení odpovědí. Výstupy pro starší generaci (55+) jsou kvůli online sběru pouze orientační.</p>
 
             <h2>Reprezentativita</h2>
             <p>Náš vzorek kopíruje složení populace 18+ z hlediska:
