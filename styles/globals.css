@@ -333,7 +333,7 @@ ul {
     }
 }
 
-@media only screen and (min-width: 920px) {
+@media only screen and (min-width: 1000px) {
     .chart-settings {
         margin-top: 2rem;
         justify-content: space-between;

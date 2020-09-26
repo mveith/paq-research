@@ -67,6 +67,12 @@ function FacebookButton({ url }) {
     </a>;
 }
 
+function LinkedinButton({ url }) {
+    return <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${url}`} target="_blank" className="share-button">
+        <img src="share-buttons/linked-in-icon.svg" />
+    </a>;
+}
+
 export default function ChartSettings({ dataProps, total, onTotalChange, group, onGroupChange, title }) {
     const router = useRouter();
     const url = `https://zivotbehempandemie.cz${router.asPath}`;
@@ -79,6 +85,7 @@ export default function ChartSettings({ dataProps, total, onTotalChange, group, 
             <div className="share-buttons">
                 <TwitterButton title={title} url={url} />
                 <FacebookButton url={url} />
+                <LinkedinButton url={url} />
             </div>
         </div>
         {!total && <GroupButtons groups={dataProps.groups} onGroupChange={onGroupChange} group={group} />}
