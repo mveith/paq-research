@@ -51,26 +51,35 @@ function GroupDropdown({ groups, onGroupChange, group }) {
     </>);
 }
 
-function TwitterButton({ title }) {
+function TwitterButton({ title, url }) {
     const text = title;
     const hashtag = "ZivotBehemPandemie";
     const via = "paq_research";
-    const router = useRouter();
-    const url = `https://zivotbehempandemie.cz${router.asPath}`;
 
-    return <a href={`https://twitter.com/intent/tweet?text=${text}&hashtags=${hashtag}&via=${via}&url=${url}`} target="_blank" className="twitter-button">
+    return <a href={`https://twitter.com/intent/tweet?text=${text}&hashtags=${hashtag}&via=${via}&url=${url}`} target="_blank" className="share-button">
         <img src="share-buttons/twitter-icon.svg" />
     </a>;
 }
 
+function FacebookButton({ url }) {
+    return <a href={`https://www.facebook.com/sharer/sharer.php?u=${url}`} target="_blank" className="share-button">
+        <img src="share-buttons/facebook-icon.svg" />
+    </a>;
+}
+
 export default function ChartSettings({ dataProps, total, onTotalChange, group, onGroupChange, title }) {
+    const router = useRouter();
+    const url = `https://zivotbehempandemie.cz${router.asPath}`;
     return (<>
         <div className="chart-settings">
             <ul style={{ listStyle: "none", display: "flex", margin: 0, padding: 0 }}>
                 <Tab title="Souhrnné zobrazení" onClick={() => onTotalChange(true)} isActive={total} />
                 <Tab title="Jak si vedou různé skupiny obyvatel?" onClick={() => onTotalChange(false)} isActive={!total} />
             </ul>
-            <TwitterButton title={title} />
+            <div className="share-buttons">
+                <TwitterButton title={title} url={url} />
+                <FacebookButton url={url} />
+            </div>
         </div>
         {!total && <GroupButtons groups={dataProps.groups} onGroupChange={onGroupChange} group={group} />}
         {!total && <GroupDropdown groups={dataProps.groups} onGroupChange={onGroupChange} group={group} />}

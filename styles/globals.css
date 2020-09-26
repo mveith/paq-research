@@ -227,13 +227,17 @@ ul {
     flex-direction: column-reverse;
 }
 
-.twitter-button {
+.share-button {
     padding: 0.5rem;
     margin-right: auto;
 }
 
-.twitter-button img {
+.share-button img {
     height: 2rem;
+}
+
+.share-buttons {
+    margin: 1rem 0;
 }
 
 @media only screen and (min-width: 720px) {
@@ -335,12 +339,11 @@ ul {
         justify-content: space-between;
         flex-direction: row;
     }
-    .twitter-button {
-        padding: 0.5rem;
-        margin: 0 1rem;
+    .share-button img {
+        height: 1.5rem;
     }
-    .twitter-button img {
-        height: 100%;
+    .share-buttons {
+        margin: 0;
     }
 }
 
