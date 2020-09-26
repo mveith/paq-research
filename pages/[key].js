@@ -35,7 +35,7 @@ export default function Page({ data, texts, menu, key, navigation }) {
             <div style={{ display: "flex", flexDirection: "column" }}>
                 <p>Podívejte se na <a href="#stories" className="arrow-button">interpretace↓</a> a <a href="#methodology" className="arrow-button">metodické poznámky↓</a></p>
 
-                <ChartSettings dataProps={data} total={total} onTotalChange={onTotalChange} group={group} onGroupChange={onGroupChange} />
+                <ChartSettings dataProps={data} total={total} onTotalChange={onTotalChange} group={group} onGroupChange={onGroupChange} title={title} />
 
                 <ChartWrapper key={key} dataProps={data} group={group} total={total} />
 
