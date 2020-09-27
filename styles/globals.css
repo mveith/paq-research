@@ -233,7 +233,7 @@ ul {
 }
 
 .share-button img {
-    height: 2rem;
+    height: 1.6rem;
 }
 
 .share-buttons {
@@ -340,7 +340,7 @@ ul {
         flex-direction: row;
     }
     .share-button img {
-        height: 1.5rem;
+        height: 1.2rem;
     }
     .share-buttons {
         margin: 0;
