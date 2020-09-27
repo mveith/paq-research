@@ -93,8 +93,6 @@ ul {
     z-index: 1;
 }
 
-.multiple-charts-wrapper {}
-
 .top-menu {
     display: none;
 }
@@ -270,7 +268,11 @@ ul {
         top: 50px;
         height: calc(100% - 50px);
     }
-    .multiple-charts-wrapper {
+    .multiple-charts-wrapper-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .multiple-charts-wrapper-3 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
