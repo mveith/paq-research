@@ -15,7 +15,7 @@ function SharedTooltip({ firstWeek, week, lines, nonpercentage, ticks }) {
         <div key={"header_multi"} style={{ fontWeight: "bold", borderBottom: "thin solid black", marginBottom: "10px", textAlign: "center" }}>
             {`${ticks[week - firstWeek]}:`}
         </div>
-        {lines.map((l, i) => <TooltipItem color={l.color} value={l.lineValues[week - firstWeek] + (nonpercentage ? "" : "%")} index={i} />)}
+        {lines.filter(l => l.lineValues[week - firstWeek] !== null).map((l, i) => <TooltipItem color={l.color} value={l.lineValues[week - firstWeek] + (nonpercentage ? "" : "%")} index={i} />)}
     </div>);
 }
 
