@@ -238,6 +238,16 @@ ul {
     margin: 1rem 0;
 }
 
+.filters {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filters label {
+    margin: 5px 20px;
+}
+
 @media only screen and (min-width: 720px) {
     h1 {
         font-size: 1.8rem;
@@ -315,6 +325,13 @@ ul {
     }
     .group-dropdown {
         display: none;
+    }
+    .filters {
+        display: flex;
+        flex-direction: row;
+    }
+    .filters label {
+        margin: 0 20px;
     }
 }
 

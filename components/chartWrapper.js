@@ -44,11 +44,11 @@ function getBigChartProps(dataProps, height, annotation, onHover) {
     };
 }
 
-export default function ChartWrapper({ dataProps, group, total }) {
+export default function ChartWrapper({ dataProps, group, total, filter }) {
     const [annotation, setAnnotation] = useState();
     const [height, setHeight] = useState(600);
     const legend = {
-        items: dataProps.titles.map((t, i) => { return { color: dataProps.legendColors[i], title: t, description: dataProps.legendItems[i] }; }),
+        items: dataProps.titles.filter((t, i) => filter ? filter.includes(i) : true).map((t, i) => { return { color: dataProps.legendColors[i], title: t, description: dataProps.legendItems[i] }; }),
         title: dataProps.legendTitle
     };
 
@@ -61,9 +61,9 @@ export default function ChartWrapper({ dataProps, group, total }) {
 
     const chartType = dataProps.asLineChart ? "line" : "stackedarea";
     const charts = dataProps.groups[group].data.map((v, i) => {
-        return (<div className="chart-content"><Chart dataProps={getSmallChartProps(dataProps, v, i, height, annotation, onHover)} chartType={chartType} /></div>);
+        return (<div className="chart-content"><Chart dataProps={getSmallChartProps(dataProps, v, i, height, annotation, onHover)} chartType={chartType} filter={filter} /></div>);
     });
-    const totalChart = (<div className="chart-content"><Chart dataProps={getBigChartProps(dataProps, height, annotation, onHover)} chartType={chartType} /></div>);
+    const totalChart = (<div className="chart-content"><Chart dataProps={getBigChartProps(dataProps, height, annotation, onHover)} chartType={chartType} filter={filter} /></div>);
 
     useEffect(() => {
         function handleResize() {

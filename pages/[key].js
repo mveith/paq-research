@@ -10,6 +10,7 @@ import ChartSettings from '../components/chartSettings';
 export default function Page({ data, texts, menu, key, navigation }) {
     const [total, setTotal] = useState(true);
     const [group, setGroup] = useState(0);
+    const [filter, setFilter] = useState();
 
     const title = texts.pageData.title;
     const [openMenu, setOpenMenu] = useState(false);
@@ -35,9 +36,9 @@ export default function Page({ data, texts, menu, key, navigation }) {
             <div style={{ display: "flex", flexDirection: "column" }}>
                 <p>Podívejte se na <a href="#stories" className="arrow-button">interpretace↓</a> a <a href="#methodology" className="arrow-button">metodické poznámky↓</a></p>
 
-                <ChartSettings dataProps={data} total={total} onTotalChange={onTotalChange} group={group} onGroupChange={onGroupChange} title={title} />
+                <ChartSettings dataProps={data} total={total} onTotalChange={onTotalChange} group={group} onGroupChange={onGroupChange} title={title} onFilterChange={setFilter} />
 
-                <ChartWrapper key={key} dataProps={data} group={group} total={total} />
+                <ChartWrapper key={key} dataProps={data} group={group} total={total} filter={filter} />
 
             </div>
 

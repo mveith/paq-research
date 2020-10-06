@@ -72,24 +72,23 @@ function getXAxis(props, ticks) {
     };
 }
 
-function generateAnnotations(props, stacked) {
+function generateAnnotations(props, dataLines, stacked) {
     if (props.annotation) {
-        const values = props.values;
-        const tooltipAnnotations = values.lines.map((l, i) => {
+        const tooltipAnnotations = dataLines.map((l, i) => {
             return {
                 type: "frame-hover",
                 x: props.annotation.week,
-                y: stacked ? values.lines.slice(i).map(pl => pl[props.annotation.week - props.firstWeek]).reduce((a, b) => a + b, 0) : l[props.annotation.week - props.firstWeek],
+                y: stacked ? dataLines.slice(i).map(pl => pl[props.annotation.week - props.firstWeek]).reduce((a, b) => a + b, 0) : l[props.annotation.week - props.firstWeek],
                 value: l[props.annotation.week - props.firstWeek]
             };
         }).slice(props.annotation.lineIndex, props.annotation.lineIndex + 1);
-        const pointAnnotations = values.lines.map((l, i) => {
+        const pointAnnotations = dataLines.map((l, i) => {
             return {
                 type: "xy",
                 x: props.annotation.week,
                 y: stacked ?
-                    values.lines.slice(i).map(pl => pl[props.annotation.week - props.firstWeek]).reduce((a, b) => a + b, 0) :
-                    values.lines[i][props.annotation.week - props.firstWeek],
+                    dataLines.slice(i).map(pl => pl[props.annotation.week - props.firstWeek]).reduce((a, b) => a + b, 0) :
+                    dataLines[i][props.annotation.week - props.firstWeek],
             };
         });
 
@@ -99,15 +98,16 @@ function generateAnnotations(props, stacked) {
     else return [];
 }
 
-function Chart({ dataProps, chartType }) {
+function Chart({ dataProps, chartType, filter }) {
     const values = dataProps.values;
+    const dataLines = values.lines.filter((l, i) => filter ? filter.includes(i) : true);
     const stacked = chartType === "stackedarea";
     const lines =
         stacked
-            ? values.lines.map((l, li) => { return { coordinates: l.map((v, i) => { return { week: i + dataProps.firstWeek, value: values.lines.slice(li).map(pl => pl[i]).reduce((a, b) => a + b, 0) }; }) }; })
-            : values.lines.map((l, li) => { return { coordinates: l.map((v, i) => { return { week: i + dataProps.firstWeek, value: l[i] }; }) }; });
+            ? dataLines.map((l, li) => { return { coordinates: l.map((v, i) => { return { week: i + dataProps.firstWeek, value: dataLines.slice(li).map(pl => pl[i]).reduce((a, b) => a + b, 0) }; }) }; })
+            : dataLines.map((l, li) => { return { coordinates: l.map((v, i) => { return { week: i + dataProps.firstWeek, value: l[i] }; }) }; });
 
-    const annotations = generateAnnotations(dataProps, stacked);
+    const annotations = generateAnnotations(dataProps, dataLines, stacked);
 
     const lineType = chartType === "stackedarea" ? "area" : undefined;
     const lineStyle = (d, i) => {
@@ -120,7 +120,7 @@ function Chart({ dataProps, chartType }) {
                 fill: "none"
             };
     };
-    const tooltipLines = values.lines.map((line, lineIndex) => {
+    const tooltipLines = dataLines.map((line, lineIndex) => {
         return {
             lineValues: line,
             color: dataProps.colors[lineIndex],
