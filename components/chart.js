@@ -104,8 +104,8 @@ function Chart({ dataProps, chartType, filter }) {
     const stacked = chartType === "stackedarea";
     const lines =
         stacked
-            ? dataLines.map((l, li) => { return { coordinates: l.map((v, i) => { return { week: i + dataProps.firstWeek, value: dataLines.slice(li).map(pl => pl[i]).reduce((a, b) => a + b, 0) }; }) }; })
-            : dataLines.map((l, li) => { return { coordinates: l.map((v, i) => { return { week: i + dataProps.firstWeek, value: l[i] }; }) }; });
+            ? dataLines.map((l, li) => { return { coordinates: l.map((v, i) => { return { week: i + dataProps.firstWeek, value: dataLines.slice(li).map(pl => pl[i]).reduce((a, b) => a + b, 0) }; }).filter(c => c.value !== null) }; })
+            : dataLines.map((l, li) => { return { coordinates: l.map((v, i) => { return { week: i + dataProps.firstWeek, value: l[i] }; }).filter(c => c.value !== null) }; });
 
     const annotations = generateAnnotations(dataProps, dataLines, stacked);
 
