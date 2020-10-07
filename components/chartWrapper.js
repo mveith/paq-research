@@ -48,7 +48,7 @@ export default function ChartWrapper({ dataProps, group, total, filter }) {
     const [annotation, setAnnotation] = useState();
     const [height, setHeight] = useState(600);
     const legend = {
-        items: dataProps.titles.filter((t, i) => filter ? filter.includes(i) : true).map((t, i) => { return { color: dataProps.legendColors[i], title: t, description: dataProps.legendItems[i] }; }),
+        items: dataProps.titles.map((t, i) => { return { color: dataProps.legendColors[i], title: t, description: dataProps.legendItems[i] }; }).filter((t, i) => filter ? filter.includes(i) : true),
         title: dataProps.legendTitle
     };
 

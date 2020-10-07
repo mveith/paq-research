@@ -99,8 +99,8 @@ function generateAnnotations(props, dataLines, stacked) {
 }
 
 function Chart({ dataProps, chartType, filter }) {
-    const values = dataProps.values;
-    const dataLines = values.lines.filter((l, i) => filter ? filter.includes(i) : true);
+    const dataLines = dataProps.values.lines.filter((_, i) => filter ? filter.includes(i) : true);
+    const dataColors = dataProps.colors.filter((_, i) => filter ? filter.includes(i) : true);
     const stacked = chartType === "stackedarea";
     const lines =
         stacked
@@ -112,10 +112,10 @@ function Chart({ dataProps, chartType, filter }) {
     const lineType = chartType === "stackedarea" ? "area" : undefined;
     const lineStyle = (d, i) => {
         return chartType === "stackedarea" ? {
-            fill: dataProps.colors[i],
+            fill: dataColors[i],
             fillOpacity: 1
         } : {
-                stroke: dataProps.colors[i],
+                stroke: dataColors[i],
                 strokeWidth: 2,
                 fill: "none"
             };
@@ -123,8 +123,7 @@ function Chart({ dataProps, chartType, filter }) {
     const tooltipLines = dataLines.map((line, lineIndex) => {
         return {
             lineValues: line,
-            color: dataProps.colors[lineIndex],
-            title: dataProps.titles[lineIndex]
+            color: dataColors[lineIndex]
         };
     });
     const [ticks, setTicks] = useState(2);
@@ -140,7 +139,7 @@ function Chart({ dataProps, chartType, filter }) {
     const frameProps = {
         lines: lines,
         size: dataProps.size,
-        margin: { left: dataProps.yLabel ? 65 : 55, bottom: 50, right: 20, top: 10 },
+        margin: { left: dataProps.yLabel ? 65 : 55, bottom: 50, right: 30, top: 10 },
 
         lineType: lineType,
         responsiveWidth: true,
