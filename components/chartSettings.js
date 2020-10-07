@@ -73,21 +73,21 @@ function LinkedinButton({ url }) {
     </a>;
 }
 
-function Filter({ label, index, onChange}) {
+function Filter({ label, index, onChange, checked }) {
     return <label>
-        <input type="radio" name="filters" id={`filter-${index}`} value={label} onChange={onChange} />
+        <input type="radio" name="filters" id={`filter-${index}`} value={label} onChange={onChange} checked={checked} />
         {label}
     </label>;
 }
 
-function Filters({ filters, onFilterChange }) {
+function Filters({ filters, currentFilter, onFilterChange }) {
     return <div className="filters">
-        Zobraz aktivity typu            
-            {filters.map((f, i) => <Filter label={f.label} index={i} onChange={_ => onFilterChange(f.indexes)} />)}
+        Zobraz aktivity typu
+            {filters.map((f, i) => <Filter checked={i === currentFilter} label={f.label} index={i} onChange={_ => onFilterChange(i)} />)}
     </div>;
 }
 
-export default function ChartSettings({ dataProps, total, onTotalChange, group, onGroupChange, title, onFilterChange }) {
+export default function ChartSettings({ dataProps, total, onTotalChange, group, onGroupChange, title, currentFilter, onFilterChange }) {
     const router = useRouter();
     const url = `https://zivotbehempandemie.cz${router.asPath}`;
     return (<>
@@ -105,6 +105,6 @@ export default function ChartSettings({ dataProps, total, onTotalChange, group, 
         {!total && <GroupButtons groups={dataProps.groups} onGroupChange={onGroupChange} group={group} />}
         {!total && <GroupDropdown groups={dataProps.groups} onGroupChange={onGroupChange} group={group} />}
 
-        {dataProps.filters && <Filters filters={dataProps.filters} onFilterChange={onFilterChange} />}
+        {dataProps.filters && <Filters filters={dataProps.filters} onFilterChange={onFilterChange} currentFilter={currentFilter} />}
     </>);
 }

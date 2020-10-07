@@ -10,7 +10,7 @@ import ChartSettings from '../components/chartSettings';
 export default function Page({ data, texts, menu, chartKey, navigation }) {
     const [total, setTotal] = useState(true);
     const [group, setGroup] = useState(0);
-    const [filter, setFilter] = useState();
+    const [filter, setFilter] = useState(data.filters ? 0 : undefined);
 
     const title = texts.pageData.title;
     const [openMenu, setOpenMenu] = useState(false);
@@ -36,9 +36,9 @@ export default function Page({ data, texts, menu, chartKey, navigation }) {
             <div style={{ display: "flex", flexDirection: "column" }}>
                 <p>Podívejte se na <a href="#stories" className="arrow-button">interpretace↓</a> a <a href="#methodology" className="arrow-button">metodické poznámky↓</a></p>
 
-                <ChartSettings dataProps={data} total={total} onTotalChange={onTotalChange} group={group} onGroupChange={onGroupChange} title={title} onFilterChange={setFilter} />
+                <ChartSettings dataProps={data} total={total} onTotalChange={onTotalChange} group={group} onGroupChange={onGroupChange} title={title} currentFilter={filter} onFilterChange={setFilter} />
 
-                <ChartWrapper key={`${chartKey + (filter ? `-${filter.toString()}` : "")}`} dataProps={data} group={group} total={total} filter={filter} />
+                <ChartWrapper key={`${chartKey + (filter ? `-${filter}` : "")}`} dataProps={data} group={group} total={total} filter={data.filters ? data.filters[filter].indexes : undefined} />
 
             </div>
 
