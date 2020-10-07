@@ -263,6 +263,7 @@ ul {
         flex-direction: column;
         flex: 1;
         justify-content: space-between;
+        overflow-y: auto;
     }
     .content-wrapper {
         width: 100%;

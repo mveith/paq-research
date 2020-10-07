@@ -7,7 +7,7 @@ import Layout from '../components/layout';
 import ChartWrapper from '../components/chartWrapper'
 import ChartSettings from '../components/chartSettings';
 
-export default function Page({ data, texts, menu, key, navigation }) {
+export default function Page({ data, texts, menu, chartKey, navigation }) {
     const [total, setTotal] = useState(true);
     const [group, setGroup] = useState(0);
     const [filter, setFilter] = useState();
@@ -38,7 +38,7 @@ export default function Page({ data, texts, menu, key, navigation }) {
 
                 <ChartSettings dataProps={data} total={total} onTotalChange={onTotalChange} group={group} onGroupChange={onGroupChange} title={title} onFilterChange={setFilter} />
 
-                <ChartWrapper key={key} dataProps={data} group={group} total={total} filter={filter} />
+                <ChartWrapper key={`${chartKey + (filter ? `-${filter.toString()}` : "")}`} dataProps={data} group={group} total={total} filter={filter} />
 
             </div>
 
@@ -73,7 +73,7 @@ export async function getStaticProps(context) {
             data: data,
             texts: texts,
             menu: await getMenu(structure),
-            key: `${context.params.key}-chart`,
+            chartKey: `${context.params.key}-chart`,
             navigation: {
                 previousHref: `/${previous.key}`,
                 previousTitle: previous.title,

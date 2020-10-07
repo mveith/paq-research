@@ -82,8 +82,7 @@ function Filter({ label, index, onChange}) {
 
 function Filters({ filters, onFilterChange }) {
     return <div className="filters">
-        Zobraz aktivity typu
-            
+        Zobraz aktivity typu            
             {filters.map((f, i) => <Filter label={f.label} index={i} onChange={_ => onFilterChange(f.indexes)} />)}
     </div>;
 }
