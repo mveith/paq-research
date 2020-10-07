@@ -2,7 +2,7 @@ function LegendItem({ color, title, description, smallItem }) {
     const style = smallItem ? { fontSize:"0.9rem" } : {};
     return (<li>
         <h2 className="legend-title" style={{...style, color: color }}>{title}</h2>
-        <p className="legend-description">{description}</p>
+        <p className="legend-description" dangerouslySetInnerHTML={{ __html: description }}></p>
     </li>);
 }
 
