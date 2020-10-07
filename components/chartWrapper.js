@@ -47,9 +47,12 @@ function getBigChartProps(dataProps, height, annotation, onHover) {
 export default function ChartWrapper({ dataProps, group, total, filter }) {
     const [annotation, setAnnotation] = useState();
     const [height, setHeight] = useState(600);
+    const [highlightedLineIndex, sethighlightedLineIndex] = useState();
     const legend = {
         items: dataProps.titles.map((t, i) => { return { color: dataProps.legendColors[i], title: t, description: dataProps.legendItems[i] }; }).filter((t, i) => filter ? filter.includes(i) : true),
-        title: dataProps.legendTitle
+        title: dataProps.legendTitle,
+        onHover: i => sethighlightedLineIndex(i),
+        highlightedLineIndex: highlightedLineIndex
     };
 
     const onHover = x => {
@@ -61,9 +64,9 @@ export default function ChartWrapper({ dataProps, group, total, filter }) {
 
     const chartType = dataProps.asLineChart ? "line" : "stackedarea";
     const charts = dataProps.groups[group].data.map((v, i) => {
-        return (<div className="chart-content"><Chart dataProps={getSmallChartProps(dataProps, v, i, height, annotation, onHover)} chartType={chartType} filter={filter} /></div>);
+        return (<div className="chart-content"><Chart key={`chart-${i + (highlightedLineIndex ? `-${highlightedLineIndex}` : "")}`} dataProps={getSmallChartProps(dataProps, v, i, height, annotation, onHover)} chartType={chartType} filter={filter} highlightedLineIndex={highlightedLineIndex} /></div>);
     });
-    const totalChart = (<div className="chart-content"><Chart dataProps={getBigChartProps(dataProps, height, annotation, onHover)} chartType={chartType} filter={filter} /></div>);
+    const totalChart = (<div className="chart-content"><Chart key={`chart-${highlightedLineIndex ?? ""}`} dataProps={getBigChartProps(dataProps, height, annotation, onHover)} chartType={chartType} filter={filter} highlightedLineIndex={highlightedLineIndex} /></div>);
 
     useEffect(() => {
         function handleResize() {

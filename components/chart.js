@@ -98,7 +98,7 @@ function generateAnnotations(props, dataLines, stacked) {
     else return [];
 }
 
-function Chart({ dataProps, chartType, filter }) {
+function Chart({ dataProps, chartType, filter, highlightedLineIndex }) {
     const dataLines = dataProps.values.lines.filter((_, i) => filter ? filter.includes(i) : true);
     const dataColors = dataProps.colors.filter((_, i) => filter ? filter.includes(i) : true);
     const stacked = chartType === "stackedarea";
@@ -116,7 +116,8 @@ function Chart({ dataProps, chartType, filter }) {
             fillOpacity: 1
         } : {
                 stroke: dataColors[i],
-                strokeWidth: 2,
+                strokeWidth: i === highlightedLineIndex ? 4 : 2,
+                strokeOpacity: highlightedLineIndex !== undefined ? (i === highlightedLineIndex ? 1 : 0.25) : 1,
                 fill: "none"
             };
     };
@@ -139,7 +140,7 @@ function Chart({ dataProps, chartType, filter }) {
     const frameProps = {
         lines: lines,
         size: dataProps.size,
-        margin: { left: dataProps.yLabel ? 65 : 55, bottom: 50, right: 30, top: 10 },
+        margin: { left: dataProps.yLabel ? 65 : 55, bottom: 50, right: 25, top: 10 },
 
         lineType: lineType,
         responsiveWidth: true,
