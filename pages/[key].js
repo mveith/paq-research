@@ -74,6 +74,7 @@ export async function getStaticProps(context) {
             texts: texts,
             menu: await getMenu(structure),
             chartKey: `${context.params.key}-chart`,
+            key: `${context.params.key}-chart`,
             navigation: {
                 previousHref: `/${previous.key}`,
                 previousTitle: previous.title,
