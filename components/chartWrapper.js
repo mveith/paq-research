@@ -52,7 +52,8 @@ export default function ChartWrapper({ dataProps, group, total, filter }) {
         items: dataProps.titles.map((t, i) => { return { color: dataProps.legendColors[i], title: t, description: dataProps.legendItems[i] }; }).filter((t, i) => filter ? filter.includes(i) : true),
         title: dataProps.legendTitle,
         onHover: dataProps.asLineChart ? i => sethighlightedLineIndex(i) : _ => { },
-        highlightedLineIndex: highlightedLineIndex
+        highlightedLineIndex: highlightedLineIndex,
+        highlightingEnabled: dataProps.asLineChart
     };
 
     const onHover = x => {
@@ -83,8 +84,6 @@ export default function ChartWrapper({ dataProps, group, total, filter }) {
 
     return (<div className="chart-wrapper">
         <div className="chart" >{content}</div>
-        <div className="legend">
-            <Legend {...legend} />
-        </div>
+        <Legend {...legend} />
     </div>);
 }
