@@ -140,7 +140,7 @@ function Chart({ dataProps, chartType, filter, highlightedLineIndex }) {
     const frameProps = {
         lines: lines,
         size: dataProps.size,
-        margin: { left: dataProps.yLabel ? 65 : 55, bottom: 50, right: 25, top: 10 },
+        margin: { left: dataProps.yLabel ? 65 : 55, bottom: 50, right: 30, top: 10 },
 
         lineType: lineType,
         responsiveWidth: true,
