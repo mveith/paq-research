@@ -51,7 +51,7 @@ export default function ChartWrapper({ dataProps, group, total, filter }) {
     const legend = {
         items: dataProps.titles.map((t, i) => { return { color: dataProps.legendColors[i], title: t, description: dataProps.legendItems[i] }; }).filter((t, i) => filter ? filter.includes(i) : true),
         title: dataProps.legendTitle,
-        onHover: i => sethighlightedLineIndex(i),
+        onHover: dataProps.asLineChart ? i => sethighlightedLineIndex(i) : _ => { },
         highlightedLineIndex: highlightedLineIndex
     };
 
