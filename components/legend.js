@@ -11,6 +11,7 @@ export default function Legend(props) {
     const smallLegend = props.items.length > 10;
     return (
         <div className="legend">
+            {props.highlightingEnabled && <span style={{ fontSize: "0.8rem", color: "#7C8A92" }}>pro zvýraznění jednotlivých kategorií, najeďte na název kategorie</span>}
             {title}
             <ul style={{ listStyle: "none", flexBasis: "20%", paddingLeft: "0" }}>
                 {props.items.map((item, i) =>
@@ -23,6 +24,5 @@ export default function Legend(props) {
                         opacity={props.highlightedLineIndex !== undefined ? (props.highlightedLineIndex === i ? 1 : 0.5) : 1}
                     />)}
             </ul>
-            {props.highlightingEnabled && <span style={{ fontSize: "0.8rem" }}>pro zvýraznění jednotlivých kategorií, najeďte na název kategorie</span>}
         </div>);
 }
