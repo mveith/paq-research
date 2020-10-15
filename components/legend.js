@@ -2,7 +2,7 @@ function LegendItem({ color, title, description, smallItem, onHover, onMouseOut,
     const style = smallItem ? { fontSize: "0.9rem" } : {};
     return (<li onMouseOver={_ => onHover(_)} onMouseOut={_ => onMouseOut(_)} style={{ opacity: opacity }}>
         <h2 className="legend-title" style={{ ...style, color: color }}>{title}</h2>
-        <p className="legend-description" dangerouslySetInnerHTML={{ __html: description }}></p>
+        <div className="legend-description" dangerouslySetInnerHTML={{ __html: description }}></div>
     </li>);
 }
 
