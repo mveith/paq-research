@@ -98,7 +98,34 @@ function generateAnnotations(props, dataLines, stacked) {
     else return [];
 }
 
-function Chart({ dataProps, chartType, filter, highlightedLineIndex }) {
+function getAreaLineStyle(dataColors, i) {
+    return {
+        fill: dataColors[i],
+        fillOpacity: 1
+    };
+}
+
+function getLineLineStyle(lineStyles, dataColors, i, highlightedLineIndex) {
+    const customLineStyle = lineStyles ? lineStyles[i] : undefined;
+    if (customLineStyle === "dashed") {
+        return {
+            stroke: dataColors[i],
+            strokeWidth: 1,
+            strokeOpacity: highlightedLineIndex !== undefined ? (i === highlightedLineIndex ? 1 : 0.25) : 1,
+            fill: dataColors[i],
+            strokeDasharray: i === 0 ? "10 10" : "5 5"
+        };
+    }
+
+    return {
+        stroke: dataColors[i],
+        strokeWidth: i === highlightedLineIndex ? 4 : 2,
+        strokeOpacity: highlightedLineIndex !== undefined ? (i === highlightedLineIndex ? 1 : 0.25) : 1,
+        fill: dataColors[i]
+    };
+}
+
+function Chart({ dataProps, chartType, filter, highlightedLineIndex, lineStyles }) {
     const dataLines = dataProps.values.lines.filter((_, i) => filter ? filter.includes(i) : true);
     const dataColors = dataProps.colors.filter((_, i) => filter ? filter.includes(i) : true);
     const stacked = chartType === "stackedarea";
@@ -111,15 +138,9 @@ function Chart({ dataProps, chartType, filter, highlightedLineIndex }) {
 
     const lineType = chartType === "stackedarea" ? "area" : undefined;
     const lineStyle = (d, i) => {
-        return chartType === "stackedarea" ? {
-            fill: dataColors[i],
-            fillOpacity: 1
-        } : {
-                stroke: dataColors[i],
-                strokeWidth: i === highlightedLineIndex ? 4 : 2,
-                strokeOpacity: highlightedLineIndex !== undefined ? (i === highlightedLineIndex ? 1 : 0.25) : 1,
-                fill: "none"
-            };
+        return chartType === "stackedarea" ?
+            getAreaLineStyle(dataColors, i) :
+            getLineLineStyle(lineStyles, dataColors, i, highlightedLineIndex);
     };
     const tooltipLines = dataLines.map((line, lineIndex) => {
         return {
@@ -137,7 +158,7 @@ function Chart({ dataProps, chartType, filter, highlightedLineIndex }) {
         const ticks = Math.min(dataProps.weeks, Math.round(maxCount));
         setTicks(ticks);
     });
-    const frameProps = {
+    const frameProps = {    
         lines: lines,
         size: dataProps.size,
         margin: { left: dataProps.yLabel ? 65 : 55, bottom: 50, right: 30, top: 10 },
