@@ -53,7 +53,8 @@ export default function ChartWrapper({ dataProps, group, total, filter }) {
         title: dataProps.legendTitle,
         onHover: dataProps.asLineChart ? i => sethighlightedLineIndex(i) : _ => { },
         highlightedLineIndex: highlightedLineIndex,
-        highlightingEnabled: dataProps.asLineChart
+        highlightingEnabled: dataProps.asLineChart,
+        lineStyles: dataProps.lineStyles
     };
 
     const onHover = x => {
