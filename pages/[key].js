@@ -64,9 +64,16 @@ export async function getStaticProps(context) {
     const data = await getSourceData(`${context.params.key}.json`);
     const texts = await getSourceData(`${context.params.key}-texts.json`);
     const structure = await getSourceData("structure.json");
+    const icons = await getSourceData("icons.json");
     const currentIndex = structure.pages.map(p => p.key).indexOf(context.params.key);
     const previous = currentIndex > 0 ? structure.pages[currentIndex - 1] : structure.pages[structure.pages.length - 1];
     const next = currentIndex < structure.pages.length - 1 ? structure.pages[currentIndex + 1] : structure.pages[0];
+
+    for (let i = 0; i < data.groups.length; i++) {
+        const group = data.groups[i];
+        const icon = icons.icons.filter(icon => icon.label === group.title)[0];
+        group.image = icon ? icon.image : icons.defaultImage;
+    }
 
     return {
         props: {

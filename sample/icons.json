@@ -1,0 +1,6 @@
+{
+    "icons": [
+        { "label": "Category 1", "image": "kategorie-v1.svg" }
+    ],
+    "defaultImage": "kategorie-v1.svg"
+}
