@@ -38,7 +38,7 @@ export default function Page({ data, texts, menu, chartKey, navigation }) {
 
                 <ChartSettings dataProps={data} total={total} onTotalChange={onTotalChange} group={group} onGroupChange={onGroupChange} title={title} currentFilter={filter} onFilterChange={setFilter} />
 
-                <ChartWrapper key={`${chartKey + (filter ? `-${filter}` : "")}`} dataProps={data} group={group} total={total} filter={data.filters && filter !== undefined ? data.filters[filter].indexes : undefined} />
+                <ChartWrapper key={`${chartKey + (filter ? `-${filter}` : "")}`} dataProps={data} group={group} total={total} filter={data.filters && filter !== undefined ? data.filters[filter].indexes : undefined} legendTitle={texts.legendTitle} legendDescriptions={texts.legendDescriptions} />
 
             </div>
 

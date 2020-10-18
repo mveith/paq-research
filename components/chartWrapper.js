@@ -44,13 +44,13 @@ function getBigChartProps(dataProps, height, annotation, onHover) {
     };
 }
 
-export default function ChartWrapper({ dataProps, group, total, filter }) {
+export default function ChartWrapper({ dataProps, group, total, filter, legendTitle, legendDescriptions }) {
     const [annotation, setAnnotation] = useState();
     const [height, setHeight] = useState(600);
     const [highlightedLineIndex, sethighlightedLineIndex] = useState();
     const legend = {
-        items: dataProps.titles.map((t, i) => { return { color: dataProps.legendColors[i], title: t, description: dataProps.legendItems[i] }; }).filter((t, i) => filter ? filter.includes(i) : true),
-        title: dataProps.legendTitle,
+        items: dataProps.titles.map((t, i) => { return { color: dataProps.legendColors[i], title: t, description: legendDescriptions[i] }; }).filter((t, i) => filter ? filter.includes(i) : true),
+        title: legendTitle,
         onHover: dataProps.asLineChart ? i => sethighlightedLineIndex(i) : _ => { },
         highlightedLineIndex: highlightedLineIndex,
         highlightingEnabled: dataProps.asLineChart,
