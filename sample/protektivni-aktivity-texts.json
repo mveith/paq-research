@@ -5,5 +5,11 @@
         "shareImage": "",
         "title": "Page 4"
     },
-    "stories": []
+    "stories": [],
+    "legendDescriptions": [
+        "Legend item description 1",
+        "Legend item description 2",
+        "Legend item description 3"
+    ],
+    "legendTitle": ""
 }
