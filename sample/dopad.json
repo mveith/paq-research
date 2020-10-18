@@ -4,8 +4,10 @@
         "#fdab5e"
     ],
     "firstWeek": 1,
-    "groups": [{
-            "data": [{
+    "groups": [
+        {
+            "data": [
+                {
                     "lines": [
                         [
                             49,
@@ -66,11 +68,11 @@
                     "title": "Group 2"
                 }
             ],
-            "image": "kategorie-v1.svg",
             "title": "Category 1"
         },
         {
-            "data": [{
+            "data": [
+                {
                     "lines": [
                         [
                             39,
@@ -131,11 +133,11 @@
                     "title": "Group 2"
                 }
             ],
-            "image": "kategorie-v1.svg",
             "title": "Category 2"
         },
         {
-            "data": [{
+            "data": [
+                {
                     "lines": [
                         [
                             7,
@@ -196,7 +198,6 @@
                     "title": "Group 2"
                 }
             ],
-            "image": "kategorie-v1.svg",
             "title": "Category 3"
         }
     ],
@@ -204,11 +205,6 @@
         "#ffc869",
         "#ff9e43"
     ],
-    "legendItems": [
-        "Legend item description 1",
-        "Legend item description 2"
-    ],
-    "legendTitle": "",
     "ticks": [
         "1",
         "2",
