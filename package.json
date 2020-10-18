@@ -9,8 +9,10 @@
         "export": "next export"
     },
     "dependencies": {
+        "@visx/gradient": "^1.0.0",
         "@visx/group": "^1.0.0",
         "@visx/mock-data": "^1.0.0",
+        "@visx/responsive": "^1.1.0",
         "@visx/scale": "^1.1.0",
         "@visx/shape": "^1.1.0",
         "next": "9.5.0",
