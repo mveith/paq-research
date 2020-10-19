@@ -3,7 +3,7 @@ module.exports = {
         return [
             {
                 source: '/',
-                destination: '/destabilizace-prace',
+                destination: '/kontakty',
                 permanent: true
             }
         ];
