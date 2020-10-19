@@ -16,7 +16,7 @@ function Example({
     // scales
     const xScale = scaleLinear({
         range: [0, xMax],
-        domain: [0, 14]
+        domain: [0, 12]
     });
     const yScale = scaleLinear({
         range: [yMax, 0],
@@ -43,16 +43,8 @@ function Example({
                 x={d => xScale(d.data.index)}
                 y0={d => yScale(d[0] / 100)}
                 y1={d => yScale(d[1] / 100)}
+                color={(key, index) => dataColors[index]}
             >
-                {({ stacks, path }) => stacks.map(stack => (
-                    <path
-                        key={`stack-${stack.key}`}
-                        d={path(stack) || ''}
-                        stroke="transparent"
-                        fill={dataColors[stack.index]}
-                    />
-                ))
-                }
             </AreaStack>
         </svg>
     );
