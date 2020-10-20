@@ -79,9 +79,10 @@ export default function ChartWrapper({ dataProps, group, total, filter, legendTi
         handleResize();
         window.addEventListener('resize', handleResize)
     });
+    const rowItemsCount = charts.length === 2 || charts.length === 4 ? 2 : 3;
     const content = total ?
         (<>{totalChart}</>) :
-        (<div className="multiple-charts-wrapper">{charts}</div>);
+        (<div key={`multiple-charts-wrapper-${rowItemsCount}`} className={`multiple-charts-wrapper-${rowItemsCount}`}>{charts}</div>);
 
     return (<div className="chart-wrapper">
         <div className="chart" >{content}</div>
