@@ -33,7 +33,6 @@ export default function Layout(props) {
     const [openMenu, setOpenMenu] = useState(false);
 
     const menu = props.menuItemsData ? props.menuItemsData.map((item, index) => <MenuGroup margin={index === 0 ? "4em" : "2em"} title={item.title} items={item.items} />) : <></>;
-    const defaultUrl = props.menuItemsData ? props.menuItemsData[0].items[0].key : "";
     const onMenuButtonClick = e => {
         const openMenuValue = openMenu || props.openMenu;
         setOpenMenu(!openMenuValue);
@@ -66,13 +65,13 @@ export default function Layout(props) {
                 `}} />
             </Head>
             <nav className="top-menu">
-                <Link href="[key]" as={`/${defaultUrl}`}><a style={navbarItemStylePadding}>Život během pandemie</a></Link>
+                <Link href="/"><a style={navbarItemStylePadding}>Život během pandemie</a></Link>
                 <Link href="/projekt"><a style={navbarItemStylePadding}>O projektu</a></Link>
                 <Link href="/kontakt"><a style={navbarItemStylePadding}>Kontakt</a></Link>
             </nav>
             <nav className="top-menu-mobile">
                 <div style={{ overflow: "hidden", backgroundColor: "#F4F4F4", position: "relative", zIndex: 10 }} >
-                    <Link href="[key]" as={`/${defaultUrl}`}><a style={{ ...navbarItemStylePadding, display: "block" }}>Život během pandemie</a></Link>
+                    <Link href="/"><a style={{ ...navbarItemStylePadding, display: "block" }}>Život během pandemie</a></Link>
                     <div style={{ display: openMenu || props.openMenu ? "flex" : "none", flexDirection: "column", margin: "0 16px" }}>
                         {menu}
                         <hr style={{ width: "100%" }} />
@@ -91,7 +90,7 @@ export default function Layout(props) {
             <div className="main-wrapper">
                 <div className="side-menu">
                     <header>
-                        <Link href="[key]" as={`/${defaultUrl}`}><a><h1 style={{ color: "#eec94e", lineHeight: "1.9rem", fontSize: "1.9rem" }} >život během pandemie</h1></a></Link>
+                        <Link href="/"><a><h1 style={{ color: "#eec94e", lineHeight: "1.9rem", fontSize: "1.9rem" }} >život během pandemie</h1></a></Link>
                     </header>
                     <div className="main-menu">
                         <nav>
