@@ -288,7 +288,7 @@ ul {
     }
     .multiple-charts-wrapper-3 {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     .axis.y.left {
         display: none;
@@ -367,6 +367,10 @@ ul {
     }
     .share-buttons {
         margin: 0;
+    }
+    .multiple-charts-wrapper-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
