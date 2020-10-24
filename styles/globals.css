@@ -279,17 +279,6 @@ ul {
         top: 50px;
         height: calc(100% - 50px);
     }
-    .multiple-charts-wrapper-2 {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .multiple-charts-wrapper-2 .chart-content {
-        max-width: 370px;
-    }
-    .multiple-charts-wrapper-3 {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
     .axis.y.left {
         display: none;
     }
@@ -339,6 +328,13 @@ ul {
     }
 }
 
+@media only screen and (min-width: 860px) {
+    .multiple-charts-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media only screen and (min-width: 1200px) {
     #stories {
         margin-top: 3rem;
@@ -368,10 +364,6 @@ ul {
     .share-buttons {
         margin: 0;
     }
-    .multiple-charts-wrapper-3 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 @media only screen and (min-width: 1600px) {
@@ -387,5 +379,9 @@ ul {
         /* width: 780px; */
         width: 840px;
         margin-left: 40px;
+    }
+    .multiple-charts-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
