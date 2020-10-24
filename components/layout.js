@@ -87,7 +87,7 @@ export default function Layout(props) {
                     </a>
                 </div>
             </nav>
-            <div className="main-wrapper">
+            {!props.landingPage && <div className="main-wrapper">
                 <div className="side-menu">
                     <header>
                         <Link href="/"><a><h1 style={{ color: "#eec94e", lineHeight: "1.9rem", fontSize: "1.9rem" }} >život během pandemie</h1></a></Link>
@@ -111,7 +111,10 @@ export default function Layout(props) {
                 <div className="main-footer">
                     <p className="menu-footer">Na projektu se podílí výzkumné společnosti <a href="https://www.paqresearch.cz/">PAQ Research</a>, iniciativa <a href="https://idea.cerge-ei.cz/anti-covid-19/">IDEA AntiCovid</a> a data sbírá agentura <a href="https://www.nms.cz/">NMS</a>.</p>
                 </div>
-            </div>
+            </div>}
+            {props.landingPage && <div className="main-wrapper">
+                {props.children}
+            </div>}
         </>
     )
 }
