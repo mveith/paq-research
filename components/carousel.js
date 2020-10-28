@@ -15,6 +15,14 @@ function NextButton({ onClick }) {
 
 export default function Carousel({ contents }) {
     const [contentIndex, setContentIndex] = useState(Math.floor(Math.random() * contents.length));
+
+    useEffect(() => {
+        let interval = setInterval(() => {
+            setContentIndex((contentIndex + 1) % contents.length);
+        }, 5000);
+        return () => clearInterval(interval);
+    }, [contentIndex]);
+
     return (
         <div style={{ position: "relative" }}>
             <PreviousButton onClick={e => setContentIndex(contentIndex === 0 ? contents.length - 1 : (contentIndex - 1))} />
