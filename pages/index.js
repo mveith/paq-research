@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import getMenu from '../components/menuBuilder'
 import Layout from '../components/layout';
 import Carousel from '../components/carousel';
@@ -15,6 +16,11 @@ function Card({ title, link, linkLabel, contents }) {
 export default function Home({ menu }) {
     return (
         <Layout menuItemsData={menu} landingPage={true}>
+            <Head>
+                <title>život během pandemie</title>
+                <meta key="share-image" property="og:image" content={`https://zivotbehempandemie.cz/destabilizace.png`} />
+                <meta property="og:description" content="PAQ Research: Život během pandemie" />
+            </Head>
             <div className={styles.landingPage}>
                 <h1 style={{ fontSize: "2.8rem", maxWidth: "900px" }}>Výzkum chování Čechů a dopadů pandemie na jejich životy</h1>
                 <p>Je více nezaměstnaných a mají pracovníci ve státní správě strach ze ztráty práce?</p>
