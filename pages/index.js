@@ -2,25 +2,39 @@ import getMenu from '../components/menuBuilder'
 import Layout from '../components/layout';
 import styles from './index.module.css'
 
+function Card({ title, link, linkLabel, contents }) {
+    return (
+        <div className={styles.card}>
+            <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                <h2 style={{ fontSize: "1.9rem", textAlign: "left" }}>{title}</h2>
+                <button className={styles.button}>{linkLabel}</button>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                <p dangerouslySetInnerHTML={{ __html: contents[0] }}></p>
+            </div>
+        </div>);
+}
+
 export default function Home({ menu }) {
     return (
         <Layout menuItemsData={menu} landingPage={true}>
             <div className={styles.landingPage}>
-                <h1>Výzkum chování Čechů a dopadů pandemie na jejich životy</h1>
+                <h1 style={{ fontSize: "2.8rem", maxWidth: "900px" }}>Výzkum chování Čechů a dopadů pandemie na jejich životy</h1>
                 <p>Je více nezaměstnaných a mají pracovníci ve státní správě strach ze ztráty práce?</p>
 
                 <div className={styles.cards}>
-                    <div className={styles.card}>
-                        <h2>Trendy v posledních týdnech</h2>
-                        <p><strong>+8 %</strong> má snížený pracovní úvazek či příjmy oproti stavu před pandemií</p>
-                        <button className={styles.button}>Podívejte se na novinky z měření</button>
-                    </div>
-
-                    <div className={styles.card}>
-                        <h2>Sledování dlouhodobých trendů</h2>
-                        <p>Jak dopadá pandemie na pracovní život</p>
-                        <button className={styles.button}>Prostudujte vybraná témata</button>
-                    </div>
+                    <Card
+                        title="Co jsme se dozvěděli z posledních odpovědí?"
+                        contents={["<strong>+8 %</strong><br />má snížený pracovní úvazek či příjmy oproti stavu před pandemií", "test..."]}
+                        link="destabilizace-prace"
+                        linkLabel="Podívejte se na novinky z měření"
+                    />
+                    <Card
+                        title="Jak odpovídají respondenti v čase?"
+                        contents={["Jak dopadá pandemie v čase na pracovní život?", "test..."]}
+                        link="destabilizace-prace"
+                        linkLabel="Prostudujte vybraná témata"
+                    />
                 </div>
             </div>
         </Layout>
