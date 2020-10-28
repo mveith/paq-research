@@ -6,13 +6,9 @@ import styles from './index.module.css'
 function Card({ title, link, linkLabel, contents }) {
     return (
         <div className={styles.card}>
-            <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-                <h2 style={{ fontSize: "1.9rem", textAlign: "left" }}>{title}</h2>
-                <button className={styles.button}>{linkLabel}</button>
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                <Carousel contents={contents} />
-            </div>
+            <h2 style={{ fontSize: "1.9rem", textAlign: "left" }}>{title}</h2>
+            <div className={styles.cardCarousel}><Carousel contents={contents} /></div>
+            <button className={styles.button}>{linkLabel}</button>
         </div>);
 }
 

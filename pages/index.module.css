@@ -6,7 +6,6 @@
     background-position: bottom;
     padding-right: 15px;
     padding-left: 15px;
-    overflow-y: hidden;
 }
 
 .card {
@@ -18,35 +17,26 @@
     overflow: hidden;
     position: relative;
     margin: 10px;
-    padding: 40px;
-    width: 600px;
-    height: 350px;
-    display: grid;
-    grid-template-columns: 60% 40%;
-}
-
-.card h2 {
-    font-size: 1.2rem;
+    padding: 20px;
 }
 
 .button {
     border: 1px solid transparent;
-    border-radius: 2rem;
+    border-radius: 1rem;
     background-color: rgb(255, 208, 128);
     color: #363636;
     cursor: pointer;
-    padding-bottom: calc(1em - 1px);
+    padding-bottom: calc(0.5em - 1px);
     padding-left: 1em;
     padding-right: 1em;
-    padding-top: calc(1em - 1px);
+    padding-top: calc(0.5em - 1px);
     text-align: center;
     white-space: nowrap;
-    font-size: 1.1rem;
 }
 
 .cards {}
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 1200px) {
     .landingPage {
         margin-top: 50px;
         background-size: contain;
@@ -55,8 +45,31 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        overflow-y: hidden;
     }
     .cards {
         display: flex;
+    }
+    .card {
+        padding: 40px;
+        width: 600px;
+        height: 350px;
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+    .card h2 {
+        font-size: 1.2rem;
+    }
+    .button {
+        border-radius: 2rem;
+        padding-bottom: calc(1em - 1px);
+        padding-top: calc(1em - 1px);
+        font-size: 1.1rem;
+    }
+    .cardCarousel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-row-start: span 2;
     }
 }
