@@ -6,7 +6,14 @@
     background-position: bottom;
     padding-right: 15px;
     padding-left: 15px;
-}
+    font-family: 'Fira Sans', sans-serif;
+    margin-top: 3vh;
+
+  }
+
+  .landingPage h1 {
+    font-size: 2.3rem !important;
+  }
 
 .card {
     background-color: #fff;
@@ -16,8 +23,12 @@
     max-width: 100%;
     overflow: hidden;
     position: relative;
-    margin: 10px;
+    margin: 10px 10px 20px;
     padding: 20px;
+    /* height: 30vh; */
+}
+.card h2 {
+  margin: 0 0 2rem 0;
 }
 
 .button {
@@ -32,9 +43,29 @@
     padding-top: calc(0.5em - 1px);
     text-align: center;
     white-space: nowrap;
+    font-size: 1rem;
 }
 
 .cards {}
+
+.subtitle {
+  margin-bottom: 2rem !important;
+}
+
+.cardCarousel {
+  height: 10vh;
+}
+
+@media only screen and (min-width: 720px) {
+  .landingPage {
+    margin-top: 8vh;
+  }
+  .landingPage h1 {
+    font-size: 2.3rem !important;
+  }
+
+
+}
 
 @media only screen and (min-width: 1200px) {
     .landingPage {
@@ -46,6 +77,9 @@
         align-items: center;
         flex-direction: column;
         overflow-y: hidden;
+    }
+    .landingPage h1 {
+      font-size: 2.6rem !important;
     }
     .cards {
         display: flex;
@@ -71,5 +105,6 @@
         flex-direction: column;
         justify-content: center;
         grid-row-start: span 2;
+        height: 100%;
     }
 }

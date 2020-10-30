@@ -7,7 +7,7 @@ import styles from './index.module.css'
 function Card({ title, link, linkLabel, contents }) {
     return (
         <div className={styles.card}>
-            <h2 style={{ fontSize: "1.9rem", textAlign: "left" }}>{title}</h2>
+            <h2 style={{ fontSize: "1.6rem", textAlign: "left" }}>{title}</h2>
             <div className={styles.cardCarousel}><Carousel contents={contents} /></div>
             <button className={styles.button}>{linkLabel}</button>
         </div>);
@@ -23,7 +23,7 @@ export default function Home({ menu }) {
             </Head>
             <div className={styles.landingPage}>
                 <h1 style={{ fontSize: "2.8rem", maxWidth: "900px" }}>Výzkum chování Čechů a dopadů pandemie na jejich životy</h1>
-                <p>Je více nezaměstnaných a mají pracovníci ve státní správě strach ze ztráty práce?</p>
+                <p className={styles.subtitle}>Je více nezaměstnaných a mají pracovníci ve státní správě strach ze ztráty práce?</p>
 
                 <div className={styles.cards}>
                     <Card

@@ -1,3 +1,9 @@
+@media only screen and (max-width: 1200px) {
+  .carousel {
+    height: 100%
+  }
+}
+
 .carouselButton {
     position: absolute;
     top: 0;
