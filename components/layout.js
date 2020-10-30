@@ -32,7 +32,7 @@ function MenuGroup({ margin, title, items }) {
 export default function Layout(props) {
     const [openMenu, setOpenMenu] = useState(false);
 
-    const menu = props.menuItemsData ? props.menuItemsData.map((item, index) => <MenuGroup margin={index === 0 ? "4em" : "2em"} title={item.title} items={item.items} />) : <></>;
+    const menu = props.menuItemsData ? props.menuItemsData.map((item, index) => <MenuGroup margin={index === 0 ? "1em" : "0em"} title={item.title} items={item.items} />) : <></>;
     const onMenuButtonClick = e => {
         const openMenuValue = openMenu || props.openMenu;
         setOpenMenu(!openMenuValue);
@@ -72,7 +72,7 @@ export default function Layout(props) {
             <nav className="top-menu-mobile">
                 <div style={{ overflow: "hidden", backgroundColor: "#F4F4F4", position: "relative", zIndex: 10 }} >
                     <Link href="/"><a style={{ ...navbarItemStylePadding, display: "block" }}>Život během pandemie</a></Link>
-                    <div style={{ display: openMenu || props.openMenu ? "flex" : "none", flexDirection: "column", margin: "0 16px" }}>
+                    <div style={{ display: openMenu || props.openMenu ? "flex" : "none", flexDirection: "column", margin: "0 2rem" }}>
                         {menu}
                         <hr style={{ width: "100%" }} />
                         <div>
