@@ -3,7 +3,9 @@ import { useRouter } from 'next/router'
 
 function GroupButton({ currentGroup, group, index, onChange }) {
     return (<>
-        <button style={{ cursor: "pointer", backgroundColor: "transparent", border: "0", display: "inline-flex", flexDirection: "column", opacity: currentGroup === index ? "1" : 0.4, width: "135px", margin: "0rem .3rem", textAlign: "center", fontSize: ".9rem" }} onClick={onChange} className="noselect">
+        {/* <button style={{ cursor: "pointer", backgroundColor: "transparent", border: "0", display: "inline-flex", flexDirection: "column", opacity: currentGroup === index ? "1" : 0.4, width: "135px", margin: "0rem .3rem", textAlign: "center", fontSize: ".9rem" }} onClick={onChange} className="noselect"> */}
+        <button style={{ cursor: "pointer", backgroundColor: "transparent", border: "0", display: "inline-flex", flexDirection: "column", flexGrow: "1", opacity: currentGroup === index ? "1" : 0.4, width: "120px", margin: "0rem .3rem", textAlign: "center", fontSize: ".9rem" }} onClick={onChange} className="noselect">
+
             <img src={`category-images/${group.image}`} width="60" style={{ margin: "0 auto", opacity: .4 }} />
             <span style={{ textAlign: "center", width: "100%" }}>{group.title}</span>
         </button>
@@ -20,7 +22,12 @@ function GroupButtons({ groups, onGroupChange, group }) {
     return (<div className="group-buttons">
         {groups.map((g, i) =>
             <GroupButton key={`group-button-${i}`} currentGroup={group} group={g} index={i} onChange={_ => onGroupChange(i)} />
-        )}
+            )}
+            <i aria-hidden="true" className="test-i"/>
+            <i aria-hidden="true" className="test-i"/>
+            <i aria-hidden="true" className="test-i"/>
+            <i aria-hidden="true" className="test-i" />
+            <i aria-hidden="true" className="test-i" />
     </div>);
 }
 

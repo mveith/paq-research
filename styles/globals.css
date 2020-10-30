@@ -317,14 +317,21 @@ ul {
         display: none;
     }
     .group-buttons {
-        display: flex;
-        flex-direction: row;
-        margin: 20px 0;
-        flex-wrap: wrap;
-    }
-    .group-dropdown {
-        display: none;
-    }
+      display: flex;
+      flex-direction: row;
+      margin: 20px 0;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: stretch;
+  }
+  .group-dropdown {
+      display: none;
+  }
+  .test-i {
+    width: 120px;
+    margin: 0rem .3rem;
+    flex-grow: 1;
+  }
     .filters {
         display: flex;
         flex-direction: row;
