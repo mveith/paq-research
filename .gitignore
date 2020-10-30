@@ -8,6 +8,10 @@
 # testing
 /coverage
 
+# kiki
+/sample2
+/env
+
 # next.js
 /.next/
 /out/
