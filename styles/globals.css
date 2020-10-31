@@ -318,21 +318,21 @@ ul {
         display: none;
     }
     .group-buttons {
-      display: flex;
-      flex-direction: row;
-      margin: 20px 0;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      align-items: stretch;
-  }
-  .group-dropdown {
-      display: none;
-  }
-  .test-i {
-    width: 120px;
-    margin: 0rem .3rem;
-    flex-grow: 1;
-  }
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+    .group-dropdown {
+        display: none;
+    }
+    .test-i {
+        width: 120px;
+        margin: 0rem .3rem;
+        flex-grow: 1;
+    }
     .filters {
         display: flex;
         flex-direction: row;
@@ -356,6 +356,13 @@ ul {
     .legend {
         width: 300px;
         margin: 1rem .5rem;
+    }
+    .cardCarousel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-row-start: span 2;
+        height: 100%;
     }
 }
 

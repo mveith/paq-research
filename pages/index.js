@@ -8,7 +8,7 @@ function Card({ title, link, linkLabel, contents }) {
     return (
         <div className={styles.card}>
             <h2 style={{ fontSize: "1.6rem", textAlign: "left" }}>{title}</h2>
-            <div className={styles.cardCarousel}><Carousel contents={contents} /></div>
+            <div className="cardCarousel"><Carousel contents={contents} /></div>
             <button className={styles.button}>{linkLabel}</button>
         </div>);
 }
