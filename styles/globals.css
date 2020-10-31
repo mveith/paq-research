@@ -357,13 +357,6 @@ ul {
         width: 300px;
         margin: 1rem .5rem;
     }
-    .cardCarousel {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        grid-row-start: span 2;
-        height: 100%;
-    }
 }
 
 @media only screen and (min-width: 1000px) {

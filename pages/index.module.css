@@ -100,4 +100,11 @@
         padding-top: calc(1em - 1px);
         font-size: 1.1rem;
     }
+    .cardCarousel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-row-start: 2;
+        height: 100%;
+    }
 }
