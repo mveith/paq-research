@@ -65,7 +65,9 @@ export default function Layout(props) {
                 `}} />
             </Head>
             <nav className="top-menu">
-                <Link href="/"><a style={navbarItemStylePadding}>Život během pandemie</a></Link>
+                {/* <Link href="/"><a style={navbarItemStylePadding}>Život během pandemie</a></Link> */}
+                <Link href="/shrnuti"><a style={navbarItemStylePadding}>Aktuální situace</a></Link>
+                <Link href="/dopad"><a style={navbarItemStylePadding}>Dlouhodobý vývoj</a></Link>
                 <Link href="/projekt"><a style={navbarItemStylePadding}>O projektu</a></Link>
                 <Link href="/kontakt"><a style={navbarItemStylePadding}>Kontakt</a></Link>
             </nav>
@@ -77,6 +79,8 @@ export default function Layout(props) {
                         <hr style={{ width: "100%" }} />
                         <div>
                             <ul>
+                                <li><Link href="/shrnuti" ><a style={navbarItemStyle}>Shrnutí nových dat</a></Link></li>
+                                <li><Link href="/data" ><a style={navbarItemStyle}>Data po tématech</a></Link></li>
                                 <li><Link href="/projekt" ><a style={navbarItemStyle}>O projektu</a></Link></li>
                                 <li><Link href="/kontakt"><a style={navbarItemStyle}>Kontakt</a></Link></li>
                             </ul>

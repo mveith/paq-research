@@ -23,20 +23,20 @@ export default function Home({ menu }) {
             </Head>
             <div className={styles.landingPage}>
                 <h1 style={{ fontSize: "2.8rem", maxWidth: "900px" }}>Výzkum chování Čechů a dopadů pandemie na jejich životy</h1>
-                <p className={styles.subtitle}>Je více nezaměstnaných a mají pracovníci ve státní správě strach ze ztráty práce?</p>
+                <p className={styles.subtitle}>Již od března se každé dva týdny ptáme stejného vzorku Čechů, jak se mění jejich chování během pandemie. Sledujeme i dopad na jejich životní podmínky a obavy.</p>
 
                 <div className={styles.cards}>
                     <Card
-                        title="Co jsme se dozvěděli z posledních odpovědí?"
+                        title="Shrnutí výsledků z posledních týdnů"
                         contents={["<strong>+8 %</strong><br />má snížený pracovní úvazek či příjmy oproti stavu před pandemií", "test..."]}
                         link="destabilizace-prace"
-                        linkLabel="Podívejte se na novinky z měření"
+                        linkLabel="Podívejte se na nejnovější data"
                     />
                     <Card
-                        title="Jak odpovídají respondenti v čase?"
-                        contents={["Jak dopadá pandemie v čase na pracovní život?", "Jak postihla pandemie ekonomickou situaci domácností?", "Jak domácnosti reagují na ekonomické problémy?", "Jak se pandemie promítá do společenských a volnočasových činností?", "..."]}
+                        title="Vývoj situace od počátku epidemie"
+                        contents={["Jsou chudé domácnosti epidemií zasažený více než bohaté?", "Proč nepřecházíme na home office jako na jaře?", "Omezujeme v pandemii svoje kontakty a jak?", "Jak se pandemie promítá do společenských a volnočasových činností?", "..."]}
                         link="destabilizace-prace"
-                        linkLabel="Prostudujte vybraná témata"
+                        linkLabel="Prostudujte klíčové trendy a témata"
                     />
                 </div>
             </div>
