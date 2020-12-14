@@ -379,4 +379,7 @@ ul {
         width: 840px;
         margin-left: 40px;
     }
+    .legend {
+        margin-left: 5rem;
+    }
 }
