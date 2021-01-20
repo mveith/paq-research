@@ -21,8 +21,8 @@ export default function About({ menu }) {
             {Person("Vojtěch Bartoš", [<li>afiliace: University of Munich</li>, <li>spolutvůrce dotazníku, tematická sekce ekonomiky a stresu</li>, <li><a href="mailto:vojtech.bartos@econ.lmu.de">vojtech.bartos@econ.lmu.de</a></li>])}
             {Person("Julie Chytilová", [<li>afiliace: IES FSV UK a CERGE-EI</li>, <li>spolutvůrkyně dotazníku</li>, <li><a href="mailto:julie.chytilova@fsv.cuni.cz">julie.chytilova@fsv.cuni.cz</a></li>])}
             {Person("Michal Bauer", [<li>afiliace: CERGE-EI a IES FSV UK</li>, <li>spolutvůrce dotazníku</li>, <li><a href="mailto:bauer@cerge-ei.cz">bauer@cerge-ei.cz</a></li>])}
-            {Person("Kristína Zákopčanová", [<li><a href="https://github.com/mveith/paq-research">grafický návrh a vizualizace dat</a></li>, <li><a href="https://www.linkedin.com/in/kristina-zakopcanova/?originalSubdomain=cz">LinkedIn</a>, <a href="mailto:zakopcanova.k@gmail.com">zakopcanova.k@gmail.com</a></li>])}
-            {Person("Miroslav Veith", [<li><a href="https://github.com/mveith/paq-research">vývoj webové aplikace</a></li>])}
+            {Person("Kristína Zákopčanová", [<li><a href="https://github.com/mveith/paq-research" target="_blank" class="external-link">grafický návrh a vizualizace dat</a></li>, <li><a href="https://www.linkedin.com/in/kristina-zakopcanova/?originalSubdomain=cz" target="_blank" class="external-link">LinkedIn</a>, <a href="mailto:zakopcanova.k@gmail.com">zakopcanova.k@gmail.com</a></li>])}
+            {Person("Miroslav Veith", [<li><a href="https://github.com/mveith/paq-research" target="_blank" class="external-link">vývoj webové aplikace</a></li>])}
 
             <br />
             <a href="https://www.paqresearch.cz/"><img src="logo-paq.png" width="120" /></a>

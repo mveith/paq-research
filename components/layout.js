@@ -69,6 +69,7 @@ export default function Layout(props) {
                 <Link href="/shrnuti"><a style={navbarItemStylePadding}>Aktuální situace</a></Link>
                 <Link href="/dopad"><a style={navbarItemStylePadding}>Dlouhodobý vývoj</a></Link>
                 <Link href="/projekt"><a style={navbarItemStylePadding}>O projektu</a></Link>
+                <Link href="/studie"><a style={navbarItemStylePadding}>Studie</a></Link>
                 <Link href="/kontakt"><a style={navbarItemStylePadding}>Kontakt</a></Link>
             </nav>
             <nav className="top-menu-mobile">
@@ -82,6 +83,7 @@ export default function Layout(props) {
                                 <li><Link href="/shrnuti" ><a style={navbarItemStyle}>Shrnutí nových dat</a></Link></li>
                                 <li><Link href="/data" ><a style={navbarItemStyle}>Data po tématech</a></Link></li>
                                 <li><Link href="/projekt" ><a style={navbarItemStyle}>O projektu</a></Link></li>
+                                <li><Link href="/studie"><a style={navbarItemStyle}>Studie</a></Link></li>
                                 <li><Link href="/kontakt"><a style={navbarItemStyle}>Kontakt</a></Link></li>
                             </ul>
                         </div>
