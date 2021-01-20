@@ -68,6 +68,7 @@ export default function Layout(props) {
             <nav className="top-menu">
                 <Link href="[key]" as={`/${defaultUrl}`}><a style={navbarItemStylePadding}>Život během pandemie</a></Link>
                 <Link href="/projekt"><a style={navbarItemStylePadding}>O projektu</a></Link>
+                <Link href="/studie"><a style={navbarItemStylePadding}>Studie</a></Link>
                 <Link href="/kontakt"><a style={navbarItemStylePadding}>Kontakt</a></Link>
             </nav>
             <nav className="top-menu-mobile">
@@ -79,6 +80,7 @@ export default function Layout(props) {
                         <div>
                             <ul>
                                 <li><Link href="/projekt" ><a style={navbarItemStyle}>O projektu</a></Link></li>
+                                <li><Link href="/studie"><a style={navbarItemStyle}>Studie</a></Link></li>
                                 <li><Link href="/kontakt"><a style={navbarItemStyle}>Kontakt</a></Link></li>
                             </ul>
                         </div>
