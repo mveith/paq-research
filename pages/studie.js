@@ -56,7 +56,7 @@ export default function Studies({ menu }) {
             title="Vyhodnocení dopadů návrhů na zrušení superhrubé mzdy"
             authors="Štěpán Jurajda, Klára Kalíšková, Daniel Prokop, Michal Šoltés (listopad 2020)"
             url="https://idea.cerge-ei.cz/files/Dopady%20zruseni%20superhrube%20mzdy%20pracovni%20list%2002.pdf"
-            description="Pracovní list předkládá grafické znázornění dopadů čtyř návrhů na zrušení superhrubé mzdy. Rozebírá, k jakým nákladům veřejných rozpočtů a daňovým odvodům zaměstnanců by vedly jednotlivé návrhy a ukazuje, jak se tyto dopady liší dle výše výdělků."
+            description="Pracovní list předkládá grafické znázornění dopadů čtyř návrhů na zrušení superhrubé mzdy. Rozebírá, k jakým nákladům veřejných rozpočtů a daňovým odvodům zaměstnanců by vedly jednotlivé návrhy, a ukazuje, jak se tyto dopady liší dle výše výdělků."
         />
         <br />
     </Layout>
