@@ -28,7 +28,7 @@ export default function Home({ menu }) {
                 <div className={styles.cards}>
                     <Card
                         title="Shrnutí výsledků z posledních týdnů"
-                        contents={["<strong>+8 %</strong><br />má snížený pracovní úvazek či příjmy oproti stavu před pandemií", "test..."]}
+                        contents={["<strong>+9 %</strong><br />má snížený pracovní úvazek či příjmy oproti stavu před pandemií", "test..."]}
                         link="destabilizace-prace"
                         linkLabel="Podívejte se na nejnovější data"
                     />
