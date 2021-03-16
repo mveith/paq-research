@@ -46,6 +46,8 @@ export default function About({ menu }) {
             <p>V minulosti projekt podpořili Ondřej Nezdara, Michal Sirový, Člověk v tísni (sběr dat o distančním vzdělávání)</p>
             <p>Tvorba tohoto dashboardu byla podpořena grantem TAČR ETA Mapování dopadů ekonomické krize a optimalizace systémů daní, dávek, exekucí a insolvencí pro zmírnění jejích nepříznivých vlivů (TL04000332).</p>
 
+            <p>Realizace sběru dat ve čtyřech vlnách výzkumu na konci roku 2020 a začátku roku 2021 a příprava dat pro epidemiologické modelování byla podpořena grantem TAČR ETA Město pro lidi, ne pro virus (TL04000282).</p>
+
             <p>
                 <a href="https://www.paqresearch.cz/"><img src="logo-paq.png" width="120" /></a>
                 <a href="https://idea.cerge-ei.cz/anti-covid-19/"><img src="idea.png" width="120" /></a>
