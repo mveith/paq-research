@@ -48,7 +48,7 @@ function getYAxis(props) {
 
 function getXAxis(props, ticks) {
     var mod;
-    for (mod = 1; mod < 10; mod++) {
+    for (mod = 1; mod < 100; mod++) {
         if (props.weeks / mod <= ticks) {
             break;
         }
@@ -58,9 +58,14 @@ function getXAxis(props, ticks) {
 
     const getTickValue = e => {
         const index = e - props.firstWeek;
-        const isModth = index % mod === 0;
-        const isInLimit = (index / mod) + 1 < maxCount;
+        const isFirst = index === 0;
         const isLast = index === props.ticks.length - 1;
+        if (ticks === 0) {
+            return isFirst || isLast ? `${props.ticks[index]}` : null;
+        }
+
+        const isModth = index % mod === 0;
+        const isInLimit = (index / mod) + 1 <= maxCount;
         return (isModth && isInLimit) || isLast ? `${props.ticks[index]}` : null;
     };
     return {
@@ -153,12 +158,12 @@ function Chart({ dataProps, chartType, filter, highlightedLineIndex, lineStyles 
         var chart = document.getElementsByClassName('chart-content')[0];
         const width = chart.offsetWidth;
         const tickLength = dataProps.ticks[0].length;
-        const maxCount = width / (tickLength * 10);
+        const maxCount = width / (tickLength * 20);
 
         const ticks = Math.min(dataProps.weeks, Math.round(maxCount));
         setTicks(ticks);
     });
-    const frameProps = {    
+    const frameProps = {
         lines: lines,
         size: dataProps.size,
         margin: { left: dataProps.yLabel ? 65 : 55, bottom: 50, right: 45, top: 10 },
