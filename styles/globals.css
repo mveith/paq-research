@@ -95,6 +95,8 @@ ul {
 
 .multiple-charts-wrapper {}
 
+.diff-grid {}
+
 .top-menu {
     display: none;
 }
@@ -288,6 +290,10 @@ ul {
     .multiple-charts-wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+    }
+    .diff-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
     }
     .axis.y.left {
         display: none;

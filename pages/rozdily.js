@@ -51,7 +51,7 @@ export default function Page({ menu }) {
             <h1>Co jsme zjistili z 16. vlny</h1>
 
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)" }}>
+            <div className="diff-grid">
                 {d.map(dv => (<DiffTile {...dv} />))}
             </div>
 
