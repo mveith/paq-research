@@ -67,6 +67,7 @@ export default function Layout(props) {
             </Head>
             <nav className="top-menu">
                 <Link href="[key]" as={`/${defaultUrl}`}><a style={navbarItemStylePadding}>Život během pandemie</a></Link>
+                <Link href="/souhrn"><a style={navbarItemStylePadding}>Souhrn</a></Link>
                 <Link href="/projekt"><a style={navbarItemStylePadding}>O projektu</a></Link>
                 <Link href="/studie"><a style={navbarItemStylePadding}>Studie</a></Link>
                 <Link href="/kontakt"><a style={navbarItemStylePadding}>Kontakt</a></Link>
@@ -79,6 +80,7 @@ export default function Layout(props) {
                         <hr style={{ width: "100%" }} />
                         <div>
                             <ul>
+                                <li><Link href="/souhrn" ><a style={navbarItemStyle}>Souhrn</a></Link></li>
                                 <li><Link href="/projekt" ><a style={navbarItemStyle}>O projektu</a></Link></li>
                                 <li><Link href="/studie"><a style={navbarItemStyle}>Studie</a></Link></li>
                                 <li><Link href="/kontakt"><a style={navbarItemStyle}>Kontakt</a></Link></li>
