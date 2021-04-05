@@ -33,10 +33,10 @@ function Arrow({ direction, color }) {
     }
 }
 
-function DiffTile({ value, text, color, arrow }) {
+function SummaryTile({ value, text, color, arrow }) {
     return (
-        <div style={{ margin: "1em" }}>
-            <div style={{ fontSize: "2em", display: "flex", justifyContent: "space-around", margin: "0 2em" }}>
+        <div className="summary">
+            <div className="summary-number">
                 <span>{value}</span>
                 <span><Arrow direction={arrow} color={color} /></span>
             </div>
@@ -45,7 +45,7 @@ function DiffTile({ value, text, color, arrow }) {
     );
 }
 
-export default function Page({ menu }) {
+export default function Summary({ menu }) {
     const d = [
         { value: "3 %", text: "má snížený pracovní úvazek či příjmy oproti stavu před pandemií", color: "gray", arrow: "no" },
         { value: "13 %", text: "domácnost je těžce finančně zasažena v důsledku pandemie", color: "gray", arrow: "no" },
@@ -66,7 +66,7 @@ export default function Page({ menu }) {
 
 
             <div className="diff-grid">
-                {d.map(dv => (<DiffTile {...dv} />))}
+                {d.map(dv => (<SummaryTile {...dv} />))}
             </div>
 
             <div className="blog">
