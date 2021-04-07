@@ -33,28 +33,32 @@ function Arrow({ direction, color }) {
     }
 }
 
-function SummaryTile({ value, text, color, arrow }) {
+function SummaryTile({ value, text, color, arrow, url }) {
     return (
-        <div className="summary">
-            <div className="summary-number">
-                <span>{value}</span>
-                <span><Arrow direction={arrow} color={color} /></span>
-            </div>
-            <p style={{ textAlign: "center" }} dangerouslySetInnerHTML={{ __html: text }}></p>
-        </div >
+        <Link href="[key]" as={url}>
+            <a>
+                <div className="summary">
+                    <div className="summary-number">
+                        <span>{value}</span>
+                        <span><Arrow direction={arrow} color={color} /></span>
+                    </div>
+                    <p style={{ textAlign: "center" }} dangerouslySetInnerHTML={{ __html: text }}></p>
+                </div>
+            </a>
+        </Link>
     );
 }
 
 export default function Summary({ menu }) {
     const d = [
-        { value: "11 %", text: "má omezenou práci (nižší výdělek či úvazek, ošetřovné atp.)", color: "red", arrow: "up" },
-        { value: "45 %", text: "navštívilo v posledním týdnu rodinu či přátele", color: "red", arrow: "up" },
-        { value: "11,5", text: "týdenní průměr přímých osobních kontaktů trvajících aspoň 5 minut", color: "red", arrow: "up" },
-        { value: "25 %", text: "pracuje plně či částečně z domova", color: "red", arrow: "down" },
-        { value: "61 %", text: "je ochotných nechat se zdarma naočkovat", color: "green", arrow: "up" },
-        { value: "35 %", text: "téměř či vůbec nevychází z domova", color: "green", arrow: "down" },
-        { value: "14 %", text: "má vysoký počet kontaktů a méně se chrání před nákazou", color: "red", arrow: "up" },
-        { value: "45 %", text: "má z epidemie velké starosti", color: "green", arrow: "down" }
+        { value: "11 %", text: "má omezenou práci (nižší výdělek či úvazek, ošetřovné atp.)", color: "red", arrow: "up", url: "/destabilizace-prace" },
+        { value: "45 %", text: "navštívilo v posledním týdnu rodinu či přátele", color: "red", arrow: "up", url: "/socialni-aktivity" },
+        { value: "11,5", text: "týdenní průměr přímých osobních kontaktů trvajících aspoň 5 minut", color: "red", arrow: "up", url: "/kontakty" },
+        { value: "25 %", text: "pracuje plně či částečně z domova", color: "red", arrow: "down", url: "/home-office" },
+        { value: "61 %", text: "je ochotných nechat se zdarma naočkovat", color: "green", arrow: "up", url: "/ockovani" },
+        { value: "35 %", text: "téměř či vůbec nevychází z domova", color: "green", arrow: "down", url: "/jednotlive-protektivni" },
+        { value: "14 %", text: "má vysoký počet kontaktů a méně se chrání před nákazou", color: "red", arrow: "up", url: "/kontakty-protektivni" },
+        { value: "45 %", text: "má z epidemie velké starosti", color: "green", arrow: "down", url: "/obavy-epidemie" }
     ];
     return (
         <Layout title="Přehled nejnovějších výsledků: 25. vlna výzkumu k 30. březnu 2021" menuItemsData={menu}>
