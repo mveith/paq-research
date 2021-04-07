@@ -303,10 +303,6 @@ ul {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
-    .diff-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-    }
     .axis.y.left {
         display: none;
     }
@@ -354,12 +350,6 @@ ul {
     .filters label {
         margin: 0 20px;
     }
-    .summary {
-        display: block;
-    }
-    .summary-number {
-        margin: 0 2em;
-    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -376,6 +366,16 @@ ul {
     .legend {
         width: 300px;
         margin: 1rem .5rem;
+    }
+    .diff-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .summary {
+        display: block;
+    }
+    .summary-number {
+        margin: 0 1em;
     }
 }
 
