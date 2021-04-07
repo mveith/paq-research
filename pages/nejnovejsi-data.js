@@ -47,22 +47,22 @@ function SummaryTile({ value, text, color, arrow }) {
 
 export default function Summary({ menu }) {
     const d = [
-        { value: "3 %", text: "má snížený pracovní úvazek či příjmy oproti stavu před pandemií", color: "gray", arrow: "no" },
-        { value: "13 %", text: "domácnost je těžce finančně zasažena v důsledku pandemie", color: "gray", arrow: "no" },
-        { value: "15", text: "týdenní průměr přímých osobních kontaktů trvajících aspoň 5 minut", color: "darkGreen", arrow: "down" },
-        { value: "16 %", text: "pracuje plně z domova", color: "green", arrow: "up" },
-        { value: "89 %", text: "deklaruje nošení roušky/respirátoru", color: "blue", arrow: "up" },
-        { value: "13 %", text: "je vysoce sociálně aktivní a méně se chrání před nákazou", color: "darkGreen", arrow: "down" },
-        { value: "48 %", text: "má z epidemie velké starosti", color: "red", arrow: "up" },
-        { value: "23 %", text: "velmi se obává, že přijde o práci", color: "gray", arrow: "no" }
+        { value: "11 %", text: "má omezenou práci (nižší výdělek či úvazek, ošetřovné atp.)", color: "red", arrow: "up" },
+        { value: "45 %", text: "navštívilo v posledním týdnu rodinu či přátele", color: "red", arrow: "up" },
+        { value: "11,5", text: "týdenní průměr přímých osobních kontaktů trvajících aspoň 5 minut", color: "red", arrow: "up" },
+        { value: "25 %", text: "pracuje plně či částečně z domova", color: "red", arrow: "down" },
+        { value: "61 %", text: "je ochotných nechat se zdarma naočkovat", color: "green", arrow: "up" },
+        { value: "35 %", text: "téměř či vůbec nevychází z domova", color: "green", arrow: "down" },
+        { value: "14 %", text: "má vysoký počet kontaktů a méně se chrání před nákazou", color: "red", arrow: "up" },
+        { value: "45 %", text: "má z epidemie velké starosti", color: "green", arrow: "down" }
     ];
     return (
-        <Layout title="Co jsme zjistili z 16. vlny" menuItemsData={menu}>
+        <Layout title="Přehled nejnovějších výsledků: 25. vlna výzkumu k 30. březnu 2021" menuItemsData={menu}>
             <Head>
                 <meta key="share-image" property="og:image" content={`https://zivotbehempandemie.cz/rozdily.png`} />
-                <meta property="og:description" content="Co jsme zjistili z 16. vlny" />
+                <meta property="og:description" content="Přehled nejnovějších výsledků: 25. vlna výzkumu k 30. březnu 2021" />
             </Head>
-            <h1>Co jsme zjistili z 16. vlny</h1>
+            <h1>Přehled nejnovějších výsledků: 25. vlna výzkumu k 30. březnu 2021</h1>
 
 
             <div className="diff-grid">
@@ -70,34 +70,34 @@ export default function Summary({ menu }) {
             </div>
 
             <div className="blog">
-                <h2>Stručně hlavní pozorování?</h2>
+                <h2>Co říkají data o aktuálním chování a postojích?</h2>
                 <div className="story">
-                    <div className="block-paragraph">Zpřísnění vládních opatření na začátku března provázel mírný pokles osobních přímých kontaktů v průměru přibližně o jeden týdně. Míra kontaktů pozvolna klesala již od ledna a aktuálně je omezena nejvíce od dubna loňského roku. Restrikce se dotkly především setkávání s rodinou a přáteli, která v březnu oproti únoru zaznamenala zásadní propad. V březnu také posílilo využívání home office. Práce z domova byla v druhém březnovém týdnu využívána dosud nejvíce od počátku května minulého roku. Obavy z epidemie se drží na vysokých hodnotách, ochota k očkování zdarma stagnuje.</div>
+                    <div className="block-paragraph">Počty kontaktů se i v druhé polovině března držely na nízké úrovni kolem 11 osobních kontaktů v průměru týdně, tedy pod polovinou běžného stavu. Sociální aktivity jako využívání služeb lehce posílily, nejvíce se rozšířila setkávání mezi přáteli a známými. Ta však byla v první půlce března potlačena nejvíce od loňského jara, tedy i aktuální hodnoty představují omezený stav. Dodržování preventivních opatření (jako pečlivé mytí rukou či nošení roušky) v posledních dvou týdnech mírně polevilo, zejména ubylo lidí, kteří téměř či vůbec nevycházejí z domova. Takových je nyní 35 %, v polovině března to bylo 41 %. Obavy z epidemie oproti první půlce března oslabily, stále se jí však velmi obává kolem 45 % dospělých, podobně jako během celé zimy.</div>
                     <hr style={{ margin: "2rem 40%", color: "#707070" }} />
                 </div>
                 <div className="story">
-                    <p className="story-title"><Link href="/kontakty"><a class="external-link">Kontakty</a></Link></p>
-                    <div className="block-paragraph">Míra kontaktů se v první polovině března oproti konci února snížila na přibližně 10 až 11 přímých osobních kontaktů týdně (v týdnu od 8. března), tedy zhruba o jeden kontakt ve srovnání s koncem února. Zpřísněná vládní opatření tak ještě víc stlačila kontakty, které klesaly už během ledna a února, ale zásadní propad nepřinesla. Míra kontaktů je už několik týdnů pod hranicí podzimního minima, ale stále výrazně vyšší než na vrcholu první vlny v druhé polovině března 2020, kdy dospělí měli týdně v průměru 7 blízkých kontaktů týdně.</div>
+                    <p className="story-title"><Link href="/kontakty"><a class="external-link">Počty kontaktů</a></Link></p>
+                    <div className="block-paragraph">Počty osobních kontaktů se již v únoru pohybovaly na zhruba 55 % běžného stavu (12 až 13 přímých osobních kontaktů v průměru týdně), podobně jako během vrcholu podzimní vlny. Březnové zpřísnění restrikcí kontakty dále stlačilo k 10 až 11 týdně. Na konci března se míra kontaktů jen lehce zvýšila k 11,5 v průměru týdně. Po celý březen měli lidé v průměru 4,5 kontaktů nad 15 minut bez roušky týdně, tedy o něco méně než během vrcholu podzimní vlny.</div>
                 </div>
                 <div className="story">
                     <p className="story-title"><Link href="/socialni-aktivity"><a class="external-link">Sociální aktivity</a></Link></p>
-                    <div className="block-paragraph">Ze sociálních aktivit se nové restrikce dotkly nejvíce návštěv mezi přáteli a rodinou – ty jsou nyní omezené nejvíce od loňského dubna. Ačkoli jejich intenzita pozvolna klesala již od ledna, březen přinesl výrazný propad. Na konci února se aspoň jednou doma s rodinou či přáteli setkalo 47 % lidí, kolem poloviny března to bylo 39 %.</div>
+                    <div className="block-paragraph">Po oslabení sociálních aktivit v první půlce března došlo ke konci měsíce k opětovnému mírnému nárůstu využívání služeb. Především se ale rozšířily návštěvy mezi přáteli a známými, které byly na počátku března oslabeny nejvíce od loňského dubna. Zatímco v týdnu od 8. března se alespoň jednou s rodinou či přáteli sešlo 39 % respondentů, ke konci března to bylo 45 %.</div>
                 </div>
                 <div className="story">
                     <p className="story-title"><Link href="/home-office"><a class="external-link">Home office</a></Link></p>
-                    <div className="block-paragraph">Využívání home office poprvé od podzimu posílilo. V týdnu od 8. března plně z domova pracovalo 18 % pracovně aktivních. Během ledna až února se přitom tato hodnota pohybovala mezi 13 až 15 %. Na pracoviště však stále dochází kolem 70 % lidí – během první vlny na jaře 2020 díky vyšší míře home office, ale také v důsledku pracovních neschopností jen kolem 55 %.</div>
+                    <div className="block-paragraph">V březnu došlo poprvé od přelomu října a listopadu k nárůstu využívání práce z domova. Během zimy z domova v jednotlivých týdnech pracovalo plně kolem 13 až 15 % lidí, částečně pak kolem 8 až 9 %. V březnu se podíl plné práce z domova pohyboval mezi 16 až 18 %, podobně až mírně více než během vrcholu podzimní vlny. Ve srovnání s druhým březnovým týdnem ale práce z domova na konci března mírně oslabila.</div>
                 </div>
                 <div className="story">
-                    <p className="story-title"><Link href="/jednotlive-protektivni"><a class="external-link">Jednotlivé protektivní aktivity</a></Link></p>
-                    <div className="block-paragraph">Podíl lidí, kteří se izolují v prostředí domova a nesetkávají se kromě členů domácnosti s dalšími osobami, od ledna setrvale roste a nové restrikce ho ještě více navýšily. Tuto strategii v první půlce března volilo přes 40 % lidí, dokonce o něco více než na podzim. Zejména díky nevycházení z domu celková míra obezřetnosti před nákazou již od ledna setrvale, i když spíše jen mírně, stoupá.</div>
+                    <p className="story-title"><Link href="/ockovani"><a class="external-link">Zájem o očkování</a></Link></p>
+                    <div className="block-paragraph">Zájem o očkování během března lehce stoupl. Na počátku března by se spíše či určitě nechalo zdarma naočkovat 57 % dospělých, na konci března pak 61 %. Od září se ochota k očkování jen mírně zvýšila (z 56 %), avšak v některých populačních skupinách je zájem nyní dokonce nižší než na podzim (zejména mladší lidé s nižším vzděláním).</div>
                 </div>
                 <div className="story">
-                    <p className="story-title"><Link href="/ockovani"><a class="external-link">Očkování</a></Link></p>
-                    <div className="block-paragraph">Ochotu k očkování proti koronaviru zdarma vyjadřovalo během první poloviny března stabilně necelých 60 % lidí (zahrnuto je 7 % dospělých, kteří mají za sebou aspoň jednu dávku). V prosinci a lednu to přitom bylo 50 %. Ochota se ale mezi skupinami obyvatel liší – výrazně vyšší je mezi starými ročníky, lidmi s vyšším vzděláním a v Praze. </div>
+                    <p className="story-title"><Link href="/jednotlive-protektivni"><a class="external-link">Obavy a duševní zdraví</a></Link></p>
+                    <div className="block-paragraph">Obavy veřejnosti z epidemie po nárůstu v první polovině března mírně opadly. Velké starosti nyní epidemie dělá přibližně 45 % dospělých. Tato vysoká úroveň obav se drží již od počátku letošního roku. V novém roce se také ve srovnání s podzimem a létem minulého roku rozrostly příznaky deprese a úzkosti.</div>
                 </div>
                 <div className="story">
-                    <p className="story-title"><Link href="/obavy-epidemie"><a class="external-link">Obavy z epidemie</a></Link></p>
-                    <div className="block-paragraph">Obavy z epidemie jsou nejvyšší od loňského jara. Velké obavy dělá aktuální situace již od začátku března polovině veřejnosti. V novém roce se také dlouhodobě zhoršilo duševního zdraví – symptomy alespoň středně těžké deprese nebo úzkosti má od ledna 12 až 13 % lidí, během podzimu to bylo 10 až 11 % a ještě před epidemií kolem 6 %. Zhoršení zasáhlo především matky s nezletilými dětmi.</div>
+                    <p className="story-title"><Link href="/destabilizace-prace"><a class="external-link">Práce a ekonomika domácností</a></Link></p>
+                    <div className="block-paragraph">Přibližně 11 % pracujících (zaměstnanci a OSVČ) se aktuálně potýká s nějakou formou omezení v práci, ať už kompenzovanou (ošetřovné, překážky práce apod.), nebo se jedná o omezení bez náhrady (snížení výdělku, ztráta doplňkového příjmu na DPP apod.).</div>
                 </div>
             </div>
 
