@@ -95,7 +95,9 @@ ul {
 
 .multiple-charts-wrapper {}
 
-.diff-grid {}
+.diff-grid {
+    margin: 5em 0;
+}
 
 .top-menu {
     display: none;
