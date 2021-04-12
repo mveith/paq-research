@@ -266,8 +266,7 @@ ul {
 
 .summary-number {
     font-size: 2em;
-    display: flex;
-    justify-content: space-around;
+    text-align: center;
 }
 
 @media only screen and (min-width: 720px) {

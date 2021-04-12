@@ -40,7 +40,7 @@ function SummaryTile({ value, text, color, arrow, url }) {
                 <div className="summary">
                     <div className="summary-number">
                         <span dangerouslySetInnerHTML={{ __html: value }}></span>
-                        <span style={{ margin: "0 1em" }}><Arrow direction={arrow} color={color} /></span>
+                        <span style={{ marginLeft: "0.4em" }}><Arrow direction={arrow} color={color} /></span>
                     </div>
                     <p style={{ textAlign: "center" }} dangerouslySetInnerHTML={{ __html: text }}></p>
                 </div>
