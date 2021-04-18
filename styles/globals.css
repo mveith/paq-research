@@ -378,6 +378,9 @@ ul {
     .summary-number {
         margin: 0 1em;
     }
+    .summary-text { 
+        text-align: center;
+    }
 }
 
 @media only screen and (min-width: 1000px) {
