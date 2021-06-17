@@ -48,7 +48,7 @@ export default function About({ menu }) {
 
             <p>Realizace sběru dat ve čtyřech vlnách výzkumu na konci roku 2020 a začátku roku 2021 a příprava dat pro epidemiologické modelování byla podpořena grantem TAČR ETA Město pro lidi, ne pro virus (TL04000282).</p>
 
-            <p>Sběr dat ve dvou vlnách výzkumu v květnu 2021 byl podpořen Centrem pro výzkum veřejného mínění (CVVM) a Českým sociálněvědním datovým archivem (ČSDA) Sociologického ústavu Akademie věd, v. v. i.</p>
+            <p>Sběr dat ve dvou vlnách výzkumu v květnu 2021 byl podpořen Centrem pro výzkum veřejného mínění (CVVM) a Českým sociálněvědním datovým archivem (ČSDA) Sociologického ústavu Akademie věd ČR, v. v. i.</p>
 
             <p>
                 <a href="https://www.paqresearch.cz/"><img src="logo-paq.png" width="120" /></a>
