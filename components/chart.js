@@ -173,6 +173,7 @@ function Chart({ dataProps, chartType, filter, highlightedLineIndex, lineStyles 
         xAccessor: "week",
         yAccessor: "value",
         yExtent: [dataProps.yMin, dataProps.yMax],
+        xExtent: [dataProps.firstWeek, dataProps.weeks],
         lineDataAccessor: "coordinates",
 
         lineStyle: lineStyle,
