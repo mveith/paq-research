@@ -121,15 +121,6 @@ function getLineLineStyle(lineStyles, dataColors, i, highlightedLineIndex) {
             strokeDasharray: i === 0 ? "10 10" : "5 5"
         };
     }
-    if (customLineStyle === "dotted") {
-        return {
-            stroke: dataColors[i],
-            strokeWidth: 1,
-            strokeOpacity: highlightedLineIndex !== undefined ? (i === highlightedLineIndex ? 1 : 0.25) : 1,
-            fill: dataColors[i],
-            strokeDasharray: "1 5"
-        };
-    }
 
     return {
         stroke: dataColors[i],
