@@ -176,8 +176,8 @@ function Chart({ dataProps, chartType, filter, highlightedLineIndex, lineStyles 
     useEffect(() => {
         var chart = document.getElementsByClassName('chart-content')[0];
         const width = chart.offsetWidth;
-        const tickLength = shortTick(dataProps.ticks[0]).length;
-        const maxCount = width / (tickLength * 20);
+        const averageTickLength = dataProps.ticks.map(t => shortTick(t).length).reduce((a, b) => (a + b)) / dataProps.ticks.length;
+        const maxCount = width / (averageTickLength * 20);
 
         const ticks = Math.min(dataProps.weeks, Math.round(maxCount));
         setTicks(ticks);
