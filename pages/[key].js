@@ -14,12 +14,12 @@ export default function Page({ data, texts, menu, chartKey, navigation }) {
     const [filter, setFilter] = useState(data.filters ? 0 : undefined);
 
     const router = useRouter();
-    const urlGroup = router.query.group;
+    const urlGroup = router.query.skupina;
     useEffect(() => {
-        const urlGroupIndex = urlGroup === undefined ? -1 : parseInt(urlGroup);
+        const urlGroupIndex = urlGroup === undefined ? -1 : parseInt(urlGroup) - 1;
         if (urlGroupIndex >= 0 && urlGroupIndex < data.groups.length) {
             setTotal(false);
-            setGroup(parseInt(urlGroup));
+            setGroup(urlGroupIndex);
         }
     }, [urlGroup]);
     const title = texts.pageData.title;
