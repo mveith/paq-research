@@ -46,6 +46,30 @@ function getYAxis(props) {
     };
 }
 
+const shortTick = tick => {
+    const end = tick.lastIndexOf(" ");
+    const short = tick.substring(0, end);
+
+    const parseTickToDate = t => {
+        const dateParts = t.split(". ");
+        console.log("parse: ", t, " date: ", dateParts);
+        if (dateParts.length === 3)
+            return new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
+        else return null;
+    };
+    const parts = tick.split("–");
+    const datePart = parts[parts.length - 1];
+    const date = parseTickToDate(datePart);
+    console.log(tick, " date: ", date);
+    if(date instanceof Date && !isNaN(date.valueOf()))
+    {
+        const firstPart = tick.replace(datePart, "");
+        return `${firstPart}${date.getDate()}. ${date.getMonth() + 1}.`;
+    }
+
+    return tick;
+};
+
 function getXAxis(props, ticks) {
     var mod;
     for (mod = 1; mod < 100; mod++) {
@@ -61,12 +85,12 @@ function getXAxis(props, ticks) {
         const isFirst = index === 0;
         const isLast = index === props.ticks.length - 1;
         if (ticks === 0) {
-            return isFirst || isLast ? `${props.ticks[index]}` : null;
+            return isFirst || isLast ? `${shortTick(props.ticks[index])}` : null;
         }
 
         const isModth = index % mod === 0;
         const isInLimit = (index / mod) + 1 <= maxCount;
-        return (isModth && isInLimit) || isLast ? `${props.ticks[index]}` : null;
+        return (isModth && isInLimit) || isLast ? `${shortTick(props.ticks[index])}` : null;
     };
     return {
         orient: "bottom",
@@ -153,11 +177,12 @@ function Chart({ dataProps, chartType, filter, highlightedLineIndex, lineStyles 
             color: dataColors[lineIndex]
         };
     });
+
     const [ticks, setTicks] = useState(2);
     useEffect(() => {
         var chart = document.getElementsByClassName('chart-content')[0];
         const width = chart.offsetWidth;
-        const tickLength = dataProps.ticks[0].length;
+        const tickLength = shortTick(dataProps.ticks[0]).length;
         const maxCount = width / (tickLength * 20);
 
         const ticks = Math.min(dataProps.weeks, Math.round(maxCount));
