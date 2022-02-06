@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 function GroupButton({ currentGroup, group, index, onChange }) {
     return (<>

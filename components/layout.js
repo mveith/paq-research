@@ -13,14 +13,14 @@ const navbarItemStylePadding = {
     padding: "14px 16px"
 };
 
-function ActiveLink({ children, href, as, style, activeStyle }) {
+function ActiveLink({ children, href, style, activeStyle }) {
     const router = useRouter()
-    const isActive = (router.pathname === href || router.asPath === as) && router.pathname !== "/";
-    return (<Link href={href} as={as}><a style={isActive ? activeStyle : style}>{children}</a></Link>);
+    const isActive = (router.pathname === href || router.asPath.startsWith(href)) && router.pathname !== "/";
+    return (<Link href={href}><a style={isActive ? activeStyle : style}>{children}</a></Link>);
 }
 
 function MenuGroup({ margin, title, items }) {
-    const links = items.map(i => <li><ActiveLink href="[key]" as={`/${i.key}`} style={menuItemStyle} activeStyle={activeMenuItemStyle}>{i.title}</ActiveLink></li>);
+    const links = items.map(i => <li><ActiveLink href={`/${i.key}`} style={menuItemStyle} activeStyle={activeMenuItemStyle}>{i.title}</ActiveLink></li>);
     return (<div style={{ marginTop: margin }}>
         <h3>{title.toUpperCase()}</h3>
         <ul>

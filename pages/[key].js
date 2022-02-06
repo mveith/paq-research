@@ -1,17 +1,27 @@
-import getSourceData from '../components/dataProvider'
-import getMenu from '../components/menuBuilder'
+import getSourceData from '../components/dataProvider';
+import getMenu from '../components/menuBuilder';
 import ThemeNavigation from '../components/themeNavigation';
 import Head from 'next/head';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Layout from '../components/layout';
-import ChartWrapper from '../components/chartWrapper'
+import ChartWrapper from '../components/chartWrapper';
 import ChartSettings from '../components/chartSettings';
+import { useRouter } from 'next/router';
 
 export default function Page({ data, texts, menu, chartKey, navigation }) {
     const [total, setTotal] = useState(true);
     const [group, setGroup] = useState(0);
     const [filter, setFilter] = useState(data.filters ? 0 : undefined);
 
+    const router = useRouter();
+    const urlGroup = router.query.group;
+    useEffect(() => {
+        const urlGroupIndex = urlGroup === undefined ? -1 : parseInt(urlGroup);
+        if (urlGroupIndex >= 0 && urlGroupIndex < data.groups.length) {
+            setTotal(false);
+            setGroup(parseInt(urlGroup));
+        }
+    }, [urlGroup]);
     const title = texts.pageData.title;
     const [openMenu, setOpenMenu] = useState(false);
     const onTotalChange = v => {
