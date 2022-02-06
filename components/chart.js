@@ -47,12 +47,8 @@ function getYAxis(props) {
 }
 
 const shortTick = tick => {
-    const end = tick.lastIndexOf(" ");
-    const short = tick.substring(0, end);
-
     const parseTickToDate = t => {
         const dateParts = t.split(". ");
-        console.log("parse: ", t, " date: ", dateParts);
         if (dateParts.length === 3)
             return new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
         else return null;
@@ -60,9 +56,7 @@ const shortTick = tick => {
     const parts = tick.split("–");
     const datePart = parts[parts.length - 1];
     const date = parseTickToDate(datePart);
-    console.log(tick, " date: ", date);
-    if(date instanceof Date && !isNaN(date.valueOf()))
-    {
+    if (date instanceof Date && !isNaN(date.valueOf())) {
         const firstPart = tick.replace(datePart, "");
         return `${firstPart}${date.getDate()}. ${date.getMonth() + 1}.`;
     }
