@@ -15,7 +15,7 @@ export default function About({ menu }) {
         <Layout title="Kontakty" menuItemsData={menu}>
             <h1 style={{ marginBottom: "3rem" }}>Kontakty</h1>
 
-            {Person("Daniel Prokop", [<li><a href="mailto:prokop@paqresearch.cz">prokop@paqresearch.cz</a>, <a href="tel:+420 608 333 902">+420 608 333 902</a></li>, <li>kontakt s médii, konzultace ohledně výsledků výzkumu</li>])}
+            {Person("Daniel Prokop", [<li><a href="mailto:prokop@paqresearch.cz">prokop@paqresearch.cz</a></li>, <li>kontakt s médii, konzultace ohledně výsledků výzkumu</li>])}
             {Person("Lucie Marková", [<li><a href="mailto:lucie.markova@paqresearch.cz">lucie.markova@paqresearch.cz</a></li>, <li>dotazy ohledně organizace projektu, dotazovacího nástroje</li>])}
             {Person("Jana Cahlíková", [<li>afiliace: Max Planck Institute for Tax Law and Public Finance</li>, <li>spolutvůrkyně dotazníku, tematická sekce ekonomiky a stresu</li>, <li><a href="mailto:jana.cahlikova@tax.mpg.de">jana.cahlikova@tax.mpg.de</a></li>])}
             {Person("Vojtěch Bartoš", [<li>afiliace: University of Munich</li>, <li>spolutvůrce dotazníku, tematická sekce ekonomiky a stresu</li>, <li><a href="mailto:vojtech.bartos@econ.lmu.de">vojtech.bartos@econ.lmu.de</a></li>])}
